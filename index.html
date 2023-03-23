@@ -20,51 +20,51 @@
 
   <body>
     <header class="container__header">
-      <div class="header__logo"></div>
+      <nav class="navbar navbar-light bg-white container-md">
+        <a class="navbar-brand" href="#">
+          <img src="/logo.png" width="200" height="200" alt="">
+        </a>
+      </nav>
     </header>
-    <main>
-      <form class="row g-3">
+    <main class="container-fluid d-flex justify-content-center">
+      <form class="row g-3 container-sm">
         <div class="col-md-6">
-          <label for="inputEmail4" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" />
+          <label for="inputEmail" class="form-label">Email</label>
+          <input type="email" class="form-control" id="inputEmail" />
         </div>
         <div class="col-md-6">
-          <label for="inputPassword4" class="form-label">Password</label>
-          <input type="password" class="form-control" id="inputPassword4" />
+          <label for="inputPassword" class="form-label">Senha</label>
+          <input type="password" class="form-control" id="inputPassword" />
         </div>
         <div class="col-12">
-          <label for="inputAddress" class="form-label">Address</label>
+          <label for="inputAddress" class="form-label">Endereço</label>
           <input
             type="text"
             class="form-control"
             id="inputAddress"
-            placeholder="1234 Main St"
+            placeholder="Rua XV de Novembro"
           />
         <div class="col-md-6">
-          <label for="inputCity" class="form-label">City</label>
+          <label for="inputCity" class="form-label">Cidade</label>
           <input type="text" class="form-control" id="inputCity" />
         </div>
         <div class="col-md-4">
-          <label for="inputState" class="form-label">State</label>
+          <label for="inputState" class="form-label">Estado</label>
           <select id="inputState" class="form-select">
-            <option selected>Choose...</option>
-            <option>...</option>
+            <option selected>Escolher..</option>
+            <option>PR</option>
+            <option>SP</option>
+            <option>SC</option>
           </select>
         </div>
         <div class="col-md-2">
-          <label for="inputZip" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="inputZip" />
+          <label for="inputCep" class="form-label">CEP</label>
+          <input type="text" class="form-control" id="inputCep" />
         </div>
         <div class="col-12">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck" />
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
-          </div>
         </div>
         <div class="col-12">
-          <button type="submit" class="btn btn-primary">Sign in</button>
+          <button type="submit" class="btn btn-warning mt-3">ENTRAR</button>
         </div>
       </form>
     </main>
