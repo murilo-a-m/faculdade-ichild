@@ -54,6 +54,38 @@
   margin-right: 6px;
 }
 
+.container__footer {
+  box-shadow: 0px 4px 53px -8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  height: 14vh;
+  -moz-box-shadow: 0px 4px 53px -8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 4px 53px -8px rgba(0, 0, 0, 0.3);
+}
+.container__footer .container__footer-md {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.container__footer .container__footer-md .container__footer-logo {
+  align-items: center;
+  display: flex;
+}
+.container__footer .container__footer-md .container__footer-logo img {
+  width: 130px;
+}
+.container__footer .container__footer-md .container__footer-logo p {
+  color: #7d7e8a;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 3px 0 0 20px;
+}
+.container__footer .container__footer-md .container__footer-link {
+  color: #7d7e8a;
+  font-weight: 500;
+  text-decoration: none;
+}
+
 .container__main {
   display: flex;
   flex-direction: column;
@@ -95,22 +127,26 @@
   font-size: 16px;
   font-weight: bold;
   justify-content: center;
-  padding: 1rem 1rem;
+  overflow: hidden;
+  padding: 12px 16px;
   text-decoration: none;
+  text-overflow: ellipsis;
   text-transform: uppercase;
-  transition: 0.2s;
+  transition: all 0.14s ease-out;
+  white-space: nowrap;
 }
 .main__banner .main__banner-btn .banner__registerBtn:hover,
 .main__banner .main__banner-btn .banner__aboutBtn:hover {
-  background-color: rgb(255, 255, 255);
-  color: #a31aca;
+  box-shadow: 4px 4px 0 #000;
+  transform: translate(-4px, -4px);
+}
+.main__banner .main__banner-btn .banner__registerBtn:focus-visible,
+.main__banner .main__banner-btn .banner__aboutBtn:focus-visible {
+  outline-offset: 1px;
 }
 .main__banner .main__banner-btn .banner__aboutBtn {
   background-color: #f5ea5a;
   color: black;
-}
-.main__banner .main__banner-btn .banner__aboutBtn:hover {
-  color: #f5ea5a;
 }
 
 .main__specs {
@@ -123,10 +159,16 @@
   align-items: center;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   display: flex;
   height: 100px;
   justify-content: space-evenly;
+  transition: transform 200ms, background 200ms;
   width: 300px;
+}
+.main__specs .main__specs-item:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.548);
+  transform: translateY(-5px);
 }
 .main__specs .main__specs-item .item__icon {
   align-items: center;
@@ -163,24 +205,20 @@
 .main__about {
   align-items: center;
   background-color: #a31aca;
-  box-shadow: 0px 4px 53px -8px rgba(0, 0, 0, 0.658);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   display: flex;
   height: 100vh;
   justify-content: center;
-  -webkit-box-shadow: 0px 4px 53px -8px rgb(0, 0, 0);
-  -moz-box-shadow: 0px 4px 53px -8px rgb(0, 0, 0);
 }
 .main__about .main__about-box {
   align-items: center;
   background-image: url("../img/about-background.png");
   border-radius: 20px;
-  box-shadow: 0px 4px 53px -8px rgba(0, 0, 0, 0.658);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   display: flex;
   justify-content: center;
   height: 90%;
   width: 80%;
-  -webkit-box-shadow: 0px 4px 53px -8px rgb(0, 0, 0);
-  -moz-box-shadow: 0px 4px 53px -8px rgb(0, 0, 0);
 }
 .main__about .about__text {
   margin-left: 80px;
@@ -264,36 +302,120 @@
   text-align: end;
 }
 
-.container__footer {
-  box-shadow: 0px 4px 53px -8px rgba(0, 0, 0, 0.3);
-  display: flex;
-  height: 14vh;
-  -moz-box-shadow: 0px 4px 53px -8px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px 4px 53px -8px rgba(0, 0, 0, 0.3);
+body {
+  background-color: white;
 }
-.container__footer .container__footer-md {
+
+.fundo {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.fundo .box {
+  display: flex;
+  justify-content: center;
+  height: 70vh;
   align-items: center;
+  width: 50vw;
+  margin-top: 4rem;
+  background-color: #FF78F0;
+  border-radius: 3%;
+}
+
+.fundo .box #bemvindo {
+  font-size: 30px;
+  height: 2vh;
+}
+
+.fundo .box .inputCadastro {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  height: 5vh;
+  flex-direction: column;
+  gap: 5px;
 }
-.container__footer .container__footer-md .container__footer-logo {
-  align-items: center;
-  display: flex;
-}
-.container__footer .container__footer-md .container__footer-logo img {
-  width: 130px;
-}
-.container__footer .container__footer-md .container__footer-logo p {
-  color: #7d7e8a;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  margin: 3px 0 0 20px;
-}
-.container__footer .container__footer-md .container__footer-link {
-  color: #7d7e8a;
-  font-weight: 500;
+
+.fundo .box .inputCadastro #semConta {
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+.fundo .box .inputCadastro #semConta:hover {
+  color: white;
+}
+
+.fundo .box .inputCadastro .single-input {
+  position: relative;
+  margin: 30px 0;
+}
+.fundo .box .inputCadastro .single-input label {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  color: rgb(150, 150, 150);
+  cursor: text;
+  transition: 0.5s ease-in-out;
+}
+.fundo .box .inputCadastro .single-input .input {
+  border-radius: 2%;
+  width: 100%;
+  padding: 2px;
+  border: 0;
+  border-bottom: 2px solid rgb(200, 200, 200);
+  outline: 0;
+  font-size: 16px;
+  color: rgb(80, 80, 80);
+  transition: 0.5s ease-in-out;
+}
+.fundo .box .inputCadastro .single-input:focus .fundo .box .inputCadastro .single-input:valid {
+  border-bottom: 2px solid cornflowerblue;
+}
+.fundo .box .inputCadastro .single-input:focus .fundo .box .inputCadastro .single-input:valid ~ label {
+  transform: translateY(-24px);
+  font-size: 12px;
+  color: cornflowerblue;
+}
+
+.fundo .box .inputCadastro .fonte {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+}
+
+.fundo .box .inputCadastro .bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+.fundo .box .inputCadastro .bn632-hover:hover {
+  background-position: 100% 0;
+  transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+.fundo .box .inputCadastro .bn632-hover:focus {
+  outline: none;
+}
+.fundo .box .inputCadastro .bn632-hover.bn20 {
+  background-image: linear-gradient(to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
+  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+  margin-left: 2rem;
+}
+
+.fundo .box .inputCadastro #iconichild {
+  height: 23vh;
 }
 
 /*# sourceMappingURL=style.css.map */
