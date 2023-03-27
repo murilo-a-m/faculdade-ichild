@@ -1,0 +1,134 @@
+
+$corprimaria: #39B5E0;
+$corsecundaria: #A31ACB;
+$corterciaria: #FF78F0;
+
+$fonte: font-family 'Montserrat', sans-serif;
+
+
+body{
+    background-color: white;
+}
+
+.fundo{
+    display: flex ;
+    justify-content: center;
+    background-color: white;
+}
+
+.fundo .box{
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    align-items: center;
+    width: 50vw;
+    margin-top: 4rem;
+    background-color: $corterciaria;
+    border-radius: 3%;
+}
+
+.fundo .box #bemvindo{
+    font-size: 30px;
+    height: 2vh;
+
+}
+
+.fundo .box .inputCadastro{
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+    flex-direction: column;
+    gap: 5px;
+}
+.fundo .box .inputCadastro #semConta{
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    
+    &:hover{
+        color: white;
+    }
+
+}
+
+.fundo .box .inputCadastro .single-input{
+    position: relative;
+    margin: 30px 0;
+
+    label {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    color: rgb(150, 150, 150);
+    cursor: text;
+    transition: 0.5s ease-in-out;
+    }
+
+    .input {
+    border-radius: 2%;
+    width: 100%;
+    padding: 2px;
+    border: 0;
+    border-bottom: 2px solid rgb(200, 200, 200);
+    outline: 0;
+    font-size: 16px;
+    color: rgb(80, 80, 80);
+    transition: 0.5s ease-in-out;
+    }
+    &:focus
+    &:valid {
+    border-bottom: 2px solid cornflowerblue;
+        ~ label {
+            transform: translateY(-24px);
+            font-size: 12px;
+            color: cornflowerblue;
+    }
+    }
+    
+}
+
+
+.fundo .box .inputCadastro .fonte{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+}
+
+.fundo .box .inputCadastro .bn632-hover{
+    
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+
+    &:hover {
+    background-position: 100% 0;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    }
+
+    &:focus {
+    outline: none;
+    }
+
+    &.bn20 {
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+    margin-left: 2rem;
+    }
+}
+
+.fundo .box .inputCadastro #iconichild{
+   height: 23vh;
+}
