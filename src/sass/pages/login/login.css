@@ -34,6 +34,10 @@ body {
 
 .fundo .box .inputCadastro #semConta {
   text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+.fundo .box .inputCadastro #semConta:hover {
+  color: white;
 }
 
 .fundo .box .inputCadastro .single-input {
@@ -103,8 +107,9 @@ body {
 .fundo .box .inputCadastro .bn632-hover.bn20 {
   background-image: linear-gradient(to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
   box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+  margin-left: 2rem;
 }
 
 .fundo .box .inputCadastro #iconichild {
-  height: 20vh;
+  height: 23vh;
 }/*# sourceMappingURL=login.css.map */
