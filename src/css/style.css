@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.background__style {
+  background: center/cover no-repeat;
+  width: 100%;
+}
+
+.container__header {
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  width: 100%;
+}
+.container__header .container__header-content {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__nav ul {
+  display: flex;
+  margin-bottom: 0;
+}
+.header__nav ul li a {
+  color: #7d7e8a;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  margin: 10px 30px;
+  text-decoration: none;
+}
+.header__nav ul li a:hover {
+  color: #a31aca;
+}
+
+.header__btn {
+  align-items: center;
+  background-color: #a31aca;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+.header__btn:hover {
+  color: white;
+}
+.header__btn svg {
+  margin-right: 6px;
+}
+
+.container__main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__banner {
+  background-image: url("../img/home-banner.png");
+  color: black;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: center;
+  width: 100%;
+}
+.main__banner .main__banner-text {
+  line-height: 72px;
+  width: 550px;
+}
+.main__banner .main__banner-text .banner__paragraph {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: -8px;
+}
+.main__banner .main__banner-text .banner__title {
+  font-size: 60px;
+  font-weight: bold;
+}
+.main__banner .main__banner-btn {
+  display: flex;
+  gap: 14px;
+}
+.main__banner .main__banner-btn .banner__registerBtn,
+.main__banner .main__banner-btn .banner__aboutBtn {
+  background-color: #a31aca;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  justify-content: center;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.2s;
+}
+.main__banner .main__banner-btn .banner__registerBtn:hover,
+.main__banner .main__banner-btn .banner__aboutBtn:hover {
+  background-color: rgb(255, 255, 255);
+  color: #a31aca;
+}
+.main__banner .main__banner-btn .banner__aboutBtn {
+  background-color: #f5ea5a;
+  color: black;
+}
+.main__banner .main__banner-btn .banner__aboutBtn:hover {
+  color: #f5ea5a;
+}
+
+.main__specs {
+  align-items: center;
+  display: flex;
+  height: 20vh;
+  justify-content: space-between;
+}
+.main__specs .main__specs-item {
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  height: 100px;
+  justify-content: space-evenly;
+  width: 300px;
+}
+.main__specs .main__specs-item .item__icon {
+  align-items: center;
+  border-radius: 12px;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+  width: 60px;
+}
+.main__specs .main__specs-item p {
+  color: #7d7e8a;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  width: 180px;
+}
+.main__specs .main__specs-item:nth-child(1) .item__icon {
+  background-color: #af88b8;
+  color: #863898;
+}
+.main__specs .main__specs-item:nth-child(2) .item__icon {
+  background-color: #f49e9c;
+  color: #a41e1b;
+}
+.main__specs .main__specs-item:nth-child(3) .item__icon {
+  background-color: #a8d59d;
+  color: #2a9410;
+}
+.main__specs .main__specs-item:nth-child(4) .item__icon {
+  background-color: #facd8a;
+  color: #b5781c;
+}
+
+.main__about {
+  height: 100vh;
+  background-color: #a31aca;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 0px 4px 53px -8px rgb(0, 0, 0);
+  -moz-box-shadow: 0px 4px 53px -8px rgb(0, 0, 0);
+  box-shadow: 0px 4px 53px -8px rgba(0, 0, 0, 0.658);
+}
+.main__about .main__about-box {
+  background-image: url("../img/about-background.png");
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 90%;
+  -webkit-box-shadow: 0px 4px 53px -8px rgb(0, 0, 0);
+  -moz-box-shadow: 0px 4px 53px -8px rgb(0, 0, 0);
+  box-shadow: 0px 4px 53px -8px rgba(0, 0, 0, 0.658);
+}
+.main__about .about__text {
+  margin-left: 80px;
+  width: 23%;
+}
+.main__about .about__text-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+}
+.main__about .about__text-title span {
+  color: #f5ea5a;
+}
+.main__about .about__text-paragraph {
+  color: #f0bdff;
+}
+.main__about .about__text-link {
+  text-decoration: none;
+  color: #f5ea5a;
+}
+
+.main__services {
+  display: flex;
+  flex-direction: column;
+  padding: 70px 0 0 0;
+}
+.main__services .services__item-container {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main__services .services__title {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+.main__services .services__item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.main__services .services__item img {
+  width: 40%;
+}
+.main__services .services__item-text {
+  text-align: start;
+  width: 30%;
+}
+.main__services .services__item-text .services__item-title {
+  color: black;
+  font-weight: 600;
+  font-size: 32px;
+}
+.main__services .services__item-text .services__item-title span {
+  color: #a31aca;
+}
+.main__services .services__item-text .services__item-paragraph {
+  color: #7d7e8a;
+  width: 400px;
+  font-size: 18px;
+}
+.main__services .services__item-text .services__item-link {
+  text-decoration: none;
+  color: #a31aca;
+}
+.main__services .services__item-container:nth-child(3) {
+  background-color: #f5f5f9;
+}
+.main__services .services__item-container:nth-child(3) .services__item {
+  flex-direction: row-reverse;
+}
+.main__services .services__item-container:nth-child(3) .services__item .services__item-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.main__services .services__item-container:nth-child(3) .services__item .services__item-paragraph {
+  text-align: end;
+}
+
+/*# sourceMappingURL=style.css.map */
