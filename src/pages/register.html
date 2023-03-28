@@ -8,6 +8,9 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/sass/pages/register/register.css">
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link
@@ -20,54 +23,90 @@
 
   <body>
     <header class="container__header">
-      <nav class="navbar navbar-light bg-white container-md">
-        <a class="navbar-brand" href="#">
-          <img src="/logo.png" width="200" height="200" alt="">
-        </a>
-      </nav>
+      <header class="container__header">
+        <div class="container__header-content container-fluid">
+          <div class="header__logo">
+            <a href="#">
+              <img
+                src="/src/img/logo-ichild.png"
+                alt="Logo do iChild"
+                class="header__image"
+                width="130px"
+              />
+            </a>
+          </div>
+          <div class="header__nav">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Quem somos</a></li>
+              <li><a href="#">Serviços</a></li>
+              <li><a href="#">Contato</a></li>
+            </ul>
+          </div>
+          <div class="header__button">
+            <a href="#" class="header__btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-person-fill header__button-icon"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                />
+              </svg>
+              <span>Minha conta</span>
+            </a>
+          </div>
+        </div>
+      </header>
     </header>
-    <main class="container-fluid d-flex justify-content-center">
-      <form class="row g-3 container-sm">
-        <div class="col-md-6">
-          <label for="inputEmail" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail" />
-        </div>
-        <div class="col-md-6">
-          <label for="inputPassword" class="form-label">Senha</label>
-          <input type="password" class="form-control" id="inputPassword" />
-        </div>
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">Endereço</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputAddress"
-            placeholder="Rua XV de Novembro"
-          />
-        <div class="col-md-6">
-          <label for="inputCity" class="form-label">Cidade</label>
-          <input type="text" class="form-control" id="inputCity" />
-        </div>
-        <div class="col-md-4">
-          <label for="inputState" class="form-label">Estado</label>
-          <select id="inputState" class="form-select">
-            <option selected>Escolher..</option>
-            <option>PR</option>
-            <option>SP</option>
-            <option>SC</option>
-          </select>
-        </div>
-        <div class="col-md-2">
-          <label for="inputCep" class="form-label">CEP</label>
-          <input type="text" class="form-control" id="inputCep" />
-        </div>
-        <div class="col-12">
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-warning mt-3">ENTRAR</button>
-        </div>
-      </form>
-    </main>
+    <div class="box">
+      <main class="container-fluid d-flex justify-content-center">
+        <form class="row g-3 container-sm">
+          <div class="col-md-6">
+            <label for="inputEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail" />
+          </div>
+          <div class="col-md-6">
+            <label for="inputPassword" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="inputPassword" />
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Endereço</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputAddress"
+              placeholder="Rua XV de Novembro"
+            />
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">Cidade</label>
+            <input type="text" class="form-control" id="inputCity" />
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">Estado</label>
+            <select id="inputState" class="form-select">
+              <option selected>Escolher..</option>
+              <option>PR</option>
+              <option>SP</option>
+              <option>SC</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="inputCep" class="form-label">CEP</label>
+            <input type="text" class="form-control" id="inputCep" />
+          </div>
+          <div class="col-12">
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-warning mt-3">ENTRAR</button>
+          </div>
+        </form>
+      </main>
+    </div>
     <footer>
       <!-- place footer here -->
     </footer>
