@@ -57,25 +57,26 @@
         <div class="box">
             <div class="inputCadastro">
                 <img id="iconichild" src="/src/img/about-logo.png" alt="">
-                <form>
+                <form name="form">
                     <div class="inputbox">
-                      <input type="text" required="required">
+                      <input type="text" required="required" name="email">
                       <span>Email</span>
                     </div>
                     <div class="inputbox">
-                      <input type="text" required="required">
+                      <input type="text" required="required" name="password">
                       <span>Password</span>
                       
                     </div>
                   </form>
                   <a id="semConta" href="">Ainda náo possui uma conta?</a>
             
-                <a href="/"><button class="bn632-hover bn20">Bem-Vindo</button></a>
+                <a ><button class="bn632-hover bn20" onclick="validateForms(document.form.email, document.form.password)" >Bem-Vindo</button></a>
 
             </div>
     
         </div>
       </div>
     </div>
+    <script src="login.js"></script>
   </body>
 </html>
