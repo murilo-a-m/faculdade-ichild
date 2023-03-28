@@ -24,6 +24,9 @@
       type="image/x-icon"
     />
 
+    <!-- AOS link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <title>iChild</title>
   </head>
   <body>
@@ -156,7 +159,13 @@
       </div>
       <div class="main__about">
         <div class="main__about-box background__style">
-          <img src="./img/about-logo.png" alt="Logo iChild" class="img-fluid" />
+          <img
+            data-aos-duration="2000"
+            data-aos="zoom-out"
+            src="./img/about-logo.png"
+            alt="Logo iChild"
+            class="img-fluid"
+          />
           <div class="about__text">
             <p class="about__text-title">O que é o <span>iChild</span>?</p>
             <p class="about__text-paragraph">
@@ -174,7 +183,12 @@
         <div class="services__item-container">
           <div class="services__item-containermd container-md">
             <div class="services__item">
-              <img src="./img/services-item1.png" alt="" />
+              <img
+                data-aos-duration="2000"
+                data-aos="fade-right"
+                src="./img/services-item1.png"
+                alt=""
+              />
               <div class="services__item-text">
                 <p class="services__item-title">
                   Gestão de <span>Presença</span>
@@ -191,7 +205,12 @@
         <div class="services__item-container">
           <div class="services__item-containermd container-md">
             <div class="services__item">
-              <img src="./img/services-item2.png" alt="" />
+              <img
+                data-aos-duration="2000"
+                data-aos="fade-left"
+                src="./img/services-item2.png"
+                alt=""
+              />
               <div class="services__item-text">
                 <p class="services__item-title">
                   Controle de <span>Agenda</span>
@@ -208,7 +227,12 @@
         <div class="services__item-container">
           <div class="services__item-containermd container-md">
             <div class="services__item">
-              <img src="./img/services-item3.png" alt="" />
+              <img
+                data-aos-duration="2000"
+                data-aos="fade-right"
+                src="./img/services-item3.png"
+                alt=""
+              />
               <div class="services__item-text">
                 <p class="services__item-title">
                   Cadastre sua <span>Empresa</span>
@@ -224,6 +248,15 @@
         </div>
       </div>
     </main>
+    <footer class="container__footer">
+      <div class="container__footer-md container-md">
+        <div class="container__footer-logo">
+          <img src="./img/logo-ichild.png" alt="" />
+          <p>Copyright &copy; 2023 - iChild</p>
+        </div>
+        <a href="" class="container__footer-link">Voltar ao início</a>
+      </div>
+    </footer>
 
     <!-- Script Bootstrap -->
     <script
@@ -231,5 +264,11 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Script AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
