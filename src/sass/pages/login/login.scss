@@ -43,12 +43,14 @@ body{
 .fundo .box .inputCadastro #semConta{
     text-decoration: none;
     font-family: "Poppins", sans-serif;
+    margin-top: 1rem;
     
     &:hover{
         color: white;
     }
 
 }
+
 
 .fundo .box .inputCadastro .single-input{
     position: relative;
@@ -125,10 +127,63 @@ body{
     &.bn20 {
     background-image: linear-gradient(to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
     box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
-    margin-left: 2rem;
+    margin-left: 4rem;
     }
 }
 
 .fundo .box .inputCadastro #iconichild{
-   height: 23vh;
+   height: 30vh;
+}
+
+
+
+    
+.inputbox {
+      position: relative;
+      width: 300px;
+      height: 50px;
+      margin-bottom: 50px;
+      
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border: 2px solid #000;
+        outline: none;
+        background: none;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 1.2em;
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      span {
+        position: absolute;
+        top: 14px;
+        left: 20px;
+        font-size: 1em;
+        transition: 0.6s;
+        font-family: sans-serif;
+      }
+      
+      input:focus ~ span,
+      input:valid ~ span {
+        transform: translateX(-13px) translateY(-35px);
+        font-size: 1em;
+      }
+      
+      [type="button"] {
+        width: 50%;
+        background: dodgerblue;
+        color: #fff;
+        border: #fff;
+      }
+      
+      &:hover [type="button"] {
+        background: linear-gradient(45deg, greenyellow, dodgerblue);
+      }
 }

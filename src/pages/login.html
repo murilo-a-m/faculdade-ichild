@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="/src/css/reset.css" />
     <link rel="stylesheet" href="/src/css/style.css" />
     <link rel="stylesheet" href="/src/sass/pages/login/login.css">
+    <link
+      rel="shortcut icon"
+      href="./img/favicon-ichild.png"
+      type="image/x-icon"
+    />
     <title>Cadastro</title>
 </head>
 <body>
@@ -53,15 +58,19 @@
         <div class="box">
             <div class="inputCadastro">
                 <img id="iconichild" src="/src/img/favicon-ichild.png" alt="">
-                <div class="single-input">
-                    <input type="text" class="input" id="nome" required>
-                    <label for="nome">Login</label>
-                </div>
-                <div class="single-input">
-                    <input type="text" class="input" id="sobrenome" required>
-                    <label for="sobrenome">Senha</label>
-                </div>
-                <a id="semConta" href="">Ainda náo possui uma conta?</a>
+                <form>
+                    <div class="inputbox">
+                      <input type="text" required="required">
+                      <span>Email</span>
+                    </div>
+                    <div class="inputbox">
+                      <input type="text" required="required">
+                      <span>Password</span>
+                      
+                    </div>
+                  </form>
+                  <a id="semConta" href="">Ainda náo possui uma conta?</a>
+            
                 <a href="/"><button class="bn632-hover bn20">Bem-Vindo</button></a>
 
             </div>
