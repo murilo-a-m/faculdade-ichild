@@ -159,4 +159,13 @@ body {
 }
 .inputbox:hover [type=button] {
   background: linear-gradient(45deg, greenyellow, dodgerblue);
+}
+
+@media (max-width: 1368px) {
+  .fundo .box {
+    height: 90vh;
+  }
+  .fundo .box .inputCadastro #iconichild {
+    height: 5vh;
+  }
 }/*# sourceMappingURL=login.css.map */
