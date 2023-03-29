@@ -90,12 +90,12 @@
         <div>
           <label for="inputEmail" class="form-label">Email</label>
           <input type="email" class="form-control" id="inputEmail" />
-          <span id="email-error"></span>
+          <span id="email-error" class="error"></span>
         </div>
         <div class="col-md-6 mt-3">
           <label for="inputPassword" class="form-label">Senha</label>
           <input type="password" class="form-control" id="inputPassword" />
-          <span id="password-error"></span>
+          <span id="password-error" class="error"></span>
         </div>
         <div class="col-md-6 mt-3">
           <label for="inputConfirmPassword" class="form-label"
@@ -106,7 +106,7 @@
             class="form-control"
             id="inputConfirmPassword"
           />
-          <span id="confirmPassword-error"></span>
+          <span id="confirmPassword-error" class="error"></span>
         </div>
         <div class="row g-2 col-12 mt-3">
           <label for="inputAddress" class="form-label">Endereço</label>
@@ -116,9 +116,11 @@
             id="inputAddress"
             placeholder="Rua XV de Novembro"
           />
+          <span id="address-error" class="error"></span>
           <div class="col-md-12 mt-3">
             <label for="inputCity" class="form-label">Cidade</label>
             <input type="text" class="form-control" id="inputCity" />
+            <span id="city-error" class="error"></span>
           </div>
           <div class="col-md-6 mt-3">
             <label for="inputState" class="form-label">Estado</label>
@@ -128,10 +130,12 @@
               <option>SP</option>
               <option>SC</option>
             </select>
+            <span id="state-error" class="error"></span>
           </div>
           <div class="col-md-6 mt-3">
             <label for="inputCep" class="form-label">CEP</label>
             <input type="text" class="form-control" id="inputCep" />
+            <span id="cep-error" class="error"></span>
           </div>
         </div>
         <button type="submit" class="col-md-12 form__btn mt-3">

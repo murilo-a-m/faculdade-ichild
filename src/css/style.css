@@ -762,4 +762,9 @@ body {
   outline-offset: 1px;
 }
 
+.error {
+  color: red;
+  font-size: 12px;
+}
+
 /*# sourceMappingURL=style.css.map */
