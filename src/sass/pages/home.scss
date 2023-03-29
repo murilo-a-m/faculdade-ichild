@@ -82,7 +82,7 @@
     height: 100px;
     justify-content: space-evenly;
     transition: transform 200ms, background 200ms;
-    width: 300px;
+    width: 23%;
 
     &:hover {
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.548);
@@ -103,7 +103,7 @@
       font-size: 14px;
       font-weight: 400;
       margin: 0;
-      width: 180px;
+      width: 60%;
     }
   }
 
@@ -241,6 +241,234 @@
 
       .services__item-paragraph {
         text-align: end;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main__banner {
+    .main__banner-text {
+      .banner__paragraph {
+        font-size: 24px;
+        margin-bottom: -20px;
+      }
+
+      .banner__title {
+        font-size: 40px;
+        line-height: 50px;
+      }
+    }
+
+    .banner__registerBtn,
+    .banner__aboutBtn {
+      font-size: 14px;
+    }
+  }
+
+  .main__specs {
+    .main__specs-item {
+      height: 80px;
+      width: 22%;
+
+      .item__icon {
+        height: 40px;
+        width: 40px;
+
+        svg {
+          width: 50%;
+        }
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .main__about {
+    align-items: center;
+    background-color: $purple;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+
+    .main__about-box {
+      background-image: url("../img/about-background.png");
+      height: 65%;
+      width: 90%;
+    }
+
+    img {
+      width: 40%;
+    }
+
+    .about__text {
+      width: 40%;
+      margin-left: 50px;
+    }
+
+    .about__text-title {
+      color: white;
+      font-size: 2rem;
+    }
+
+    .about__text-paragraph {
+      color: #f0bdff;
+    }
+
+    .about__text-link {
+      color: $yellow;
+      text-decoration: none;
+    }
+  }
+
+  .main__services {
+    .services__item {
+      justify-content: center;
+
+      img {
+        width: 400px;
+      }
+    }
+
+    .services__item-text {
+      .services__item-title {
+        font-size: 24px;
+      }
+
+      .services__item-paragraph {
+        font-size: 16px;
+        width: auto;
+      }
+
+      .services__item-link {
+        color: $purple;
+        text-decoration: none;
+      }
+    }
+
+    .services__item-container:nth-child(3) {
+      background-color: #f5f5f9;
+
+      .services__item {
+        flex-direction: row-reverse;
+
+        .services__item-text {
+          align-items: flex-end;
+          display: flex;
+          flex-direction: column;
+        }
+
+        .services__item-paragraph {
+          text-align: end;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main__banner {
+    height: 64vh;
+  }
+
+  .main__specs {
+    flex-wrap: wrap;
+    height: 26vh;
+
+    .main__specs-item {
+      width: 48%;
+    }
+  }
+
+  .main__banner .main__banner-text {
+    line-height: 72px;
+    width: 300px;
+
+    .banner__title {
+      font-size: 30px;
+    }
+  }
+
+  .main__about {
+    background-color: $purple;
+    height: 100vh;
+
+    .main__about-box {
+      height: 100%;
+      width: 100%;
+      border-radius: 0;
+      flex-direction: column;
+    }
+
+    img {
+      width: 40%;
+    }
+
+    .about__text {
+      width: 80%;
+      margin-left: 0px;
+      text-align: center;
+    }
+  }
+
+  .main__services {
+    .services__item {
+      flex-direction: column;
+
+      img {
+        width: 300px;
+      }
+    }
+
+    .services__item-text {
+      width: 80%;
+      text-align: center;
+    }
+  }
+
+  .main__services .services__item-container:nth-child(3) .services__item {
+    flex-direction: column;
+
+    .services__item-text,
+    .services__item-paragraph,
+    .services__item-link {
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .main__banner {
+    .main__banner-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .main__banner-text {
+        text-align: center;
+        width: auto;
+        color: rgb(255, 255, 255);
+        text-shadow: 0 10px 20px rgba(0, 0, 0, 0.452),
+          0 6px 6px rgba(0, 0, 0, 0.493);
+
+        .banner__paragraph {
+          font-weight: 600;
+        }
+
+        .banner__title {
+          font-weight: bold;
+        }
+      }
+
+      .main__banner-btn {
+        .banner__registerBtn,
+        .banner__aboutBtn {
+          font-size: 16px;
+        }
       }
     }
   }

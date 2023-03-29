@@ -34,3 +34,27 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .container__footer .container__footer-md {
+    justify-content: space-around;
+  }
+
+  .container__footer .container__footer-md .container__footer-logo img {
+    width: 100px;
+  }
+
+  .container__footer .container__footer-md .container__footer-logo p {
+    font-size: 12px;
+  }
+
+  .container__footer-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .container__footer .container__footer-md {
+    flex-direction: column;
+  }
+}
