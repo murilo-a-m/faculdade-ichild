@@ -30,7 +30,7 @@
     <title>iChild</title>
   </head>
   <body>
-    <header class="container__header">
+    <header id="home" class="container__header">
       <div class="container__header-content container-fluid">
         <div class="header__logo">
           <a href="#">
@@ -44,10 +44,10 @@
         </div>
         <div class="header__nav">
           <ul class="navbar">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Quem somos</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">Quem somos</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#contact">Contato</a></li>
           </ul>
         </div>
         <div class="header__button">
@@ -93,10 +93,10 @@
             <p class="banner__title">Os pais aprovam e acompanham.</p>
           </div>
           <div class="main__banner-btn">
-            <a href="#" class="banner__registerBtn">
+            <a href="./pages/login.html" class="banner__registerBtn">
               <span>Cadastrar-se</span>
             </a>
-            <a href="#" class="banner__aboutBtn">
+            <a href="#about" class="banner__aboutBtn">
               <span>Saber mais</span>
             </a>
           </div>
@@ -173,7 +173,7 @@
           <p>Uso simples e intuitivo</p>
         </div>
       </div>
-      <div class="main__about">
+      <div id="about" class="main__about">
         <div class="main__about-box background__style">
           <img
             data-aos-duration="2000"
@@ -190,13 +190,13 @@
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip exea commodo consequat.
             </p>
-            <a href="" class="about__text-link">Serviços ></a>
+            <a href="#services" class="about__text-link">Serviços ></a>
           </div>
         </div>
       </div>
-      <div class="main__services">
+      <div id="services" class="main__services">
         <p class="services__title">Serviços</p>
-        <div class="services__item-container">
+        <div id="services1" class="services__item-container">
           <div class="services__item-containermd container-md">
             <div class="services__item">
               <img
@@ -213,12 +213,12 @@
                   Auxiliar na gestão de presença de menores durante o transporte
                   escolar.
                 </p>
-                <a href="" class="services__item-link">Próximo ></a>
+                <a href="#services2" class="services__item-link">Próximo ></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="services__item-container">
+        <div id="services2" class="services__item-container">
           <div class="services__item-containermd container-md">
             <div class="services__item">
               <img
@@ -235,12 +235,12 @@
                   Proporcionar controle do agendamento de embarque do menor de
                   idade.
                 </p>
-                <a href="" class="services__item-link">Próximo ></a>
+                <a href="#services3" class="services__item-link">Próximo ></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="services__item-container">
+        <div id="services3" class="services__item-container">
           <div class="services__item-containermd container-md">
             <div class="services__item">
               <img
@@ -257,7 +257,9 @@
                   Proporcionar controle do agendamento de embarque do menor de
                   idade.
                 </p>
-                <a href="" class="services__item-link">Próximo ></a>
+                <a href="./pages/register.html" class="services__item-link"
+                  >Começar agora ></a
+                >
               </div>
             </div>
           </div>
@@ -271,7 +273,7 @@
           <img src="./img/logo-ichild.png" alt="" />
           <p>Copyright &copy; 2023 - iChild</p>
         </div>
-        <a href="" class="container__footer-link">Voltar ao início</a>
+        <a href="#" class="container__footer-link">Voltar ao início</a>
       </div>
     </footer>
 
