@@ -1,0 +1,135 @@
+.container__header {
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  width: 100%;
+
+  .container__header-content {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.header__nav {
+  ul {
+    display: flex;
+    margin-bottom: 0;
+    li a {
+      color: $gray-text-color;
+      font-family: $font;
+      font-size: 14px;
+      margin: 10px 30px;
+      text-decoration: none;
+
+      &:hover {
+        color: $purple;
+        font-weight: 500;
+      }
+    }
+
+    li .active {
+      color: $purple;
+      font-weight: 500;
+    }
+  }
+}
+
+.header__button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  #nav-icon {
+    color: $purple;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+  }
+}
+
+.header__btn {
+  align-items: center;
+  background-color: $purple;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  font-family: $font;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+  }
+
+  svg {
+    margin-right: 6px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header__image {
+    width: 100px;
+  }
+  .header__nav {
+    ul {
+      li a {
+        font-size: 12px;
+        margin: 10px 20px;
+      }
+    }
+  }
+
+  .header__btn {
+    font-size: 12px;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container__header .container__header-content {
+    justify-content: space-between;
+  }
+
+  .header__nav {
+    display: none;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 210px;
+    height: 23vh;
+    background-color: #a41acade;
+    border-bottom-left-radius: 10px;
+    transition: all 0.5s ease;
+
+    ul {
+      align-items: flex-start;
+      flex-direction: column;
+
+      li a,
+      a.active {
+        display: block;
+        margin: 12px 0;
+        padding: 0 25px;
+        transition: all 0.5s ease;
+        color: white;
+
+        &:hover {
+          color: white;
+          font-weight: 500;
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+  .header__button {
+    #nav-icon {
+      display: block;
+    }
+  }
+
+  .header__nav.open {
+    display: block;
+  }
+}
