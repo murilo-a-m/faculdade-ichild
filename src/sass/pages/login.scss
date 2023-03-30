@@ -10,7 +10,7 @@ body {
 .fundo {
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 .fundo .box {
@@ -185,10 +185,17 @@ body {
 
 @media (max-width: 1368px) {
   .fundo .box {
-    height: 120vh;
+    height: 80vh;
   }
   .fundo .box .inputCadastro #iconichild {
     height: 300px;
     width: 300px;
+  }
+}
+
+
+@media(max-width: 1024px){
+  .fundo.box{
+    height: 30vh;
   }
 }
