@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/css/reset.css" />
     <link rel="stylesheet" href="/src/css/style.css" />
-    <link rel="stylesheet" href="/src/sass/pages/login/login.css">
+    
     <link rel="shortcut icon" href="/src/img/favicon-ichild.png" type="image/x-icon"
     />
-    <link rel="stylesheet" href="/src/sass/pages/login/login.css" />
+
 
     <title>Cadastro</title>
   </head>
   <body>
-    <header class="container__header">
+    <header id="home" class="container__header">
       <div class="container__header-content container-fluid">
         <div class="header__logo">
           <a href="#">
@@ -27,11 +27,11 @@
           </a>
         </div>
         <div class="header__nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Quem somos</a></li>
-            <li><a href="#">Serviços</a></li>
-            <li><a href="#">Contato</a></li>
+          <ul class="navbar">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">Quem somos</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#contact">Contato</a></li>
           </ul>
         </div>
         <div class="header__button">
@@ -50,6 +50,21 @@
             </svg>
             <span>Minha conta</span>
           </a>
+          <div id="nav-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </header>
@@ -63,12 +78,12 @@
                       <span>Email</span>
                     </div>
                     <div class="inputbox">
-                      <input type="text" required="required" name="password">
+                      <input type="password" required="required" name="password">
                       <span>Password</span>
                       
                     </div>
                   </form>
-                  <a id="semConta" href="">Ainda náo possui uma conta?</a>
+                  <a target="_blank" id="semConta" href="/src/pages/register.html">Ainda náo possui uma conta?</a>
             
                 <a ><button class="bn632-hover bn20" onclick="validateForms(document.form.email, document.form.password)" >Bem-Vindo</button></a>
 
@@ -78,5 +93,6 @@
       </div>
     </div>
     <script src="/src/JS/login.js"></script>
+    <script>"/src/JS/navbar.js"</script>
   </body>
 </html>

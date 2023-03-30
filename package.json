@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "node-sass": "4.5.0"
+  },
+  "scripts" : {
+    "node-sass": "node-sass --output-style compressed -o dist/css src/scss"
+  }
+}

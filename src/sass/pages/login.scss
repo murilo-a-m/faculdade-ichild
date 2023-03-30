@@ -4,7 +4,7 @@ $corterciaria: #ff78f0;
 $fonte: font-family "Montserrat", sans-serif;
 
 body {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 .fundo {
@@ -185,17 +185,32 @@ body {
 
 @media (max-width: 1368px) {
   .fundo .box {
-    height: 80vh;
+    height: 70vh;
+    
   }
   .fundo .box .inputCadastro #iconichild {
-    height: 300px;
-    width: 300px;
+    height: 32vh;
   }
 }
 
-
-@media(max-width: 1024px){
-  .fundo.box{
+@media(max-width:425px){
+  .fundo .box{
+    height: 80vh;
+    width: 80vw;
+  }
+  .fundo .box .inputCadastro #iconichild{
     height: 30vh;
   }
 }
+
+@media(max-width: 375px){
+  .fundo .box{
+    width: 90vw;
+    height: 80vh;
+  }
+  .fundo .box .inputCadastro #iconichild{
+    height: 30vh;
+  }
+}
+
+
