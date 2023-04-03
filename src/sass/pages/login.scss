@@ -1,0 +1,216 @@
+$corprimaria: #39b5e0;
+$corsecundaria: #a31acb;
+$corterciaria: #ff78f0;
+$fonte: font-family "Montserrat", sans-serif;
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+.fundo {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.fundo .box {
+  display: flex;
+  justify-content: center;
+  height: 70vh;
+  align-items: center;
+  width: 50vw;
+  margin-top: 4rem;
+  background-color: white;
+  border: 4px solid $corterciaria;
+  border-radius: 3%;
+}
+
+.fundo .box #bemvindo {
+  font-size: 30px;
+  height: 2vh;
+}
+
+.fundo .box .inputCadastro {
+  display: flex;
+  justify-content: center;
+  height: 5vh;
+  flex-direction: column;
+  gap: 5px;
+}
+.fundo .box .inputCadastro #semConta {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  margin-top: 1rem;
+
+  &:hover {
+    color: $corterciaria;
+  }
+}
+
+.fundo .box .inputCadastro .single-input {
+  position: relative;
+  margin: 30px 0;
+
+  label {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    color: rgb(150, 150, 150);
+    cursor: text;
+    transition: 0.5s ease-in-out;
+  }
+
+  .input {
+    border-radius: 2%;
+    width: 100%;
+    padding: 2px;
+    border: 0;
+    border-bottom: 2px solid rgb(200, 200, 200);
+    outline: 0;
+    font-size: 16px;
+    color: rgb(80, 80, 80);
+    transition: 0.5s ease-in-out;
+  }
+  &:focus &:valid {
+    border-bottom: 2px solid cornflowerblue;
+    ~ label {
+      transform: translateY(-24px);
+      font-size: 12px;
+      color: cornflowerblue;
+    }
+  }
+}
+
+.fundo .box .inputCadastro .fonte {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+}
+
+.fundo .box .inputCadastro .bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+
+  &:hover {
+    background-position: 100% 0;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.bn20 {
+    background-image: linear-gradient(
+      to right,
+      #667eea,
+      #764ba2,
+      #6b8dd6,
+      #8e37d7
+    );
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+    margin-left: 4rem;
+  }
+}
+
+.fundo .box .inputCadastro #iconichild {
+  height: 30vh;
+  margin-bottom: 2rem;
+}
+
+.inputbox {
+  position: relative;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 50px;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 2px solid #000;
+    outline: none;
+    background: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2em;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  span {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    font-size: 1em;
+    transition: 0.6s;
+    font-family: sans-serif;
+  }
+
+  input:focus ~ span,
+  input:valid ~ span {
+    transform: translateX(-13px) translateY(-35px);
+    font-size: 1em;
+  }
+
+  [type="button"] {
+    width: 50%;
+    background: dodgerblue;
+    color: #fff;
+    border: #fff;
+  }
+
+  &:hover [type="button"] {
+    background: linear-gradient(45deg, greenyellow, dodgerblue);
+  }
+}
+
+@media (max-width: 1368px) {
+  .fundo .box {
+    height: 70vh;
+    
+  }
+  .fundo .box .inputCadastro #iconichild {
+    height: 32vh;
+  }
+}
+
+@media(max-width:425px){
+  .fundo .box{
+    height: 80vh;
+    width: 80vw;
+  }
+  .fundo .box .inputCadastro #iconichild{
+    height: 30vh;
+  }
+}
+
+@media(max-width: 375px){
+  .fundo .box{
+    width: 90vw;
+    height: 80vh;
+  }
+  .fundo .box .inputCadastro #iconichild{
+    height: 30vh;
+  }
+}
+
+

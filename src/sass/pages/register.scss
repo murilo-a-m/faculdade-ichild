@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: auto;
   font-weight: 500;
 
   .form__btn {
@@ -32,6 +32,7 @@
   }
 }
 
-#password-error {
+.error {
   color: red;
+  font-size: 12px;
 }

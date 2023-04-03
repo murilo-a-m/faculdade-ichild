@@ -561,13 +561,13 @@
   }
 }
 body {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 .fundo {
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 .fundo .box {
@@ -578,7 +578,7 @@ body {
   width: 50vw;
   margin-top: 4rem;
   background-color: white;
-  border: 4px solid #FF78F0;
+  border: 4px solid #ff78f0;
   border-radius: 3%;
 }
 
@@ -601,7 +601,7 @@ body {
   margin-top: 1rem;
 }
 .fundo .box .inputCadastro #semConta:hover {
-  color: #FF78F0;
+  color: #ff78f0;
 }
 
 .fundo .box .inputCadastro .single-input {
@@ -725,17 +725,35 @@ body {
 
 @media (max-width: 1368px) {
   .fundo .box {
-    height: 90vh;
+    height: 70vh;
   }
   .fundo .box .inputCadastro #iconichild {
-    height: 5vh;
+    height: 32vh;
+  }
+}
+@media (max-width: 425px) {
+  .fundo .box {
+    height: 80vh;
+    width: 80vw;
+  }
+  .fundo .box .inputCadastro #iconichild {
+    height: 30vh;
+  }
+}
+@media (max-width: 375px) {
+  .fundo .box {
+    width: 90vw;
+    height: 80vh;
+  }
+  .fundo .box .inputCadastro #iconichild {
+    height: 30vh;
   }
 }
 .container__form {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: auto;
   font-weight: 500;
 }
 .container__form .form__btn {
@@ -760,6 +778,11 @@ body {
 }
 .container__form .form__btn:focus-visible {
   outline-offset: 1px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */
