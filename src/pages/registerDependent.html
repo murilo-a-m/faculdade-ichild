@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Css Links -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+
+    <!-- Bootstrap links -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <!-- Favicon link -->
+    <link
+      rel="shortcut icon"
+      href="./img/favicon-ichild.png"
+      type="image/x-icon"
+    />
+
+    <!-- AOS link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>iChild</title>
+  </head>
+  <body>
+    <header id="home" class="container__header">
+      <div class="container__header-content container-fluid">
+        <div class="header__logo">
+          <a href="#">
+            <img
+              src="../img/logo-ichild.png"
+              alt="Logo do iChild"
+              class="header__image"
+              width="130px"
+            />
+          </a>
+        </div>
+        <div class="header__nav">
+          <ul class="navbar">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">Quem somos</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+        <div class="header__button">
+          <a href="#" class="header__btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              fill="currentColor"
+              class="bi bi-person-fill header__button-icon"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+              />
+            </svg>
+            <span>User</span>
+          </a>
+          <div id="nav-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container__form container-fluid">
+      <form class="container__form-content row g-1 container-md">
+        <div class="col-md-6 mt-3">
+          <label for="inputPassword" class="form-label">Nome</label>
+          <input class="form-control" id="inputName" />
+          <span id="name-error"></span>
+        </div>
+        <div class="col-md-6 mt-3">
+          <label for="inputPassword" class="form-label">Sobrenome</label>
+          <input class="form-control" id="inputPassword" />
+          <span id="lastName-error"></span>
+        </div>
+
+        <div class="col-md-6 mt-3">
+          <label for="inputPassword" class="form-label">Idade</label>
+          <input class="form-control" id="inputYersOld" />
+          <span id="yersOld-error"></span>
+        </div>
+        <div class="col-md-6 mt-3">
+          <label for="inputPassword" class="form-label">Foto</label>
+          <input class="form-control" id="inputPicture" />
+          <span id="picture-error"></span>
+        </div>
+        <div class="col-md-6 mt-3">
+          <label for="inputPassword" class="form-label">Documento</label>
+          <input class="form-control" id="inputDocument" />
+          <span id="document-error"></span>
+        </div>
+        <div class="col-md-6 mt-3">
+          <label for="inputState" class="form-label">Turno</label>
+          <select id="inputShift" class="form-select">
+            <option selected>Escolher..</option>
+            <option>Matutino</option>
+            <option>Verpertino</option>
+            <option>Noturno</option>
+            <option>Integral</option>
+          </select>
+        </div>
+        <button type="submit" class="col-md-12 form__btn mt-3">
+          Salvar dependente
+        </button>
+      </form>
+    </main>
+
+    <!-- Script Navbar -->
+    <script src="./js/navbar.js"></script>
+
+    <!-- Script Regex -->
+    <script src="../js/register.js"></script>
+
+    <!-- Script Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Script AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
