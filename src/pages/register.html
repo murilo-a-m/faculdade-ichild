@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/src/img/favicon-ichild.png" type="image/x-icon"
+    <link
+      rel="shortcut icon"
+      href="/src/img/favicon-ichild.png"
+      type="image/x-icon"
     />
-
 
     <!-- Css Links -->
     <link rel="stylesheet" href="../css/style.css" />
@@ -36,7 +38,7 @@
     <header id="home" class="container__header">
       <div class="container__header-content container-fluid">
         <div class="header__logo">
-          <a href="#">
+          <a href="../index.html">
             <img
               src="../img/logo-ichild.png"
               alt="Logo do iChild"
@@ -47,10 +49,10 @@
         </div>
         <div class="header__nav">
           <ul class="navbar">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">Quem somos</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#contact">Contato</a></li>
+            <li><a href="../index.html#home" class="active">Home</a></li>
+            <li><a href="../index.html#about">Quem somos</a></li>
+            <li><a href="../index.html#services">Serviços</a></li>
+            <li><a href="../index.html#contact">Contato</a></li>
           </ul>
         </div>
         <div class="header__button">
@@ -90,15 +92,40 @@
 
     <main class="container__form container-fluid">
       <form class="container__form-content row g-1 container-md">
+        <div class="col-md-6 mt-3">
+          <label for="inputName" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="inputName" required />
+          <span id="name-error" class="error"></span>
+        </div>
+        <div class="col-md-6 mt-3">
+          <label for="inputLastname" class="form-label">Sobrenome</label>
+          <input type="text" class="form-control" id="inputLastname" required />
+          <span id="lastname-error" class="error"></span>
+        </div>
         <div>
-          <label for="inputEmail" class="form-label">Email</label>
-          <input type="email" class="form-control" id="inputEmail" />
+          <label for="inputEmail" class="form-label mt-3">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            required
+            placeholder="user@email.com"
+          />
           <span id="email-error" class="error"></span>
         </div>
         <div class="col-md-6 mt-3">
           <label for="inputPassword" class="form-label">Senha</label>
-          <input type="password" class="form-control" id="inputPassword" />
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword"
+            required
+          />
           <span id="password-error" class="error"></span>
+          <div class="require">
+            A senha deve conter letras maiscúlas, letras minúsculas, números e
+            caracteres especiais.
+          </div>
         </div>
         <div class="col-md-6 mt-3">
           <label for="inputConfirmPassword" class="form-label"
@@ -108,38 +135,36 @@
             type="password"
             class="form-control"
             id="inputConfirmPassword"
+            required
           />
           <span id="confirmPassword-error" class="error"></span>
         </div>
+        <div class="col-md-6 mt-3">
+          <label for="inputCep" class="form-label">CEP</label>
+          <input type="text" class="form-control" id="inputCep" required />
+          <span id="cep-error" class="error"></span>
+        </div>
+        <div class="col-md-6 mt-3">
+          <label for="inputState" class="form-label">Estado</label>
+          <input type="text" class="form-control" id="inputState" disabled />
+          <span id="state-error" class="error"></span>
+        </div>
         <div class="row g-2 col-12 mt-3">
-          <label for="inputAddress" class="form-label">Endereço</label>
-          <input
-            type="text"
-            class="form-control"
-            id="inputAddress"
-            placeholder="Rua XV de Novembro"
-          />
-          <span id="address-error" class="error"></span>
           <div class="col-md-12 mt-3">
             <label for="inputCity" class="form-label">Cidade</label>
-            <input type="text" class="form-control" id="inputCity" />
+            <input type="text" class="form-control" id="inputCity" disabled />
             <span id="city-error" class="error"></span>
           </div>
-          <div class="col-md-6 mt-3">
-            <label for="inputState" class="form-label">Estado</label>
-            <select id="inputState" class="form-select">
-              <option selected>Escolher..</option>
-              <option>PR</option>
-              <option>SP</option>
-              <option>SC</option>
-            </select>
-            <span id="state-error" class="error"></span>
-          </div>
-          <div class="col-md-6 mt-3">
-            <label for="inputCep" class="form-label">CEP</label>
-            <input type="text" class="form-control" id="inputCep" />
-            <span id="cep-error" class="error"></span>
-          </div>
+        </div>
+        <div class="col-md-6 mt-3">
+          <label for="inputStreet" class="form-label">Rua</label>
+          <input type="text" class="form-control" id="inputStreet" required />
+          <span id="street-error" class="error"></span>
+        </div>
+        <div class="col-md-6 mt-3">
+          <label for="inputNumber" class="form-label">Número</label>
+          <input type="text" class="form-control" id="inputNumber" required />
+          <span id="number-error" class="error"></span>
         </div>
         <button type="submit" class="col-md-12 form__btn mt-3">
           Criar conta
@@ -148,10 +173,13 @@
     </main>
 
     <!-- Script Navbar -->
-    <script src="./js/navbar.js"></script>
+    <script src="../js/navbar.js"></script>
 
     <!-- Script Regex -->
     <script src="../js/register.js"></script>
+
+    <!-- Script CEP -->
+    <script src="../js/cep.js"></script>
 
     <!-- Script Bootstrap -->
     <script

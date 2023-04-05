@@ -382,6 +382,9 @@
 .main__services .services__item-container:nth-child(3) .services__item {
   flex-direction: row-reverse;
 }
+.main__services .services__item-container:nth-child(3) .services__item .services__item-title {
+  text-align: end;
+}
 .main__services .services__item-container:nth-child(3) .services__item .services__item-text {
   align-items: flex-end;
   display: flex;
@@ -783,6 +786,17 @@ body {
 .error {
   color: red;
   font-size: 12px;
+}
+
+.require {
+  font-size: 12px;
+  color: #7d7e8a;
+}
+
+@media (max-width: 768px) {
+  .container__form {
+    margin-bottom: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
