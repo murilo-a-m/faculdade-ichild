@@ -28,6 +28,7 @@ function validatePassword(password, passwordConfirm) {
       }
     } else {
       passwordError.textContent = "Senha inválida";
+      passwordConfirmError.textContent = "";
     }
   } else {
     passwordError.textContent = "Campo obrigatório*";
