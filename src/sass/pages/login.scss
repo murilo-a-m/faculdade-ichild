@@ -186,31 +186,28 @@ body {
 @media (max-width: 1368px) {
   .fundo .box {
     height: 70vh;
-    
   }
   .fundo .box .inputCadastro #iconichild {
-    height: 32vh;
+    height: 300px;
   }
 }
 
-@media(max-width:425px){
-  .fundo .box{
+@media (max-width: 680px) {
+  .fundo .box {
+    border: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .fundo .box {
     height: 80vh;
     width: 80vw;
   }
-  .fundo .box .inputCadastro #iconichild{
-    height: 30vh;
-  }
 }
 
-@media(max-width: 375px){
-  .fundo .box{
+@media (max-width: 375px) {
+  .fundo .box {
     width: 90vw;
     height: 80vh;
   }
-  .fundo .box .inputCadastro #iconichild{
-    height: 30vh;
-  }
 }
-
-
