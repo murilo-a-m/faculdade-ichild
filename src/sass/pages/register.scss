@@ -36,3 +36,14 @@
   color: red;
   font-size: 12px;
 }
+
+.require {
+  font-size: 12px;
+  color: $gray-text-color;
+}
+
+@media (max-width: 768px) {
+  .container__form {
+    margin-bottom: 20px;
+  }
+}

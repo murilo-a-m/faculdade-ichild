@@ -233,6 +233,10 @@
     .services__item {
       flex-direction: row-reverse;
 
+      .services__item-title {
+        text-align: end;
+      }
+
       .services__item-text {
         align-items: flex-end;
         display: flex;

@@ -2,7 +2,7 @@ function validateEmail(email) {
   const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   const spanError = document.querySelector("#email-error");
 
-  if (email.value.length < 0) {
+  if (email.value.length > 0) {
     if (email.value.match(emailFormat)) {
       spanError.textContent = "";
     } else {
@@ -34,43 +34,23 @@ function validatePassword(password, passwordConfirm) {
   }
 }
 
-function validateAddress(address) {
-  const addressError = document.querySelector("#address-error");
+function validateStreet(street) {
+  const streetError = document.querySelector("#street-error");
 
-  if (address.value === "") {
-    addressError.textContent = "Campo obrigatório*";
+  if (street.value === "") {
+    streetError.textContent = "Campo obrigatório*";
   } else {
-    addressError.textContent = "";
+    streetError.textContent = "";
   }
 }
 
-function validateCity(city) {
-  const cityError = document.querySelector("#city-error");
+function validateNumber(number) {
+  const numberError = document.querySelector("#number-error");
 
-  if (city.value === "") {
-    cityError.textContent = "Campo obrigatório*";
+  if (number.value === "") {
+    numberError.textContent = "Campo obrigatório*";
   } else {
-    cityError.textContent = "";
-  }
-}
-
-function validateState(state) {
-  const stateError = document.querySelector("#state-error");
-
-  if (state.value === "Escolher..") {
-    stateError.textContent = "Campo obrigatório*";
-  } else {
-    stateError.textContent = "";
-  }
-}
-
-function validateCEP(cep) {
-  const cepError = document.querySelector("#cep-error");
-
-  if (cep.value === "") {
-    cepError.textContent = "Campo obrigatório";
-  } else {
-    cepError.textContent = "";
+    numberError.textContent = "";
   }
 }
 
@@ -79,18 +59,14 @@ const form = document.querySelector(".container__form-content");
 const email = document.querySelector("#inputEmail");
 const password = document.querySelector("#inputPassword");
 const confirmPassword = document.querySelector("#inputConfirmPassword");
-const address = document.querySelector("#inputAddress");
-const city = document.querySelector("#inputCity");
-const state = document.querySelector("#inputState");
-const cep = document.querySelector("#inputCep");
+const street = document.querySelector("#inputStreet");
+const number = document.querySelector("#inputNumber");
 
 form.addEventListener("submit", (ev) => {
   ev.preventDefault();
 
   validateEmail(email);
   validatePassword(password, confirmPassword);
-  validateAddress(address);
-  validateCity(city);
-  validateState(state);
-  validateCEP(cep);
+  validateStreet(street);
+  validateNumber(number);
 });
