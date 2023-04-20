@@ -20,7 +20,7 @@
     <!-- Favicon link -->
     <link
       rel="shortcut icon"
-      href="./img/favicon-ichild.png"
+      href="../../img/favicon-ichild.png"
       type="image/x-icon"
     />
 
@@ -35,7 +35,7 @@
         <div class="header__logo">
           <a href="#">
             <img
-              src="./img/logo-ichild.png"
+              src="../../img/logo-ichild.png"
               alt="Logo do iChild"
               class="header__image"
               width="130px"
@@ -178,7 +178,7 @@
           <img
             data-aos-duration="2000"
             data-aos="zoom-out"
-            src="./img/about-logo.png"
+            src="../../img/about-logo.png"
             alt="Logo iChild"
             class="img-fluid"
           />
@@ -202,7 +202,7 @@
               <img
                 data-aos-duration="2000"
                 data-aos="fade-right"
-                src="./img/services-item1.png"
+                src="../../img/services-item1.png"
                 alt=""
               />
               <div class="services__item-text">
@@ -224,7 +224,7 @@
               <img
                 data-aos-duration="2000"
                 data-aos="fade-left"
-                src="./img/services-item2.png"
+                src="../../img/services-item2.png"
                 alt=""
               />
               <div class="services__item-text">
@@ -246,7 +246,7 @@
               <img
                 data-aos-duration="2000"
                 data-aos="fade-right"
-                src="./img/services-item3.png"
+                src="../../img/services-item3.png"
                 alt=""
               />
               <div class="services__item-text">
@@ -270,7 +270,7 @@
     <footer class="container__footer">
       <div class="container__footer-md container-md">
         <div class="container__footer-logo">
-          <img src="./img/logo-ichild.png" alt="" />
+          <img src="../../img/logo-ichild.png" alt="" />
           <p>Copyright &copy; 2023 - iChild</p>
         </div>
         <a href="#" class="container__footer-link">Voltar ao início</a>
