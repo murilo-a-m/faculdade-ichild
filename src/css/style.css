@@ -797,5 +797,65 @@ body {
     margin-bottom: 20px;
   }
 }
+.dependenteTitulo {
+  display: flex;
+  margin-left: 5rem;
+}
+
+.dependenteTitulo #tittledependentes {
+  font-family: "Poppins", sans-serif;
+}
+
+.box {
+  background-color: #EEF3FF;
+  height: 50vw;
+  width: auto;
+  margin: 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box .titulos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.box .titulos .infoTitulos {
+  width: 300px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.dependente {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vw;
+  width: 93%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2%;
+}
+
+.dependente .icon #userImg {
+  height: 5vh;
+}
+
+.dependente .dados {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.dependente .dados .infoDados {
+  width: 305px;
+  text-align: center;
+}
 
 /*# sourceMappingURL=style.css.map */
