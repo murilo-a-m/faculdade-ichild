@@ -899,8 +899,8 @@ body {
   width: 180px;
 }
 
-.card__title-config {
-  font-size: 18px;
+.card__title-add {
+  font-size: 16px;
   color: #ffffff;
   font-weight: 600;
   margin-bottom: 0;
@@ -909,9 +909,23 @@ body {
   align-self: flex-start;
 }
 
-.container__config {
+.container__add {
   align-items: center;
   justify-content: space-between;
+}
+
+.container__config {
+  align-items: center;
+}
+
+.card__title-config {
+  font-size: 16px;
+  color: #646466;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-top: 10px;
+  align-self: flex-start;
 }
 
 .container__header-app {
