@@ -11,12 +11,13 @@
 .box{
     
     background-color: $corboxfundo;
-    height: 50vw;
+    height: 45vw;
     width: auto;
     margin: 0 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 1%;
     
 
 }
