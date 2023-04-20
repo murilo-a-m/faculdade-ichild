@@ -93,7 +93,7 @@
             <p class="banner__title">Os pais aprovam e acompanham.</p>
           </div>
           <div class="main__banner-btn">
-            <a href="./pages/register.html" class="banner__registerBtn">
+            <a href="./pages/register/register.php" class="banner__registerBtn">
               <span>Cadastrar-se</span>
             </a>
             <a href="#about" class="banner__aboutBtn">
