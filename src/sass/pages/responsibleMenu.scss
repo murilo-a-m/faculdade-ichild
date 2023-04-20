@@ -1,5 +1,5 @@
 .container__main-app {
-  height: 90vh;
+  height: 92vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,8 +13,8 @@
 
   .main__app-content {
     display: grid;
-    height: 96%;
-    width: 85%;
+    height: 92%;
+    width: 97%;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 10px;
@@ -95,9 +95,39 @@
     border-radius: 10px;
   }
 
-  .card__schedule-content {
+  .card__schedule-content:nth-child(2) {
+    height: 36%;
+    background-color: #3ab5df;
+    border-radius: 10px;
+  }
+  .card__schedule-content:nth-child(3) {
     height: 36%;
     background-color: white;
     border-radius: 10px;
   }
+
+  .card__notifications-content {
+    height: 20%;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  .config__img {
+    width: 180px;
+  }
+}
+
+.card__title-config {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.container__config {
+  align-items: center;
+  justify-content: space-between;
 }

@@ -798,7 +798,7 @@ body {
   }
 }
 .container__main-app {
-  height: 90vh;
+  height: 92vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -811,8 +811,8 @@ body {
 }
 .container__main-app .main__app-content {
   display: grid;
-  height: 96%;
-  width: 85%;
+  height: 92%;
+  width: 97%;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 10px;
@@ -880,31 +880,59 @@ body {
   background-color: white;
   border-radius: 10px;
 }
-.card__container .card__schedule-content {
+.card__container .card__schedule-content:nth-child(2) {
+  height: 36%;
+  background-color: #3ab5df;
+  border-radius: 10px;
+}
+.card__container .card__schedule-content:nth-child(3) {
   height: 36%;
   background-color: white;
   border-radius: 10px;
+}
+.card__container .card__notifications-content {
+  height: 20%;
+  background-color: white;
+  border-radius: 10px;
+}
+.card__container .config__img {
+  width: 180px;
+}
+
+.card__title-config {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.container__config {
+  align-items: center;
+  justify-content: space-between;
 }
 
 .container__header-app {
   align-items: center;
   display: flex;
-  height: 10vh;
+  height: 8vh;
   justify-content: space-between;
   padding: 0 30px;
 }
 .container__header-app #app__nav-icon {
   cursor: pointer;
   margin-right: 10px;
-  width: 30px;
+  width: 25px;
 }
 .container__header-app .logo-img {
-  width: 70px;
+  width: 50px;
 }
 .container__header-app .profile-img {
   border: 3px solid #3ab5df;
   border-radius: 100%;
-  width: 50px;
+  width: 40px;
 }
 
 .aside__bar {
@@ -919,19 +947,20 @@ body {
   background-color: #3ab5df;
   height: 100vh;
   transition: 0.3s all;
-  width: 350px;
+  width: 320px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 #menu__bar .menu__bar-icon {
   color: rgb(255, 255, 255);
   cursor: pointer;
-  margin-left: 25px;
-  margin-top: 28px;
+  margin-left: 22px;
+  margin-top: 20px;
 }
 #menu__bar .menu__bar-icon:hover {
   color: black;
 }
 #menu__bar ul {
-  margin-left: 34px;
+  margin-left: 33px;
   margin-top: 1rem;
   padding-left: 0;
 }
