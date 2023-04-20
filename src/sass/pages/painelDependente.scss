@@ -32,7 +32,7 @@
 
 }
 .box .titulos .infoTitulos{
-    width: 300px;
+    width: 310px;
     text-align: center;
     font-weight: bolder;
     
@@ -47,10 +47,12 @@
     width: calc(100% - 7%);
     background-color: rgb(255, 255, 255);
     border-radius: 2%;
+    
 
 }
 .dependente .icon #userImg{
-    height: 5vh;
+    border-radius: 50%;
+    width: 3vw;
 }
 
 .dependente .dados{
@@ -58,12 +60,12 @@
     align-items: center;
     justify-content: center;
     font-family: $font;
-
+   
    
 }
 
 .dependente .dados .infoDados{
-    width: 305px;
+    width: 320px;
     text-align: center;
     
 }

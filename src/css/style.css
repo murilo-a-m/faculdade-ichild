@@ -797,7 +797,6 @@ body {
     margin-bottom: 20px;
   }
 }
-<<<<<<< HEAD
 .dependenteTitulo {
   display: flex;
   margin-left: 5rem;
@@ -829,7 +828,7 @@ body {
 }
 
 .box .titulos .infoTitulos {
-  width: 300px;
+  width: 310px;
   text-align: center;
   font-weight: bolder;
 }
@@ -845,7 +844,8 @@ body {
 }
 
 .dependente .icon #userImg {
-  height: 5vh;
+  border-radius: 50%;
+  width: 3vw;
 }
 
 .dependente .dados {
@@ -856,9 +856,10 @@ body {
 }
 
 .dependente .dados .infoDados {
-  width: 305px;
+  width: 320px;
   text-align: center;
-=======
+}
+
 .container__main-app {
   height: 92vh;
   display: flex;
@@ -1097,7 +1098,6 @@ body {
 
 .openNavbar {
   display: flex;
->>>>>>> feature/responsible-menu
 }
 
 /*# sourceMappingURL=style.css.map */
