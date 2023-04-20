@@ -6,6 +6,6 @@
         $url = substr($url,strrpos($url,"\\/"),strlen($url));  
         $url = strstr($url, '/',true);
     }
-    $url = "Location: /" . $url . "/home.php";	
+    $url = "Location: /" . $url . "/pages/home/home.php";	
     header($url);
 ?>
