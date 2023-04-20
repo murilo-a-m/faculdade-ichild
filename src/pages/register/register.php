@@ -95,15 +95,15 @@
     </header>
 
     <main class="container__form container-fluid">
-      <form class="container__form-content row g-1 container-md" action=>
+      <form class="container__form-content row g-1 container-md" method="post" action="registerExe.php">
         <div class="col-md-6 mt-3">
           <label for="inputName" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="inputName" required />
+          <input type="text" class="form-control" id="inputName" name="nome" required />
           <span id="name-error" class="error"></span>
         </div>
         <div class="col-md-6 mt-3">
           <label for="inputLastname" class="form-label">Sobrenome</label>
-          <input type="text" class="form-control" id="inputLastname" required />
+          <input type="text" class="form-control" id="inputLastname" name="sobrenome" required />
           <span id="lastname-error" class="error"></span>
         </div>
         <div>
@@ -114,6 +114,7 @@
             id="inputEmail"
             required
             placeholder="user@email.com"
+            name="email"
           />
           <span id="email-error" class="error"></span>
         </div>
@@ -124,6 +125,7 @@
             class="form-control"
             id="inputPassword"
             required
+            name="password"
           />
           <span id="password-error" class="error"></span>
           <div class="require">
@@ -140,34 +142,35 @@
             class="form-control"
             id="inputConfirmPassword"
             required
+            name="password2"
           />
           <span id="confirmPassword-error" class="error"></span>
         </div>
         <div class="col-md-6 mt-3">
           <label for="inputCep" class="form-label">CEP</label>
-          <input type="text" class="form-control" id="inputCep" required />
+          <input type="text" class="form-control" id="inputCep" required name="cep"  />
           <span id="cep-error" class="error"></span>
         </div>
         <div class="col-md-6 mt-3">
           <label for="inputState" class="form-label">Estado</label>
-          <input type="text" class="form-control" id="inputState" disabled />
+          <input type="text" class="form-control" id="inputState" disabled name="estado" />
           <span id="state-error" class="error"></span>
         </div>
         <div class="row g-2 col-12 mt-3">
           <div class="col-md-12 mt-3">
             <label for="inputCity" class="form-label">Cidade</label>
-            <input type="text" class="form-control" id="inputCity" disabled />
+            <input type="text" class="form-control" id="inputCity" disabled name="cidade" />
             <span id="city-error" class="error"></span>
           </div>
         </div>
         <div class="col-md-6 mt-3">
           <label for="inputStreet" class="form-label">Rua</label>
-          <input type="text" class="form-control" id="inputStreet" required />
+          <input type="text" class="form-control" id="inputStreet" required name="rua" />
           <span id="street-error" class="error"></span>
         </div>
         <div class="col-md-6 mt-3">
           <label for="inputNumber" class="form-label">Número</label>
-          <input type="text" class="form-control" id="inputNumber" required />
+          <input type="text" class="form-control" id="inputNumber" required name="numero" />
           <span id="number-error" class="error"></span>
         </div>
         <button type="submit" class="col-md-12 form__btn mt-3">
