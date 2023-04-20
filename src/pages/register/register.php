@@ -35,10 +35,7 @@
     <title>iChild</title>
   </head>
   <body>
-
-
     <?php require '../../database/connection.php'; ?>    
-
     <header id="home" class="container__header">
       <div class="container__header-content container-fluid">
         <div class="header__logo">
@@ -180,13 +177,13 @@
     </main>
 
     <!-- Script Navbar -->
-    <script src="../js/navbar.js"></script>
+    <script src="../../utils/navbar.js"></script>
 
     <!-- Script Regex -->
-    <script src="../js/register.js"></script>
+    <script src="./js/register.js"></script>
 
     <!-- Script CEP -->
-    <script src="../js/cep.js"></script>
+    <script src="../../utils/cep.js"></script>
 
     <!-- Script Bootstrap -->
     <script
