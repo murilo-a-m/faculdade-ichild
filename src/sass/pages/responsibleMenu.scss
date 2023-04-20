@@ -1,0 +1,68 @@
+.container__main-app {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card__title {
+    font-size: 16px;
+    color: #646466;
+    font-weight: bold;
+
+    .card__button {
+    }
+  }
+
+  .main__app-content {
+    display: grid;
+    height: 90%;
+    width: 94%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    .content__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .content__card:nth-child(1) {
+      grid-column: 1/3;
+      grid-row: 1/3;
+    }
+
+    .content__card:nth-child(2) {
+      grid-column: 3/4;
+      grid-row: 1/4;
+    }
+
+    .content__card:nth-child(3) {
+      grid-column: 4/4;
+      grid-row: 1/2;
+    }
+
+    .content__card:nth-child(4) {
+      grid-column: 4/4;
+      grid-row: 2/4;
+    }
+
+    .content__card:nth-child(5) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+
+    .content__card:nth-child(5) {
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+  }
+}
+
+.card__dependents-container {
+  height: 100%;
+  width: 90%;
+
+  .card__dependents-content {
+    height: 25%;
+  }
+}
