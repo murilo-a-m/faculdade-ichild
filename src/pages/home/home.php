@@ -51,7 +51,7 @@
           </ul>
         </div>
         <div class="header__button">
-          <a href="./pages/login.html" class="header__btn">
+          <a href="./pages/login/login.php" class="header__btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -257,7 +257,7 @@
                   Proporcionar controle do agendamento de embarque do menor de
                   idade.
                 </p>
-                <a href="./pages/register.html" class="services__item-link"
+                <a href="./pages/home/home.php" class="services__item-link"
                   >Começar agora ></a
                 >
               </div>
