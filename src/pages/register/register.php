@@ -11,8 +11,8 @@
     />
 
     <!-- Css Links -->
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
 
     <!-- Bootstrap links -->
     <link
@@ -25,7 +25,7 @@
     <!-- Favicon link -->
     <link
       rel="shortcut icon"
-      href="./img/favicon-ichild.png"
+      href="../../img/favicon-ichild.png"
       type="image/x-icon"
     />
 
