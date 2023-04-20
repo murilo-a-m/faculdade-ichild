@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="/src/img/favicon-ichild.png"
+      href="../../img/favicon-ichild.png"
       type="image/x-icon"
     />
 
@@ -44,7 +44,7 @@
         <div class="header__logo">
           <a href="../index.html">
             <img
-              src="../img/logo-ichild.png"
+              src="../../img/logo-ichild.png"
               alt="Logo do iChild"
               class="header__image"
               width="130px"
