@@ -35,57 +35,50 @@
     <title>iChild</title>
   </head>
   <body>
-
-
     <?php require '../../database/connection.php'; ?>    
+    <?php
+      $nome    = $_POST['nome'];	
+      $sobrenome     = $_POST['sobrenome'];
+      $email = $_POST['email'];
+      $password = $_POST['password'];
+      $password2 = $_POST['password2'];
+      $cep = $_POST['cep'];
+      $estado = $_POST['estado'];
+      $cidade = $_POST['cidade'];
+      $rua = $_POST['rua'];
+      $numero = $_POST['numero'];
 
-    <div>
-  <div class="w3-code cssHigh notranslate w3-green w3-round-large">
+      // Cria conexão
+      $conn = mysqli_connect($servername, $username, $password, $database);
 
+      // Verifica conexão
+      if (!$conn) {
+        die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
+      }
 
-	<?php
-		$nome    = $_POST['nome'];	
-		$sobrenome     = $_POST['sobrenome'];
-		$email = $_POST['email'];
-    $password = $_POST['password'];
-    $password2 = $_POST['password2'];
-    $cep = $_POST['cep'];
-    $estado = $_POST['estado'];
-    $cidade = $_POST['cidade'];
-    $rua = $_POST['rua'];
-    $numero = $_POST['numero'];
+      mysqli_query($conn,"SET NAMES 'utf8'");
+      mysqli_query($conn,'SET character_set_connection=utf8');
+      mysqli_query($conn,'SET character_set_client=utf8');
+      mysqli_query($conn,'SET character_set_results=utf8');
 
-		// Cria conexão
-		$conn = mysqli_connect($servername, $username, $password, $database);
+      if ($nome == "" || $sobrenome == "" || $email == "" || $password == "" || $password2 == "" || $cep == "" || $estado == "" || $cidade == "" || $rua == "" || $numero == "") {
+        echo "<p>&nbsp;Preencha todos os campos!</p>";
+        exit;
+      }
 
-		// Verifica conexão
-		if (!$conn) {
-			die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
-		}
+      $sql = "INSERT INTO Responsaveis (nome, sobrenome, email, password, cep, estado, cidade, rua, numero) VALUES ('$','$nome','$sobrenome','MD5($password)','$cep','$estado','$cidade','$rua','$numero')";
 
-		mysqli_query($conn,"SET NAMES 'utf8'");
-		mysqli_query($conn,'SET character_set_connection=utf8');
-		mysqli_query($conn,'SET character_set_client=utf8');
-		mysqli_query($conn,'SET character_set_results=utf8');
-
-    if ($nome == "" || $sobrenome == "" || $email == "" || $password == "" || $password2 == "" || $cep == "" || $estado == "" || $cidade == "" || $rua == "" || $numero == "") {
-      echo "<p>&nbsp;Preencha todos os campos!</p>";
-      exit;
-    }
-
-		$sql = "INSERT INTO Responsaveis (nome, sobrenome, email, password, cep, estado, cidade, rua, numero) VALUES ('$','$nome','$sobrenome','MD5($password)','$cep','$estado','$cidade','$rua','$numero')";
-
-		?>
-		<?php
-		echo "<div>";
-		if ($result = mysqli_query($conn, $sql)) {
-			echo "<p>Cadastrado com sucesso! </p>";
-		} else {
-			echo "<p>&nbsp;Erro executando INSERT: " . mysqli_error($conn . "</p>");
-		}
-        echo "</div>";
-		mysqli_close($conn); 
-	?>
+      ?>
+      <?php
+      echo "<div>";
+      if ($result = mysqli_query($conn, $sql)) {
+        echo "<p>Cadastrado com sucesso! </p>";
+      } else {
+        echo "<p>&nbsp;Erro executando INSERT: " . mysqli_error($conn . "</p>");
+      }
+          echo "</div>";
+      mysqli_close($conn); 
+    ?>
   </div>
   </body>
 </html>
