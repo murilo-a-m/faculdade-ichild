@@ -48,8 +48,14 @@
       $rua = $_POST['rua'];
       $numero = $_POST['numero'];
 
+      if ($password != $password2) {
+        exit
+      }
+
+      $encrypted_pwd = md5($password);
+
       // Cria conexão
-      $conn = mysqli_connect($servername, $username, $password, $database);
+      $conn = mysqli_connect($servername, 'dev', 'dev', 'ichild');
 
       // Verifica conexão
       if (!$conn) {
@@ -61,24 +67,20 @@
       mysqli_query($conn,'SET character_set_client=utf8');
       mysqli_query($conn,'SET character_set_results=utf8');
 
-      if ($nome == "" || $sobrenome == "" || $email == "" || $password == "" || $password2 == "" || $cep == "" || $estado == "" || $cidade == "" || $rua == "" || $numero == "") {
-        echo "<p>&nbsp;Preencha todos os campos!</p>";
-        exit;
-      }
+      $sql = "INSERT INTO Responsaveis ( nome, sobrenome, email, senha, cep, estado, cidade, rua, numero) VALUES ('$nome','$sobrenome', '$email', '$encrypted_pwd','$cep','$estado','$cidade','$rua','$numero')";?>
 
-      $sql = "INSERT INTO Responsaveis (nome, sobrenome, email, password, cep, estado, cidade, rua, numero) VALUES ('$','$nome','$sobrenome','MD5($password)','$cep','$estado','$cidade','$rua','$numero')";
-
-      ?>
       <?php
-      echo "<div>";
-      if ($result = mysqli_query($conn, $sql)) {
-        echo "<p>Cadastrado com sucesso! </p>";
-      } else {
-        echo "<p>&nbsp;Erro executando INSERT: " . mysqli_error($conn . "</p>");
-      }
-          echo "</div>";
-      mysqli_close($conn); 
-    ?>
+        echo "<div>";
+        if ($result = mysqli_query($conn, $sql)) {
+          echo "<script>alert('Cadastro realizado com sucesso!');</script>";
+          echo "<script>window.location = '../../../index.php';</script>";
+        } else {
+          echo "<p>&nbsp;Erro executando INSERT: " . mysqli_error($conn . "</p>");
+        }
+            echo "</div>";
+        mysqli_close($conn);  
+	?>
+
   </div>
   </body>
 </html>

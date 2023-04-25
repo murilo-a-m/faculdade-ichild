@@ -5,7 +5,7 @@ global $password;
 global $database;
 
 $servername = "localhost:3306";
-$username = "admin";
-$password = "ichild";
+$username = "dev";
+$password = "dev";
 $database = "ichild";
 ?>

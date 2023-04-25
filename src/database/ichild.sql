@@ -4,10 +4,11 @@ CREATE TABLE Responsaveis (
     sobrenome VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL,
-    endereco VARCHAR(255) NOT NULL,
-    cidade VARCHAR(255) NOT NULL,
+    cep VARCHAR(20) NOT NULL,
     estado VARCHAR(50) NOT NULL,
-    cep VARCHAR(20) NOT NULL
+    cidade VARCHAR(255) NOT NULL,
+    rua VARCHAR(255) NOT NULL,
+    numero VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Transportadores (

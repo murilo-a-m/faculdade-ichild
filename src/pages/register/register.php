@@ -150,13 +150,13 @@
         </div>
         <div class="col-md-6 mt-3">
           <label for="inputState" class="form-label">Estado</label>
-          <input type="text" class="form-control" id="inputState" disabled name="estado" />
+          <input type="text" class="form-control" id="inputState"  name="estado" />
           <span id="state-error" class="error"></span>
         </div>
         <div class="row g-2 col-12 mt-3">
           <div class="col-md-12 mt-3">
             <label for="inputCity" class="form-label">Cidade</label>
-            <input type="text" class="form-control" id="inputCity" disabled name="cidade" />
+            <input type="text" class="form-control" id="inputCity"  name="cidade" />
             <span id="city-error" class="error"></span>
           </div>
         </div>
@@ -183,7 +183,7 @@
     <script src="./js/register.js"></script>
 
     <!-- Script CEP -->
-    <script src="../../utils/cep.js"></script>
+    <!-- <script src="../../utils/cep.js"></script> -->
 
     <!-- Script Bootstrap -->
     <script
