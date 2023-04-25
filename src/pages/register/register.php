@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="/src/img/favicon-ichild.png"
+      href="../../img/favicon-ichild.png"
       type="image/x-icon"
     />
 
     <!-- Css Links -->
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
 
     <!-- Bootstrap links -->
     <link
@@ -25,7 +25,7 @@
     <!-- Favicon link -->
     <link
       rel="shortcut icon"
-      href="./img/favicon-ichild.png"
+      href="../../img/favicon-ichild.png"
       type="image/x-icon"
     />
 
@@ -34,17 +34,13 @@
 
     <title>iChild</title>
   </head>
-  <body>
-
-
-    <?php require '../../database/connection.php'; ?>    
-
+  <body>  
     <header id="home" class="container__header">
       <div class="container__header-content container-fluid">
         <div class="header__logo">
           <a href="../index.html">
             <img
-              src="../img/logo-ichild.png"
+              src="../../img/logo-ichild.png"
               alt="Logo do iChild"
               class="header__image"
               width="130px"
@@ -153,13 +149,13 @@
         </div>
         <div class="col-md-6 mt-3">
           <label for="inputState" class="form-label">Estado</label>
-          <input type="text" class="form-control" id="inputState" disabled name="estado" />
+          <input type="text" class="form-control" id="inputState"  name="estado" />
           <span id="state-error" class="error"></span>
         </div>
         <div class="row g-2 col-12 mt-3">
           <div class="col-md-12 mt-3">
             <label for="inputCity" class="form-label">Cidade</label>
-            <input type="text" class="form-control" id="inputCity" disabled name="cidade" />
+            <input type="text" class="form-control" id="inputCity"  name="cidade" />
             <span id="city-error" class="error"></span>
           </div>
         </div>
@@ -180,13 +176,13 @@
     </main>
 
     <!-- Script Navbar -->
-    <script src="../js/navbar.js"></script>
+    <script src="../../utils/navbar.js"></script>
 
     <!-- Script Regex -->
-    <script src="../js/register.js"></script>
+    <script src="./js/register.js"></script>
 
     <!-- Script CEP -->
-    <script src="../js/cep.js"></script>
+    <!-- <script src="../../utils/cep.js"></script> -->
 
     <!-- Script Bootstrap -->
     <script

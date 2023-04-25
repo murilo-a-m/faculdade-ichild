@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -36,19 +37,12 @@
   </head>
   <body>
     <?php require '../../database/connection.php'; ?>    
+    
     <?php
-      $nome    = $_POST['nome'];	
-      $sobrenome     = $_POST['sobrenome'];
       $email = $_POST['email'];
-      $password = $_POST['password'];
-      $password2 = $_POST['password2'];
-      $cep = $_POST['cep'];
-      $estado = $_POST['estado'];
-      $cidade = $_POST['cidade'];
-      $rua = $_POST['rua'];
-      $numero = $_POST['numero'];
+      $senha = $_POST['senha'];
 
-      $encrypted_pwd = md5($password);
+      echo "<script>console.log('Esta chamando');</script>";
 
       // Cria conexão
       $conn = mysqli_connect($servername, 'dev', 'dev', 'ichild');
@@ -63,20 +57,30 @@
       mysqli_query($conn,'SET character_set_client=utf8');
       mysqli_query($conn,'SET character_set_results=utf8');
 
-      $sql = "INSERT INTO Responsaveis ( nome, sobrenome, email, senha, cep, estado, cidade, rua, numero) VALUES ('$nome','$sobrenome', '$email', '$encrypted_pwd','$cep','$estado','$cidade','$rua','$numero')";?>
 
-      <?php
-        echo "<div>";
-        if ($result = mysqli_query($conn, $sql)) {
-          echo "<script>alert('Cadastro realizado com sucesso!');</script>";
-          echo "<script>window.location = '../../../index.php';</script>";
-        } else {
-          echo "<p>&nbsp;Erro executando INSERT: " . mysqli_error($conn . "</p>");
+      $sql = "SELECT id, nome, sobrenome, email, senha, cep, estado, cidade, rua, numero 
+      FROM ichild.Responsaveis
+      WHERE email = 'muriloam@outlook.com'";
+
+      if ($result = mysqli_query($conn, $sql)) {
+        if (mysqli_num_rows($result) > 0) {
+          while ($row = mysqli_fetch_assoc($result)){
+            if ($row['email'] == $email &&$row['senha'] ==  MD5($senha)) {
+              echo "Login realizado com sucesso!";
+            } else {
+              echo "<script>alert('Erro ao realizar login');</script>";
+              echo "<script> location.href='./login.php'; </script>";
+            }
+          }
         }
-            echo "</div>";
-        mysqli_close($conn);  
+      }
+    
+    ;?>
+    <?php
+      mysqli_close($conn);  
 	?>
 
   </div>
   </body>
 </html>
+
