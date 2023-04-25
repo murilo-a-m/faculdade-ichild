@@ -17,12 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 1%;
-    :hover{
-        background-color: rgb(219, 219, 219);
-    }
-    
-
+    border-radius: 1%;    
 }
 .box .titulos{
     display: flex;
@@ -51,6 +46,10 @@
     background-color: rgb(255, 255, 255);
     border-radius: 1%;
     box-shadow: 0.5px 0px 5px 0px  #000;
+    :hover{
+        background-color: rgb(219, 219, 219);
+    }
+    
     
     
 
@@ -74,7 +73,7 @@
 }
 @media (max-width: 1440px) {
     .box{
-        width: 80%;
+        width: 90%;
     }
     .box .titulos{
         display: flex;
@@ -96,6 +95,8 @@
         text-align: center;
         
     }
+
+
 @media(max-width: 1024px){
     .box{
         width: 90%;
@@ -121,6 +122,8 @@
         text-align: center;
         
     }
+
+
 
 @media(max-width: 768px){
     .box{
@@ -192,6 +195,52 @@
 
 }
 }
+@media(max-width: 375px){
+    .box .titulos{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $font;
+        font-weight: bolder;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        
+    }
+    .box .titulos .infoTitulos{
+        width: 60px;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 10px;
+        
+        
+    }
+    .dependente{
+        height: 7vh;
+    }
+    .dependente .dados .infoDados{
+        width: 60px;
+        height: 2vh;
+    }
+}
+
+@media(max-width: 320px){
+    .dependente .dados .infoDados{
+        width: 55px;
+        text-align: center;
+        font-size: 8px;
+        
+    }
+    .box .titulos .infoTitulos{
+        width: 55px;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 10px;
+        
+        
+    }
+
+}
+
 
     
 }

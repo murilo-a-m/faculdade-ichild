@@ -816,9 +816,6 @@ body {
   align-items: center;
   border-radius: 1%;
 }
-.box :hover {
-  background-color: rgb(219, 219, 219);
-}
 
 .box .titulos {
   display: flex;
@@ -846,6 +843,9 @@ body {
   border-radius: 1%;
   box-shadow: 0.5px 0px 5px 0px #000;
 }
+.dependente :hover {
+  background-color: rgb(219, 219, 219);
+}
 
 .dependente .icon #userDependente {
   width: 3vw;
@@ -865,7 +865,7 @@ body {
 
 @media (max-width: 1440px) {
   .box {
-    width: 80%;
+    width: 90%;
   }
   .box .titulos {
     display: flex;
@@ -970,6 +970,43 @@ body {
     width: 75px;
     text-align: center;
     font-size: 9px;
+  }
+}
+@media (max-width: 1440px) and (max-width: 1024px) and (max-width: 375px) {
+  .box .titulos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .box .titulos .infoTitulos {
+    width: 60px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 10px;
+  }
+  .dependente {
+    height: 7vh;
+  }
+  .dependente .dados .infoDados {
+    width: 60px;
+    height: 2vh;
+  }
+}
+@media (max-width: 1440px) and (max-width: 1024px) and (max-width: 320px) {
+  .dependente .dados .infoDados {
+    width: 55px;
+    text-align: center;
+    font-size: 8px;
+  }
+  .box .titulos .infoTitulos {
+    width: 55px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 10px;
   }
 }
 .container__main-app {
