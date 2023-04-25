@@ -34,8 +34,7 @@
 
     <title>iChild</title>
   </head>
-  <body>
-    <?php require '../../database/connection.php'; ?>    
+  <body>  
     <header id="home" class="container__header">
       <div class="container__header-content container-fluid">
         <div class="header__logo">

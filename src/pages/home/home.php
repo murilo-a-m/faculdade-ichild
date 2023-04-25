@@ -51,7 +51,7 @@
           </ul>
         </div>
         <div class="header__button">
-          <a href="./pages/login/login.php" class="header__btn">
+          <a href="../login/login.php" class="header__btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
