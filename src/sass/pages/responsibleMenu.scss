@@ -151,11 +151,11 @@
   align-items: center;
   gap: 5%;
   .dependent__img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background-color: #3ab6df93;
     border-radius: 10px;
-    margin-left: 20px;
+    margin-left: 4%;
   }
   .dependent__info {
     width: 20%;
@@ -163,16 +163,34 @@
       color: black;
       font-weight: bold;
       margin: 0;
+      font-size: 12px;
     }
     .dependent__info-text {
       color: $gray-text-color;
       font-weight: 600;
       margin: 0;
+      font-size: 12px;
     }
   }
 }
 
 @media (max-width: 1024px) {
+  .card__dependents-content {
+    .dependent__img {
+      width: 50px;
+      height: 50px;
+    }
+    .dependent__info {
+      width: 24%;
+      .dependent__info-title {
+        font-size: 11px;
+      }
+      .dependent__info-text {
+        font-size: 11px;
+      }
+    }
+  }
+
   .container__main-app .card__title {
     font-size: 14px;
   }
@@ -241,6 +259,30 @@
 }
 
 @media (max-width: 425px) {
+  .card__dependents-content {
+    .dependent__info:nth-child(4),
+    .dependent__info:nth-child(3) {
+      display: none;
+    }
+  }
+
+  .card__dependents-content {
+    gap: 10%;
+    .dependent__img {
+      width: 60px;
+      height: 60px;
+    }
+    .dependent__info {
+      width: auto;
+      .dependent__info-title {
+        font-size: 14px;
+      }
+      .dependent__info-text {
+        font-size: 14px;
+      }
+    }
+  }
+
   .card__container .card__log-content {
     height: 12%;
   }
