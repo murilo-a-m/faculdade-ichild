@@ -10,8 +10,14 @@
     mysqli_query($conn,'SET character_set_client=utf8');
     mysqli_query($conn,'SET character_set_results=utf8');
 
+    $responsavelId = $_SESSION['id'];
+
     $sql = "SELECT id, nome, documento, turno
-            FROM ichild.Dependentes";
+            FROM ichild.Dependentes
+            WHERE responsavelId =$responsavelId
+            LIMIT 3
+            ";
+            
 
     echo '<div class="content__card card__dependents">';
     echo '<div class="card__container">';
