@@ -20,7 +20,7 @@
     <!-- Favicon link -->
     <link
       rel="shortcut icon"
-      href="../img/favicon-ichild.png"
+      href="../../img/favicon-ichild.png"
       type="image/x-icon"
     />
 
@@ -54,11 +54,11 @@
 
     <header class="container__header-app">
       <div class="app__nav">
-        <img src="../img/navbarIcon.png" alt="" id="app__nav-icon" />
-        <img src="../img/favicon-ichild.png" alt="" class="logo-img" />
+        <img src="../../img/navbarIcon.png" alt="" id="app__nav-icon" />
+        <img src="../../img/favicon-ichild.png" alt="" class="logo-img" />
       </div>
       <div class="app__nav-profile">
-        <img src="../img/profile.png" alt="" class="profile-img" />
+        <img src="../../img/profile.png" alt="" class="profile-img" />
         <div class="nav__profile">
           <ul>
             <li><a href="">PERFIL</a></li>
@@ -114,21 +114,21 @@
         <div class="content__card card__config">
           <div class="card__container container__add">
             <p class="card__title-add">Adicionar dependentes ></p>
-            <img src="../img/child-image.png" alt="" class="config__img" />
+            <img src="../../img/child-image.png" alt="" class="config__img" />
           </div>
         </div>
 
         <div class="content__card card__config">
           <div class="card__container container__config">
             <p class="card__title-config">Configurar dependentes ></p>
-            <img src="../img/child-config.png" alt="" class="config__img" />
+            <img src="../../img/child-config.png" alt="" class="config__img" />
           </div>
         </div>
       </div>
     </main>
 
     <!-- Script Navbar -->
-    <script src="../../utils/navbar.js"></script>
+    <script src="../../utils/navbar-menu.js"></script>
 
     <!-- Script Bootstrap -->
     <script
