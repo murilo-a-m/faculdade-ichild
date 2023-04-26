@@ -35,7 +35,7 @@
     <title>iChild</title>
   </head>
   <body>
-    <?php require '../../database/connection.php'; ?>    
+    <?php require '../../components/header.php';?>  
     <?php
       $nome    = $_POST['nome'];	
       $sobrenome     = $_POST['sobrenome'];
@@ -51,7 +51,7 @@
       $encrypted_pwd = md5($password);
 
       // Cria conexão
-      $conn = mysqli_connect($servername, 'dev', 'dev', 'ichild');
+      $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
 
       // Verifica conexão
       if (!$conn) {
@@ -63,20 +63,34 @@
       mysqli_query($conn,'SET character_set_client=utf8');
       mysqli_query($conn,'SET character_set_results=utf8');
 
+      $sql = "SELECT id, nome, sobrenome, email, senha, cep, estado, cidade, rua, numero 
+      FROM ichild.Responsaveis
+      WHERE email = '$email'";
+
+      echo "<script>console.log('$email');</script>";
+
+      if ($result = mysqli_query($conn, $sql)) {
+        if (mysqli_num_rows($result) > 0) {
+          while ($row = mysqli_fetch_assoc($result)){
+            if ($row['email'] == $email) {
+              echo "Email Ja cadastrado";
+            } 
+          }
+        }
+      }
+
       $sql = "INSERT INTO Responsaveis ( nome, sobrenome, email, senha, cep, estado, cidade, rua, numero) VALUES ('$nome','$sobrenome', '$email', '$encrypted_pwd','$cep','$estado','$cidade','$rua','$numero')";?>
 
       <?php
         echo "<div>";
         if ($result = mysqli_query($conn, $sql)) {
-          echo "<script>alert('Cadastro realizado com sucesso!');</script>";
-          echo "<script>window.location = '../../../index.php';</script>";
+          // echo "<script>window.location = '../../../indexx.php';</script>";
         } else {
           echo "<p>&nbsp;Erro executando INSERT: " . mysqli_error($conn . "</p>");
         }
             echo "</div>";
         mysqli_close($conn);  
 	?>
-
   </div>
   </body>
 </html>
