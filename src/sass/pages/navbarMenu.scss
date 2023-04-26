@@ -1,24 +1,24 @@
 .container__header-app {
   align-items: center;
   display: flex;
-  height: 10vh;
+  height: 8vh;
   justify-content: space-between;
   padding: 0 30px;
 
   #app__nav-icon {
     cursor: pointer;
     margin-right: 10px;
-    width: 30px;
+    width: 25px;
   }
 
   .logo-img {
-    width: 70px;
+    width: 50px;
   }
 
   .profile-img {
     border: 3px solid #3ab5df;
     border-radius: 100%;
-    width: 50px;
+    width: 40px;
   }
 }
 
@@ -34,13 +34,14 @@
   background-color: #3ab5df;
   height: 100vh;
   transition: 0.3s all;
-  width: 350px;
+  width: 320px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 
   .menu__bar-icon {
     color: rgb(255, 255, 255);
     cursor: pointer;
-    margin-left: 25px;
-    margin-top: 28px;
+    margin-left: 22px;
+    margin-top: 20px;
 
     &:hover {
       color: black;
@@ -48,7 +49,7 @@
   }
 
   ul {
-    margin-left: 34px;
+    margin-left: 33px;
     margin-top: 1rem;
     padding-left: 0;
 
