@@ -20,121 +20,117 @@
     <!-- Favicon link -->
     <link
       rel="shortcut icon"
-      href="./img/favicon-ichild.png"
+      href="../img/favicon-ichild.png"
       type="image/x-icon"
     />
-
-    <!-- AOS link -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <title>iChild</title>
   </head>
   <body>
-    <header id="home" class="container__header">
-      <div class="container__header-content container-fluid">
-        <div class="header__logo">
-          <a href="#">
-            <img
-              src="../img/logo-ichild.png"
-              alt="Logo do iChild"
-              class="header__image"
-              width="130px"
-            />
-          </a>
-        </div>
-        <div class="header__nav">
-          <ul class="navbar">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">Quem somos</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#contact">Contato</a></li>
+    <aside class="aside__bar">
+      <div id="menu__bar">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          fill="currentColor"
+          class="bi bi-x menu__bar-icon"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+          />
+        </svg>
+        <ul>
+          <li><a href="">MENU</a></li>
+          <li><a href="">DEPENDENTES</a></li>
+          <li><a href="">ADICIONAR DEPENDENTES</a></li>
+          <li><a href="">LOG DO DIA</a></li>
+          <li><a href="">AGENDA</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <header class="container__header-app">
+      <div class="app__nav">
+        <img src="../img/navbarIcon.png" alt="" id="app__nav-icon" />
+        <img src="../img/favicon-ichild.png" alt="" class="logo-img" />
+      </div>
+      <div class="app__nav-profile">
+        <img src="../img/profile.png" alt="" class="profile-img" />
+        <div class="nav__profile">
+          <ul>
+            <li><a href="">PERFIL</a></li>
+            <li><a href="">SAIR</a></li>
           </ul>
-        </div>
-        <div class="header__button">
-          <a href="#" class="header__btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="18"
-              height="18"
-              fill="currentColor"
-              class="bi bi-person-fill header__button-icon"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
-              />
-            </svg>
-            <span>User</span>
-          </a>
-          <div id="nav-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="currentColor"
-              class="bi bi-list"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-              />
-            </svg>
-          </div>
         </div>
       </div>
     </header>
 
     <main class="container__form container-fluid">
-      <form class="container__form-content row g-1 container-md">
-        <div class="col-md-8 mt-3">
-          <label for="inputPassword" class="form-label">Nome</label>
+      <form
+        class="container__form-content row g-1 container-md gap-2"
+        id="form-dependent"
+      >
+        <p class="col-md-8 container__form-text">Registrar dependente:</p>
+
+        <div class="col-md-8 mt-2">
+          <label for="inputName" class="form-label">Nome</label>
           <input class="form-control" id="inputName" />
-          <span id="name-error"></span>
-        </div>
-        <div class="col-md-8 mt-3">
-          <label for="inputPassword" class="form-label">Sobrenome</label>
-          <input class="form-control" id="inputPassword" />
-          <span id="lastName-error"></span>
+          <span id="name-error" class="error"></span>
         </div>
 
-        <div class="col-md-8 mt-3">
-          <label for="inputPassword" class="form-label">Idade</label>
-          <input class="form-control" id="inputYersOld" />
-          <span id="yersOld-error"></span>
+        <div class="col-md-8 mt-2">
+          <label for="inputLastName" class="form-label">Sobrenome</label>
+          <input class="form-control" id="inputLastName" />
+          <span id="lastName-error" class="error"></span>
         </div>
-        <div class="col-md-8 mt-3">
-          <label for="formFile" class="form-label">Foto</label>
-          <input class="form-control" type="file" id="formFile" />
 
-          <span id="picture-error"></span>
+        <div class="col-md-8 mt-2">
+          <label for="inputBirth" class="form-label">Data de nascimento</label>
+          <input type="date" class="form-control" id="inputBirth" />
+          <span id="birth-error" class="error"></span>
         </div>
-        <div class="col-md-8 mt-3">
-          <label for="inputPassword" class="form-label">Documento</label>
+
+        <div class="col-md-8 mt-2">
+          <label for="inputDocument" class="form-label">Documento</label>
           <input class="form-control" id="inputDocument" />
-          <span id="document-error"></span>
+          <span id="document-error" class="error"></span>
         </div>
-        <div class="col-md-8 mt-3">
-          <label for="inputState" class="form-label">Turno</label>
-          <select id="inputShift" class="form-select">
+
+        <div class="col-md-8 mt-2">
+          <label for="inputTurn" class="form-label">Turno</label>
+          <select id="inputTurn" class="form-select">
             <option selected>Escolher..</option>
             <option>Matutino</option>
             <option>Verpertino</option>
             <option>Noturno</option>
             <option>Integral</option>
           </select>
+          <span id="turn-error" class="error"></span>
         </div>
-        <button type="submit" class="col-md-8 form__btn mt-3">
+
+        <div class="col-md-8 mt-2 mb-2">
+          <label for="inputTransport" class="form-label">Transporte</label>
+          <select id="inputTransport" class="form-select">
+            <option selected>Escolher..</option>
+            <option></option>
+          </select>
+          <span id="transport-error" class="error"></span>
+        </div>
+
+        <button type="submit" class="col-md-6 form__btn-save">
           Salvar dependente
         </button>
+        <button type="" class="col-md-2 form__btn-cancel">Cancelar</button>
       </form>
     </main>
 
     <!-- Script Navbar -->
-    <script src="./js/navbar.js"></script>
+    <script src="../JS/navbar-menu.js"></script>
 
     <!-- Script Regex -->
-    <script src="../js/register.js"></script>
+    <script src="../JS/registerDependent.js"></script>
 
     <!-- Script Bootstrap -->
     <script
@@ -142,11 +138,5 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
-
-    <!-- Script AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>
