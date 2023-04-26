@@ -151,7 +151,7 @@
 
         <div class="content__card card__config">
           <a
-            href="./registerDependent.html"
+            href="../registerDependent/registerDependent.php"
             class="card__container container__add"
           >
             <p class="card__title-add">Adicionar dependentes ></p>

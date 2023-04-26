@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Css Links -->
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
 
     <!-- Bootstrap links -->
     <link
@@ -20,7 +20,7 @@
     <!-- Favicon link -->
     <link
       rel="shortcut icon"
-      href="../img/favicon-ichild.png"
+      href="../../img/favicon-ichild.png"
       type="image/x-icon"
     />
 
@@ -53,11 +53,11 @@
 
     <header class="container__header-app">
       <div class="app__nav">
-        <img src="../img/navbarIcon.png" alt="" id="app__nav-icon" />
-        <img src="../img/favicon-ichild.png" alt="" class="logo-img" />
+        <img src="../../img/navbarIcon.png" alt="" id="app__nav-icon" />
+        <img src="../../img/favicon-ichild.png" alt="" class="logo-img" />
       </div>
       <div class="app__nav-profile">
-        <img src="../img/profile.png" alt="" class="profile-img" />
+        <img src="../../img/profile.png" alt="" class="profile-img" />
         <div class="nav__profile">
           <ul>
             <li><a href="">PERFIL</a></li>
@@ -127,10 +127,10 @@
     </main>
 
     <!-- Script Navbar -->
-    <script src="../JS/navbar-menu.js"></script>
+    <script src="../../utils/navbar-menu.js"></script>
 
     <!-- Script Regex -->
-    <script src="../JS/registerDependent.js"></script>
+    <script src="./registerDependent.js"></script>
 
     <!-- Script Bootstrap -->
     <script
