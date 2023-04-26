@@ -16,10 +16,12 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <?php
       if (isset($_GET['status'])){
+        if ($_GET['status'] == 'sucess'){
         echo 
         "<script>
            Swal.fire('Tudo pronto, conta cadastrada!')
         </script>";
+        }
       }
     ;?>
 
