@@ -24,9 +24,6 @@
       type="image/x-icon"
     />
 
-    <!-- AOS link -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
     <title>iChild</title>
   </head>
   <body>
@@ -72,6 +69,7 @@
 
     <main class="container__form container-fluid">
       <form class="container__form-content row g-1 container-md gap-2">
+        <p class="col-md-8 container__form-text">Registrar dependente:</p>
         <div class="col-md-8 mt-3">
           <label for="inputPassword" class="form-label">Nome</label>
           <input class="form-control" id="inputName" />
@@ -99,7 +97,7 @@
           <input class="form-control" id="inputDocument" />
           <span id="document-error"></span>
         </div>
-        <div class="col-md-8 mt-3">
+        <div class="col-md-8 mt-3 mb-3">
           <label for="inputState" class="form-label">Turno</label>
           <select id="inputShift" class="form-select">
             <option selected>Escolher..</option>
@@ -109,17 +107,17 @@
             <option>Integral</option>
           </select>
         </div>
-        <button type="submit" class="col-md-6 form__btn-save mt-3">
+        <button type="submit" class="col-md-6 form__btn-save">
           Salvar dependente
         </button>
-        <button type="submit" class="col-md-2 form__btn-cancel mt-3">
+        <button type="submit" class="col-md-2 form__btn-cancel">
           Cancelar
         </button>
       </form>
     </main>
 
     <!-- Script Navbar -->
-    <script src="./js/navbar.js"></script>
+    <script src="../JS/navbar-menu.js"></script>
 
     <!-- Script Regex -->
     <script src="../js/register.js"></script>
@@ -130,11 +128,5 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
-
-    <!-- Script AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>
