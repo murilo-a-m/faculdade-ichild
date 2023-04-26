@@ -40,35 +40,12 @@
     <?php require '../../components/headerMenu.php';?>
     <?php require '../../components/aside.php' ;?>
 
+
     <main class="container__main-app">
       <div class="main__app-content">
-        <div class="content__card card__dependents">
-          <div class="card__container">
-            <p class="card__title">Dependentes</p>
-            <div class="card__dependents-content">
 
 
-              <div class="dependent__img"></div>
-              <div class="dependent__info">
-                <p class="dependent__info-title">Nome</p>
-                <p class="dependent__info-text">Elvis Claudino</p>
-              </div>
-              <div class="dependent__info">
-                <p class="dependent__info-title">Escola</p>
-                <p class="dependent__info-text">PUC-PR</p>
-              </div>
-              <div class="dependent__info">
-                <p class="dependent__info-title">Transporte</p>
-                <p class="dependent__info-text">Busão</p>
-              </div>
-
-
-            </div>
-            <div class="card__dependents-content"></div>
-            <div class="card__dependents-content"></div>
-            <a class="card__button" href=""><button>Ver tudo</button></a>
-          </div>
-        </div>
+        <?php require './dependentsCard.php' ;?>
 
         <div class="content__card card__log">
           <div class="card__container">

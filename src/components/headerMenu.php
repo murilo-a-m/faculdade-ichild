@@ -1,6 +1,6 @@
 <!-- Css Links -->
 <link rel="stylesheet" href="../../css/style.css" />
-<link rel="stylesheet" href="../../css/eset.css" />
+<link rel="stylesheet" href="../../css/reset.css" />
 
 <aside class="aside__bar">
   <div id="menu__bar">
