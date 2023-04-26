@@ -6,13 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="shortcut icon"
-          href="/src/img/favicon-ichild.png"
+          href="../../img/favicon-ichild.png"
           type="image/x-icon"
         />
     
         <!-- Css Links -->
-        <link rel="stylesheet" href="../css/style.css" />
-        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../../css/style.css" />
+        <link rel="stylesheet" href="../../css/reset.css" />
     
         <!-- Bootstrap links -->
         <link
@@ -25,13 +25,13 @@
         <!-- Favicon link -->
         <link
           rel="shortcut icon"
-          href="./img/favicon-ichild.png"
+          href="../../img/favicon-ichild.png"
           type="image/x-icon"
         />
     
         <!-- AOS link -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-<body>
+  <body>
     <aside class="aside__bar">
         <div id="menu__bar">
           <svg
@@ -58,11 +58,11 @@
   
       <header class="container__header-app">
         <div class="app__nav">
-          <img src="../img/navbarIcon.png" alt="" id="app__nav-icon" />
-          <img src="../img/favicon-ichild.png" alt="" class="logo-img" />
+          <img src="../../img/navbarIcon.png" alt="" id="app__nav-icon" />
+          <img src="../../img/favicon-ichild.png" alt="" class="logo-img" />
         </div>
         <div class="app__nav-profile">
-          <img src="../img/profile.png" alt="" class="profile-img" />
+          <img src="../../img/profile.png" alt="" class="profile-img" />
           <div class="nav__profile">
             <ul>
               <li><a href="">PERFIL</a></li>
@@ -85,7 +85,7 @@
         </div>
         <div class="dependente">
             <div class="icon">
-                <a href=""><img id="userDependente" src="../img/usuario.png" alt=""></a>
+                <a href=""><img id="userDependente" src="../../img/usuario.png" alt=""></a>
             </div>
             <div class="dados">
                 <h6 class="infoDados">Elvis</h6>
@@ -95,8 +95,6 @@
                 <h6 class="infoDados">Manhã</h6>
             </div>
         </div>
-        
-
     </div>
     <script src="../js/navbar-menu.js"></script>
 </body>

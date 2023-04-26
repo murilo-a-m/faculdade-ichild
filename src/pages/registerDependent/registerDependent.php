@@ -51,8 +51,6 @@
     <?php require '../../components/headerMenu.php';?>
     <?php require '../../components/aside.php' ;?>
 
-
-
     <main class="container__form container-fluid">
       <form
         class="container__form-content row g-1 container-md gap-2"

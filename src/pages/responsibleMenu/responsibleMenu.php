@@ -44,7 +44,6 @@
     <main class="container__main-app">
       <div class="main__app-content">
 
-
         <?php require './dependentsCard.php' ;?>
 
         <div class="content__card card__log">
