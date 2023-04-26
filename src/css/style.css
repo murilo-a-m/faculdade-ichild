@@ -757,6 +757,12 @@ body {
   justify-content: center;
   height: auto;
   font-weight: 500;
+  height: 80vh;
+}
+.container__form .container__form-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .container__form .form__btn {
   background-color: #a31aca;

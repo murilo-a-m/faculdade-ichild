@@ -4,6 +4,13 @@
   justify-content: center;
   height: auto;
   font-weight: 500;
+  height: 80vh;
+
+  .container__form-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .form__btn {
     background-color: $purple;
