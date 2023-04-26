@@ -876,24 +876,83 @@ body {
   border-radius: 10px;
 }
 .card__container .card__log-content {
+  display: flex;
+  align-items: center;
   height: 13%;
   background-color: white;
   border-radius: 10px;
+  gap: 5%;
+}
+.card__container .card__log-content .log__light {
+  width: 15px;
+  height: 15px;
+  background-color: rgba(0, 255, 0, 0.37);
+  border-radius: 100%;
+  margin-left: 10%;
+}
+.card__container .card__log-content .log__text {
+  margin: 0;
+  font-size: 14px;
+  color: #7d7e8a;
+  font-weight: 600;
 }
 .card__container .card__schedule-content:nth-child(2) {
   height: 36%;
   background-color: #3ab5df;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6%;
+}
+.card__container .card__schedule-content:nth-child(2) img {
+  width: 60px;
+}
+.card__container .card__schedule-content:nth-child(2) p {
+  color: white;
+  margin: 0;
+  font-weight: 600;
+  width: 40%;
 }
 .card__container .card__schedule-content:nth-child(3) {
   height: 36%;
   background-color: white;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6%;
+  text-decoration: none;
+}
+.card__container .card__schedule-content:nth-child(3) img {
+  width: 60px;
+}
+.card__container .card__schedule-content:nth-child(3) p {
+  color: #7d7e8a;
+  margin: 0;
+  font-weight: 600;
+  width: 40%;
 }
 .card__container .card__notifications-content {
+  display: flex;
+  align-items: center;
+  gap: 5%;
   height: 21.5%;
   background-color: white;
   border-radius: 10px;
+}
+.card__container .card__notifications-content .notifications__light {
+  width: 15px;
+  height: 15px;
+  background-color: rgba(128, 0, 128, 0.411);
+  border-radius: 100%;
+  margin-left: 10%;
+}
+.card__container .card__notifications-content .notifications__text {
+  margin: 0;
+  font-size: 14px;
+  color: #7d7e8a;
+  font-weight: 600;
 }
 .card__container .config__img {
   width: 180px;
@@ -949,16 +1008,34 @@ body {
   color: black;
   font-weight: bold;
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
 }
 .card__dependents-content .dependent__info .dependent__info-text {
   color: #7d7e8a;
   font-weight: 600;
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 @media (max-width: 1024px) {
+  .card__container .card__log-content .log__text {
+    font-size: 12px;
+  }
+  .card__container .card__schedule-content:nth-child(2) p {
+    font-size: 12px;
+  }
+  .card__container .card__schedule-content:nth-child(2) img {
+    width: 50px;
+  }
+  .card__container .card__schedule-content:nth-child(3) p {
+    font-size: 12px;
+  }
+  .card__container .card__schedule-content:nth-child(3) img {
+    width: 50px;
+  }
+  .card__container .card__notifications-content .notifications__text {
+    font-size: 12px;
+  }
   .card__dependents-content .dependent__img {
     width: 50px;
     height: 50px;
