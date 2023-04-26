@@ -66,7 +66,7 @@
         if (mysqli_num_rows($result) > 0) {
           while ($row = mysqli_fetch_assoc($result)){
             if ($row['email'] == $email &&$row['senha'] ==  MD5($senha)) {
-              echo "Login realizado com sucesso!";
+              echo "<script> location.href='../responsibleMenu/responsibleMenu.php'; </script>";
             } else {
               echo "<script>alert('Erro ao realizar login');</script>";
               echo "<script> location.href='./login.php'; </script>";
