@@ -31,7 +31,7 @@
     <?php require '../../components/headerMenu.php';?>
 
     <main class="container__main-reponsibleInfo">
-    <form class="container__responsibleInfo-content row g-1 container-sm">
+    <form class="container__responsibleInfo-content row g-1 container-sm gap-1">
         <div class="col-md-7 mt-3">
           <label for="infoName" class="form-label">Nome</label>
           <input type="text" class="form-control disabled" id="infoName" name="nome" disabled/>
@@ -67,8 +67,15 @@
           <input type="text" class="form-control disabled" id="infoNumber" required name="numero" disabled/>
           <span id="number-error" class="error"></span>
         </div>
-        <button type="submit" class="col-md-7 info__btn mt-3">
+
+        <button id="btnEdit" class="col-md-7 info__btn-edit mt-3">
           Editar informações
+        </button>
+        <button id="btnSave" class="col-md-5 info__btn-edit form-disabled mt-3">
+          Salvar
+        </button>
+        <button id="btnCancel" class="col-md-2 info__btn-edit form-disabled mt-3">
+          Cancelar
         </button>
       </form>
     </main>

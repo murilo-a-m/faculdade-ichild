@@ -11,7 +11,7 @@
   justify-content: center;
 }
 
-.info__btn {
+.info__btn-edit {
   background-color: $blue;
   border: none;
   border-radius: 8px;
@@ -39,4 +39,8 @@
 
 .disabled {
   cursor: not-allowed;
+}
+
+.form-disabled {
+  display: none;
 }
