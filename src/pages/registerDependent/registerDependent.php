@@ -27,6 +27,31 @@
     <title>iChild</title>
   </head>
   <body>
+
+    <?php 
+
+      session_start();
+
+      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
+        header('location: ../login/login.php?erro=true');
+        exit;
+      }
+
+    ; ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <?php
+      if (isset($_GET['erro'])){
+        if ($_GET['erro'] == 'documentExists'){
+          echo 
+          "<script>
+            Swal.fire('Documento já cadastrado!')
+          </script>";
+        }
+      }
+    ;?>
+
     <aside class="aside__bar">
       <div id="menu__bar">
         <svg
@@ -71,41 +96,43 @@
       <form
         class="container__form-content row g-1 container-md gap-2"
         id="form-dependent"
+        method="post"
+        action="registerDependentExe.php"
       >
         <p class="col-md-8 container__form-text">Registrar dependente:</p>
 
         <div class="col-md-8 mt-2">
           <label for="inputName" class="form-label">Nome</label>
-          <input class="form-control" id="inputName" />
+          <input class="form-control" id="inputName" name="nome" />
           <span id="name-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-2">
           <label for="inputLastName" class="form-label">Sobrenome</label>
-          <input class="form-control" id="inputLastName" />
+          <input class="form-control" id="inputLastName" name="sobrenome" />
           <span id="lastName-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-2">
           <label for="inputBirth" class="form-label">Data de nascimento</label>
-          <input type="date" class="form-control" id="inputBirth" />
+          <input type="date" class="form-control" id="inputBirth" name="dataNascimento"/>
           <span id="birth-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-2">
           <label for="inputDocument" class="form-label">Documento</label>
-          <input class="form-control" id="inputDocument" />
+          <input class="form-control" id="inputDocument" name="documento"/>
           <span id="document-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-2">
           <label for="inputTurn" class="form-label">Turno</label>
-          <select id="inputTurn" class="form-select">
+          <select id="inputTurn" class="form-select" name="turno">
             <option selected>Escolher..</option>
-            <option>Matutino</option>
-            <option>Verpertino</option>
-            <option>Noturno</option>
-            <option>Integral</option>
+            <option value="Matutino" >Matutino</option>
+            <option value="Verpertino" >Verpertino</option>
+            <option value="Noturno" >Noturno</option>
+            <option value="Integral" >Integral</option>
           </select>
           <span id="turn-error" class="error"></span>
         </div>
@@ -122,7 +149,7 @@
         <button type="submit" class="col-md-6 form__btn-save">
           Salvar dependente
         </button>
-        <button type="" class="col-md-2 form__btn-cancel">Cancelar</button>
+        <button class="col-md-2 form__btn-cancel">Cancelar</button>
       </form>
     </main>
 
@@ -130,7 +157,7 @@
     <script src="../../utils/navbar-menu.js"></script>
 
     <!-- Script Regex -->
-    <script src="./registerDependent.js"></script>
+    <!-- <script src="./registerDependent.js"></script> -->
 
     <!-- Script Bootstrap -->
     <script

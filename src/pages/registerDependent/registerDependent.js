@@ -76,5 +76,4 @@ formContent.addEventListener("submit", (ev) => {
   validateBirth(birth);
   validateDocument(inputDocument);
   validateTurn(turn);
-  validateTransport(transport);
 });

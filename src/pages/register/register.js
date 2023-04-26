@@ -66,6 +66,8 @@ const number = document.querySelector("#inputNumber");
 form.addEventListener("submit", (ev) => {
   ev.preventDefault();
 
+  console.log("oi");
+
   validateEmail(email);
   validatePassword(password, confirmPassword);
   validateStreet(street);

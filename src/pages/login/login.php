@@ -6,12 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../css/reset.css" />
     <link rel="stylesheet" href="../../css/style.css" />
-    
     <link rel="shortcut icon" href="../../img/favicon-ichild.png" type="image/x-icon"
+    
     />
     <title>Login</title>
   </head>
   <body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <?php
+      if (isset($_GET['status'])){
+        echo 
+        "<script>
+           Swal.fire('Tudo pronto, conta cadastrada!')
+        </script>";
+      }
+    ;?>
+
     <header id="home" class="container__header">
       <div class="container__header-content container-fluid">
         <div class="header__logo">
@@ -83,10 +94,9 @@
                 <button type="submit" class="bn632-hover bn20">Bem-Vindo</button>
               </form>
             </div>
-            <!-- <a target="_blank" id="semConta" href="/src/pages/register.html">Ainda náo possui uma conta?</a> -->
         </div>
       </div>
     </div>
-    <script>"/src/JS/navbar.js"</script>   
+    <script>"/src/JS/navbar.js"</script>  
 </body>
 </html>

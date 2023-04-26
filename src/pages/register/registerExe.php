@@ -67,8 +67,6 @@
       FROM ichild.Responsaveis
       WHERE email = '$email'";
 
-      echo "<script>console.log('$email');</script>";
-
       if ($result = mysqli_query($conn, $sql)) {
         if (mysqli_num_rows($result) > 0) {
           while ($row = mysqli_fetch_assoc($result)){
@@ -84,7 +82,7 @@
       <?php
         echo "<div>";
         if ($result = mysqli_query($conn, $sql)) {
-          // echo "<script>window.location = '../../../indexx.php';</script>";
+          header('location: ../login/login.php?status=success');
         } else {
           echo "<p>&nbsp;Erro executando INSERT: " . mysqli_error($conn . "</p>");
         }
