@@ -37,23 +37,8 @@
       }
     ;?>
 
+    <?php require '../../components/headerMenu.php';?>
     <?php require '../../components/aside.php' ;?>
-
-    <header class="container__header-app">
-      <div class="app__nav">
-        <img src="../../img/navbarIcon.png" alt="" id="app__nav-icon" />
-        <img src="../../img/favicon-ichild.png" alt="" class="logo-img" />
-      </div>
-      <div class="app__nav-profile">
-        <img src="../../img/profile.png" alt="" class="profile-img" />
-        <div class="nav__profile">
-          <ul>
-            <li><a href="" >PERFIL</a></li>
-            <li><a href="../logout/logout.php" >SAIR</a></li>
-          </ul>
-        </div>
-      </div>
-    </header>
 
     <main class="container__main-app">
       <div class="main__app-content">

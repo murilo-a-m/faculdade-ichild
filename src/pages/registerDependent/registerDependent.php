@@ -29,14 +29,11 @@
   <body>
 
     <?php 
-
       session_start();
-
       if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
         header('location: ../login/login.php?erro=true');
         exit;
       }
-
     ; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -51,24 +48,10 @@
         }
       }
     ;?>
-
+    <?php require '../../components/headerMenu.php';?>
     <?php require '../../components/aside.php' ;?>
 
-    <header class="container__header-app">
-      <div class="app__nav">
-        <img src="../../img/navbarIcon.png" alt="" id="app__nav-icon" />
-        <img src="../../img/favicon-ichild.png" alt="" class="logo-img" />
-      </div>
-      <div class="app__nav-profile">
-        <img src="../../img/profile.png" alt="" class="profile-img" />
-        <div class="nav__profile">
-          <ul>
-            <li><a href="">PERFIL</a></li>
-            <li><a href="">SAIR</a></li>
-          </ul>
-        </div>
-      </div>
-    </header>
+
 
     <main class="container__form container-fluid">
       <form

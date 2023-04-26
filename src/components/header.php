@@ -1,6 +1,6 @@
 <!-- Css Links -->
-<link rel="stylesheet" href="../../css/style.css" />
-<link rel="stylesheet" href="../../css/reset.css" />
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/reset.css" />
 
 <header id="home" class="container__header">
   <div class="container__header-content container-fluid">
@@ -23,7 +23,7 @@
       </ul>
     </div>
     <div class="header__button">
-      <a href="#" class="header__btn">
+      <a href="/ichild/src/pages/login/login.php" class="header__btn">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
@@ -56,3 +56,6 @@
     </div>
   </div>
 </header>
+
+<!-- Script Navbar -->
+<script src="../utils/navbar.js"></script>
