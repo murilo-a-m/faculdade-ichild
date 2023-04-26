@@ -35,7 +35,7 @@
     <img src="../../img/profile.png" alt="" class="profile-img" />
     <div class="nav__profile">
       <ul>
-        <li><a href="" >PERFIL</a></li>
+        <li><a href="../../pages/responsible/responsibleInfo.php" >PERFIL</a></li>
         <li><a href="../logout/logout.php" >SAIR</a></li>
       </ul>
     </div>

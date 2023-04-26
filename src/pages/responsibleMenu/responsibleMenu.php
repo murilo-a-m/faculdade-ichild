@@ -38,7 +38,6 @@
     ;?>
 
     <?php require '../../components/headerMenu.php';?>
-    <?php require '../../components/aside.php' ;?>
 
 
     <main class="container__main-app">

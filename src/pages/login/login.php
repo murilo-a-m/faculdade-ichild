@@ -25,6 +25,15 @@
         </script>";
         }
       }
+
+      if (isset($_GET['error'])){
+        if ($_GET['error'] == 'loginError'){
+        echo 
+        "<script>
+           Swal.fire('Erro ao realizar o login!')
+        </script>";
+        }
+      }
     ;?>
 
     <div class="fundo">

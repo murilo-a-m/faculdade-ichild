@@ -67,7 +67,6 @@
         if (mysqli_num_rows($result) > 0) {
           while ($row = mysqli_fetch_assoc($result)){
 
-
             echo " <script>console.log('".$row['email']."');</script>";
             echo " <script>console.log('".$row['senha']."');</script>";
             echo " <script>console.log('".MD5($row['senha'])."');</script>";
@@ -83,10 +82,12 @@
               header('Location: ../responsibleMenu/responsibleMenu.php');
 
             } else {
-              echo "<script>alert('Erro ao realizar login');</script>";
-              // header('location: ./login.php');
+              header('location: ./login.php?error=loginError');
+              exit;
             }
           }
+        }else{
+          header('location: ./login.php?error=loginError');
         }
       }
     

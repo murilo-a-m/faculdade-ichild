@@ -49,7 +49,6 @@
       }
     ;?>
     <?php require '../../components/headerMenu.php';?>
-    <?php require '../../components/aside.php' ;?>
 
     <main class="container__form container-fluid">
       <form
