@@ -28,8 +28,6 @@
   </head>
   <body>
 
-    <?php require '../../components/aside.php' ;?>
-
     <header class="container__header-app">
       <div class="app__nav">
         <img src="../../img/navbarIcon.png" alt="" id="app__nav-icon" />

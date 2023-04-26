@@ -54,8 +54,8 @@
     <div class="box">
         <div class="titulos">
             <h5 class="infoTitulos">Nome</h5>
-            <h5 class="infoTitulos">Escola</h5>
-            <h5 class="infoTitulos">Local</h5>
+            <h5 class="infoTitulos">Sobrenome</h5>
+            <h5 class="infoTitulos">Data Nascimento</h5>
             <h5 class="infoTitulos">Gênero</h5>
             <h5 class="infoTitulos">Turno</h5>
         </div>
