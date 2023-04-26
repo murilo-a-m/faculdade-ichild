@@ -39,15 +39,16 @@
     <?php require '../../database/connection.php'; ?>    
     
     <?php
+
+      session_start();
+
       $email = $_POST['email'];
       $senha = $_POST['senha'];
 
       echo "<script>console.log('Esta chamando');</script>";
 
-      // Cria conexão
       $conn = mysqli_connect($servername, 'dev', 'dev', 'ichild');
-
-      // Verifica conexão
+   
       if (!$conn) {
         die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
       }
@@ -58,18 +59,32 @@
       mysqli_query($conn,'SET character_set_results=utf8');
 
 
-      $sql = "SELECT id, nome, sobrenome, email, senha, cep, estado, cidade, rua, numero 
+      $sql = "SELECT id, nome, sobrenome, email, senha 
       FROM ichild.Responsaveis
-      WHERE email = 'muriloam@outlook.com'";
+      WHERE email = '$email'";
 
       if ($result = mysqli_query($conn, $sql)) {
         if (mysqli_num_rows($result) > 0) {
           while ($row = mysqli_fetch_assoc($result)){
-            if ($row['email'] == $email &&$row['senha'] ==  MD5($senha)) {
-              echo "<script> location.href='../responsibleMenu/responsibleMenu.php'; </script>";
+
+
+            echo " <script>console.log('".$row['email']."');</script>";
+            echo " <script>console.log('".$row['senha']."');</script>";
+            echo " <script>console.log('".MD5($row['senha'])."');</script>";
+
+            if ($row['email'] == $email && $row['senha'] ==  MD5($senha)) {
+
+              $_SESSION['id'] = $row['id'];
+              $_SESSION['nome'] = $row['nome'];
+              $_SESSION['sobrenome'] = $row['sobrenome'];
+              $_SESSION['email'] = $row['email'];
+              $_SESSION['role'] = 'responsavel';
+              
+              header('Location: ../responsibleMenu/responsibleMenu.php');
+
             } else {
               echo "<script>alert('Erro ao realizar login');</script>";
-              echo "<script> location.href='./login.php'; </script>";
+              // header('location: ./login.php');
             }
           }
         }

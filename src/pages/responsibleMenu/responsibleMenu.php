@@ -28,6 +28,18 @@
   </head>
 
   <body>
+
+    <?php 
+
+      session_start();
+
+      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
+        header('location: ../login/login.php?erro=true');
+        exit;
+      }
+
+    ; ?>
+
     <aside class="aside__bar">
       <div id="menu__bar">
         <svg
@@ -61,8 +73,8 @@
         <img src="../../img/profile.png" alt="" class="profile-img" />
         <div class="nav__profile">
           <ul>
-            <li><a href="">PERFIL</a></li>
-            <li><a href="">SAIR</a></li>
+            <li><a href="" >PERFIL</a></li>
+            <li><a href="../logout/logout.php" >SAIR</a></li>
           </ul>
         </div>
       </div>
