@@ -4,14 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/css/reset.css" />
-    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
     
-    <link rel="shortcut icon" href="/src/img/favicon-ichild.png" type="image/x-icon"
+    <link rel="shortcut icon" href="../../img/favicon-ichild.png" type="image/x-icon"
     />
-
-
-    <title>Cadastro</title>
+    <title>Login</title>
   </head>
   <body>
     <header id="home" class="container__header">
@@ -19,7 +17,7 @@
         <div class="header__logo">
           <a href="../index.html">
             <img
-              src="/src/img/logo-ichild.png"
+              src="../../img/logo-ichild.png"
               alt="Logo do iChild"
               class="header__image"
               width="130px"
@@ -71,28 +69,24 @@
     <div class="fundo">
         <div class="box">
             <div class="inputCadastro">
-                <img id="iconichild" src="/src/img/about-logo.png" alt="">
-                <form name="form">
-                    <div class="inputbox">
-                      <input type="text" required="required" name="email">
-                      <span>Email</span>
-                    </div>
-                    <div class="inputbox">
-                      <input type="password" required="required" name="password">
-                      <span>Password</span>
-                      
-                    </div>
-                  </form>
-                  <a target="_blank" id="semConta" href="/src/pages/register.html">Ainda náo possui uma conta?</a>
-            
-                <a ><button class="bn632-hover bn20" onclick="validateForms(document.form.email, document.form.password)" >Bem-Vindo</button></a>
+              <img id="iconichild" src="../../img/about-logo.png" alt="">
 
+              <form method="post" action="loginExe.php" >
+                <div class="inputbox">
+                  <input type="text" required="required" name="email">
+                  <span>Email</span>
+                </div>
+                <div class="inputbox">
+                  <input type="password" required="required" name="senha">
+                  <span>Password</span>                      
+                </div>
+                <button type="submit" class="bn632-hover bn20">Bem-Vindo</button>
+              </form>
             </div>
-    
+            <!-- <a target="_blank" id="semConta" href="/src/pages/register.html">Ainda náo possui uma conta?</a> -->
         </div>
       </div>
     </div>
-    <script src="/src/JS/login.js"></script>
-    <script>"/src/JS/navbar.js"</script>
-  </body>
+    <script>"/src/JS/navbar.js"</script>   
+</body>
 </html>

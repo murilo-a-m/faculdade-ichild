@@ -51,7 +51,7 @@
           </ul>
         </div>
         <div class="header__button">
-          <a href="./pages/login.html" class="header__btn">
+          <a href="../login/login.php" class="header__btn">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -93,7 +93,7 @@
             <p class="banner__title">Os pais aprovam e acompanham.</p>
           </div>
           <div class="main__banner-btn">
-            <a href="./pages/register.html" class="banner__registerBtn">
+            <a href="../register/register.php" class="banner__registerBtn">
               <span>Cadastrar-se</span>
             </a>
             <a href="#about" class="banner__aboutBtn">
@@ -257,7 +257,7 @@
                   Proporcionar controle do agendamento de embarque do menor de
                   idade.
                 </p>
-                <a href="./pages/register.html" class="services__item-link"
+                <a href="" class="services__item-link"
                   >Começar agora ></a
                 >
               </div>
