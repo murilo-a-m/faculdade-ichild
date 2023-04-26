@@ -46,7 +46,7 @@
         }
       }
     }   
-    echo '<a class="card__button" href=""><button>Ver tudo</button></a>';
+    echo '<a class="card__button" href="../dependentPanel/dependentPanel.php"><button>Ver tudo</button></a>';
     echo '</div>';
     echo '</div>';
 ;?>

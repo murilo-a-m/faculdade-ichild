@@ -1520,6 +1520,12 @@ body {
   width: 40px;
 }
 
+.app__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .aside__bar {
   display: none;
   font-family: "Poppins", sans-serif;
