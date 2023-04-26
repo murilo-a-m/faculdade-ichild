@@ -2,9 +2,9 @@ function removeDisable(input) {
   input.removeAttribute("disabled");
 }
 
-const formContent = document.querySelector(
-  ".container__responsibleInfo-content"
-);
+const btnEdit = document.querySelector("#btnEdit");
+const btnCancel = document.querySelector("#btnCancel");
+const btnSave = document.querySelector("#btnSave");
 
 const inputs = [
   (inputName = document.querySelector("#infoName")),
@@ -16,10 +16,26 @@ const inputs = [
   (inputNumber = document.querySelector("#infoNumber")),
 ];
 
-formContent.addEventListener("submit", (ev) => {
+btnEdit.addEventListener("click", (ev) => {
   ev.preventDefault();
+  btnEdit.classList.add("form-disabled");
+  btnCancel.classList.remove("form-disabled");
+  btnSave.classList.remove("form-disabled");
+
   inputs.forEach((element) => {
-    removeDisable(element);
+    element.removeAttribute("disabled");
     element.classList.remove("disabled");
+  });
+});
+
+btnCancel.addEventListener("click", (ev) => {
+  ev.preventDefault();
+  btnEdit.classList.remove("form-disabled");
+  btnCancel.classList.add("form-disabled");
+  btnSave.classList.add("form-disabled");
+
+  inputs.forEach((element) => {
+    element.setAttribute("disabled", "disabled");
+    element.classList.add("disabled");
   });
 });

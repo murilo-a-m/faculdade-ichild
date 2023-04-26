@@ -1467,7 +1467,7 @@ body {
   justify-content: center;
 }
 
-.info__btn {
+.info__btn-edit {
   background-color: #3ab5df;
   border: none;
   border-radius: 8px;
@@ -1483,16 +1483,20 @@ body {
   transition: all 0.14s ease-out;
   white-space: nowrap;
 }
-.info__btn:hover {
+.info__btn-edit:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px, -4px);
 }
-.info__btn:focus-visible {
+.info__btn-edit:focus-visible {
   outline-offset: 1px;
 }
 
 .disabled {
   cursor: not-allowed;
+}
+
+.form-disabled {
+  display: none;
 }
 
 .container__header-app {
