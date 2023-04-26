@@ -20,7 +20,7 @@
     <!-- Favicon link -->
     <link
       rel="shortcut icon"
-      href="./img/favicon-ichild.png"
+      href="../img/favicon-ichild.png"
       type="image/x-icon"
     />
 
@@ -68,51 +68,61 @@
     </header>
 
     <main class="container__form container-fluid">
-      <form class="container__form-content row g-1 container-md gap-2">
+      <form
+        class="container__form-content row g-1 container-md gap-2"
+        id="form-dependent"
+      >
         <p class="col-md-8 container__form-text">Registrar dependente:</p>
-        <div class="col-md-8 mt-3">
-          <label for="inputPassword" class="form-label">Nome</label>
+
+        <div class="col-md-8 mt-2">
+          <label for="inputName" class="form-label">Nome</label>
           <input class="form-control" id="inputName" />
-          <span id="name-error"></span>
-        </div>
-        <div class="col-md-8 mt-3">
-          <label for="inputPassword" class="form-label">Sobrenome</label>
-          <input class="form-control" id="inputPassword" />
-          <span id="lastName-error"></span>
+          <span id="name-error" class="error"></span>
         </div>
 
-        <div class="col-md-8 mt-3">
-          <label for="inputPassword" class="form-label">Idade</label>
-          <input class="form-control" id="inputYersOld" />
-          <span id="yersOld-error"></span>
+        <div class="col-md-8 mt-2">
+          <label for="inputLastName" class="form-label">Sobrenome</label>
+          <input class="form-control" id="inputLastName" />
+          <span id="lastName-error" class="error"></span>
         </div>
-        <div class="col-md-8 mt-3">
-          <label for="formFile" class="form-label">Foto</label>
-          <input class="form-control" type="file" id="formFile" />
 
-          <span id="picture-error"></span>
+        <div class="col-md-8 mt-2">
+          <label for="inputBirth" class="form-label">Data de nascimento</label>
+          <input type="date" class="form-control" id="inputBirth" />
+          <span id="birth-error" class="error"></span>
         </div>
-        <div class="col-md-8 mt-3">
-          <label for="inputPassword" class="form-label">Documento</label>
+
+        <div class="col-md-8 mt-2">
+          <label for="inputDocument" class="form-label">Documento</label>
           <input class="form-control" id="inputDocument" />
-          <span id="document-error"></span>
+          <span id="document-error" class="error"></span>
         </div>
-        <div class="col-md-8 mt-3 mb-3">
-          <label for="inputState" class="form-label">Turno</label>
-          <select id="inputShift" class="form-select">
+
+        <div class="col-md-8 mt-2">
+          <label for="inputTurn" class="form-label">Turno</label>
+          <select id="inputTurn" class="form-select">
             <option selected>Escolher..</option>
             <option>Matutino</option>
             <option>Verpertino</option>
             <option>Noturno</option>
             <option>Integral</option>
           </select>
+          <span id="turn-error" class="error"></span>
         </div>
+
+        <div class="col-md-8 mt-2 mb-2">
+          <label for="inputTransport" class="form-label">Transporte</label>
+          <select id="inputTransport" class="form-select">
+            <option selected>Escolher..</option>
+            <option></option>
+          </select>
+          <span id="transport-error" class="error"></span>
+        </div>
+
         <button type="submit" class="col-md-6 form__btn-save">
           Salvar dependente
         </button>
-        <button type="submit" class="col-md-2 form__btn-cancel">
-          Cancelar
-        </button>
+        <button type="" class="col-md-2 form__btn-cancel">Cancelar</button>
       </form>
     </main>
 
@@ -120,7 +130,7 @@
     <script src="../JS/navbar-menu.js"></script>
 
     <!-- Script Regex -->
-    <script src="../js/register.js"></script>
+    <script src="../JS/registerDependent.js"></script>
 
     <!-- Script Bootstrap -->
     <script
