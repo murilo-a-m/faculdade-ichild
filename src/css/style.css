@@ -735,8 +735,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: auto;
   font-weight: 500;
+  height: 80vh;
+}
+.container__form .container__form-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .container__form .form__btn {
   background-color: #a31aca;
@@ -760,6 +766,22 @@ body {
 }
 .container__form .form__btn:focus-visible {
   outline-offset: 1px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.require {
+  font-size: 12px;
+  color: #7d7e8a;
+}
+
+@media (max-width: 768px) {
+  .container__form {
+    margin-bottom: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

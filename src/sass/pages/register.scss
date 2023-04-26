@@ -2,8 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: auto;
   font-weight: 500;
+  height: 80vh;
+
+  .container__form-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .form__btn {
     background-color: $purple;
@@ -32,6 +39,18 @@
   }
 }
 
-#password-error {
+.error {
   color: red;
+  font-size: 12px;
+}
+
+.require {
+  font-size: 12px;
+  color: $gray-text-color;
+}
+
+@media (max-width: 768px) {
+  .container__form {
+    margin-bottom: 20px;
+  }
 }
