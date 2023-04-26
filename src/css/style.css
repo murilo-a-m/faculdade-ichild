@@ -843,9 +843,6 @@ body {
   border-radius: 1%;
   box-shadow: 0.5px 0px 5px 0px #000;
 }
-.dependente :hover {
-  background-color: rgb(219, 219, 219);
-}
 
 .dependente .icon #userDependente {
   width: 3vw;
