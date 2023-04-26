@@ -1,6 +1,6 @@
 <!-- Css Links -->
-<link rel="stylesheet" href="../../css/style.css" />
-<link rel="stylesheet" href="../../css/reset.css" />
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/reset.css" />
 
 <header id="home" class="container__header">
   <div class="container__header-content container-fluid">
@@ -56,3 +56,6 @@
     </div>
   </div>
 </header>
+
+<!-- Script Navbar -->
+<script src="../utils/navbar.js"></script>
