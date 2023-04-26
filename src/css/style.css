@@ -757,6 +757,12 @@ body {
   justify-content: center;
   height: auto;
   font-weight: 500;
+  height: 80vh;
+}
+.container__form .container__form-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .container__form .form__btn {
   background-color: #a31aca;
@@ -797,6 +803,7 @@ body {
     margin-bottom: 20px;
   }
 }
+<<<<<<< HEAD
 .container__main-app {
   height: 92vh;
   display: flex;
@@ -1036,5 +1043,7 @@ body {
 .openNavbar {
   display: flex;
 }
+=======
+>>>>>>> b8342e73d3936fe8123ec1dc008ba0aeb9407aa1
 
 /*# sourceMappingURL=style.css.map */
