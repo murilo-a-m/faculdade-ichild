@@ -29,42 +29,77 @@
 
   <body>
     <?php require '../../components/headerMenu.php';?>
+            <?php
+
+          session_start();
+        
+          $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
+
+          if (!$conn) {
+            die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
+          }
+
+          mysqli_query($conn,"SET NAMES 'utf8'");
+          mysqli_query($conn,'SET character_set_connection=utf8');
+          mysqli_query($conn,'SET character_set_client=utf8');
+          mysqli_query($conn,'SET character_set_results=utf8');
+
+          $responsavelId = $_SESSION['id'];
+
+          $sql = "SELECT id, nome, sobrenome, cep, estado, cidade, rua, numero 
+                  FROM ichild.Responsaveis
+                  WHERE id =$responsavelId";
+
+          if ($result = mysqli_query($conn, $sql)) {
+            if (mysqli_num_rows($result) > 0) {
+              while ($row = mysqli_fetch_assoc($result)){
+                $nome = $row['nome'];
+                $sobrenome = $row['sobrenome'];
+                $cep = $row['cep'];
+                $estado = $row['estado'];
+                $cidade = $row['cidade'];
+                $rua = $row['rua'];
+                $numero = $row['numero'];
+              }
+            }
+          }   
+      ;?>
 
     <main class="container__main-reponsibleInfo">
     <form class="container__responsibleInfo-content row g-1 container-sm gap-1">
         <div class="col-md-7 mt-3">
           <label for="infoName" class="form-label">Nome</label>
-          <input type="text" class="form-control disabled" id="infoName" name="nome" disabled/>
+          <input type="text" value="<?php echo ($nome);?>" class="form-control disabled" id="infoName" name="nome" disabled/>
           <span id="name-error" class="error"></span>
         </div>
         <div class="col-md-7 mt-3">
           <label for="infoLastname" class="form-label">Sobrenome</label>
-          <input type="text" class="form-control disabled" id="infoLastname" name="sobrenome" required disabled/>
+          <input type="text" value="<?php echo ($sobrenome);?>" class="form-control disabled" id="infoLastname" name="sobrenome" required disabled/>
           <span id="lastname-error" class="error"></span>
         </div>
         <div class="col-md-7 mt-3">
           <label for="infoCep" class="form-label">CEP</label>
-          <input type="text" class="form-control disabled" id="infoCep" required name="cep" disabled />
+          <input type="text" value="<?php echo ($cep);?>" class="form-control disabled" id="infoCep" required name="cep" disabled />
           <span id="cep-error" class="error"></span>
         </div>
         <div class="col-md-7 mt-3">
           <label for="infoState" class="form-label">Estado</label>
-          <input type="text" class="form-control disabled" id="infoState"  name="estado" disabled/>
+          <input type="text" value="<?php echo ($estado);?>" class="form-control disabled" id="infoState"  name="estado" disabled/>
           <span id="state-error" class="error"></span>
         </div>
         <div class="col-md-7 mt-3">
           <label for="infoCity" class="form-label">Cidade</label>
-          <input type="text" class="form-control disabled" id="infoCity"  name="cidade" disabled/>
+          <input type="text" value="<?php echo ($cidade);?>" class="form-control disabled" id="infoCity"  name="cidade" disabled/>
           <span id="city-error" class="error"></span>
         </div>
         <div class="col-md-7 mt-3">
           <label for="infoStreet" class="form-label">Rua</label>
-          <input type="text" class="form-control disabled" id="infoStreet" required name="rua" disabled/>
+          <input type="text" value="<?php echo ($rua);?>" class="form-control disabled" id="infoStreet" required name="rua" disabled/>
           <span id="street-error" class="error"></span>
         </div>
         <div class="col-md-7 mt-3">
           <label for="infoNumber" class="form-label">Número</label>
-          <input type="text" class="form-control disabled" id="infoNumber" required name="numero" disabled/>
+          <input type="text" value="<?php echo ($numero);?>" class="form-control disabled" id="infoNumber" required name="numero" disabled/>
           <span id="number-error" class="error"></span>
         </div>
 
