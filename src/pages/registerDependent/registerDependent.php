@@ -42,9 +42,15 @@
       if (isset($_GET['erro'])){
         if ($_GET['erro'] == 'documentExists'){
           echo 
-          "<script>
-            Swal.fire('Documento já cadastrado!')
-          </script>";
+            "<script>
+              Swal.fire(
+                'ERRO!',
+                'Codumento já cadastrado!',
+                'error'
+              ).then(function() {
+                window.location = './registerDependent.php'
+              })
+            </script>";
         }
       }
     ;?>

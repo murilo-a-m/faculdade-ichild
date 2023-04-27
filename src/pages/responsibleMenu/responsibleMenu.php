@@ -24,11 +24,12 @@
       type="image/x-icon"
     />
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <title>iChild</title>
   </head>
 
   <body>
-
     <?php 
       session_start();
       if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
@@ -39,6 +40,22 @@
 
     <?php require '../../components/headerMenu.php';?>
 
+    <?php
+      if (isset($_GET['status'])){
+        if ($_GET['status'] == 'logged'){
+        echo 
+        "<script>
+          Swal.fire(
+            'Olá!',
+            'Seja bem-vindo!',
+            'success'
+          ).then(function() {
+            window.location = './responsibleMenu.php';
+        })
+        </script>";
+        }
+      }
+    ;?>
 
     <main class="container__main-app">
       <div class="main__app-content">

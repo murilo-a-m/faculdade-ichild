@@ -17,20 +17,17 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <?php
-      if (isset($_GET['status'])){
-        if ($_GET['status'] == 'sucess'){
-        echo 
-        "<script>
-           Swal.fire('Tudo pronto, conta cadastrada!')
-        </script>";
-        }
-      }
-
       if (isset($_GET['error'])){
         if ($_GET['error'] == 'loginError'){
         echo 
         "<script>
-           Swal.fire('Erro ao realizar o login!')
+          Swal.fire(
+            'Conta não cadastrada!',
+            'Tente novamente ou crie uma nova conta!',
+            'error'
+          ).then(function() {
+            window.location = './login.php'
+          })
         </script>";
         }
       }
