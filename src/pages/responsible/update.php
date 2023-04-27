@@ -92,6 +92,7 @@
 
     <main class="container__main-reponsibleInfo">
     <form class="container__responsibleInfo-content row g-1 container-sm gap-1" method="post" action="updateExe.php">
+        <p class="col-md-7 container__form-text">Suas informações:</p>
         <div class="col-md-7 mt-3">
           <label for="infoName" class="form-label">Nome</label>
           <input type="text" value="<?php echo ($nome);?>" class="form-control disabled" id="infoName" name="nome" disabled/>
