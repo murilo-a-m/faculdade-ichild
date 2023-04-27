@@ -23,50 +23,75 @@
       href="../../img/favicon-ichild.png"
       type="image/x-icon"
     />
-
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>iChild</title>
   </head>
 
   <body>
-    <?php require '../../components/headerMenu.php';?>
-            <?php
+    <?php 
+      session_start();
+      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
+        header('location: ../login/login.php?erro=true');
+        exit;
+      }
+    ;?>
 
-          session_start();
+    <?php 
+      if (isset($_GET['result'])){
         
-          $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
+        if ($_GET['result'] == 'success'){
+          echo 
+          "<script>
+              Swal.fire('Atualizado com sucesso!')
+          </script>";
+        }
 
-          if (!$conn) {
-            die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
+        if ($_GET['result'] == 'error'){
+          echo 
+          "<script>
+              Swal.fire('Erro ao atualizar!')
+          </script>";
+        }
+      }
+    ;?>
+
+    <?php require '../../components/headerMenu.php';?>
+
+    <?php 
+      $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
+
+      if (!$conn) {
+        die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
+      }
+
+      mysqli_query($conn,"SET NAMES 'utf8'");
+      mysqli_query($conn,'SET character_set_connection=utf8');
+      mysqli_query($conn,'SET character_set_client=utf8');
+      mysqli_query($conn,'SET character_set_results=utf8');
+
+      $responsavelId = $_SESSION['id'];
+
+      $sql = "SELECT id, nome, sobrenome, cep, estado, cidade, rua, numero 
+              FROM ichild.Responsaveis
+              WHERE id =$responsavelId";
+
+      if ($result = mysqli_query($conn, $sql)) {
+        if (mysqli_num_rows($result) > 0) {
+          while ($row = mysqli_fetch_assoc($result)){
+            $nome = $row['nome'];
+            $sobrenome = $row['sobrenome'];
+            $cep = $row['cep'];
+            $estado = $row['estado'];
+            $cidade = $row['cidade'];
+            $rua = $row['rua'];
+            $numero = $row['numero'];
           }
-
-          mysqli_query($conn,"SET NAMES 'utf8'");
-          mysqli_query($conn,'SET character_set_connection=utf8');
-          mysqli_query($conn,'SET character_set_client=utf8');
-          mysqli_query($conn,'SET character_set_results=utf8');
-
-          $responsavelId = $_SESSION['id'];
-
-          $sql = "SELECT id, nome, sobrenome, cep, estado, cidade, rua, numero 
-                  FROM ichild.Responsaveis
-                  WHERE id =$responsavelId";
-
-          if ($result = mysqli_query($conn, $sql)) {
-            if (mysqli_num_rows($result) > 0) {
-              while ($row = mysqli_fetch_assoc($result)){
-                $nome = $row['nome'];
-                $sobrenome = $row['sobrenome'];
-                $cep = $row['cep'];
-                $estado = $row['estado'];
-                $cidade = $row['cidade'];
-                $rua = $row['rua'];
-                $numero = $row['numero'];
-              }
-            }
-          }   
-      ;?>
+        }
+      }   
+    ;?>
 
     <main class="container__main-reponsibleInfo">
-    <form class="container__responsibleInfo-content row g-1 container-sm gap-1" method="post" action="">
+    <form class="container__responsibleInfo-content row g-1 container-sm gap-1" method="post" action="updateExe.php">
         <div class="col-md-7 mt-3">
           <label for="infoName" class="form-label">Nome</label>
           <input type="text" value="<?php echo ($nome);?>" class="form-control disabled" id="infoName" name="nome" disabled/>
@@ -119,7 +144,7 @@
     <script src="../../utils/navbar-menu.js"></script>
 
     <!-- Script Info -->
-    <script src="./responsibleInfo.js"></script>
+    <script src="./update.js"></script>
 
     <!-- Script Bootstrap -->
     <script
