@@ -751,6 +751,10 @@ body {
     height: 80vh;
   }
 }
+.swal2-container {
+  font-family: "Poppins", sans-serif;
+}
+
 .container__form {
   display: flex;
   align-items: center;
