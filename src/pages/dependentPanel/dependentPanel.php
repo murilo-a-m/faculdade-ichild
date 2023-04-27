@@ -61,7 +61,7 @@
         </div>
         <div class="dependente">
             <div class="icon">
-                <a href=""><img id="userDependente" src="../../img/usuario.png" alt=""></a>
+                
             </div>
             <div class="dados">
                 <h6 class="infoDados">Elvis</h6>

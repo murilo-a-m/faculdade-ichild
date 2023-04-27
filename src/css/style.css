@@ -892,7 +892,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 1%;
+  border-radius: 10px;
 }
 
 .box .titulos {
@@ -919,7 +919,6 @@ body {
   width: 93%;
   background-color: rgb(255, 255, 255);
   border-radius: 1%;
-  box-shadow: 0.5px 0px 5px 0px #000;
 }
 
 .dependente .icon #userDependente {
