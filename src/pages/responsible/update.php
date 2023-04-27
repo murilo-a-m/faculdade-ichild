@@ -42,8 +42,14 @@
         if ($_GET['result'] == 'success'){
           echo 
           "<script>
-              Swal.fire('Atualizado com sucesso!')
-          </script>";
+          Swal.fire(
+            'Atualizado!',
+            'Usuário editado com sucesso!',
+            'success'
+          ).then(function() {
+            window.location = './update.php'
+          })
+        </script>";
         }
 
         if ($_GET['result'] == 'error'){

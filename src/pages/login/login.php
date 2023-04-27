@@ -25,7 +25,9 @@
             'Conta não cadastrada!',
             'Tente novamente ou crie uma nova conta!',
             'error'
-          )
+          ).then(function() {
+            window.location = './login.php'
+          })
         </script>";
         }
       }
