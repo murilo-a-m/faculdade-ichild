@@ -79,7 +79,7 @@
               $_SESSION['email'] = $row['email'];
               $_SESSION['role'] = 'responsavel';
               
-              header('Location: ../responsibleMenu/responsibleMenu.php');
+              header('Location: ../responsibleMenu/responsibleMenu.php?status=logged');
 
             } else {
               header('location: ./login.php?error=loginError');
