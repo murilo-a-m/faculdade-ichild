@@ -1544,14 +1544,18 @@ body {
   transition: 0.3s all;
   width: 320px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  display: flex;
+  flex-direction: column;
 }
 #menu__bar .menu__bar-icon {
-  color: rgb(255, 255, 255);
+  align-self: flex-end;
+  margin: 5px;
+  border-radius: 10px;
+  color: white;
   cursor: pointer;
-  margin-left: 22px;
-  margin-top: 20px;
 }
 #menu__bar .menu__bar-icon:hover {
+  background-color: rgba(255, 255, 255, 0.466);
   color: black;
 }
 #menu__bar ul {
@@ -1611,6 +1615,90 @@ body {
   text-decoration: none;
 }
 .nav__profile ul li a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.aside__bar-profile {
+  display: none;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  right: 0;
+  position: fixed;
+}
+
+#profile__bar {
+  background-color: #3ab5df;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  transition: 0.3s all;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+#profile__bar svg {
+  align-self: flex-start;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#profile__bar svg:hover {
+  background-color: rgba(255, 255, 255, 0.466);
+  color: black;
+}
+#profile__bar .profile__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+#profile__bar .profile__info .profile__pic {
+  width: 130px;
+  border: 5px solid #ffffff;
+  border-radius: 100%;
+}
+#profile__bar .profile__info p {
+  font-size: 18px;
+}
+#profile__bar .profile__division {
+  background-color: rgba(255, 255, 255, 0.486);
+  width: 100%;
+  height: 2px;
+}
+#profile__bar .profile__options {
+  margin-bottom: 50px;
+}
+#profile__bar ul {
+  margin-top: 30px;
+  text-align: center;
+}
+#profile__bar ul li {
+  font-size: 16px;
+  list-style: none;
+  margin-top: 10px;
+}
+#profile__bar ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+}
+#profile__bar ul li a:hover {
+  color: rgb(0, 0, 0);
+}
+#profile__bar ul li button {
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  padding: 8px 30px;
+}
+#profile__bar ul li button a {
+  font-weight: bold;
+  color: #3ab5df;
+  text-decoration: none;
+}
+#profile__bar ul li button a:hover {
   color: rgb(0, 0, 0);
 }
 
