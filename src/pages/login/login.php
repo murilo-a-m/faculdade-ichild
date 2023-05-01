@@ -13,8 +13,6 @@
   </head>
   <body>
     <?php require '../../components/header.php';?>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <?php
       if (isset($_GET['error'])){
@@ -54,5 +52,6 @@
       </div>
     </div>
     <script>"/src/JS/navbar.js"</script>  
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
