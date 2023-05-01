@@ -1705,7 +1705,8 @@
 }
 
 @media (max-width: 425px) {
-  #menu__bar {
+  #menu__bar,
+  #profile__bar {
     width: 100vw;
   }
 }
