@@ -1527,17 +1527,17 @@
 }
 
 .aside__bar {
-  display: none;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   left: 0;
   position: fixed;
+  transform: translateX(-1000px);
+  transition: transform 0.3s ease-in-out;
 }
 
 #menu__bar {
   background-color: #3ab5df;
   height: 100vh;
-  transition: 0.3s all;
   width: 320px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   display: flex;
@@ -1558,6 +1558,7 @@
   margin-left: 33px;
   margin-top: 1rem;
   padding-left: 0;
+  list-style: none;
 }
 #menu__bar ul li {
   font-size: 18px;
@@ -1615,12 +1616,13 @@
 }
 
 .aside__bar-profile {
-  display: none;
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   right: 0;
   position: fixed;
+  transform: translateX(1000px);
+  transition: transform 0.3s ease-in-out;
 }
 
 #profile__bar {
@@ -1629,7 +1631,6 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  transition: 0.3s all;
   width: 400px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
@@ -1699,7 +1700,14 @@
 }
 
 .openNavbar {
-  display: flex;
+  transform: translateX(0);
+  transition: 0.3s all;
+}
+
+@media (max-width: 425px) {
+  #menu__bar {
+    width: 100vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
