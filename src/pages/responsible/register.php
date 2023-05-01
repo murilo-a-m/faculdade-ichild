@@ -61,33 +61,35 @@
           />
           <span id="email-error" class="error"></span>
         </div>
-        <div class="col-md-6 mt-3">
-          <label for="inputPassword" class="form-label">Senha</label>
-          <input
-            type="password"
-            class="form-control"
-            id="inputPassword"
-            required
-            name="password"
-          />
-          <span id="password-error" class="error"></span>
-          <div class="require">
-            A senha deve conter letras maiscúlas, letras minúsculas, números e
-            caracteres especiais.
+        <div class="col-md-12 mt-3 d-flex gap-1">
+          <div class="col-md-6">
+            <label for="inputPassword" class="form-label">Senha</label>
+            <input
+              type="password"
+              class="form-control"
+              id="inputPassword"
+              required
+              name="password"
+            />
+            <span id="password-error" class="error"></span>
+            <div class="require">
+              A senha deve conter letras maiscúlas, letras minúsculas, números e
+              caracteres especiais.
+            </div>
           </div>
-        </div>
-        <div class="col-md-6 mt-3">
-          <label for="inputConfirmPassword" class="form-label"
-            >Confirmar senha</label
-          >
-          <input
-            type="password"
-            class="form-control"
-            id="inputConfirmPassword"
-            required
-            name="password2"
-          />
-          <span id="confirmPassword-error" class="error"></span>
+          <div class="col-md-6">
+            <label for="inputConfirmPassword" class="form-label"
+              >Confirmar senha</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="inputConfirmPassword"
+              required
+              name="password2"
+            />
+            <span id="confirmPassword-error" class="error"></span>
+          </div>
         </div>
         <div class="col-md-6 mt-3">
           <label for="inputCep" class="form-label">CEP</label>
