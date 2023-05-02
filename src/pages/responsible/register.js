@@ -55,21 +55,7 @@ function validateNumber(number) {
   }
 }
 
-const form = document.querySelector(".container__form-content");
-
-const email = document.querySelector("#inputEmail");
-const password = document.querySelector("#inputPassword");
-const confirmPassword = document.querySelector("#inputConfirmPassword");
-const street = document.querySelector("#inputStreet");
-const number = document.querySelector("#inputNumber");
-
-form.addEventListener("submit", (ev) => {
-  ev.preventDefault();
-
-  validateEmail(email);
-  validatePassword(password, confirmPassword);
-  validateStreet(street);
-  validateNumber(number);
+function createResponsible() {
   jQuery.ajax({
     url: "registerExe.php",
     type: "POST",
@@ -93,4 +79,21 @@ form.addEventListener("submit", (ev) => {
       );
     },
   });
+}
+
+const form = document.querySelector(".container__form-content");
+const email = document.querySelector("#inputEmail");
+const password = document.querySelector("#inputPassword");
+const confirmPassword = document.querySelector("#inputConfirmPassword");
+const street = document.querySelector("#inputStreet");
+const number = document.querySelector("#inputNumber");
+
+form.addEventListener("submit", (ev) => {
+  ev.preventDefault();
+
+  validateEmail(email);
+  validatePassword(password, confirmPassword);
+  validateStreet(street);
+  validateNumber(number);
+  createResponsible();
 });
