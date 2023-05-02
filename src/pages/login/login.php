@@ -38,7 +38,7 @@
             <div class="inputCadastro">
               <img id="iconichild" src="../../img/about-logo.png" alt="">
 
-              <form method="post" action="loginExe.php" >
+              <form>
                 <div class="inputbox">
                   <input type="text" required="required" name="email">
                   <span>Email</span>

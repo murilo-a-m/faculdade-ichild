@@ -71,7 +71,6 @@ function createResponsible() {
       });
     },
     error: function (resp) {
-      console.log(resp);
       Swal.fire(
         "Conta não cadastrada!",
         "Tente novamente ou crie uma nova conta!",
