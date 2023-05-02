@@ -27,28 +27,10 @@
 </aside>
 
 <?php 
-      $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
-
-      mysqli_query($conn,"SET NAMES 'utf8'");
-      mysqli_query($conn,'SET character_set_connection=utf8');
-      mysqli_query($conn,'SET character_set_client=utf8');
-      mysqli_query($conn,'SET character_set_results=utf8');
-
-      $responsavelId = $_SESSION['id'];
-
-      $sql = "SELECT id, nome, sobrenome
-              FROM ichild.Responsaveis
-              WHERE id =$responsavelId";
-
-      if ($result = mysqli_query($conn, $sql)) {
-        if (mysqli_num_rows($result) > 0) {
-          while ($row = mysqli_fetch_assoc($result)){
-            $nome = $row['nome'];
-            $sobrenome = $row['sobrenome'];
-          }
-        }
-      }   
-    ;?>
+  $responsavelId = $_SESSION['id'];
+  $nome = $_SESSION['nome'];
+  $sobrenome = $_SESSION['sobrenome'];
+?>
 
 <aside class="aside__bar-profile">
   <div id="profile__bar">
