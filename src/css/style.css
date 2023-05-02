@@ -90,15 +90,14 @@
     justify-content: space-between;
   }
   .header__nav {
-    display: none;
-    position: absolute;
-    top: 10%;
+    position: fixed;
+    top: 10vh;
     right: 0;
     width: 210px;
-    height: 23vh;
+    height: 90vh;
     background-color: rgba(164, 26, 202, 0.8705882353);
-    border-bottom-left-radius: 10px;
-    transition: all 0.5s ease;
+    transform: translateX(1000px);
+    transition: transform 0.3s ease-in-out;
   }
   .header__nav ul {
     align-items: flex-start;
@@ -122,7 +121,7 @@
     display: block;
   }
   .header__nav.open {
-    display: block;
+    transform: translateX(0px);
   }
 }
 .container__footer {
