@@ -383,24 +383,15 @@
 .main__services .services__item-container:nth-child(3) .services__item {
   flex-direction: row-reverse;
 }
-.main__services
-  .services__item-container:nth-child(3)
-  .services__item
-  .services__item-title {
+.main__services .services__item-container:nth-child(3) .services__item .services__item-title {
   text-align: end;
 }
-.main__services
-  .services__item-container:nth-child(3)
-  .services__item
-  .services__item-text {
+.main__services .services__item-container:nth-child(3) .services__item .services__item-text {
   align-items: flex-end;
   display: flex;
   flex-direction: column;
 }
-.main__services
-  .services__item-container:nth-child(3)
-  .services__item
-  .services__item-paragraph {
+.main__services .services__item-container:nth-child(3) .services__item .services__item-paragraph {
   text-align: end;
 }
 
@@ -485,18 +476,12 @@
   .main__services .services__item-container:nth-child(3) .services__item {
     flex-direction: row-reverse;
   }
-  .main__services
-    .services__item-container:nth-child(3)
-    .services__item
-    .services__item-text {
+  .main__services .services__item-container:nth-child(3) .services__item .services__item-text {
     align-items: flex-end;
     display: flex;
     flex-direction: column;
   }
-  .main__services
-    .services__item-container:nth-child(3)
-    .services__item
-    .services__item-paragraph {
+  .main__services .services__item-container:nth-child(3) .services__item .services__item-paragraph {
     text-align: end;
   }
 }
@@ -549,28 +534,20 @@
   .main__services .services__item-container:nth-child(3) .services__item {
     flex-direction: column;
   }
-  .main__services
-    .services__item-container:nth-child(3)
-    .services__item
-    .services__item-text,
-  .main__services
-    .services__item-container:nth-child(3)
-    .services__item
-    .services__item-paragraph,
-  .main__services
-    .services__item-container:nth-child(3)
-    .services__item
-    .services__item-link {
+  .main__services .services__item-container:nth-child(3) .services__item .services__item-text,
+  .main__services .services__item-container:nth-child(3) .services__item .services__item-paragraph,
+  .main__services .services__item-container:nth-child(3) .services__item .services__item-link {
     align-items: center;
     text-align: center;
   }
 }
 @media (max-width: 425px) {
-  .main__services
-    .services__item-container:nth-child(3)
-    .services__item
-    .services__item-title {
+  .main__services .services__item-container:nth-child(3) .services__item .services__item-title {
     text-align: center;
+  }
+  .main__about .about__text-title {
+    color: white;
+    font-size: 1.5rem;
   }
   .main__banner .main__banner-box {
     display: flex;
@@ -581,8 +558,7 @@
     text-align: center;
     width: auto;
     color: rgb(255, 255, 255);
-    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.452),
-      0 6px 6px rgba(0, 0, 0, 0.493);
+    text-shadow: 0 10px 20px rgba(0, 0, 0, 0.452), 0 6px 6px rgba(0, 0, 0, 0.493);
   }
   .main__banner .main__banner-box .main__banner-text .banner__paragraph {
     font-weight: 600;
@@ -657,25 +633,10 @@
   color: rgb(80, 80, 80);
   transition: 0.5s ease-in-out;
 }
-.fundo
-  .box
-  .inputCadastro
-  .single-input:focus
-  .fundo
-  .box
-  .inputCadastro
-  .single-input:valid {
+.fundo .box .inputCadastro .single-input:focus .fundo .box .inputCadastro .single-input:valid {
   border-bottom: 2px solid cornflowerblue;
 }
-.fundo
-  .box
-  .inputCadastro
-  .single-input:focus
-  .fundo
-  .box
-  .inputCadastro
-  .single-input:valid
-  ~ label {
+.fundo .box .inputCadastro .single-input:focus .fundo .box .inputCadastro .single-input:valid ~ label {
   transform: translateY(-24px);
   font-size: 12px;
   color: cornflowerblue;
@@ -714,13 +675,7 @@
   outline: none;
 }
 .fundo .box .inputCadastro .bn632-hover.bn20 {
-  background-image: linear-gradient(
-    to right,
-    #667eea,
-    #764ba2,
-    #6b8dd6,
-    #8e37d7
-  );
+  background-image: linear-gradient(to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
   box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
   margin-left: 4rem;
 }
@@ -764,13 +719,13 @@
   transform: translateX(-13px) translateY(-35px);
   font-size: 1em;
 }
-.inputbox [type="button"] {
+.inputbox [type=button] {
   width: 50%;
   background: dodgerblue;
   color: #fff;
   border: #fff;
 }
-.inputbox:hover [type="button"] {
+.inputbox:hover [type=button] {
   background: linear-gradient(45deg, greenyellow, dodgerblue);
 }
 
@@ -933,7 +888,7 @@
 }
 
 .box {
-  background-color: #eef3ff;
+  background-color: #EEF3FF;
   height: 45vw;
   width: auto;
   margin: 0 50px;
