@@ -5,7 +5,7 @@
 <header id="home" class="container__header">
   <div class="container__header-content container-fluid">
     <div class="header__logo">
-      <a href="">
+      <a href="/ichild/src/pages/home">
         <img
           src="../../img/logo-ichild.png"
           alt="Logo do iChild"
