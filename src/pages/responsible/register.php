@@ -32,10 +32,11 @@
     <!-- AOS link -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
     <title>iChild</title>
   </head>
   <body>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+    
     <?php require '../../components/header.php';?>
 
     <main class="container__form container-fluid">
@@ -130,7 +131,7 @@
     <script src="./register.js"></script>
 
     <!-- Script CEP -->
-    <!-- <script src="../../utils/cep.js"></script> -->
+    <script src="../../utils/cep.js"></script>
 
     <!-- Script Bootstrap -->
     <script
