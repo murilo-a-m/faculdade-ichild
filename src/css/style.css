@@ -1617,8 +1617,8 @@ body {
   display: flex;
 }
 
-.box .dependente .icon img {
-  height: 20px;
+.box .dependente .icon #doneImg {
+  height: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

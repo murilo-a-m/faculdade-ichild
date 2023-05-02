@@ -61,7 +61,7 @@
         </div>
         <div class="dependente">
             <div class="icon">
-                <img src="../../img/marcacaoDone.png" alt="">
+                <img id="doneImg" src="../../img/marcacaoDone.png" alt="">
             </div>
             <div class="dados">
                 <h6 class="infoDados">13:55</h6>
