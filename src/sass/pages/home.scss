@@ -446,6 +446,13 @@
 }
 
 @media (max-width: 425px) {
+  .main__services
+    .services__item-container:nth-child(3)
+    .services__item
+    .services__item-title {
+    text-align: center;
+  }
+
   .main__banner {
     .main__banner-box {
       display: flex;
