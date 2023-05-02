@@ -66,10 +66,32 @@ const number = document.querySelector("#inputNumber");
 form.addEventListener("submit", (ev) => {
   ev.preventDefault();
 
-  console.log("oi");
 
   validateEmail(email);
   validatePassword(password, confirmPassword);
   validateStreet(street);
   validateNumber(number);
+  jQuery.ajax({
+    url: 'registerExe.php',
+    type : "POST", 
+    dataType : 'json', 
+    data : $("#form").serialize(), 
+    success : function(result) {
+      Swal.fire(
+        'Conta cadastrada!',
+        'Conta criada com sucesso',
+        'success'
+      ).then(function() {
+        window.location = '../login/login.php'
+      })
+    },
+    error: function(xhr, resp, text) {~
+      Swal.fire(
+        'Conta não cadastrada!',
+        'Tente novamente ou crie uma nova conta!',
+        'error'
+      )
+    }
+})
 });
+
