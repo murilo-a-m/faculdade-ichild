@@ -1348,9 +1348,6 @@
   .card__container .card__notifications-content .notifications__text {
     font-size: 12px;
   }
-  .card__dependents-content {
-    justify-content: flex-start;
-  }
   .card__dependents-content .dependent__img {
     width: 50px;
     height: 50px;
@@ -1423,6 +1420,9 @@
   }
 }
 @media (max-width: 425px) {
+  .card__dependents-content {
+    justify-content: flex-start;
+  }
   .card__dependents-content .dependent__info:nth-child(4),
   .card__dependents-content .dependent__info:nth-child(3) {
     display: none;
