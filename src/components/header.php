@@ -1,6 +1,6 @@
 <!-- Css Links -->
-<link rel="stylesheet" href="../css/style.css" />
-<link rel="stylesheet" href="../css/reset.css" />
+<link rel="stylesheet" href="/src/css/style.css"/>
+<link rel="stylesheet" href="/src/css/reset.css"/>
 
 <header id="home" class="container__header">
   <div class="container__header-content container-fluid">

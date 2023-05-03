@@ -6,45 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../css/reset.css" />
     <link rel="stylesheet" href="../../css/style.css" />
-    <link rel="shortcut icon" href="../../img/favicon-ichild.png" type="image/x-icon"
-    
-    />
+    <link rel="shortcut icon" href="../../img/favicon-ichild.png" type="image/x-icon"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
     <title>Login</title>
   </head>
   <body>
     <?php require '../../components/header.php';?>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
-    <?php
-      if (isset($_GET['error'])){
-        if ($_GET['error'] == 'loginError'){
-        echo 
-        "<script>
-          Swal.fire(
-            'Conta não cadastrada!',
-            'Tente novamente ou crie uma nova conta!',
-            'error'
-          ).then(function() {
-            window.location = './login.php'
-          })
-        </script>";
-        }
-      }
-    ;?>
-
     <div class="fundo">
         <div class="box">
             <div class="inputCadastro">
               <img id="iconichild" src="../../img/about-logo.png" alt="">
-
-              <form>
+              <form id="form">
                 <div class="inputbox">
-                  <input type="text" required="required" name="email">
+                  <input id="email" type="text" name="email">
                   <span>Email</span>
                 </div>
                 <div class="inputbox">
-                  <input type="password" required="required" name="senha">
+                  <input id="password" type="password" name="senha">
                   <span>Password</span>                      
                 </div>
                 <button type="submit" class="bn632-hover bn20">Bem-Vindo</button>
@@ -54,5 +33,6 @@
       </div>
     </div>
     <script>"/src/JS/navbar.js"</script>  
+    <script src="./login.js"></script>
 </body>
 </html>

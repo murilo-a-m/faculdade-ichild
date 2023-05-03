@@ -1,12 +1,7 @@
-function login() {
-  if ($("#email").val() == "") {
-    Swal.fire("Preencha o campo email!");
-    return false;
-  }
-
-  if ($("#senha").val() == "") {
-    Swal.fire("Preencha o campo senha!");
-    return false;
+function login(email, password) {
+  if (email == "" || password == "") {
+    Swal.fire("Login não efetuado!", "Preencha todos os campos!", "error");
+    return;
   }
 
   jQuery.ajax({
@@ -20,11 +15,10 @@ function login() {
         "Login realizado com sucesso",
         "success"
       ).then(function () {
-        window.location = "../home/home.php";
+        window.location.href = "../responsibleMenu/responsibleMenu.php";
       });
     },
     error: function (resp) {
-      console.log(resp);
       Swal.fire(
         "Login não efetuado!",
         "Tente novamente ou crie uma nova conta!",
@@ -33,4 +27,12 @@ function login() {
     },
   });
 }
-f;
+
+const formContent = document.querySelector("#form");
+const email = document.querySelector("#email");
+const name = document.querySelector("#password");
+
+formContent.addEventListener("submit", (ev) => {
+  ev.preventDefault();
+  login(email.value, password.value);
+});
