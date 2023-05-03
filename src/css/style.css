@@ -570,6 +570,13 @@
     font-size: 16px;
   }
 }
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .fundo {
   display: flex;
   justify-content: center;
@@ -652,7 +659,7 @@
   font-weight: 600;
   color: #fff;
   cursor: pointer;
-  margin: 20px;
+  margin-bottom: 20px;
   height: 55px;
   text-align: center;
   border: none;
@@ -676,7 +683,6 @@
 .fundo .box .inputCadastro .bn632-hover.bn20 {
   background-image: linear-gradient(to right, #667eea, #764ba2, #6b8dd6, #8e37d7);
   box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
-  margin-left: 4rem;
 }
 
 .fundo .box .inputCadastro #iconichild {
@@ -745,6 +751,22 @@
   .fundo .box {
     height: 80vh;
     width: 80vw;
+  }
+  .inputbox {
+    position: relative;
+    width: 90%;
+    height: 50px;
+    margin-bottom: 50px;
+  }
+  .fundo .box .inputCadastro #iconichild {
+    width: 80%;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+  #email, #password {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    height: 40px;
   }
 }
 @media (max-width: 375px) {
