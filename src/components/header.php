@@ -1,6 +1,6 @@
 <!-- Css Links -->
-<link rel="stylesheet" href="../css/style.css" />
-<link rel="stylesheet" href="../css/reset.css" />
+<link rel="stylesheet" href="/src/css/style.css"/>
+<link rel="stylesheet" href="/src/css/reset.css"/>
 
 <header id="home" class="container__header">
   <div class="container__header-content container-fluid">
@@ -16,10 +16,10 @@
     </div>
     <div class="header__nav">
       <ul class="navbar">
-        <li><a href="../index.html#home" class="active">Home</a></li>
-        <li><a href="../index.html#about">Quem somos</a></li>
-        <li><a href="../index.html#services">Serviços</a></li>
-        <li><a href="../index.html#contact">Contato</a></li>
+        <li><a href="../pages/home/home.php#home" class="active">Home</a></li>
+        <li><a href="../pages/home/home.php">Quem somos</a></li>
+        <li><a href="../pages/home/home.php">Serviços</a></li>
+        <li><a href="../pages/home/home.php">Contato</a></li>
       </ul>
     </div>
     <div class="header__button">

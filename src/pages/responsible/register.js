@@ -55,8 +55,32 @@ function validateNumber(number) {
   }
 }
 
-const form = document.querySelector(".container__form-content");
+function createResponsible() {
+  jQuery.ajax({
+    url: "registerExe.php",
+    type: "POST",
+    dataType: "json",
+    data: $("#form").serialize(),
+    success: function (result) {
+      Swal.fire(
+        "Conta cadastrada!",
+        "Conta criada com sucesso",
+        "success"
+      ).then(function () {
+        window.location = "../login/login.php";
+      });
+    },
+    error: function (resp) {
+      Swal.fire(
+        "Conta não cadastrada!",
+        "Tente novamente ou crie uma nova conta!",
+        "error"
+      );
+    },
+  });
+}
 
+const form = document.querySelector(".container__form-content");
 const email = document.querySelector("#inputEmail");
 const password = document.querySelector("#inputPassword");
 const confirmPassword = document.querySelector("#inputConfirmPassword");
@@ -66,10 +90,9 @@ const number = document.querySelector("#inputNumber");
 form.addEventListener("submit", (ev) => {
   ev.preventDefault();
 
-  console.log("oi");
-
   validateEmail(email);
   validatePassword(password, confirmPassword);
   validateStreet(street);
   validateNumber(number);
+  createResponsible();
 });

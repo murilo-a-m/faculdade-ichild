@@ -8,7 +8,8 @@ CREATE TABLE Responsaveis (
     estado VARCHAR(50) NOT NULL,
     cidade VARCHAR(255) NOT NULL,
     rua VARCHAR(255) NOT NULL,
-    numero VARCHAR(255) NOT NULL
+    numero VARCHAR(255) NOT NULL,
+    imagem BLOB
 );
 
 CREATE TABLE Transportadores (

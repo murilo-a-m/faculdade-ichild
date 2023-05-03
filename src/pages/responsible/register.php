@@ -31,14 +31,16 @@
 
     <!-- AOS link -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
     <title>iChild</title>
   </head>
-  <body>  
+  <body>
+    
     <?php require '../../components/header.php';?>
 
     <main class="container__form container-fluid">
-      <form class="container__form-content row g-1 container-md" method="post" action="registerExe.php">
+      <form id="form" class="container__form-content row g-1 container-md">
         <div class="col-md-6 mt-3">
           <label for="inputName" class="form-label">Nome</label>
           <input type="text" class="form-control" id="inputName" name="nome" required />
@@ -126,10 +128,10 @@
     <script src="../../utils/navbar.js"></script>
 
     <!-- Script Regex -->
-    <script src="./js/register.js"></script>
+    <script src="./register.js"></script>
 
     <!-- Script CEP -->
-    <!-- <script src="../../utils/cep.js"></script> -->
+    <script src="../../utils/cep.js"></script>
 
     <!-- Script Bootstrap -->
     <script
@@ -143,5 +145,6 @@
     <script>
       AOS.init();
     </script>
+    
   </body>
 </html>
