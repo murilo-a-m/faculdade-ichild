@@ -762,6 +762,7 @@
     width: 80%;
     margin-bottom: 2rem;
     margin-left: 0;
+    align-self: center;
   }
   #email, #password {
     font-family: "Montserrat", sans-serif;
