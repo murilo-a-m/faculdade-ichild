@@ -39,6 +39,11 @@
   }
 }
 
+.passwordContent {
+  display: flex;
+  gap: 0.25rem;
+}
+
 .error {
   color: red;
   font-size: 12px;
@@ -52,5 +57,13 @@
 @media (max-width: 768px) {
   .container__form {
     margin-bottom: 20px;
+  }
+
+  .passwordContent {
+    flex-direction: column;
+  }
+
+  .require {
+    font-size: 10px;
   }
 }
