@@ -39,7 +39,7 @@
 
     <main class="container__main-reponsibleInfo">
     <form class="container__responsibleInfo-content row g-1 container-sm gap-1" method="post" action="">
-        <p class="col-md-7 container__form-text">Suas informações:</p>
+        <p class="col-md-7 container__form-text">Informações do dependente:</p>
 
         <div class="col-md-7 mt-3">
           <label for="infoNameDependent" class="form-label">Nome</label>
@@ -49,7 +49,7 @@
 
         <div class="col-md-7 mt-3">
           <label for="infoLastnameDependent" class="form-label">Sobrenome</label>
-          <input type="text" value="" class="form-control disabled" id="infoLastname" name="sobrenomeDependente" required disabled/>
+          <input type="text" value="" class="form-control disabled" id="infoLastnameDependent" name="sobrenomeDependente" required disabled/>
           <span id="lastname-error" class="error"></span>
         </div>
 
