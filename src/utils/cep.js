@@ -15,6 +15,11 @@ function findCep() {
         let address = JSON.parse(request.response);
         document.querySelector("#inputState").value = address.state;
         document.querySelector("#inputCity").value = address.city;
+        if (address.street === undefined) {
+          document.querySelector("#inputStreet").value = "";
+        } else {
+          document.querySelector("#inputStreet").value = address.street;
+        }
       } else if (request.status === 404) {
         cepError.textContent = "CEP inválido";
       } else {

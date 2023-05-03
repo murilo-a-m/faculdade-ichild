@@ -93,15 +93,17 @@
             <span id="confirmPassword-error" class="error"></span>
           </div>
         </div>
-        <div class="col-md-6 mt-3">
-          <label for="inputCep" class="form-label">CEP</label>
-          <input type="text" class="form-control" id="inputCep" required name="cep"  />
-          <span id="cep-error" class="error"></span>
-        </div>
-        <div class="col-md-6 mt-3">
-          <label for="inputState" class="form-label">Estado</label>
-          <input type="text" class="form-control" id="inputState"  name="estado" />
-          <span id="state-error" class="error"></span>
+        <div class="col-md-12 mt-3 d-flex gap-1">
+          <div class="col-md-6">
+            <label for="inputCep" class="form-label">CEP</label>
+            <input type="text" class="form-control" id="inputCep" required name="cep"  />
+            <span id="cep-error" class="error"></span>
+          </div>
+          <div class="col-md-6">
+            <label for="inputState" class="form-label">Estado</label>
+            <input type="text" class="form-control" id="inputState"  name="estado" />
+            <span id="state-error" class="error"></span>
+          </div>
         </div>
         <div class="row g-2 col-12 mt-3">
           <div class="col-md-12 mt-3">
