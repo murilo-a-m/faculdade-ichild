@@ -78,15 +78,12 @@
         </div>
 
         <div class="col-md-7 mt-3">
-          <label for="infoStreet" class="form-label">Rua</label>
-          <input type="text" value="" class="form-control disabled" id="infoStreet" required name="rua" disabled/>
+          <label for="infoStreet" class="form-label">Transporte</label>
+          <select value="" class="form-control disabled" id="infoStreet" required name="rua" disabled>
+            <option selected>Escolher..</option>
+            <option></option>
+          </select>
           <span id="street-error" class="error"></span>
-        </div>
-
-        <div class="col-md-7 mt-3">
-          <label for="infoNumber" class="form-label">Número</label>
-          <input type="text" value="" class="form-control disabled" id="infoNumber" required name="numero" disabled/>
-          <span id="number-error" class="error"></span>
         </div>
 
         <button id="btnEdit" class="col-md-7 info__btn-edit mt-3">
