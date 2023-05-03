@@ -1,10 +1,10 @@
-.container__form {
+.container__form-register {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: auto;
+  height: 90vh;
   font-weight: 500;
-  height: 80vh;
+  background-color: aliceblue;
 
   .container__form-content {
     display: flex;
@@ -39,6 +39,11 @@
   }
 }
 
+.passwordContent {
+  display: flex;
+  gap: 0.25rem;
+}
+
 .error {
   color: red;
   font-size: 12px;
@@ -50,7 +55,19 @@
 }
 
 @media (max-width: 768px) {
+  .container__form-register {
+    height: auto;
+  }
+
   .container__form {
     margin-bottom: 20px;
+  }
+
+  .passwordContent {
+    flex-direction: column;
+  }
+
+  .require {
+    font-size: 10px;
   }
 }

@@ -39,19 +39,24 @@
     
     <?php require '../../components/header.php';?>
 
-    <main class="container__form container-fluid">
-      <form id="form" class="container__form-content row g-1 container-md">
-        <div class="col-md-6 mt-3">
-          <label for="inputName" class="form-label">Nome</label>
-          <input type="text" class="form-control" id="inputName" name="nome" required />
-          <span id="name-error" class="error"></span>
+    <main class="container__form-register container-fluid">
+      <form id="form" class="container__form-content row g-1 container-md mt-3">
+
+        <div class="col-md-10 passwordContent">
+          <div class="col-md-6">
+            <label for="inputName" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="inputName" name="nome" required />
+            <span id="name-error" class="error"></span>
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputLastname" class="form-label">Sobrenome</label>
+            <input type="text" class="form-control" id="inputLastname" name="sobrenome" required />
+            <span id="lastname-error" class="error"></span>
+          </div>
         </div>
-        <div class="col-md-6 mt-3">
-          <label for="inputLastname" class="form-label">Sobrenome</label>
-          <input type="text" class="form-control" id="inputLastname" name="sobrenome" required />
-          <span id="lastname-error" class="error"></span>
-        </div>
-        <div>
+
+        <div class="col-md-10">
           <label for="inputEmail" class="form-label mt-3">Email</label>
           <input
             type="email"
@@ -63,7 +68,8 @@
           />
           <span id="email-error" class="error"></span>
         </div>
-        <div class="col-md-12 mt-3 d-flex gap-1">
+
+        <div class="col-md-10 passwordContent mt-3">
           <div class="col-md-6">
             <label for="inputPassword" class="form-label">Senha</label>
             <input
@@ -74,11 +80,12 @@
               name="password"
             />
             <span id="password-error" class="error"></span>
-            <div class="require">
+            <p class="require">
               A senha deve conter letras maiscúlas, letras minúsculas, números e
               caracteres especiais.
-            </div>
+            </p>
           </div>
+
           <div class="col-md-6">
             <label for="inputConfirmPassword" class="form-label"
               >Confirmar senha</label
@@ -93,36 +100,40 @@
             <span id="confirmPassword-error" class="error"></span>
           </div>
         </div>
-        <div class="col-md-12 mt-3 d-flex gap-1">
-          <div class="col-md-6">
+
+        <div class="col-md-10 passwordContent">
+          <div class="col-md-6 mt-3">
             <label for="inputCep" class="form-label">CEP</label>
             <input type="text" class="form-control" id="inputCep" required name="cep"  />
             <span id="cep-error" class="error"></span>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 mt-3">
             <label for="inputState" class="form-label">Estado</label>
             <input type="text" class="form-control" id="inputState"  name="estado" />
             <span id="state-error" class="error"></span>
           </div>
         </div>
-        <div class="row g-2 col-12 mt-3">
-          <div class="col-md-12 mt-3">
-            <label for="inputCity" class="form-label">Cidade</label>
-            <input type="text" class="form-control" id="inputCity"  name="cidade" />
-            <span id="city-error" class="error"></span>
+
+        <div class="col-md-10 mt-3">
+          <label for="inputCity" class="form-label">Cidade</label>
+          <input type="text" class="form-control" id="inputCity"  name="cidade" />
+          <span id="city-error" class="error"></span>
+        </div>
+
+        <div class="col-md-10 passwordContent">
+          <div class="col-md-6 mt-3">
+            <label for="inputStreet" class="form-label">Rua</label>
+            <input type="text" class="form-control" id="inputStreet" required name="rua" />
+            <span id="street-error" class="error"></span>
+          </div>
+          <div class="col-md-6 mt-3">
+            <label for="inputNumber" class="form-label">Número</label>
+            <input type="text" class="form-control" id="inputNumber" required name="numero" />
+            <span id="number-error" class="error"></span>
           </div>
         </div>
-        <div class="col-md-6 mt-3">
-          <label for="inputStreet" class="form-label">Rua</label>
-          <input type="text" class="form-control" id="inputStreet" required name="rua" />
-          <span id="street-error" class="error"></span>
-        </div>
-        <div class="col-md-6 mt-3">
-          <label for="inputNumber" class="form-label">Número</label>
-          <input type="text" class="form-control" id="inputNumber" required name="numero" />
-          <span id="number-error" class="error"></span>
-        </div>
-        <button type="submit" class="col-md-12 form__btn mt-3">
+
+        <button type="submit" class="col-md-10 form__btn mt-3">
           Criar conta
         </button>
       </form>

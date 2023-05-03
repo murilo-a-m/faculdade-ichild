@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <script>"/src/JS/navbar.js"</script>  
+    <script src="../../utils/navbar.js"></script>
     <script src="./login.js"></script>
 </body>
 </html>
