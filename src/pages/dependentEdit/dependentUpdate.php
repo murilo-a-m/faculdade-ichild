@@ -78,8 +78,8 @@
         </div>
 
         <div class="col-md-7 mt-3">
-          <label for="infoStreet" class="form-label">Transporte</label>
-          <select value="" class="form-control disabled" id="infoStreet" required name="rua" disabled>
+          <label for="infoTransportDependent" class="form-label">Transporte</label>
+          <select value="" class="form-control disabled" id="infoTransportDependent" required name="rua" disabled>
             <option selected>Escolher..</option>
             <option></option>
           </select>
@@ -102,7 +102,7 @@
     <script src="../../utils/navbar-menu.js"></script>
 
     <!-- Script Info -->
-    <script src="../responsible/update.js"></script>
+    <script src="./dependentUpdate.js"></script>
 
     <!-- Script Bootstrap -->
     <script

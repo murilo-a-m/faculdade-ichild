@@ -7,13 +7,12 @@ const btnCancel = document.querySelector("#btnCancel");
 const btnSave = document.querySelector("#btnSave");
 
 const inputs = [
-  (inputName = document.querySelector("#infoName")),
-  (inputLastName = document.querySelector("#infoLastname")),
-  (inputCep = document.querySelector("#infoCep")),
-  (inputState = document.querySelector("#infoState")),
-  (inputCity = document.querySelector("#infoCity")),
-  (inputStreet = document.querySelector("#infoStreet")),
-  (inputNumber = document.querySelector("#infoNumber")),
+  (inputName = document.querySelector("#infoNameDependent")),
+  (inputLastName = document.querySelector("#infoLastnameDependent")),
+  (inputBirth = document.querySelector("#infoBirthDependent")),
+  (inputDocument = document.querySelector("#infoDocumentDependent")),
+  (inputTurn = document.querySelector("#infoTurnDependent")),
+  (inputStreet = document.querySelector("#infoTransportDependent")),
 ];
 
 btnEdit.addEventListener("click", (ev) => {
