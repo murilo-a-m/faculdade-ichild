@@ -25,7 +25,7 @@
         if ($row['email'] == $email) {
           $status = 'error';
           $message = 'Erro ao realizar a requisição';
-          $statusCode = 400;
+          $statusCode = 403;
 
           http_response_code($statusCode);
 

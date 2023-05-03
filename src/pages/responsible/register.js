@@ -82,11 +82,15 @@ function createResponsible() {
       });
     },
     error: function (resp) {
-      Swal.fire(
-        "Conta não cadastrada!",
-        "Tente novamente ou crie uma nova conta!",
-        "error"
-      );
+      if (resp.status == 403) {
+        Swal.fire(
+          "Email já cadastrado!",
+          "Tente novamente com outro email!",
+          "error"
+        );
+      } else {
+        Swal.fire("Conta não cadastrada!", "Tente novamente!", "error");
+      }
     },
   });
 }
