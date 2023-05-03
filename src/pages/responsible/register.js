@@ -5,11 +5,14 @@ function validateEmail(email) {
   if (email.value.length > 0) {
     if (email.value.match(emailFormat)) {
       spanError.textContent = "";
+      return true;
     } else {
       spanError.textContent = "Email inválido";
+      return false;
     }
   } else {
     spanError.textContent = "Campo obrigatório*";
+    return false;
   }
 }
 
@@ -23,15 +26,19 @@ function validatePassword(password, passwordConfirm) {
       passwordError.textContent = "";
       if (password.value !== passwordConfirm.value) {
         passwordConfirmError.textContent = "As senhas não são iguais";
+        return false;
       } else {
         passwordConfirmError.textContent = "";
+        return true;
       }
     } else {
       passwordError.textContent = "Senha inválida";
       passwordConfirmError.textContent = "";
+      return false;
     }
   } else {
     passwordError.textContent = "Campo obrigatório*";
+    return false;
   }
 }
 
@@ -40,8 +47,10 @@ function validateStreet(street) {
 
   if (street.value === "") {
     streetError.textContent = "Campo obrigatório*";
+    return false;
   } else {
     streetError.textContent = "";
+    return true;
   }
 }
 
@@ -50,8 +59,10 @@ function validateNumber(number) {
 
   if (number.value === "") {
     numberError.textContent = "Campo obrigatório*";
+    return false;
   } else {
     numberError.textContent = "";
+    return true;
   }
 }
 
@@ -89,10 +100,12 @@ const number = document.querySelector("#inputNumber");
 
 form.addEventListener("submit", (ev) => {
   ev.preventDefault();
+  const emailOk = validateEmail(email);
+  const passwordOk = validatePassword(password, confirmPassword);
+  const streetOk = validateStreet(street);
+  const numberOk = validateNumber(number);
 
-  validateEmail(email);
-  validatePassword(password, confirmPassword);
-  validateStreet(street);
-  validateNumber(number);
-  createResponsible();
+  if (emailOk && passwordOk && streetOk && numberOk) {
+    createResponsible();
+  }
 });
