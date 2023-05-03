@@ -56,22 +56,10 @@
             <h5 class="infoTitulos">Nome</h5>
             <h5 class="infoTitulos">Sobrenome</h5>
             <h5 class="infoTitulos">Data Nascimento</h5>
-            <h5 class="infoTitulos">Gênero</h5>
+            <h5 class="infoTitulos">Documento</h5>
             <h5 class="infoTitulos">Turno</h5>
         </div>
-        <div class="dependente">
-            <div class="icon">
-                
-            </div>
-            <div class="dados">
-                <h6 class="infoDados">Elvis</h6>
-                <h6 class="infoDados">Marista</h6>
-                <h6 class="infoDados">Lamenha-Lins</h6>
-                <h6 class="infoDados">Masculino</h6>
-                <h6 class="infoDados">Manhã</h6>
-            </div>
-        </div>
-    </div>
+        <?php require './dependentTable.php' ;?>
     <script src="../js/navbar-menu.js"></script>
 </body>
 
