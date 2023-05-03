@@ -59,15 +59,15 @@
             <h5 class="infoTitulos">Local</h5>
             
         </div>
-        <div class="dependente">
-            <div class="icon">
+        <div class="dependenteLog">
+            <div class="iconLog">
                 <img id="doneImg" src="../../img/marcacaoDone.png" alt="">
             </div>
-            <div class="dados">
-                <h6 class="infoDados">13:55</h6>
-                <h6 class="infoDados">Elvis</h6>
-                <h6 class="infoDados">Em transito</h6>
-                <h6 class="infoDados">Marista</h6>
+            <div class="dadosLog">
+                <h6 class="infoDadosLog">13:55</h6>
+                <h6 class="infoDadosLog">Elvis</h6>
+                <h6 class="infoDadosLog">Em transito</h6>
+                <h6 class="infoDadosLog">Marista</h6>
             </div>
         </div>
     </div>
