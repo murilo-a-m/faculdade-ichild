@@ -132,10 +132,7 @@
           <div class="about__text">
             <p class="about__text-title">O que é o <span>iChild</span>?</p>
             <p class="about__text-paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip exea commodo consequat.
+              iChild foi desenvolvido para ajudar a controlar o transporte de crianças e manter os responsáveis informados sobre sua rotina escolar. Com o iChild, os responsáveis podem receber notificações de quando seus filhos embarcam e desembarcam do transporte escolar.
             </p>
             <a href="#services" class="about__text-link">Serviços ></a>
           </div>

@@ -5,7 +5,7 @@
 <header id="home" class="container__header">
   <div class="container__header-content container-fluid">
     <div class="header__logo">
-      <a href="">
+      <a href="/ichild/src/pages/home">
         <img
           src="../../img/logo-ichild.png"
           alt="Logo do iChild"
@@ -16,10 +16,10 @@
     </div>
     <div class="header__nav">
       <ul class="navbar">
-        <li><a href="../pages/home/home.php#home" class="active">Home</a></li>
-        <li><a href="../pages/home/home.php">Quem somos</a></li>
-        <li><a href="../pages/home/home.php">Serviços</a></li>
-        <li><a href="../pages/home/home.php">Contato</a></li>
+        <li><a href="/ichild/src/pages/home" class="active">Home</a></li>
+        <li><a href="/ichild/src/pages/home#about">Quem somos</a></li>
+        <li><a href="/ichild/src/pages/home#services">Serviços</a></li>
+        <li><a href="/ichild/src/pages/home#contact">Contato</a></li>
       </ul>
     </div>
     <div class="header__button">
