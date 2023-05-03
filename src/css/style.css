@@ -757,20 +757,20 @@
   font-family: "Poppins", sans-serif;
 }
 
-.container__form {
+.container__form-register {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: auto;
+  height: 90vh;
   font-weight: 500;
-  height: 80vh;
+  background-color: aliceblue;
 }
-.container__form .container__form-content {
+.container__form-register .container__form-content {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.container__form .form__btn {
+.container__form-register .form__btn {
   background-color: #a31aca;
   border: none;
   border-radius: 8px;
@@ -786,11 +786,11 @@
   transition: all 0.14s ease-out;
   white-space: nowrap;
 }
-.container__form .form__btn:hover {
+.container__form-register .form__btn:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px, -4px);
 }
-.container__form .form__btn:focus-visible {
+.container__form-register .form__btn:focus-visible {
   outline-offset: 1px;
 }
 
@@ -810,6 +810,9 @@
 }
 
 @media (max-width: 768px) {
+  .container__form-register {
+    height: auto;
+  }
   .container__form {
     margin-bottom: 20px;
   }

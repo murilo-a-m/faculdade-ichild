@@ -39,7 +39,7 @@
     
     <?php require '../../components/header.php';?>
 
-    <main class="container__form container-fluid">
+    <main class="container__form-register container-fluid">
       <form id="form" class="container__form-content row g-1 container-md mt-3">
 
         <div class="col-md-10 passwordContent">
