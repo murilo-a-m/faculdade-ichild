@@ -60,7 +60,9 @@
             <h5 class="infoTitulos">Turno</h5>
         </div>
         <?php require './dependentTable.php' ;?>
-    <script src="../js/navbar-menu.js"></script>
+  <script src="../../utils/navbar.js"></script>
+      
+
 </body>
 
 </html>
