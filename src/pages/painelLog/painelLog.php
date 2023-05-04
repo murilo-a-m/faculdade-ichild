@@ -31,6 +31,7 @@
 
   <!-- AOS link -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <body>
     <?php 
       session_start();
       if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
@@ -38,10 +39,9 @@
         exit;
       }
     ;?>
-  <body>
     <?php require '../../components/headerMenu.php';?>
     <div class="dependenteTitulo">
-      <h5 id="tittleDependentes">Log do Dia</h5>
+      <h5 class="tittleDependentes">Log do Dia</h5>
     </div>
     
     <div class="box">
@@ -63,7 +63,6 @@
             </div>
         </div>
     </div>
-    <?php require './painelLog.php' ;?>
     <script src="../../utils/navbar-menu.js"></script>
   </body>
 
