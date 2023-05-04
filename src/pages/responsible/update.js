@@ -1,8 +1,5 @@
-function removeDisable(input) {
-  input.removeAttribute("disabled");
-}
-
 const btnEdit = document.querySelector("#btnEdit");
+const btnDelete = document.querySelector("#btnDelete");
 const btnCancel = document.querySelector("#btnCancel");
 const btnSave = document.querySelector("#btnSave");
 
@@ -19,6 +16,7 @@ const inputs = [
 btnEdit.addEventListener("click", (ev) => {
   ev.preventDefault();
   btnEdit.classList.add("form-disabled");
+  btnDelete.classList.add("form-disabled");
   btnCancel.classList.remove("form-disabled");
   btnSave.classList.remove("form-disabled");
 
@@ -31,6 +29,7 @@ btnEdit.addEventListener("click", (ev) => {
 btnCancel.addEventListener("click", (ev) => {
   ev.preventDefault();
   btnEdit.classList.remove("form-disabled");
+  btnDelete.classList.remove("form-disabled");
   btnCancel.classList.add("form-disabled");
   btnSave.classList.add("form-disabled");
 
