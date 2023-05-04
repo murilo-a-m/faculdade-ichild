@@ -39,10 +39,11 @@
         exit;
       }
     ;?>
+
     <?php require '../../components/headerMenu.php';?>
-     
+    
     <div class="dependenteTitulo">
-      <h5 id="tittleDependentes">Dependentes</h5>
+      <p class="tittleDependentes">Dependentes</p>
     </div>
     
     <div class="box">

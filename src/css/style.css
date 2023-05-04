@@ -923,13 +923,21 @@
     padding-top: 20px;
   }
 }
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 .dependenteTitulo {
   display: flex;
   margin-left: 5rem;
 }
 
-.dependenteTitulo #tittledependentes {
+.tittleDependentes {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
   font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
 }
 
 .box {
@@ -1063,7 +1071,7 @@
     display: none;
     margin-left: 1rem;
   }
-  .dependenteTitulo #tittledependentes {
+  #tittledependentes {
     font-family: "Poppins", sans-serif;
     font-size: 10px;
   }
