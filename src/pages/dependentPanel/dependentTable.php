@@ -7,13 +7,13 @@
             FROM ichild.Dependentes
             WHERE responsavelId =$responsavelId
             ";
-            
+   
     if ($result = mysqli_query($conn, $sql)) {
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)){
+                
                 echo '<div class="dependente">';
                 echo '<div class="icon">';
-                    
                 echo'</div>';
                 echo'<div class="dados">';
                     echo"<h6 class='infoDados'>$row[nome]</h6>";
@@ -21,10 +21,12 @@
                     echo"<h6 class='infoDados'>$row[dataNascimento]</h6>";
                     echo"<h6 class='infoDados'>$row[documento]</h6>";
                     echo"<h6 class='infoDados'>$row[turno]</h6>";
+                    echo"<a href= '../editDependent/editDependent.php'><img class='editImg' src='../../img/editbutton.png' alt=''></a>";
                 echo'</div>';
                 echo'</div>';
+            
             }
-        }
+            }
         }   
 
 

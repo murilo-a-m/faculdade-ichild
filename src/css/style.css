@@ -949,6 +949,7 @@
   flex-direction: column;
   align-items: center;
   border-radius: 1%;
+  pointer-events: none;
 }
 
 .box .titulos {
@@ -959,12 +960,14 @@
   font-weight: bolder;
   margin-top: 1rem;
   margin-bottom: 2rem;
+  pointer-events: none;
 }
 
 .box .titulos .infoTitulos {
   width: 310px;
   text-align: center;
   font-weight: bolder;
+  pointer-events: none;
 }
 
 .dependente {
@@ -976,6 +979,7 @@
   background-color: rgb(255, 255, 255);
   border-radius: 1%;
   margin-top: 2rem;
+  pointer-events: none;
 }
 
 .dependente .icon #userDependente {
@@ -992,6 +996,14 @@
 .dependente .dados .infoDados {
   width: 312px;
   text-align: center;
+}
+
+.dependente .dados .editImg {
+  width: 20px;
+}
+
+.editImg {
+  width: 20px;
 }
 
 @media (max-width: 1440px) {
