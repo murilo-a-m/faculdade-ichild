@@ -46,15 +46,16 @@
       <p class="tittleDependentes">Dependentes</p>
     </div>
     
-    <div class="box">
-      <div class="titulos">
-        <h5 class="infoTitulos">Nome</h5>
-        <h5 class="infoTitulos">Sobrenome</h5>
-        <h5 class="infoTitulos">Data Nascimento</h5>
-        <h5 class="infoTitulos">Documento</h5>
-        <h5 class="infoTitulos">Turno</h5>
-      </div>
-    <?php require './dependentTable.php' ;?>
+      <div class="box">
+        <div class="titulos">
+          <h5 class="infoTitulos">Nome</h5>
+          <h5 class="infoTitulos">Sobrenome</h5>
+          <h5 class="infoTitulos">Data Nascimento</h5>
+          <h5 class="infoTitulos">Documento</h5>
+          <h5 class="infoTitulos">Turno</h5>
+        </div>
+      
+      <?php require './dependentTable.php' ;?>
     <script src="../../utils/navbar-menu.js"></script>
       
 
