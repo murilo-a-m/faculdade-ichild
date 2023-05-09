@@ -43,4 +43,4 @@
   } else {
     header('location: ./update.php?result=error');
   }
-  
+;?>

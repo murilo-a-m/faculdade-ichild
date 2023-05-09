@@ -77,7 +77,7 @@
 
       $dependentId = '3';
 
-      $sql = "SELECT id, nome, sobrenome, dataNascimento, documento, turno, 
+      $sql = "SELECT id, nome, sobrenome, dataNascimento, documento, turno
               FROM ichild.Dependentes
               WHERE id = $dependentId";
 
@@ -149,7 +149,7 @@
         </div>
 
         <button type="submit" class="col-md-6 form__btn-save">
-          Salvar dependente
+          Editar dependente
         </button>
         <button class="col-md-2 form__btn-cancel">Cancelar</button>
       </form>
