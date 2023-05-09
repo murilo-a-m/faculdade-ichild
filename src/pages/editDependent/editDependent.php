@@ -66,6 +66,8 @@
     <?php 
       $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
 
+      
+
       if (!$conn) {
         die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
       }
@@ -75,7 +77,7 @@
       mysqli_query($conn,'SET character_set_client=utf8');
       mysqli_query($conn,'SET character_set_results=utf8');
 
-      $dependentId = '3'; // puxar ID sem ser fixo SELECT id_dependent FROM Dependentes
+      $dependentId = '1'; // puxar ID sem ser fixo SELECT id_dependent FROM Dependentes
 
       $sql = "SELECT id, nome, sobrenome, dataNascimento, documento, turno
               FROM ichild.Dependentes
@@ -123,7 +125,7 @@
 
         <div class="col-md-8 mt-2">
           <label for="inputDocument" class="form-label">Documento</label>
-          <input class="form-control" <?php echo ($documento);?> id="inputDocument" name="documento"/>
+          <input class="form-control" value="<?php echo ($documento);?>" id="inputDocument" name="documento"/>
           <span id="document-error" class="error"></span>
         </div>
 
