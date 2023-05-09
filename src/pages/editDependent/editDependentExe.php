@@ -29,7 +29,7 @@
   mysqli_query($conn,'SET character_set_client=utf8');
   mysqli_query($conn,'SET character_set_results=utf8');
 
-  $dependentId = '3';
+  $dependentId = 'SELECT id_dependent FROM Dependentes';  //ACHAR MANEIRA DE PUXAR O ID DA TABELA
 
 
   $sql = "UPDATE ichild.Dependentes

@@ -75,7 +75,7 @@
       mysqli_query($conn,'SET character_set_client=utf8');
       mysqli_query($conn,'SET character_set_results=utf8');
 
-      $dependentId = '3';
+      $dependentId = '3'; // puxar ID sem ser fixo SELECT id_dependent FROM Dependentes
 
       $sql = "SELECT id, nome, sobrenome, dataNascimento, documento, turno
               FROM ichild.Dependentes
