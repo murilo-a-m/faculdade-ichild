@@ -75,11 +75,11 @@
       mysqli_query($conn,'SET character_set_client=utf8');
       mysqli_query($conn,'SET character_set_results=utf8');
 
-      $responsavelId = $_SESSION['id'];
+      $dependentId = '3';
 
       $sql = "SELECT id, nome, sobrenome, dataNascimento, documento, turno, 
               FROM ichild.Dependentes
-              WHERE id =$responsavelId";
+              WHERE id = $dependentId";
 
       if ($result = mysqli_query($conn, $sql)) {
         if (mysqli_num_rows($result) > 0) {
@@ -94,7 +94,7 @@
       }   
     ;?>
 
-<main class="container__form container-fluid">
+    <main class="container__form container-fluid">
       <form
         class="container__form-content row g-1 container-md gap-2"
         id="form-dependent"
@@ -105,7 +105,7 @@
 
         <div class="col-md-8 mt-2">
           <label for="inputName" class="form-label">Nome</label>
-          <input class="form-control" value="<?php echo ($nome);?> id="inputName" name="nome" />
+          <input class="form-control" value="<?php echo ($nome);?>"id="inputName" name="nome" />
           <span id="name-error" class="error"></span>
         </div>
 

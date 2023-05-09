@@ -21,6 +21,7 @@
                     echo"<h6 class='infoDados'>$row[dataNascimento]</h6>";
                     echo"<h6 class='infoDados'>$row[documento]</h6>";
                     echo"<h6 class='infoDados'>$row[turno]</h6>";
+                    
                 echo'</div>';
                 echo'</div>';
             }
