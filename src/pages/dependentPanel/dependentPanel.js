@@ -1,6 +1,13 @@
-const form = document.querySelector(".submit");
+const myDiv = document.getElementById("DependentSubmit");
 
-form.addEventListener("submit", (ev) => {
+myDiv.addEventListener("click", (ev) => {
     ev.preventDefault();
-    console.log('tchau')
+    console.log(ev)
+    // editDependent();
 });
+
+function editDependent(dependentId) {
+    console.log
+    window.location = `../editDependent/editDependent.php?id=${dependentId}`;    
+}
+  
