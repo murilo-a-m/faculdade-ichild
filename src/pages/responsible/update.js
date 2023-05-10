@@ -1,41 +1,43 @@
 function findCep() {
-  const cep = document.querySelector("#infoCep").value;
-  const cepError = document.querySelector("#cep-error");
+  return new Promise((resolve, reject) => {
+    const cep = document.querySelector("#infoCep").value;
+    const cepError = document.querySelector("#cep-error");
 
-  if (cep !== "") {
-    let url = "https://brasilapi.com.br/api/cep/v1/" + cep;
+    if (cep !== "") {
+      let url = "https://brasilapi.com.br/api/cep/v1/" + cep;
 
-    let request = new XMLHttpRequest();
-    request.open("GET", url);
-    request.send();
+      let request = new XMLHttpRequest();
+      request.open("GET", url);
+      request.send();
 
-    request.onload = function () {
-      if (request.status === 200) {
-        cepError.textContent = "";
-        let address = JSON.parse(request.response);
-        document.querySelector("#infoState").value = address.state;
-        document.querySelector("#infoCity").value = address.city;
-        if (address.street === undefined) {
-          document.querySelector("#infoStreet").value = "";
-          return true;
+      request.onload = function () {
+        if (request.status === 200) {
+          cepError.textContent = "";
+          let address = JSON.parse(request.response);
+          document.querySelector("#infoState").value = address.state;
+          document.querySelector("#infoCity").value = address.city;
+          if (address.street === undefined) {
+            resolve(true);
+          } else {
+            document.querySelector("#infoStreet").value = address.street;
+            resolve(true);
+          }
+        } else if (request.status === 404) {
+          cepError.textContent = "CEP inválido";
+          resolve(false);
         } else {
-          document.querySelector("#infoStreet").value = address.street;
-          return true;
+          alert("Erro ao fazer a requisição");
+          resolve(false);
         }
-      } else if (request.status === 404) {
-        cepError.textContent = "CEP inválido";
-        return false;
-      } else {
-        alert("Erro ao fazer a requisição");
-        return false;
-      }
-    };
-  } else {
-    cepError.textContent = "Campo obrigatório*";
-    return false;
-  }
+      };
+    } else {
+      cepError.textContent = "Campo obrigatório*";
+      resolve(false);
+    }
+  });
 }
 
+const form = document.querySelector("#formUpdate");
 const btnEdit = document.querySelector("#btnEdit");
 const btnDelete = document.querySelector("#btnDelete");
 const btnCancel = document.querySelector("#btnCancel");
@@ -79,7 +81,13 @@ btnCancel.addEventListener("click", (ev) => {
 
 const cepInput = document.querySelector("#infoCep");
 
-cepInput.addEventListener("blur", () => {
-  console.log("Sss");
-  findCep();
+form.addEventListener("submit", async (ev) => {
+  ev.preventDefault();
+
+  validateCep = findCep();
+
+  if (await findCep()) {
+    form.submit();
+    return;
+  }
 });
