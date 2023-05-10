@@ -14,7 +14,6 @@
             while ($row = mysqli_fetch_assoc($result)){
                 echo '<div class="dependente">';
                 echo '<div class="icon">';
-                    
                 echo'</div>';
                 echo"<div value=$row[id] id='DependentSubmit' class='dados'>";
                     echo"<h6 class='infoDados'>$row[nome]</h6>";
