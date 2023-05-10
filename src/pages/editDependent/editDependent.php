@@ -77,7 +77,7 @@
       mysqli_query($conn,'SET character_set_client=utf8');
       mysqli_query($conn,'SET character_set_results=utf8');
 
-      $dependentId = '1'; // puxar ID sem ser fixo SELECT id_dependent FROM Dependentes
+      $dependentId = $_GET['id']; // puxar ID sem ser fixo SELECT id_dependent FROM Dependentes
 
       $sql = "SELECT id, nome, sobrenome, dataNascimento, documento, turno
               FROM ichild.Dependentes
@@ -101,7 +101,7 @@
         class="container__form-content row g-1 container-md gap-2"
         id="form-dependent"
         method="post"
-        action="registerDependentExe.php"
+        action="saveEdit.php"
       >
         <p class="col-md-8 container__form-text">Registrar dependente:</p>
 
@@ -131,7 +131,7 @@
 
         <div class="col-md-8 mt-2">
           <label for="inputTurn" class="form-label">Turno</label>
-          <select value='<?php echo ($turno);?>'id="inputTurn" class="form-select" name="turno">
+          <select value="<?php echo ($turno);?>"id="inputTurn" class="form-select" name="turno">
             <option selected>Escolher..</option>
             <option value="Matutino" >Matutino</option>
             <option value="Verpertino" >Verpertino</option>
@@ -150,7 +150,7 @@
           <span id="transport-error" class="error"></span>
         </div>
 
-        <button type="submit" class="col-md-6 form__btn-save">
+        <button type="submit" name="update" id="update" class="col-md-6 form__btn-save">
           Editar dependente
         </button>
         <button class="col-md-2 form__btn-cancel">Cancelar</button>

@@ -11,12 +11,36 @@
 
       
 <?php
-  $nome    = $_POST['nome'];	
-  $sobrenome     = $_POST['sobrenome'];
-  $dataNascimento = $_POST['dataNascimento'];
-  $documento = $_POST['documento'];
-  $turno = $_POST['turno'];
+
+
+  if(!empty($_GET['id']));
+
+
   
+
+  //$sqlSelect = "SELECT * FROM Dependentes where id=$id";
+
+  //$result = $conn->query($sqlSelect);
+
+  if($result -> num_rows > 0)
+  {
+    while($row = mysqli_fetch_assoc($result))
+    {
+      $nome    = $_row['nome'];	
+      $sobrenome     = $_row['sobrenome'];
+      $dataNascimento = $_row['dataNascimento'];
+      $documento = $_row['documento'];
+      $turno = $_row['turno'];
+      
+    }
+  }
+  else
+  {
+    header('location: ./update.php?result=error');
+  }
+
+
+
   
   $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
 
@@ -29,18 +53,9 @@
   mysqli_query($conn,'SET character_set_client=utf8');
   mysqli_query($conn,'SET character_set_results=utf8');
 
-  $dependentId = 'SELECT id_dependent FROM Dependentes';  //ACHAR MANEIRA DE PUXAR O ID DA TABELA
-
 
   $sql = "UPDATE ichild.Dependentes
           SET nome = '$nome', sobrenome = '$sobrenome', dataNascimento= '$dataNascimento', documento = '$documento', turno = '$turno' 
           WHERE id = $dependentId";  
 ;?>
 
-<?php
-  if ($result = mysqli_query($conn, $sql)) {
-    header('location: ./update.php?result=success');
-  } else {
-    header('location: ./update.php?result=error');
-  }
-;?>
