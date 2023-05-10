@@ -101,5 +101,6 @@ form.addEventListener("submit", async (ev) => {
     title: "Cep inválido!",
     showConfirmButton: false,
     timer: 1500,
+    background: "#ffebee",
   });
 });
