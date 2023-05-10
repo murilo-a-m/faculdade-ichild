@@ -81,6 +81,10 @@ btnCancel.addEventListener("click", (ev) => {
 
 const cepInput = document.querySelector("#infoCep");
 
+cepInput.addEventListener("blur", () => {
+  findCep();
+});
+
 form.addEventListener("submit", async (ev) => {
   ev.preventDefault();
 

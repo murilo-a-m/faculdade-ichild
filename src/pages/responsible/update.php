@@ -140,21 +140,21 @@
           <span id="street-error" class="error"></span>
         </div>
 
-        <div class="col-md-7 mt-3">
+        <div class="col-md-7 mt-3 mb-3">
           <label for="infoNumber" class="form-label">Número</label>
           <input type="text" value="<?php echo ($numero);?>" class="form-control disabled" id="infoNumber" required name="numero" disabled/>
           <span id="number-error" class="error"></span>
         </div>
 
-        <button id="btnEdit" class="col-md-7 info__btn-edit mt-3">
+        <button id="btnEdit" class="col-md-7 info__btn-edit">
           Editar informações
         </button>
 
-        <button id="btnSave" class="col-md-5 info__btn-edit form-disabled mt-3">
+        <button id="btnSave" class="col-md-5 info__btn-edit form-disabled">
           Salvar
         </button>
 
-        <button id="btnCancel" class="col-md-2 info__btn-edit form-disabled mt-3">
+        <button id="btnCancel" class="col-md-2 info__btn-edit form-disabled">
           Cancelar
         </button>
       </form>
