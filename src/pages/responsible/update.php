@@ -17,13 +17,16 @@
       crossorigin="anonymous"
     />
 
+    <script src="sweetalert2.all.min.js"></script>
+
     <!-- Favicon link -->
     <link
       rel="shortcut icon"
       href="../../img/favicon-ichild.png"
       type="image/x-icon"
     />
-     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>iChild</title>
   </head>
 
@@ -76,6 +79,7 @@
       mysqli_query($conn,'SET character_set_results=utf8');
 
       $responsavelId = $_SESSION['id'];
+      session_write_close();
 
       $sql = "SELECT id, nome, sobrenome, cep, estado, cidade, rua, numero 
               FROM ichild.Responsaveis
@@ -155,9 +159,9 @@
         </button>
       </form>
 
-      <form method="post" action="deleteExe.php" class="container__responsibleInfo-content row g-1 container-md gap-2 mt-1">
+      <form id="delete__form" method="post" action="deleteExe.php" class="container__responsibleInfo-content row g-1 container-md gap-2 mt-1">
         <input type="hidden" name="id_cliente" value="1">
-        <button id="btnDelete" class="info__btn-edit col-md-7">
+        <button type="button" id="btnDelete" class="info__btn-edit col-md-7">
         Deletar conta
         </button>
       </form>
@@ -168,6 +172,9 @@
 
     <!-- Script Info -->
     <script src="./update.js"></script>
+
+    <!-- Script Delete -->
+    <script src="./delete.js"></script>
 
     <!-- Script Bootstrap -->
     <script
