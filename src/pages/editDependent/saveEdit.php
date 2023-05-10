@@ -1,19 +1,22 @@
 <?php
+    session_start();
 
-    include_once('../dependentPanel/dependentTable.php');
+    include_once '../../database/connection.php';
+    
+    $nome = $_POST['nome'];
+    $sobrenome = $_POST['sobrenome'];
+    $dataNascimento = $_POST['dataNascimento'];
+    $documento = $_POST['documento'];
+    $turno = $_POST['turno'];
 
-    if(isset($_POST['update']))
-    { 
-        $nome = $_POST['nome'];
-        $sobrenome = $_POST['sobrenome'];
-        $dataNascimento = $_POST['dataNascimento'];
-        $documento = $_POST['documento'];
-        $turno = $_POST['turno'];
+    $sqlUpdate = "UPDATE ichild.Dependentes SET nome = '$nome', sobrenome='$sobrenome',dataNascimento='$dataNascimento', documento='$documento', turno ='$turno' 
+    WHERE documento = '$documento'";
+    $result = $conn -> query($sqlUpdate);
 
-        $sqlUpdate = "UPDATE Dependentes SET nome = '$nome', sobrenome='$sobrenome',dataNascimento='$dataNascimento', documento='$documento', turno ='$turno' 
-        WHERE id = '$id'";
-        $result = $conn -> query($sqlUpdate);
+    if ($result = mysqli_query($conn, $sql)) {
+        header('location: ../dependentPanel/dependentPanel.php');
+    } else {
+        header('location: ./editDependent.php?');
     }
-
-    header('Location: dependentPanel.php')
+    mysqli_close($conn);      
 ?>
