@@ -94,4 +94,12 @@ form.addEventListener("submit", async (ev) => {
     form.submit();
     return;
   }
+
+  Swal.fire({
+    position: "top-end",
+    icon: "error",
+    title: "Cep inválido!",
+    showConfirmButton: false,
+    timer: 1500,
+  });
 });
