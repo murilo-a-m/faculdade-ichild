@@ -74,13 +74,12 @@
           $_SESSION['cidade'] = $cidade;
           $_SESSION['rua'] = $rua;
           $_SESSION['numero'] = $numero;
-
           header('location: ./update.php?result=success');
         } else {
           header('location: ./update.php?result=error');
         }
         mysqli_close($conn);  
-	    ?>
+	  ?>
     <!-- Script Navbar -->
     <script src="../../utils/navbar-menu.js"></script>
 
