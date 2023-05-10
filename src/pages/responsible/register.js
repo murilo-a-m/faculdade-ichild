@@ -8,6 +8,13 @@ function validateEmail(email) {
       return true;
     } else {
       spanError.textContent = "Email inválido";
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Email inválido!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       return false;
     }
   } else {
@@ -26,6 +33,13 @@ function validatePassword(password, passwordConfirm) {
       passwordError.textContent = "";
       if (password.value !== passwordConfirm.value) {
         passwordConfirmError.textContent = "As senhas não são iguais";
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: "As senhas não coincidem!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
         return false;
       } else {
         passwordConfirmError.textContent = "";
@@ -34,6 +48,13 @@ function validatePassword(password, passwordConfirm) {
     } else {
       passwordError.textContent = "Senha inválida";
       passwordConfirmError.textContent = "";
+      Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Senha inválida!",
+        showConfirmButton: false,
+        timer: 1500,
+      });
       return false;
     }
   } else {
