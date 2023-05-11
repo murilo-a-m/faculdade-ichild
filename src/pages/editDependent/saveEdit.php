@@ -1,6 +1,12 @@
 <?php
     session_start();
 
+    $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
+
+    if (!$conn) {
+    die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
+    }
+
     include_once '../../database/connection.php';
     
     $nome = $_POST['nome'];
@@ -13,7 +19,7 @@
     WHERE documento = '$documento'";
     $result = $conn -> query($sqlUpdate);
 
-    if ($result = mysqli_query($conn, $sql)) {
+    if ($result = mysqli_query($conn, $sqlUpdate)) {
         header('location: ../dependentPanel/dependentPanel.php');
     } else {
         header('location: ./editDependent.php?');
