@@ -67,12 +67,19 @@
 
       <?php
         if ($result = mysqli_query($conn, $sql)) {
+          $_SESSION['nome'] = $nome;
+          $_SESSION['sobrenome'] = $sobrenome;
+          $_SESSION['cep'] = $cep;
+          $_SESSION['estado'] = $estado;
+          $_SESSION['cidade'] = $cidade;
+          $_SESSION['rua'] = $rua;
+          $_SESSION['numero'] = $numero;
           header('location: ./update.php?result=success');
         } else {
           header('location: ./update.php?result=error');
         }
         mysqli_close($conn);  
-	    ?>
+	  ?>
     <!-- Script Navbar -->
     <script src="../../utils/navbar-menu.js"></script>
 

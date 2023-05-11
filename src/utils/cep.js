@@ -22,6 +22,13 @@ function findCep() {
         }
       } else if (request.status === 404) {
         cepError.textContent = "CEP inválido";
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: "CEP Inválido!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
       } else {
         alert("Erro ao fazer a requisição");
       }

@@ -17,13 +17,16 @@
       crossorigin="anonymous"
     />
 
+    <script src="sweetalert2.all.min.js"></script>
+
     <!-- Favicon link -->
     <link
       rel="shortcut icon"
       href="../../img/favicon-ichild.png"
       type="image/x-icon"
     />
-     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>iChild</title>
   </head>
 
@@ -76,6 +79,7 @@
       mysqli_query($conn,'SET character_set_results=utf8');
 
       $responsavelId = $_SESSION['id'];
+      session_write_close();
 
       $sql = "SELECT id, nome, sobrenome, cep, estado, cidade, rua, numero 
               FROM ichild.Responsaveis
@@ -97,7 +101,7 @@
     ;?>
 
     <main class="container__main-reponsibleInfo">
-    <form class="container__responsibleInfo-content row g-1 container-md gap-2" method="post" action="updateExe.php">
+      <form id="formUpdate" class="container__responsibleInfo-content row g-1 container-md gap-2" method="post" action="updateExe.php">
         <p class="col-md-7 container__form-text">Suas informações:</p>
 
         <div class="col-md-7 mt-3">
@@ -136,20 +140,29 @@
           <span id="street-error" class="error"></span>
         </div>
 
-        <div class="col-md-7 mt-3">
+        <div class="col-md-7 mt-3 mb-3">
           <label for="infoNumber" class="form-label">Número</label>
           <input type="text" value="<?php echo ($numero);?>" class="form-control disabled" id="infoNumber" required name="numero" disabled/>
           <span id="number-error" class="error"></span>
         </div>
 
-        <button id="btnEdit" class="col-md-7 info__btn-edit mt-3">
+        <button id="btnEdit" class="col-md-7 info__btn-edit">
           Editar informações
         </button>
-        <button id="btnSave" class="col-md-5 info__btn-edit form-disabled mt-3">
+
+        <button id="btnSave" class="col-md-5 info__btn-edit form-disabled">
           Salvar
         </button>
-        <button id="btnCancel" class="col-md-2 info__btn-edit form-disabled mt-3">
+
+        <button id="btnCancel" class="col-md-2 info__btn-edit form-disabled">
           Cancelar
+        </button>
+      </form>
+
+      <form id="delete__form" method="post" action="deleteExe.php" class="container__responsibleInfo-content row g-1 container-md gap-2 mt-1">
+        <input type="hidden" name="id_cliente" value="1">
+        <button type="button" id="btnDelete" class="info__btn-edit col-md-7">
+        Deletar conta
         </button>
       </form>
     </main>
@@ -159,6 +172,9 @@
 
     <!-- Script Info -->
     <script src="./update.js"></script>
+
+    <!-- Script Delete -->
+    <script src="./delete.js"></script>
 
     <!-- Script Bootstrap -->
     <script
