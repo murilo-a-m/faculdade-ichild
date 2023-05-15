@@ -810,7 +810,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  min-height: 90vh;
   font-weight: 500;
   background-color: aliceblue;
 }
@@ -870,6 +870,11 @@
   }
   .require {
     font-size: 10px;
+  }
+}
+@media (max-height: 800px) {
+  .container__form-register {
+    padding: 20px 0;
   }
 }
 .container__form {
