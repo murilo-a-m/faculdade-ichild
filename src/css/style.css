@@ -11,7 +11,7 @@
 
 .container__header {
   display: flex;
-  height: 10vh;
+  min-height: 10vh;
   justify-content: center;
   width: 100%;
 }
@@ -122,6 +122,11 @@
   }
   .header__nav.open {
     transform: translateX(0px);
+  }
+}
+@media (max-height: 800px) {
+  .container__header {
+    padding: 20px 0;
   }
 }
 .container__footer {
