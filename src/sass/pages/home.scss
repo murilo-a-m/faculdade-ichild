@@ -8,7 +8,7 @@
   color: black;
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  min-height: 70vh;
   justify-content: center;
   width: 100%;
 
@@ -70,7 +70,7 @@
 .main__specs {
   align-items: center;
   display: flex;
-  height: 20vh;
+  min-height: 20vh;
   justify-content: space-between;
 
   .main__specs-item {
@@ -79,7 +79,7 @@
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     cursor: pointer;
     display: flex;
-    height: 100px;
+    min-height: 100px;
     justify-content: space-evenly;
     transition: transform 200ms, background 200ms;
     width: 23%;
@@ -93,7 +93,7 @@
       align-items: center;
       border-radius: 12px;
       display: flex;
-      height: 60px;
+      min-height: 60px;
       justify-content: center;
       width: 60px;
     }
@@ -132,7 +132,7 @@
   background-color: $purple;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
 
   .main__about-box {
@@ -142,7 +142,7 @@
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     display: flex;
     justify-content: center;
-    height: 90%;
+    min-height: 90%;
     width: 80%;
   }
 
@@ -272,11 +272,11 @@
 
   .main__specs {
     .main__specs-item {
-      height: 80px;
+      min-height: 80px;
       width: 22%;
 
       .item__icon {
-        height: 40px;
+        min-height: 40px;
         width: 40px;
 
         svg {
@@ -295,12 +295,12 @@
     background-color: $purple;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
 
     .main__about-box {
       background-image: url("../img/about-background.png");
-      height: 65%;
+      min-height: 65%;
       width: 90%;
     }
 
@@ -375,12 +375,12 @@
 
 @media (max-width: 768px) {
   .main__banner {
-    height: 64vh;
+    min-height: 64vh;
   }
 
   .main__specs {
     flex-wrap: wrap;
-    height: 26vh;
+    min-height: 26vh;
 
     .main__specs-item {
       width: 48%;
@@ -398,10 +398,10 @@
 
   .main__about {
     background-color: $purple;
-    height: 100vh;
+    min-height: 100vh;
 
     .main__about-box {
-      height: 100%;
+      min-height: 100%;
       width: 100%;
       border-radius: 0;
       flex-direction: column;
@@ -487,5 +487,23 @@
         }
       }
     }
+  }
+}
+
+@media (max-height: 800px) {
+  .main__banner {
+    min-height: 500px;
+  }
+
+  .main__specs {
+    min-height: 230px;
+  }
+
+  .main__about {
+    min-height: 800px;
+  }
+
+  .services__item-container {
+    min-height: 800px;
   }
 }
