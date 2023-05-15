@@ -790,7 +790,8 @@
     margin-left: 0;
     align-self: center;
   }
-  #email, #password {
+  #email,
+  #password {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     height: 40px;
@@ -806,6 +807,23 @@
   font-family: "Poppins", sans-serif;
 }
 
+@media (max-height: 800px) {
+  .fundo .box .inputCadastro #iconichild {
+    width: 200px;
+    align-self: center;
+  }
+  .fundo {
+    min-height: 300px;
+    padding: 20px 0;
+  }
+  .fundo .box {
+    min-height: 500px;
+    padding: 20px 0;
+  }
+  #form {
+    min-height: 250px;
+  }
+}
 .container__form-register {
   display: flex;
   align-items: center;
