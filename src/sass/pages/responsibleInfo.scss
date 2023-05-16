@@ -1,5 +1,5 @@
 .container__main-reponsibleInfo {
-  height: 92vh;
+  min-height: 92vh;
   background-color: #f0f8ff;
   display: flex;
   align-items: center;
@@ -45,4 +45,10 @@
 
 .form-disabled {
   display: none;
+}
+
+@media (max-height: 800px) {
+  .container__main-reponsibleInfo {
+    height: 800px;
+  }
 }
