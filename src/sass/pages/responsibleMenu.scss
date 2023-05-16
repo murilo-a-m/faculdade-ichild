@@ -1,5 +1,5 @@
 .container__main-app {
-  height: 92vh;
+  min-height: 92vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -424,5 +424,11 @@
         background-color: #eef3ff;
       }
     }
+  }
+}
+
+@media (max-height: 800px) {
+  .container__main-app {
+    height: 800px;
   }
 }
