@@ -896,7 +896,7 @@
   }
 }
 .container__form {
-  min-height: 92vh;
+  height: 92vh;
   background-color: aliceblue;
   display: flex;
   align-items: center;
@@ -1194,7 +1194,7 @@
   }
 }
 .container__main-app {
-  min-height: 92vh;
+  height: 92vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1572,11 +1572,11 @@
 }
 @media (max-height: 800px) {
   .container__main-app {
-    height: 800px;
+    min-height: 800px;
   }
 }
 .container__main-reponsibleInfo {
-  min-height: 92vh;
+  height: 92vh;
   background-color: #f0f8ff;
   display: flex;
   align-items: center;
