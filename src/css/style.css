@@ -935,7 +935,7 @@
 .tittleDependentes {
   font-size: 20px;
   font-weight: bold;
-  color: black;
+  color: rgb(0, 0, 0);
   font-family: "Poppins", sans-serif;
   margin-bottom: 10px;
 }
@@ -1007,7 +1007,7 @@
     margin-top: 1rem;
   }
   .box .titulos .infoTitulos {
-    width: 200px;
+    width: 149px;
     text-align: center;
     font-weight: bolder;
   }
@@ -1055,10 +1055,10 @@
     margin-bottom: 2rem;
   }
   .box .titulos .infoTitulos {
-    width: 120px;
+    width: 110px;
     text-align: center;
     font-weight: bolder;
-    font-size: 18px;
+    font-size: 14px;
   }
   .dependente .dados .infoDados {
     width: 120px;
