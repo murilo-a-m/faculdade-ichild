@@ -54,6 +54,13 @@
 .dependente .icon #userDependente {
   width: 3vw;
 }
+#botaoDependent{
+  height: 27px;
+  
+}
+#botaoDependentEdit{
+  height: 27px;
+}
 
 .dependente .dados {
   display: flex;
@@ -63,7 +70,7 @@
 }
 
 .dependente .dados .infoDados {
-  width: 312px;
+  width: 300px;
   text-align: center;
 }
 @media (max-width: 1440px) {
@@ -127,52 +134,63 @@
         margin-bottom: 2rem;
       }
       .box .titulos .infoTitulos {
-        width: 120px;
+        width: 100px;
         text-align: center;
         font-weight: bolder;
-        font-size: 18px;
+        font-size: 12px;
+      }
+      .dependente{
+        margin-top: 1rem;
       }
       .dependente .dados .infoDados {
-        width: 120px;
+        width: 110px;
         text-align: center;
         font-size: 13px;
+        
       }
+    }
 
-      @media (max-width: 425px) {
-        .dependenteTitulo {
-          display: none;
-          margin-left: 1rem;
-        }
-        #tittledependentes {
-          font-family: $font;
-          font-size: 10px;
-        }
-        .box {
-          width: 100%;
-          height: 80vh;
-          margin-left: 0;
-          margin-right: 0;
-        }
-        .box .titulos {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-family: $font;
-          font-weight: bolder;
-          margin-top: 1rem;
-          margin-bottom: 2rem;
-        }
-        .box .titulos .infoTitulos {
-          width: 80px;
-          text-align: center;
-          font-weight: bolder;
-          font-size: 10px;
-        }
-        .dependente .dados .infoDados {
-          width: 75px;
-          text-align: center;
-          font-size: 9px;
-        }
+    @media (max-width: 425px) {
+      .dependenteTitulo {
+        display: none;
+        margin-left: 1rem;
+      }
+      #tittledependentes {
+        font-family: $font;
+        font-size: 10px;
+      }
+      .box {
+        width: 100%;
+        height: 80vh;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .box .titulos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $font;
+        font-weight: bolder;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+      .box .titulos .infoTitulos {
+        width: 70px;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 8px;
+      }
+      .dependente .dados .infoDados {
+        width: 70px;
+        text-align: center;
+        font-size: 9px;
+      }
+      #botaoDependent{
+        height: 12px;
+        
+      }
+      #botaoDependentEdit{
+        height: 12px;
       }
     }
     @media (max-width: 375px) {
@@ -200,18 +218,26 @@
       }
     }
 
-    @media (max-width: 320px) {
-      .dependente .dados .infoDados {
-        width: 55px;
-        text-align: center;
-        font-size: 8px;
-      }
-      .box .titulos .infoTitulos {
-        width: 55px;
-        text-align: center;
-        font-weight: bolder;
-        font-size: 10px;
-      }
+  @media (max-width: 320px) {
+    .dependente .dados .infoDados {
+      width: 55px;
+      text-align: center;
+      font-size: 8px;
     }
+    .box .titulos .infoTitulos {
+      width: 55px;
+      text-align: center;
+      font-weight: bolder;
+      font-size: 10px;
+    }
+  }
+  } 
+}
+
+
+
+@media(max-height:371px){
+  .dependente{
+    padding-bottom: 20px;
   }
 }
