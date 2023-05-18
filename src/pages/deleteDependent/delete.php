@@ -37,6 +37,7 @@
     {
         $sqlDelete = "DELETE FROM Dependentes WHERE id =$dependentId";
         $resultDelete = $conn->query($sqlDelete);
+        header('location: http://localhost/ichild/src/pages/dependentPanel/dependentPanel.php');
     }
     else
     {

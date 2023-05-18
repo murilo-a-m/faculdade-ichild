@@ -46,7 +46,7 @@
   justify-content: center;
   height: 5vw;
   width: calc(100% - 7%);
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   border-radius: 1%;
 
   margin-top: 2rem;
@@ -238,6 +238,7 @@
 
 @media(max-height:371px){
   .dependente{
-    padding-bottom: 20px;
+    min-height: 371px;
+    padding-bottom: 15px;
   }
 }
