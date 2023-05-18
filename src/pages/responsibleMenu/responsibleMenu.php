@@ -85,7 +85,7 @@
               <img src="../../img/menu-item2.png" alt="" class="schedule__img" />
               <p id="clock" class="schedule__text"></p>
             </div>
-            <a href="#" class="card__schedule-content">
+            <a href="../schedule/schedule.php" class="card__schedule-content">
               <img src="../../img/menu-item1.png" alt="" class="schedule__img" />
               <p class="schedule__text">Configurar horários</p>
             </a>

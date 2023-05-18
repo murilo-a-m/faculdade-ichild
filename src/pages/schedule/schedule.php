@@ -40,12 +40,18 @@
 
     <?php require '../../components/headerMenu.php';?>
 
+    <main class="container__main-schedule">
+      <div id="calendar" class="schedule__content"></div>
+    </main>
+
     <!-- Script Navbar -->
     <script src="../../utils/navbar-menu.js"></script>
 
-    <!-- Script FullCalendqar -->
-    <script src="./dist/index.global.min.js"></script>
-    <script src="./dist/index.global.js"></script>
+    <!-- Script FullCalendar -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js'></script>
+
+    <!-- Script Schedule -->
+    <script src="./schedule.js"></script>
 
     <!-- Script Bootstrap -->
     <script

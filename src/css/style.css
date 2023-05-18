@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
@@ -1920,6 +1922,38 @@
   .box .dependenteLog .iconLog #doneImg {
     height: 15px;
   }
+}
+.container__main-schedule {
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container__main-schedule .schedule__content {
+  height: 92%;
+  width: 97%;
+  padding: 20px;
+  background-color: #eef3ff;
+  border-radius: 10px;
+}
+.container__main-schedule .schedule__content button {
+  background-color: #3ab5df;
+  border: none;
+}
+.container__main-schedule .schedule__content button:hover {
+  background-color: rgba(26, 37, 47, 0.8705882353);
+}
+.container__main-schedule .schedule__content button:disabled {
+  background-color: #1a252f;
+  opacity: 100%;
+}
+.container__main-schedule .schedule__content h2 {
+  font-weight: bold;
+}
+.container__main-schedule .schedule__content a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
