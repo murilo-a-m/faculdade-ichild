@@ -23,18 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
       // change the day's background color just for fun
       info.dayEl.style.backgroundColor = "red";
     },
-    events: [
-      {
-        title: "The Title",
-        start: "2023-05-18",
-        end: "2023-05-19",
-      },
-      {
-        title: "The Title 2",
-        start: "2023-05-22",
-        end: "2023-05-25",
-      },
-    ],
+    events: "./events.json",
+    eventClick: function (info) {
+      window.location.href =
+        "https://www.sitequalquer.com.br/evento/" + info.event.id;
+    },
   });
   calendar.render();
 });

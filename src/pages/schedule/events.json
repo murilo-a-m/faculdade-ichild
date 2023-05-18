@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Event 1",
+    "start": "2023-05-05T09:00:00",
+    "end": "2023-05-05T18:00:00",
+    "color": "red"
+  },
+  {
+    "id": 2,
+    "title": "Event 2",
+    "start": "2023-05-08",
+    "end": "2023-05-10",
+    "color": "blue",
+    "textColor": "yellow"
+  }
+]
