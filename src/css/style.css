@@ -1661,6 +1661,7 @@
   font-weight: 500;
   left: 0;
   position: fixed;
+  z-index: 9999;
   transform: translateX(-1000px);
   transition: transform 0.3s ease-in-out;
 }
@@ -1751,6 +1752,7 @@
   font-weight: 500;
   right: 0;
   position: fixed;
+  z-index: 9999;
   transform: translateX(1000px);
   transition: transform 0.3s ease-in-out;
 }
