@@ -1,26 +1,3 @@
-<?php 
-  session_start();
-  if (!isset($_SESSION['id']) || $_SESSION['role'] != 'responsavel') {
-    header('location: ../login/login.php?erro=true');
-    exit;
-  }
-
-  $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
-  if (!$conn) {
-    die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
-  }
-
-  mysqli_query($conn, "SET NAMES 'utf8'");
-  mysqli_query($conn, 'SET character_set_connection=utf8');
-  mysqli_query($conn, 'SET character_set_client=utf8');
-  mysqli_query($conn, 'SET character_set_results=utf8')
-?>
-
-<?php
-  $date = new \DateTime($_GET['date'], new \DateTimeZone('America/Sao_Paulo'));
-  var_dump($date);
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -50,27 +27,72 @@
     <title>iChild</title>
   </head>
   <body>
+    <?php 
+      session_start();
+      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
+        header('location: ../login/login.php?erro=true');
+        exit;
+      }
+    ; ?>
+
+    <?php
+      $date = null;
+      if (isset($_GET['date'])) {
+        $date = new \DateTime($_GET['date'], new \DateTimeZone('America/Sao_Paulo'));
+      }
+    ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <?php require '../../components/headerMenu.php';?>
 
     <main class="container__form container-fluid">
       <form
-        class="container__form-schedule row g-1 container-md gap-2"
-        id="formAdd"
+        class="container__form-content row g-1 container-md gap-2"
         name="formAdd"
+        id="formAdd"
         method="post"
-        action="scheduleAddExe.php"
-        >
-        <p class="col-md-8 container__form-text">Registrar dependente:</p>
+        action="./scheduleAddExe.php"
+      >
+        <p class="col-md-8 container__form-text">Agendar evento:</p>
 
         <div class="col-md-8 mt-2">
-          <!-- <label for="inputName" class="form-label">Nome</label> -->
-          <input class="form-control" type="date" id="date" name="date" value="<?php echo $date->formar("Y-m-d") ?>"/>
-          <!-- <span id="name-error" class="error"></span> -->
-          <input class="form-control" type="time" id="time" name="time" value="<?php echo $date->formar("H:i") ?>"/>
+          <label for="date" class="form-label">Data</label>
+          <input type="date" class="form-control" id="data" name="data" value="<?php echo $date->format("Y-m-d") ?>"/>
+          <span id="data-error" class="error"></span>
         </div>
 
-        <button type="submit" class="col-md-6 form__btn-save">
-          Salvar dependente
+        <div class="col-md-8 mt-2">
+          <label for="time" class="form-label">Horas</label>
+          <input type="time" class="form-control" id="time" name="time" value="<?php echo $date->format("H:i") ?>"/>
+          <span id="time-error" class="error"></span>
+        </div>
+
+        <div class="col-md-8 mt-2">
+          <label for="title" class="form-label">Título</label>
+          <input type="title" class="form-control" id="title" name="title"/>
+          <span id="title-error" class="error"></span>
+        </div>
+
+        <div class="col-md-8 mt-2">
+          <label for="desc" class="form-label">Descrição</label>
+          <input type="desc" class="form-control" id="desc" name="desc"/>
+          <span id="desc-error" class="error"></span>
+        </div>
+
+        <div class="col-md-8 mt-2">
+          <label for="duration" class="form-label">Duração</label>
+          <select id="duration" class="form-select" name="duration">
+            <option selected value="">Escolher...</option>
+            <option value="1" >1h</option>
+            <option value="2" >2h</option>
+            <option value="3" >3h</option>
+          </select>
+          <span id="duration-error" class="error"></span>
+        </div>
+
+        <button type="submit" class="col-md-8 form__btn-save">
+          Agendar
         </button>
       </form>
     </main>
@@ -89,3 +111,5 @@
     ></script>
   </body>
 </html>
+
+

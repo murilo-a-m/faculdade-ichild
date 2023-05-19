@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (info.view.type == "dayGridMonth") {
         calendar.changeView("timeGrid", info.dateStr);
       } else {
-        window.location.href = "./scheduleAdd.php/?date=" + info.dateStr;
+        window.location.href = "./scheduleAdd.php?date=" + info.dateStr;
       }
     },
     events: "./scheduleEvents.php",
