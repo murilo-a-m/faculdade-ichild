@@ -17,13 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     themeSystem: "bootstrap5",
     dateClick: function (info) {
-      alert("Clicked on: " + info.dateStr);
-      alert("Coordinates: " + info.jsEvent.pageX + "," + info.jsEvent.pageY);
-      alert("Current view: " + info.view.type);
-      // change the day's background color just for fun
-      info.dayEl.style.backgroundColor = "red";
+      if (info.view.type == "dayGridMonth") {
+        calendar.changeView("timeGrid", info.dateStr);
+      } else {
+        window.location.href = "./scheduleExe.php/?date=" + info.dateStr;
+      }
     },
-    events: "./events.json",
+    events: "./scheduleEvents.php",
     eventClick: function (info) {
       window.location.href =
         "https://www.sitequalquer.com.br/evento/" + info.event.id;
