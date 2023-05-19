@@ -57,5 +57,6 @@
     <?php require './dependentTable.php' ;?>
     <script src="../../utils/navbar-menu.js"></script>
     <script src="./dependentPanel.js" ></script>
+    <script src="../deleteDependent/deleteDependent.js"></script>
   </body>
 </html>
