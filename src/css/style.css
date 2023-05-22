@@ -1212,8 +1212,8 @@
 }
 @media (max-height: 371px) {
   .dependente {
-    min-height: 371px;
-    padding-bottom: 15px;
+    min-height: 350px;
+    padding-bottom: 1px;
   }
 }
 .container__main-app {
