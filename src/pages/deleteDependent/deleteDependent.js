@@ -1,21 +1,17 @@
 function confirmarExclusaoDependent() {
-    swal({
-        title: "Tem certeza?",
-        text: "Esta ação não pode ser desfeita!",
+    Swal.fire({
+        title: "Você tem certeza?",
+        text: "Você não podera reverter isso!",
         icon: "warning",
-        buttons: {
-            cancel: "Cancelar",
-            confirm: {
-                text: "Confirmar",
-                value: true,
-                className: "btn-danger"
-            }
-        }
-    }).then((result) => {
-        if (result.isConfirmed) {
-            document.getElementById("#botaoDependentDelete").submit()
-        }
-    });
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Sim, desejo deletar!",
+}).then((result) => {
+    if (result.isConfirmed) {
+    document.getElementById("#botaoDependentDelete").submit();
+    }
+});
 }
 
 const button = document.querySelector("#botaoDependentDelete");
