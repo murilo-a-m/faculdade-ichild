@@ -8,8 +8,6 @@
 
 <?php require '../../components/headerMenu.php';?>
 
-
-
 <?php
     $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
 
