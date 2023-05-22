@@ -48,7 +48,7 @@
 
     <main class="container__form container-fluid">
       <form
-        class="container__form-content row g-1 container-md gap-2"
+        class="container__form-content row g-1 container-md gap-1"
         name="formAdd"
         id="formAdd"
         method="post"
@@ -56,19 +56,7 @@
       >
         <p class="col-md-8 container__form-text">Agendar evento:</p>
 
-        <div class="col-md-8 mt-2">
-          <label for="date" class="form-label">Data</label>
-          <input type="date" class="form-control" id="data" name="data" value="<?php echo $date->format("Y-m-d") ?>"/>
-          <span id="data-error" class="error"></span>
-        </div>
-
-        <div class="col-md-8 mt-2">
-          <label for="time" class="form-label">Horas</label>
-          <input type="time" class="form-control" id="time" name="time" value="<?php echo $date->format("H:i") ?>"/>
-          <span id="time-error" class="error"></span>
-        </div>
-
-        <div class="col-md-8 mt-2">
+        <div class="col-md-8 mt-3">
           <label for="title" class="form-label">Título</label>
           <input type="title" class="form-control" id="title" name="title"/>
           <span id="title-error" class="error"></span>
@@ -80,18 +68,31 @@
           <span id="desc-error" class="error"></span>
         </div>
 
-        <div class="col-md-8 mt-2">
-          <label for="duration" class="form-label">Duração</label>
-          <select id="duration" class="form-select" name="duration">
-            <option selected value="">Escolher...</option>
-            <option value="1" >1h</option>
-            <option value="2" >2h</option>
-            <option value="3" >3h</option>
-          </select>
-          <span id="duration-error" class="error"></span>
+        <div class="col-md-4 mt-2">
+          <label for="dateStart" class="form-label">Data inicial</label>
+          <input type="date" class="form-control" id="dateStart" name="dateStart" value="<?php echo $date->format("Y-m-d") ?>"/>
+          <span id="data-error" class="error"></span>
         </div>
 
-        <button type="submit" class="col-md-8 form__btn-save">
+        <div class="col-md-4 mt-2">
+          <label for="timeStart" class="form-label">Horário</label>
+          <input type="time" class="form-control" id="timeStart" name="timeStart" value="<?php echo $date->format("H:i") ?>"/>
+          <span id="time-error" class="error"></span>
+        </div>
+
+        <div class="col-md-4 mt-2">
+          <label for="dateEnd" class="form-label">Data Final</label>
+          <input type="date" class="form-control" id="dateEnd" name="dateEnd" value="<?php echo $date->format("Y-m-d") ?>"/>
+          <span id="data-error" class="error"></span>
+        </div>
+        
+        <div class="col-md-4 mt-2">
+          <label for="timeEnd" class="form-label">Horário</label>
+          <input type="time" class="form-control" id="timeEnd" name="timeEnd" value="<?php echo $date->format("H:i") ?>"/>
+          <span id="time-error" class="error"></span>
+        </div>
+
+        <button type="submit" class="col-md-8 form__btn-save mt-3">
           Agendar
         </button>
       </form>

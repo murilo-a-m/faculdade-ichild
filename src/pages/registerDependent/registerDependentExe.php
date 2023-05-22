@@ -98,8 +98,7 @@
           echo "<p>&nbsp;Erro executando INSERT: " . mysqli_error($conn . "</p>");
         }
             echo "</div>";
-        mysqli_close($conn);  
-	    ?>
+        mysqli_close($conn);?>
 
     <!-- Script Navbar -->
     <script src="../../utils/navbar-menu.js"></script>
