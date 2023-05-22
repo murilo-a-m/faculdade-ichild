@@ -1,6 +1,6 @@
 .container__header {
   display: flex;
-  height: 10vh;
+  min-height: 10vh;
   justify-content: center;
   width: 100%;
 
@@ -98,7 +98,7 @@
     top: 10vh;
     right: 0;
     width: 300px;
-    height: auto;
+    min-height: 200px;
     background-color: #a41aca;
     transform: translateX(1000px);
     transition: transform 0.3s ease-in-out;
@@ -131,5 +131,15 @@
 
   .header__nav.open {
     transform: translateX(0px);
+  }
+}
+
+@media (max-height: 800px) {
+  .container__header {
+    min-height: 80px;
+  }
+
+  .header__nav {
+    top: 80px;
   }
 }

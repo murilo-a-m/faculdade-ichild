@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="../../css/style.css" />
     <link rel="stylesheet" href="../../css/reset.css" />
 
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- Bootstrap links -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
@@ -57,5 +60,6 @@
     <?php require './dependentTable.php' ;?>
     <script src="../../utils/navbar-menu.js"></script>
     <script src="./dependentPanel.js" ></script>
+    <script src="../deleteDependent/deleteDependent.js"></script>
   </body>
 </html>

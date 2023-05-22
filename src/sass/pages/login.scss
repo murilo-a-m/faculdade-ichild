@@ -126,7 +126,6 @@ $fonte: font-family "Montserrat", sans-serif;
       #8e37d7
     );
     box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
-
   }
 }
 
@@ -217,7 +216,8 @@ $fonte: font-family "Montserrat", sans-serif;
     margin-left: 0;
     align-self: center;
   }
-  #email, #password {
+  #email,
+  #password {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     height: 40px;
@@ -233,4 +233,25 @@ $fonte: font-family "Montserrat", sans-serif;
 
 .swal2-container {
   font-family: $font;
+}
+
+@media (max-height: 800px) {
+  .fundo .box .inputCadastro #iconichild {
+    width: 200px;
+    align-self: center;
+  }
+
+  .fundo {
+    min-height: 300px;
+    padding: 20px 0;
+  }
+
+  .fundo .box {
+    min-height: 500px;
+    padding: 20px 0;
+  }
+
+  #form {
+    min-height: 250px;
+  }
 }

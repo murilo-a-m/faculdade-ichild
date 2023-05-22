@@ -46,3 +46,9 @@
 .form-disabled {
   display: none;
 }
+
+@media (max-height: 800px) {
+  .container__main-reponsibleInfo {
+    height: 800px;
+  }
+}

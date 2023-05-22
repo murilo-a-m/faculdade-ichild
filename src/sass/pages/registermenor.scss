@@ -80,3 +80,9 @@
     padding-top: 20px;
   }
 }
+
+@media (max-height: 800px) {
+  .container__form {
+    height: 800px;
+  }
+}

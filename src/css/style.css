@@ -11,7 +11,7 @@
 
 .container__header {
   display: flex;
-  height: 10vh;
+  min-height: 10vh;
   justify-content: center;
   width: 100%;
 }
@@ -94,7 +94,7 @@
     top: 10vh;
     right: 0;
     width: 300px;
-    height: auto;
+    min-height: 200px;
     background-color: #a41aca;
     transform: translateX(1000px);
     transition: transform 0.3s ease-in-out;
@@ -124,10 +124,18 @@
     transform: translateX(0px);
   }
 }
+@media (max-height: 800px) {
+  .container__header {
+    min-height: 80px;
+  }
+  .header__nav {
+    top: 80px;
+  }
+}
 .container__footer {
   box-shadow: 0px 4px 53px -8px rgba(0, 0, 0, 0.3);
   display: flex;
-  height: 14vh;
+  height: 100px;
   -moz-box-shadow: 0px 4px 53px -8px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 4px 53px -8px rgba(0, 0, 0, 0.3);
 }
@@ -185,7 +193,7 @@
   color: black;
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  min-height: 70vh;
   justify-content: center;
   width: 100%;
 }
@@ -241,7 +249,7 @@
 .main__specs {
   align-items: center;
   display: flex;
-  height: 20vh;
+  min-height: 20vh;
   justify-content: space-between;
 }
 .main__specs .main__specs-item {
@@ -250,7 +258,7 @@
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: flex;
-  height: 100px;
+  min-height: 100px;
   justify-content: space-evenly;
   transition: transform 200ms, background 200ms;
   width: 23%;
@@ -263,7 +271,7 @@
   align-items: center;
   border-radius: 12px;
   display: flex;
-  height: 60px;
+  min-height: 60px;
   justify-content: center;
   width: 60px;
 }
@@ -296,7 +304,7 @@
   background-color: #a31aca;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
 }
 .main__about .main__about-box {
@@ -306,7 +314,7 @@
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   display: flex;
   justify-content: center;
-  height: 90%;
+  min-height: 90vh;
   width: 80%;
 }
 .main__about .about__text {
@@ -408,11 +416,11 @@
     font-size: 14px;
   }
   .main__specs .main__specs-item {
-    height: 80px;
+    min-height: 80px;
     width: 22%;
   }
   .main__specs .main__specs-item .item__icon {
-    height: 40px;
+    min-height: 40px;
     width: 40px;
   }
   .main__specs .main__specs-item .item__icon svg {
@@ -426,12 +434,12 @@
     background-color: #a31aca;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     justify-content: center;
   }
   .main__about .main__about-box {
     background-image: url("../img/about-background.png");
-    height: 65%;
+    min-height: 65%;
     width: 90%;
   }
   .main__about img {
@@ -486,11 +494,11 @@
 }
 @media (max-width: 768px) {
   .main__banner {
-    height: 64vh;
+    min-height: 64vh;
   }
   .main__specs {
     flex-wrap: wrap;
-    height: 26vh;
+    min-height: 26vh;
   }
   .main__specs .main__specs-item {
     width: 48%;
@@ -504,10 +512,10 @@
   }
   .main__about {
     background-color: #a31aca;
-    height: 100vh;
+    min-height: 100vh;
   }
   .main__about .main__about-box {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     border-radius: 0;
     flex-direction: column;
@@ -568,6 +576,24 @@
   .main__banner .main__banner-box .main__banner-btn .banner__registerBtn,
   .main__banner .main__banner-box .main__banner-btn .banner__aboutBtn {
     font-size: 16px;
+  }
+}
+@media (max-height: 800px) {
+  .main__banner {
+    padding-bottom: 20px;
+  }
+  .main__specs {
+    min-height: 200px;
+  }
+  .main__about {
+    padding: 20px 0;
+  }
+  .main__about .main__about-box {
+    box-shadow: none;
+    min-height: 90vh;
+  }
+  .services__item-container {
+    min-height: 800px;
   }
 }
 #form {
@@ -764,7 +790,8 @@
     margin-left: 0;
     align-self: center;
   }
-  #email, #password {
+  #email,
+  #password {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     height: 40px;
@@ -780,11 +807,28 @@
   font-family: "Poppins", sans-serif;
 }
 
+@media (max-height: 800px) {
+  .fundo .box .inputCadastro #iconichild {
+    width: 200px;
+    align-self: center;
+  }
+  .fundo {
+    min-height: 300px;
+    padding: 20px 0;
+  }
+  .fundo .box {
+    min-height: 500px;
+    padding: 20px 0;
+  }
+  #form {
+    min-height: 250px;
+  }
+}
 .container__form-register {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  min-height: 90vh;
   font-weight: 500;
   background-color: aliceblue;
 }
@@ -844,6 +888,11 @@
   }
   .require {
     font-size: 10px;
+  }
+}
+@media (max-height: 800px) {
+  .container__form-register {
+    padding: 20px 0;
   }
 }
 .container__form {
@@ -923,6 +972,11 @@
     padding-top: 20px;
   }
 }
+@media (max-height: 800px) {
+  .container__form {
+    height: 800px;
+  }
+}
 * {
   font-family: "Poppins", sans-serif;
 }
@@ -973,13 +1027,21 @@
   justify-content: center;
   height: 5vw;
   width: 93%;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   border-radius: 1%;
   margin-top: 2rem;
 }
 
 .dependente .icon #userDependente {
   width: 3vw;
+}
+
+#botaoDependentDelete {
+  height: 27px;
+}
+
+#botaoDependentEdit {
+  height: 27px;
 }
 
 .dependente .dados {
@@ -990,7 +1052,7 @@
 }
 
 .dependente .dados .infoDados {
-  width: 312px;
+  width: 300px;
   text-align: center;
 }
 
@@ -1055,18 +1117,21 @@
     margin-bottom: 2rem;
   }
   .box .titulos .infoTitulos {
-    width: 120px;
+    width: 100px;
     text-align: center;
     font-weight: bolder;
-    font-size: 18px;
+    font-size: 12px;
+  }
+  .dependente {
+    margin-top: 1rem;
   }
   .dependente .dados .infoDados {
-    width: 120px;
+    width: 110px;
     text-align: center;
     font-size: 13px;
   }
 }
-@media (max-width: 1440px) and (max-width: 1024px) and (max-width: 768px) and (max-width: 425px) {
+@media (max-width: 1440px) and (max-width: 1024px) and (max-width: 425px) {
   .dependenteTitulo {
     display: none;
     margin-left: 1rem;
@@ -1091,15 +1156,21 @@
     margin-bottom: 2rem;
   }
   .box .titulos .infoTitulos {
-    width: 80px;
+    width: 70px;
     text-align: center;
     font-weight: bolder;
-    font-size: 10px;
+    font-size: 8px;
   }
   .dependente .dados .infoDados {
-    width: 75px;
+    width: 70px;
     text-align: center;
     font-size: 9px;
+  }
+  #botaoDependentDelete {
+    height: 12px;
+  }
+  #botaoDependentEdit {
+    height: 12px;
   }
 }
 @media (max-width: 1440px) and (max-width: 1024px) and (max-width: 375px) {
@@ -1116,10 +1187,10 @@
     width: 60px;
     text-align: center;
     font-weight: bolder;
-    font-size: 10px;
+    font-size: 8.5px;
   }
   .dependente {
-    height: 7vh;
+    height: 5vh;
   }
   .dependente .dados .infoDados {
     width: 60px;
@@ -1137,6 +1208,12 @@
     text-align: center;
     font-weight: bolder;
     font-size: 10px;
+  }
+}
+@media (max-height: 371px) {
+  .dependente {
+    min-height: 350px;
+    padding-bottom: 1px;
   }
 }
 .container__main-app {
@@ -1516,6 +1593,11 @@
     background-color: #eef3ff;
   }
 }
+@media (max-height: 800px) {
+  .container__main-app {
+    min-height: 800px;
+  }
+}
 .container__main-reponsibleInfo {
   height: 92vh;
   background-color: #f0f8ff;
@@ -1563,10 +1645,15 @@
   display: none;
 }
 
+@media (max-height: 800px) {
+  .container__main-reponsibleInfo {
+    height: 800px;
+  }
+}
 .container__header-app {
   align-items: center;
   display: flex;
-  height: 8vh;
+  min-height: 8vh;
   justify-content: space-between;
   padding: 0 30px;
 }
@@ -1601,7 +1688,7 @@
 
 #menu__bar {
   background-color: #3ab5df;
-  height: 100vh;
+  min-height: 100vh;
   width: 320px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   display: flex;
@@ -1648,7 +1735,7 @@
   background-color: #3ab5df;
   border-radius: 4px;
   display: none;
-  height: 60px;
+  min-height: 60px;
   justify-content: center;
   margin-right: 30px;
   position: absolute;
@@ -1694,7 +1781,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 400px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
@@ -1726,7 +1813,7 @@
 #profile__bar .profile__division {
   background-color: rgba(255, 255, 255, 0.486);
   width: 100%;
-  height: 2px;
+  min-height: 2px;
 }
 #profile__bar .profile__options {
   margin-bottom: 50px;
@@ -1772,6 +1859,11 @@
   #menu__bar,
   #profile__bar {
     width: 100vw;
+  }
+}
+@media (max-height: 800px) {
+  .container__header-app {
+    min-height: 70px;
   }
 }
 .box .dependenteLog .iconLog #doneImg {

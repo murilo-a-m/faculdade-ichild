@@ -100,7 +100,7 @@
       }   
     ;?>
 
-    <main class="container__main-reponsibleInfo">
+    <main class="container__main-reponsibleInfo container-fluid">
       <form id="formUpdate" class="container__responsibleInfo-content row g-1 container-md gap-2" method="post" action="updateExe.php">
         <p class="col-md-7 container__form-text">Suas informações:</p>
 
