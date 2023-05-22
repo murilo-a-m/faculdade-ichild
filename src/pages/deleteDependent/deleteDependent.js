@@ -17,8 +17,8 @@ function confirmarExclusaoDependent(dependentId) {
 const button = document.querySelector("#botaoDependentDelete");
 
 button.addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent the default link behavior
+  event.preventDefault();
   const url = button.parentElement.href;
-  const dependentId = url.split("id=")[1]; // Extract the dependentId from the URL
+  const dependentId = url.split("id=")[1];
   confirmarExclusaoDependent(dependentId);
 });
