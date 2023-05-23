@@ -1987,4 +1987,21 @@
   border: none;
 }
 
+@media (max-width: 768px) {
+  .container__main-schedule .schedule__content h2 {
+    font-size: 16px;
+  }
+  .fc .fc-button-group button {
+    font-size: 12px;
+  }
+}
+@media (max-width: 425px) {
+  .fc .fc-toolbar {
+    flex-direction: column;
+  }
+  .fc .fc-button-group button {
+    margin: 8px 0;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
