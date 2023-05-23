@@ -83,7 +83,7 @@
         method="post"
         action="./scheduleUpdateExe.php"
       >
-        <p class="col-md-7 container__form-text">Agendar evento</p>
+        <p class="col-md-7 container__form-text">Informações sobre o evento</p>
 
         <input type="hidden" name="id" id="id" value="<?php echo $id ?>">
 
