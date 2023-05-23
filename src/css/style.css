@@ -1963,4 +1963,20 @@
   font-weight: bold;
 }
 
+#color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+#color::-webkit-color-swatch {
+  border-radius: 10px;
+  border: none;
+}
+
 /*# sourceMappingURL=style.css.map */

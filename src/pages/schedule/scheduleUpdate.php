@@ -93,10 +93,15 @@
           <span id="title-error" class="error"></span>
         </div>
 
-        <div class="col-md-7 mt-2">
+        <div class="col-md-6 mt-2">
           <label for="desc" class="form-label">Descrição</label>
           <input type="desc" class="form-control" id="desc" name="desc" value="<?php echo $description ?>"/>
           <span id="desc-error" class="error"></span>
+        </div>
+
+        <div class="col-md-1 mt-2">
+          <label for="color" class="form-label">Cor</label>
+          <input type="color" class="form-control" id="color" name="color" value="<?php echo $color?>"/>
         </div>
 
         <p class="col-md-7 container__form-paragraph mt-3">Data inicial:</p>

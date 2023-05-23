@@ -58,14 +58,19 @@
 
         <div class="col-md-8 mt-3">
           <label for="title" class="form-label">Título</label>
-          <input type="title" class="form-control" id="title" name="title"/>
+          <input type="text" class="form-control" id="title" name="title"/>
           <span id="title-error" class="error"></span>
         </div>
 
-        <div class="col-md-8 mt-2">
+        <div class="col-md-7 mt-2">
           <label for="desc" class="form-label">Descrição</label>
-          <input type="desc" class="form-control" id="desc" name="desc"/>
+          <input type="text" class="form-control" id="desc" name="desc"/>
           <span id="desc-error" class="error"></span>
+        </div>
+
+        <div class="col-md-1 mt-2">
+          <label for="color" class="form-label">Cor</label>
+          <input type="color" class="form-control" id="color" name="color"/>
         </div>
 
         <p class="col-md-8 container__form-paragraph mt-3">Data inicial:</p>

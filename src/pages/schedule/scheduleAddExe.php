@@ -9,7 +9,7 @@
 <?php
   $title = $_POST['title'];
   $desc = $_POST['desc'];
-  $color = 'blue';
+  $color = $_POST['color'];
   $dateStart = $_POST['dateStart'];	
   $timeStart = $_POST['timeStart'];
   $dateEnd = $_POST['dateEnd'];	
