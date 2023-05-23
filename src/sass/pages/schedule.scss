@@ -42,19 +42,27 @@
   font-weight: bold;
 }
 
+.color__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #color {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background-color: transparent;
   width: 100%;
+  height: 38px;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
   padding: 0;
   margin: 0;
 
   &::-webkit-color-swatch {
-    border-radius: 10px;
+    border-radius: 6px;
     border: none;
   }
 }

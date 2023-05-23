@@ -68,9 +68,9 @@
           <span id="desc-error" class="error"></span>
         </div>
 
-        <div class="col-md-1 mt-2">
+        <div class="col-md-1 mt-2 color__div">
           <label for="color" class="form-label">Cor</label>
-          <input type="color" class="form-control" id="color" name="color"/>
+          <input type="color" class="form-control" id="color" name="color" value="#0000ff"/>
         </div>
 
         <p class="col-md-8 container__form-paragraph mt-3">Data inicial:</p>
