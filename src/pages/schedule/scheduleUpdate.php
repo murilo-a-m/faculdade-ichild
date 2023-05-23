@@ -134,7 +134,7 @@
 
       <form id="scheduleDelete" method="post" action="<?php echo './scheduleDeleteExe.php?id=' . $id ?>" class="container__responsibleInfo-content row g-1 container-md gap-2 mt-1">
         <input type="hidden" name="id_cliente" value="1">
-        <button type="submit" id="btnDelete" class="info__btn-edit col-md-7">
+        <button type="button" id="btnDelete" class="info__btn-edit col-md-7">
         Deletar
         </button>
       </form>
@@ -145,6 +145,9 @@
 
     <!-- Script Regex -->
     <!-- <script src="./registerDependent.js"></script> -->
+
+    <!-- Script Delete -->
+    <script src="./scheduleDelete.js"></script>
 
     <!-- Script Bootstrap -->
     <script
