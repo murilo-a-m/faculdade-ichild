@@ -54,7 +54,7 @@
         method="post"
         action="./scheduleAddExe.php"
       >
-        <p class="col-md-8 container__form-text">Agendar evento:</p>
+        <p class="col-md-8 container__form-text">Agendar evento</p>
 
         <div class="col-md-8 mt-3">
           <label for="title" class="form-label">Título</label>
@@ -68,25 +68,29 @@
           <span id="desc-error" class="error"></span>
         </div>
 
-        <div class="col-md-4 mt-2">
-          <label for="dateStart" class="form-label">Data inicial</label>
+        <p class="col-md-8 container__form-paragraph mt-3">Data inicial:</p>
+
+        <div class="col-md-8 mt-2">
+          <label for="dateStart" class="form-label">Dia</label>
           <input type="date" class="form-control" id="dateStart" name="dateStart" value="<?php echo $date->format("Y-m-d") ?>"/>
           <span id="data-error" class="error"></span>
         </div>
 
-        <div class="col-md-4 mt-2">
+        <div class="col-md-8 mt-2">
           <label for="timeStart" class="form-label">Horário</label>
           <input type="time" class="form-control" id="timeStart" name="timeStart" value="<?php echo $date->format("H:i") ?>"/>
           <span id="time-error" class="error"></span>
         </div>
 
-        <div class="col-md-4 mt-2">
-          <label for="dateEnd" class="form-label">Data Final</label>
+        <p class="col-md-8 container__form-paragraph mt-3">Data final:</p>
+
+        <div class="col-md-8 mt-2">
+          <label for="dateEnd" class="form-label">Dia</label>
           <input type="date" class="form-control" id="dateEnd" name="dateEnd" value="<?php echo $date->format("Y-m-d") ?>"/>
           <span id="data-error" class="error"></span>
         </div>
         
-        <div class="col-md-4 mt-2">
+        <div class="col-md-8 mt-2">
           <label for="timeEnd" class="form-label">Horário</label>
           <input type="time" class="form-control" id="timeEnd" name="timeEnd" value="<?php echo $date->format("H:i") ?>"/>
           <span id="time-error" class="error"></span>

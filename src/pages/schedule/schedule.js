@@ -25,8 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     events: "./scheduleEvents.php",
     eventClick: function (info) {
-      window.location.href =
-        "https://www.sitequalquer.com.br/evento/" + info.event.id;
+      window.location.href = "./scheduleUpdate.php?id=" + info.event.id;
     },
   });
   calendar.render();
