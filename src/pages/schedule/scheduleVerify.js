@@ -41,12 +41,12 @@ formAdd.addEventListener("submit", (ev) => {
     Swal.fire({
       position: "top-end",
       icon: "error",
-      title: "Agende apenas no calendário de 2023!",
+      title: "Data inválida!",
       showConfirmButton: false,
       timer: 1500,
     });
     dataStartError.innerHTML =
-      "Data inválida! Agende apenas no calendário de 2023!";
+      "Data inválida! Agende apenas no calendário de 2023.";
   }
 
   if (dateStart.value < formattedDate) {
@@ -59,7 +59,7 @@ formAdd.addEventListener("submit", (ev) => {
       timer: 1500,
     });
 
-    dataStartError.innerHTML = "Data inválida! Forneça uma data futura!";
+    dataStartError.innerHTML = "Data inválida! Essa data já passou.";
   }
 
   if (dateStart.value == formattedDate && timeStart.value < formattedTime) {
@@ -72,7 +72,7 @@ formAdd.addEventListener("submit", (ev) => {
       timer: 1500,
     });
 
-    timeStartError.innerHTML = "Horário inválido! Forneça um horário futuro!";
+    timeStartError.innerHTML = "Horário inválido! Esse horário já passou.";
   }
 
   if (dateEnd.value < dateStart.value) {
@@ -85,7 +85,7 @@ formAdd.addEventListener("submit", (ev) => {
       timer: 1500,
     });
     dataEndError.innerHTML =
-      "Data inválida! Deve ser futura ou igual a data de inicio!";
+      "Data inválida! Essa data é anterior a data inicial.";
   }
 
   if (dateEnd.value == dateStart.value && timeEnd.value < timeStart.value) {
@@ -98,6 +98,6 @@ formAdd.addEventListener("submit", (ev) => {
       timer: 1500,
     });
     timeEndError.innerHTML =
-      "Horário inválido! Deve ser futura ou igual ao horário de inicio!";
+      "Horário inválido! Esse horário é antetior ao horário inicial.";
   }
 });
