@@ -21,7 +21,7 @@
       <li><a href="/ichild/src/pages/dependentPanel/dependentPanel.php">DEPENDENTES</a></li>
       <li><a href="/ichild/src/pages/registerDependent/registerDependent.php">ADICIONAR DEPENDENTES</a></li>
       <li><a href="#">LOG DO DIA</a></li>
-      <li><a href="#">AGENDA</a></li>
+      <li><a href="/ichild/src/pages/schedule/schedule.php">AGENDA</a></li>
     </ul>
   </div>
 </aside>
