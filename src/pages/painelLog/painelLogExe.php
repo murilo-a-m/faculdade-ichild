@@ -2,6 +2,7 @@
     require_once '../../database/connection.php';
 
     $responsavelId = $_SESSION['id'];
+    // transportadorId = $_SESSION['id'];
 
     $sql = "SELECT * FROM dependentes";  //MUDAR TABELA
 
