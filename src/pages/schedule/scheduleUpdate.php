@@ -79,7 +79,7 @@
       <form
         class="container__form-content row g-1 container-md gap-1"
         name="formEdit"
-        id="formEdit"
+        id="formAdd"
         method="post"
         action="./scheduleUpdateExe.php"
       >
@@ -89,13 +89,13 @@
 
         <div class="col-md-7 mt-3">
           <label for="title" class="form-label">Título</label>
-          <input type="title" class="form-control" id="title" name="title" value="<?php echo $title ?>"/>
+          <input type="title" class="form-control" id="title" name="title" value="<?php echo $title ?>" required/>
           <span id="title-error" class="error"></span>
         </div>
 
         <div class="col-md-6 mt-2">
           <label for="desc" class="form-label">Descrição</label>
-          <input type="desc" class="form-control" id="desc" name="desc" value="<?php echo $description ?>"/>
+          <input type="desc" class="form-control" id="desc" name="desc" value="<?php echo $description ?>" required/>
           <span id="desc-error" class="error"></span>
         </div>
 
@@ -109,13 +109,13 @@
         <div class="col-md-7 mt-2">
           <label for="dateStart" class="form-label">Dia</label>
           <input type="date" class="form-control" id="dateStart" name="dateStart" value="<?php echo $dateStart->format("Y-m-d") ?>"/>
-          <span id="data-error" class="error"></span>
+          <span id="dataStart-error" class="error"></span>
         </div>
 
         <div class="col-md-7 mt-2">
           <label for="timeStart" class="form-label">Horário</label>
           <input type="time" class="form-control" id="timeStart" name="timeStart" value="<?php echo $dateStart->format("H:i") ?>"/>
-          <span id="time-error" class="error"></span>
+          <span id="timeStart-error" class="error"></span>
         </div>
 
         <p class="col-md-7 container__form-paragraph mt-3">Data final:</p>
@@ -123,13 +123,13 @@
         <div class="col-md-7 mt-2">
           <label for="dateEnd" class="form-label">Dia</label>
           <input type="date" class="form-control" id="dateEnd" name="dateEnd" value="<?php echo $dateEnd->format("Y-m-d") ?>"/>
-          <span id="data-error" class="error"></span>
+          <span id="dataEnd-error" class="error"></span>
         </div>
         
         <div class="col-md-7 mt-2">
           <label for="timeEnd" class="form-label">Horário</label>
           <input type="time" class="form-control" id="timeEnd" name="timeEnd" value="<?php echo $dateEnd->format("H:i") ?>"/>
-          <span id="time-error" class="error"></span>
+          <span id="timeEnd-error" class="error"></span>
         </div>
 
         <button type="submit" class="col-md-7 form__btn-save mt-3">
@@ -149,7 +149,7 @@
     <script src="../../utils/navbar-menu.js"></script>
 
     <!-- Script Regex -->
-    <!-- <script src="./registerDependent.js"></script> -->
+    <script src="./scheduleVerify.js"></script>
 
     <!-- Script Delete -->
     <script src="./scheduleDelete.js"></script>

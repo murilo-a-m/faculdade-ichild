@@ -26,7 +26,17 @@ formAdd.addEventListener("submit", (ev) => {
   const dateEnd = document.querySelector("#dateEnd");
   const timeEnd = document.querySelector("#timeEnd");
 
-  if (dateStart.value > "12/30/2023") {
+  const dataStartError = document.querySelector("#dataStart-error");
+  const timeStartError = document.querySelector("#timeStart-error");
+  const dataEndError = document.querySelector("#dataEnd-error");
+  const timeEndError = document.querySelector("#timeEnd-error");
+
+  dataStartError.innerHTML = "";
+  timeStartError.innerHTML = "";
+  dataEndError.innerHTML = "";
+  timeEndError.innerHTML = "";
+
+  if (dateStart.value > "2023-12-30") {
     ev.preventDefault();
     Swal.fire({
       position: "top-end",
@@ -35,6 +45,8 @@ formAdd.addEventListener("submit", (ev) => {
       showConfirmButton: false,
       timer: 1500,
     });
+    dataStartError.innerHTML =
+      "Data inválida! Agende apenas no calendário de 2023!";
   }
 
   if (dateStart.value < formattedDate) {
@@ -46,6 +58,8 @@ formAdd.addEventListener("submit", (ev) => {
       showConfirmButton: false,
       timer: 1500,
     });
+
+    dataStartError.innerHTML = "Data inválida! Forneça uma data futura!";
   }
 
   if (dateStart.value == formattedDate && timeStart.value < formattedTime) {
@@ -57,6 +71,8 @@ formAdd.addEventListener("submit", (ev) => {
       showConfirmButton: false,
       timer: 1500,
     });
+
+    timeStartError.innerHTML = "Horário inválido! Forneça um horário futuro!";
   }
 
   if (dateEnd.value < dateStart.value) {
@@ -68,6 +84,8 @@ formAdd.addEventListener("submit", (ev) => {
       showConfirmButton: false,
       timer: 1500,
     });
+    dataEndError.innerHTML =
+      "Data inválida! Deve ser futura ou igual a data de inicio!";
   }
 
   if (dateEnd.value == dateStart.value && timeEnd.value < timeStart.value) {
@@ -79,5 +97,7 @@ formAdd.addEventListener("submit", (ev) => {
       showConfirmButton: false,
       timer: 1500,
     });
+    timeEndError.innerHTML =
+      "Horário inválido! Deve ser futura ou igual ao horário de inicio!";
   }
 });
