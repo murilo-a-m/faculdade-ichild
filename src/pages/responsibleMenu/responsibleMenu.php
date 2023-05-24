@@ -87,7 +87,7 @@
             </div>
             <a href="../schedule/schedule.php" class="card__schedule-content">
               <img src="../../img/menu-item1.png" alt="" class="schedule__img" />
-              <p class="schedule__text">Configurar horários</p>
+              <p class="schedule__text">Minha agenda</p>
             </a>
           </div>
         </div>
