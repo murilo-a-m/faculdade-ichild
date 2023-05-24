@@ -50,8 +50,8 @@
         <p class="col-md-8 container__form-text">Update Log:</p>
 
         <div class="col-md-8 mt-2">
-          <label for="inputName" class="form-label">Horario</label>
-          <input class="form-control" id="inputName" name="nome" />
+          <label for="time" class="form-label">Horario</label>
+          <input type="time" class="form-control" />
           <span id="name-error" class="error"></span>
         </div>
 
@@ -65,13 +65,9 @@
         </div>
 
         <div class="col-md-8 mt-2">
-          <label for="inputTurn" class="form-label">Status</label>
-          <select id="inputTurn" class="form-select" name="turno">
-            <option selected>Escolher..</option>
-            <option value="Matutino" >Em trânsito</option>
-            <option value="Verpertino" >Chegou ao destino</option>
-          </select>
-          <span id="turn-error" class="error"></span>
+          <label for="inputDocument" class="form-label">Status</label>
+          <input class="form-control" id="inputDocument" name="documento"/>
+          <span id="document-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-2">

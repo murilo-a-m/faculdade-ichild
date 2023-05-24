@@ -1878,6 +1878,7 @@
   width: 88%;
   background-color: rgb(255, 255, 255);
   border-radius: 1%;
+  margin-bottom: 15px;
 }
 
 .dependenteLog .iconLog #userDependente {
@@ -1943,6 +1944,59 @@
   .box .dependenteLog .iconLog #doneImg {
     height: 15px;
   }
+}
+.boxTransportador {
+  background-color: #DDE6ED;
+  height: 45vw;
+  width: auto;
+  margin: 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1%;
+}
+
+.boxTransportador .titulos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.boxTransportador .titulos .infoTitulos {
+  width: 300px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.dependenteTransportador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5vw;
+  width: 93%;
+  background-color: #9DB2BF;
+  border-radius: 1%;
+  margin-top: 2rem;
+}
+
+.dependente .icon #userDependente {
+  width: 3vw;
+}
+
+.dependenteTransportador .dados {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.dependenteTransportador .dados .infoDependentTransportador {
+  width: 300px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
