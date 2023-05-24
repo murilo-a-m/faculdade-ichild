@@ -144,7 +144,7 @@
         <div class="col-md-8 mt-2 mb-2">
           <label for="inputTransport" class="form-label">Transporte</label>
           <select id="inputTransport" class="form-select">
-            <option selected>Escolher..</option>
+            <option onchange="fetchDependents()" selected>Escolher..</option>
             <option></option>
           </select>
           <span id="transport-error" class="error"></span>
