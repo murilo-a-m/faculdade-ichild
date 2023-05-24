@@ -58,13 +58,13 @@
 
         <div class="col-md-8 mt-3">
           <label for="title" class="form-label">Título</label>
-          <input type="text" class="form-control" id="title" name="title"/>
+          <input type="text" class="form-control" id="title" name="title" required/>
           <span id="title-error" class="error"></span>
         </div>
 
         <div class="col-md-7 mt-2">
           <label for="desc" class="form-label">Descrição</label>
-          <input type="text" class="form-control" id="desc" name="desc"/>
+          <input type="text" class="form-control" id="desc" name="desc" required/>
           <span id="desc-error" class="error"></span>
         </div>
 
@@ -111,7 +111,7 @@
     <script src="../../utils/navbar-menu.js"></script>
 
     <!-- Script Regex -->
-    <!-- <script src="./registerDependent.js"></script> -->
+    <script src="./scheduleRegex.js"></script>
 
     <!-- Script Bootstrap -->
     <script
