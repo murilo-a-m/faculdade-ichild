@@ -45,15 +45,20 @@
 
     <?php require '../../components/headerMenu.php';?>
     
-    <div class="dependenteTitulo">
-      <p class="tittleDependentes">Notifição</p>
-    </div>
     
     <div class="box">
       <div class="titulos">
         <h1 class="tituloNotify">Notificação</h1>
     </div>
-    <?php require './dependendNotifyExe.php' ;?>
+    <div class="notifyBox">
+      <div  class='dadosNoti'>
+        <div class='notificationsBall'></div>
+        <h6 class='notify'>mensagens</h6>
+      </div>
+      <div class="mensagens">DJADADAW</div>
+    </div>
+    
+    <!-- <?php require './dependendNotifyExe.php' ;?> -->
     <script src="../../utils/navbar-menu.js"></script>
     <script src="./dependentPanel.js" ></script>
     <script src="../deleteDependent/deleteDependent.js"></script>

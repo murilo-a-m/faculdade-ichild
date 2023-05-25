@@ -1999,11 +1999,42 @@
   text-align: center;
 }
 
-.container__form container-fluid {
+.dadosNoti {
   display: flex;
-  flex-direction: column;
+  align-self: flex-start;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+}
+
+.notifyBox {
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  height: 5vw;
+  width: 93%;
+  background-color: #ffffff;
+  border-radius: 1%;
+  margin-top: 2rem;
+}
+
+.notificationsBall {
+  width: 25px;
+  height: 12px;
+  background-color: rgba(128, 0, 128, 0.411);
+  border-radius: 100%;
+  margin-left: 10%;
+  margin-right: 7px;
+}
+
+.mensagens {
+  font-family: "Poppins", sans-serif;
+  align-self: center;
+}
+
+.boxMsg {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */
