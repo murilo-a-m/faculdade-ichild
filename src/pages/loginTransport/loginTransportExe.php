@@ -19,7 +19,7 @@
           $_SESSION['nome'] = $row['nome'];
           $_SESSION['sobrenome'] = $row['sobrenome'];
           $_SESSION['email'] = $row['email'];
-          $_SESSION['role'] = 'responsavel';
+          $_SESSION['role'] = 'transportador';
 
           $status = 'success';
           $message = 'Login realizado com sucesso';

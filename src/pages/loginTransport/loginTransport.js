@@ -15,7 +15,7 @@ function login(email, password) {
         "Login realizado com sucesso",
         "success"
       ).then(function () {
-        window.location.href = "../responsibleMenu/responsibleMenu.php";
+        window.location.href = "../transportMenu/transportMenu.php";
       });
     },
     error: function (resp) {
