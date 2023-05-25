@@ -57,13 +57,13 @@
       }
     ;?>
 
-    <main class="container__main-app">
-      <div class="main__app-content">
+    <main class="container__main-transportMenu">
+      <div class="main__transport-content">
 
-        <div class="content__card card__dependents">
+        <div class="content__card-transport card__dependents">
           <div class="card__container">
             <p class="card__title">Dependentes</p>
-            <div class="card__dependents-content">
+            <div class="card__transportContent">
               <div class="dependent__img"></div>
               <div class="dependent__info">
                 <p class="dependent__info-title">Nome</p>
@@ -80,67 +80,67 @@
                 <p class="dependent__info-text"></p>
               </div>
             </div>
-            <a class="card__button" href="../dependentPanel/dependentPanel.php"><button>Ver tudo</button></a>
+            <a class="card__transportButton" href="../dependentPanel/dependentPanel.php"><button>Ver tudo</button></a>
           </div>
         </div>
 
-        <div class="content__card card__log">
+        <div class="content__card-transport card__log">
           <div class="card__container">
             <p class="card__title">Log do dia</p>
-            <div class="card__log-content">
-              <div class="log__light"></div>
+            <div class="card__log-transportContent">
+              <div class="log__lightTransport"></div>
               <p class="log__text">14:30 - Chegou na escola</p>
             </div>
-            <div class="card__log-content"></div>
-            <div class="card__log-content"></div>
-            <div class="card__log-content"></div>
-            <div class="card__log-content"></div>
-            <div class="card__log-content"></div>
-            <a class="card__button" href="../painelLog/painelLog.php"><button>Ver tudo</button></a>
+            <div class="card__log-transportContent"></div>
+            <div class="card__log-transportContent"></div>
+            <div class="card__log-transportContent"></div>
+            <div class="card__log-transportContent"></div>
+            <div class="card__log-transportContent"></div>
+            <a class="card__transportButton" href="../painelLog/painelLog.php"><button>Ver tudo</button></a>
           </div>
         </div>
 
-        <div class="content__card card__schedule">
+        <div class="content__card-transport card__schedule">
           <div class="card__container">
             <p class="card__title">Agenda</p>
-            <div class="card__schedule-content">
+            <div class="card__schedule-transportContent">
               <img src="../../img/menu-item2-transporte.png" alt="" class="schedule__img" />
               <p id="clock" class="schedule__text"></p>
             </div>
-            <a href="../schedule/schedule.php" class="card__schedule-content">
+            <a href="../schedule/schedule.php" class="card__schedule-transportContent">
               <img src="../../img/menu-item1-transporte.png" alt="" class="schedule__img" />
               <p class="schedule__text">Ver agenda</p>
             </a>
           </div>
         </div>
 
-        <div class="content__card card__notifications">
+        <div class="content__card-transport card__notifications">
           <div class="card__container">
             <p class="card__title">Notificações enviadas</p>
-            <div class="card__notifications-content">
-              <div class="notifications__light"></div>
+            <div class="card__notifications-transportContent">
+              <div class="notifications__transportLight"></div>
               <p class="notifications__text">Mensalidade atrasada</p>
             </div>
-            <div class="card__notifications-content"></div>
-            <div class="card__notifications-content"></div>
-            <a class="card__button" href=""><button>Ver tudo</button></a>
+            <div class="card__notifications-transportContent"></div>
+            <div class="card__notifications-transportContent"></div>
+            <a class="card__transportButton" href=""><button>Ver tudo</button></a>
           </div>
         </div>
 
-        <div class="content__card card__config">
+        <div class="content__card-transport card__config">
           <a
             href="../registerDependent/registerDependent.php"
-            class="card__container container__add"
+            class="card__container container__config"
           >
             <p class="card__title-add">Novo log ></p>
-            <img src="../../img/log-transporte.png" alt="" class="config__img" />
+            <img src="../../img/log-transporte.png" alt="" class="logTransport__img" />
           </a>
         </div>
 
-        <div class="content__card card__config">
+        <div class="content__card-transport card__config">
           <a href="#" class="card__container container__config">
             <p class="card__title-config">Enviar notificação ></p>
-            <img src="../../img/notificacao-transporte.png" alt="" class="config__img" />
+            <img src="../../img/notificacao-transporte.png" alt="" class="logTransport__img" />
           </a>
         </div>
       </div>
