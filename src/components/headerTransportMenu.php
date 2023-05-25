@@ -19,15 +19,15 @@
     <ul>
       <li><a href="/ichild/src/pages/responsibleMenu/responsibleMenu.php">MENU</a></li>
       <li><a href="/ichild/src/pages/dependentPanel/dependentPanel.php">DEPENDENTES</a></li>
-      <li><a href="/ichild/src/pages/registerDependent/registerDependent.php">ADICIONAR DEPENDENTES</a></li>
-      <li><a href="#">LOG DO DIA</a></li>
-      <li><a href="/ichild/src/pages/schedule/schedule.php">AGENDA</a></li>
+      <li><a href="/ichild/src/pages/registerDependent/registerDependent.php">LOG DO DIA</a></li>
+      <li><a href="#">NOVO LOG</a></li>
+      <li><a href="/ichild/src/pages/schedule/schedule.php">ENVIAR NOTIFICAÇÃO</a></li>
     </ul>
   </div>
 </aside>
 
 <?php 
-  $responsavelId = $_SESSION['id'];
+  $transportadorId = $_SESSION['id'];
   $nome = $_SESSION['nome'];
   $sobrenome = $_SESSION['sobrenome'];
 ?>
