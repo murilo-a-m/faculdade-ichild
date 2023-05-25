@@ -16,8 +16,7 @@
                 echo '<div class="icon">';
                 echo'</div>';
                 echo"<div value=$row[id] id='DependentSubmit' class='dados'>";
-                echo"<div class='dependent__img'></div>";
-                    echo"<h6 class='notify'>$row[nome]</h6>";
+                    echo"<h6 class='notify'>aaa</h6>";
             }
         }
     }
