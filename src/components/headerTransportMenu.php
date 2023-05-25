@@ -1,17 +1,9 @@
-<?php
-  if (isset($_SESSION['role'])) {
-      echo $_SESSION['role'];
-  } else {
-      echo 'A variável de sessão "role" não está definida.';
-  }
-?>
-
 <!-- Css Links -->
 <link rel="stylesheet" href="../../css/style.css" />
 <link rel="stylesheet" href="../../css/reset.css" />
 
-<aside class="aside__bar">
-  <div id="menu__bar">
+<aside class="aside__bar-menuTransport">
+  <div id="menu__bar-transport">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="30"
@@ -40,8 +32,8 @@
   $sobrenome = $_SESSION['sobrenome'];
 ?>
 
-<aside class="aside__bar-profile">
-  <div id="profile__bar">
+<aside class="aside__bar-transport">
+  <div id="profile__bar-transport">
       <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30"
@@ -68,15 +60,15 @@
   </div>
 </aside>
 
-<header class="container__header-app">
+<header class="container__header-transport">
   <div class="app__nav">
-    <img src="../../img/navbarIcon.png" alt="" id="app__nav-icon" />
-    <img src="../../img/favicon-ichild.png" alt="" class="logo-img" />
+    <img src="../../img/navbarIcon-transporte.png" alt="" id="app__nav-icon" />
+    <img src="../../img/favicon-ichild-transporte.png" alt="" class="logo-img" />
   </div>
   <div class="app__nav-profile">
-    <img src="../../img/profile.png" alt="" class="profile-img" />
+    <img src="../../img/profile.png" alt="" class="profileTransport-img" />
   </div>
 </header>
 
 <!-- Script Navbar -->
-<script src="../../utils/navbar-menu.js"></script>
+<script src="../../utils/navbar-transportMenu.js"></script>

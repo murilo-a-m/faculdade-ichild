@@ -60,7 +60,29 @@
     <main class="container__main-app">
       <div class="main__app-content">
 
-        <?php require './dependentsCard.php' ;?>
+        <div class="content__card card__dependents">
+          <div class="card__container">
+            <p class="card__title">Dependentes</p>
+            <div class="card__dependents-content">
+              <div class="dependent__img"></div>
+              <div class="dependent__info">
+                <p class="dependent__info-title">Nome</p>
+                <p class="dependent__info-text"></p>
+              </div>
+
+              <div class="dependent__info">
+                <p class="dependent__info-title">Turno</p>
+                <p class="dependent__info-text"></p>
+              </div>
+
+              <div class="dependent__info">
+                <p class="dependent__info-title">Responsável</p>
+                <p class="dependent__info-text"></p>
+              </div>
+            </div>
+            <a class="card__button" href="../dependentPanel/dependentPanel.php"><button>Ver tudo</button></a>
+          </div>
+        </div>
 
         <div class="content__card card__log">
           <div class="card__container">
@@ -110,15 +132,15 @@
             href="../registerDependent/registerDependent.php"
             class="card__container container__add"
           >
-            <p class="card__title-add">Adicionar dependentes ></p>
-            <img src="../../img/child-image.png" alt="" class="config__img" />
+            <p class="card__title-add">Novo log ></p>
+            <img src="../../img/log-transporte.png" alt="" class="config__img" />
           </a>
         </div>
 
         <div class="content__card card__config">
           <a href="#" class="card__container container__config">
-            <p class="card__title-config">Configurar dependentes ></p>
-            <img src="../../img/child-config.png" alt="" class="config__img" />
+            <p class="card__title-config">Enviar notificação ></p>
+            <img src="../../img/notificacao-transporte.png" alt="" class="config__img" />
           </a>
         </div>
       </div>
@@ -128,7 +150,7 @@
     <script src="../../utils/navbar-menu.js"></script>
 
     <!-- Script Date -->
-    <script src="./date.js"></script>
+    <script src="../../utils/date.js"></script>
 
     <!-- Script Bootstrap -->
     <script

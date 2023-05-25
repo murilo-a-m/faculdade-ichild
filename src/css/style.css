@@ -2020,5 +2020,221 @@
     margin: 8px 0;
   }
 }
+.container__header-transport {
+  align-items: center;
+  display: flex;
+  min-height: 8vh;
+  justify-content: space-between;
+  padding: 0 30px;
+  background-color: #dde6ed;
+}
+.container__header-transport #app__nav-icon {
+  cursor: pointer;
+  margin-right: 10px;
+  width: 25px;
+}
+.container__header-transport .logo-img {
+  width: 50px;
+}
+.container__header-transport .profileTransport-img {
+  border: 3px solid #526d82;
+  border-radius: 100%;
+  width: 40px;
+  cursor: pointer;
+}
+
+.app__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aside__bar-menuTransport {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  left: 0;
+  position: fixed;
+  z-index: 9999;
+  transform: translateX(-1000px);
+  transition: transform 0.3s ease-in-out;
+}
+
+#menu__bar-transport {
+  background-color: #526d82;
+  min-height: 100vh;
+  width: 320px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  display: flex;
+  flex-direction: column;
+}
+#menu__bar-transport .menu__bar-icon {
+  align-self: flex-end;
+  margin: 5px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+#menu__bar-transport .menu__bar-icon:hover {
+  background-color: rgba(255, 255, 255, 0.466);
+  color: black;
+}
+#menu__bar-transport ul {
+  margin-left: 33px;
+  margin-top: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+#menu__bar-transport ul li {
+  font-size: 18px;
+  list-style: none;
+  margin-top: 20px;
+}
+#menu__bar-transport ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+#menu__bar-transport ul li a:hover {
+  color: rgb(0, 0, 0);
+}
+#menu__bar-transport ul li:first-child {
+  margin-top: 0;
+}
+
+.nav__profile {
+  background-color: #3ab5df;
+  border-radius: 4px;
+  display: none;
+  min-height: 60px;
+  justify-content: center;
+  margin-right: 30px;
+  position: absolute;
+  right: 0;
+  top: 10;
+  width: 80px;
+}
+.nav__profile ul {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.nav__profile ul li {
+  font-size: 14px;
+  list-style: none;
+  text-align: right;
+}
+.nav__profile ul li a {
+  color: rgb(255, 255, 255);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+.nav__profile ul li a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.aside__bar-transport {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  right: 0;
+  position: fixed;
+  z-index: 9999;
+  transform: translateX(1000px);
+  transition: transform 0.3s ease-in-out;
+}
+
+#profile__bar-transport {
+  background-color: #526d82;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+#profile__bar-transport svg {
+  align-self: flex-start;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#profile__bar-transport svg:hover {
+  background-color: rgba(255, 255, 255, 0.466);
+  color: black;
+}
+#profile__bar-transport .profile__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+#profile__bar-transport .profile__info .profile__pic {
+  width: 130px;
+  border: 5px solid #ffffff;
+  border-radius: 100%;
+}
+#profile__bar-transport .profile__info p {
+  font-size: 18px;
+}
+#profile__bar-transport .profile__division {
+  background-color: rgba(255, 255, 255, 0.486);
+  width: 100%;
+  min-height: 2px;
+}
+#profile__bar-transport .profile__options {
+  margin-bottom: 50px;
+}
+#profile__bar-transport ul {
+  margin-top: 30px;
+  text-align: center;
+}
+#profile__bar-transport ul li {
+  font-size: 16px;
+  list-style: none;
+  margin-top: 10px;
+}
+#profile__bar-transport ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+}
+#profile__bar-transport ul li a:hover {
+  color: rgb(0, 0, 0);
+}
+#profile__bar-transport ul li button {
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  padding: 8px 30px;
+}
+#profile__bar-transport ul li button a {
+  font-weight: bold;
+  color: #526d82;
+  text-decoration: none;
+}
+#profile__bar-transport ul li button a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.openNavbar {
+  transform: translateX(0);
+  transition: 0.3s all;
+}
+
+@media (max-width: 425px) {
+  #menu__bar,
+  #profile__bar {
+    width: 100vw;
+  }
+}
+@media (max-height: 800px) {
+  .container__header-app {
+    min-height: 70px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
