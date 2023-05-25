@@ -104,19 +104,19 @@
           <div class="card__container">
             <p class="card__title">Agenda</p>
             <div class="card__schedule-content">
-              <img src="../../img/menu-item2.png" alt="" class="schedule__img" />
+              <img src="../../img/menu-item2-transporte.png" alt="" class="schedule__img" />
               <p id="clock" class="schedule__text"></p>
             </div>
             <a href="../schedule/schedule.php" class="card__schedule-content">
-              <img src="../../img/menu-item1.png" alt="" class="schedule__img" />
-              <p class="schedule__text">Minha agenda</p>
+              <img src="../../img/menu-item1-transporte.png" alt="" class="schedule__img" />
+              <p class="schedule__text">Ver agenda</p>
             </a>
           </div>
         </div>
 
         <div class="content__card card__notifications">
           <div class="card__container">
-            <p class="card__title">Notificações</p>
+            <p class="card__title">Notificações enviadas</p>
             <div class="card__notifications-content">
               <div class="notifications__light"></div>
               <p class="notifications__text">Mensalidade atrasada</p>
