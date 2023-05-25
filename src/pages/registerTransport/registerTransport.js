@@ -63,27 +63,39 @@ function validatePassword(password, passwordConfirm) {
   }
 }
 
-function validateStreet(cnh) {
-  const cnhError = document.querySelector("#cnh-error");
-
-  if (cnh.value === "") {
-    cnhError.textContent = "Campo obrigatório*";
-    return false;
-  } else {
-    cnhError.textContent = "";
-    return true;
-  }
-}
-
-function validateNumber(cep) {
+function validateCep() {
+  const cep = document.querySelector("#inputCep").value;
   const cepError = document.querySelector("#cep-error");
 
-  if (cep.value === "") {
+  if (cep !== "") {
+    let url = "https://brasilapi.com.br/api/cep/v1/" + cep;
+
+    let request = new XMLHttpRequest();
+    request.open("GET", url);
+    request.send();
+
+    request.onload = function () {
+      if (request.status === 200) {
+        cepError.textContent = "";
+        return true;
+      } else if (request.status === 404) {
+        cepError.textContent = "CEP inválido";
+        Swal.fire({
+          position: "top-end",
+          icon: "error",
+          title: "CEP Inválido!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        return false;
+      } else {
+        alert("Erro ao fazer a requisição");
+        return false;
+      }
+    };
+  } else {
     cepError.textContent = "Campo obrigatório*";
     return false;
-  } else {
-    cepError.textContent = "";
-    return true;
   }
 }
 
@@ -120,10 +132,14 @@ const form = document.querySelector("#form");
 const email = document.querySelector("#inputEmail");
 const password = document.querySelector("#inputPassword");
 const confirmPassword = document.querySelector("#inputConfirmPassword");
-const street = document.querySelector("#inputStreet");
-const number = document.querySelector("#inputNumber");
 
 form.addEventListener("submit", (ev) => {
   ev.preventDefault();
-  createResponsible();
+  if (
+    validateEmail(email) &&
+    validatePassword(password, confirmPassword) &&
+    validateCep()
+  ) {
+    createResponsible();
+  }
 });
