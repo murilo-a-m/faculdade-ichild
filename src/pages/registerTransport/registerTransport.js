@@ -88,16 +88,16 @@ function validateCep() {
             showConfirmButton: false,
             timer: 1500,
           });
-          resolve(false); // CEP é inválido
+          resolve(false);
         } else {
           alert("Erro ao fazer a requisição");
-          resolve(false); // Erro na requisição
+          resolve(false);
         }
       };
     });
   } else {
     cepError.textContent = "Campo obrigatório*";
-    return Promise.resolve(false); // CEP em branco é inválido
+    return Promise.resolve(false);
   }
 }
 
@@ -113,7 +113,7 @@ function createResponsible() {
         "Conta criada com sucesso",
         "success"
       ).then(function () {
-        window.location = "../login/login.php";
+        window.location = "../loginTransport/loginTransport.php";
       });
     },
     error: function (resp) {
@@ -121,6 +121,12 @@ function createResponsible() {
         Swal.fire(
           "Email já cadastrado!",
           "Tente novamente com outro email!",
+          "error"
+        );
+      } else if (resp.status == 409) {
+        Swal.fire(
+          "CNH já cadastrado!",
+          "Tente novamente com outro CNH!",
           "error"
         );
       } else {
