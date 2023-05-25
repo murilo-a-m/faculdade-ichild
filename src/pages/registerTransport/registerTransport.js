@@ -63,26 +63,26 @@ function validatePassword(password, passwordConfirm) {
   }
 }
 
-function validateStreet(street) {
-  const streetError = document.querySelector("#street-error");
+function validateStreet(cnh) {
+  const cnhError = document.querySelector("#cnh-error");
 
-  if (street.value === "") {
-    streetError.textContent = "Campo obrigatório*";
+  if (cnh.value === "") {
+    cnhError.textContent = "Campo obrigatório*";
     return false;
   } else {
-    streetError.textContent = "";
+    cnhError.textContent = "";
     return true;
   }
 }
 
-function validateNumber(number) {
-  const numberError = document.querySelector("#number-error");
+function validateNumber(cep) {
+  const cepError = document.querySelector("#cep-error");
 
-  if (number.value === "") {
-    numberError.textContent = "Campo obrigatório*";
+  if (cep.value === "") {
+    cepError.textContent = "Campo obrigatório*";
     return false;
   } else {
-    numberError.textContent = "";
+    cepError.textContent = "";
     return true;
   }
 }
@@ -92,7 +92,7 @@ function createResponsible() {
     url: "registerTransportExe.php",
     type: "POST",
     dataType: "json",
-    data: $("#formTransport").serialize(),
+    data: $("#form").serialize(),
     success: function (result) {
       Swal.fire(
         "Conta cadastrada!",
@@ -116,7 +116,7 @@ function createResponsible() {
   });
 }
 
-const form = document.querySelector("#formTransport");
+const form = document.querySelector("#form");
 const email = document.querySelector("#inputEmail");
 const password = document.querySelector("#inputPassword");
 const confirmPassword = document.querySelector("#inputConfirmPassword");
@@ -125,12 +125,5 @@ const number = document.querySelector("#inputNumber");
 
 form.addEventListener("submit", (ev) => {
   ev.preventDefault();
-  const emailOk = validateEmail(email);
-  const passwordOk = validatePassword(password, confirmPassword);
-  const streetOk = validateStreet(street);
-  const numberOk = validateNumber(number);
-
-  if (emailOk && passwordOk && streetOk && numberOk) {
-    createResponsible();
-  }
+  createResponsible();
 });

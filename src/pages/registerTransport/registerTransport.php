@@ -39,7 +39,7 @@
     <?php require '../../components/header.php';?>
 
     <main class="container__form-register container-fluid">
-      <form id="formTransport" class="container__form-content row g-1 container-md mt-3">
+      <form id="form" class="container__form-content row g-1 container-md mt-3">
 
         <div class="col-md-10 passwordContent">
           <div class="col-md-6">
@@ -140,7 +140,7 @@
         </div>
 
         <button type="submit" class="col-md-10 form__btn mt-3">
-          Criar conta
+          Cadastrar veiculo
         </button>
       </form>
     </main>
@@ -149,7 +149,7 @@
     <script src="../../utils/navbar.js"></script>
 
     <!-- Script Regex -->
-    <script src="../js/register.js"></script>
+    <script src="./registerTransport.js"></script>
 
     <!-- Script Bootstrap -->
     <script

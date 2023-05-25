@@ -1,4 +1,7 @@
 <?php
+  require_once '../../database/connection.php';
+  header('Content-Type: application/json');
+
   $nome    = $_POST['nome'];	
   $sobrenome     = $_POST['sobrenome'];
   $email = $_POST['email'];
@@ -39,7 +42,7 @@
     }
   }
 
-  $sql = "INSERT INTO ichild.Transportades ( nome, sobrenome, email, senha, cnh, cep, placa, marca, modelo, capacidade) 
+  $sql = "INSERT INTO ichild.Transportadores ( nome, sobrenome, email, senha, cnh, cep, placa, marca, modelo, capacidade) 
           VALUES ('$nome','$sobrenome', '$email', '$encrypted_pwd', '$cnh', '$cep', '$placa','$marca','$modelo','$capacidade')";
   
   if ($result = mysqli_query($conn, $sql)) {       
