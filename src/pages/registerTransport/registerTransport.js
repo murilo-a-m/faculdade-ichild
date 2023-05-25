@@ -70,32 +70,34 @@ function validateCep() {
   if (cep !== "") {
     let url = "https://brasilapi.com.br/api/cep/v1/" + cep;
 
-    let request = new XMLHttpRequest();
-    request.open("GET", url);
-    request.send();
+    return new Promise((resolve, reject) => {
+      let request = new XMLHttpRequest();
+      request.open("GET", url);
+      request.send();
 
-    request.onload = function () {
-      if (request.status === 200) {
-        cepError.textContent = "";
-        return true;
-      } else if (request.status === 404) {
-        cepError.textContent = "CEP inválido";
-        Swal.fire({
-          position: "top-end",
-          icon: "error",
-          title: "CEP Inválido!",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-        return false;
-      } else {
-        alert("Erro ao fazer a requisição");
-        return false;
-      }
-    };
+      request.onload = function () {
+        if (request.status === 200) {
+          cepError.textContent = "";
+          resolve(true); // CEP é válido
+        } else if (request.status === 404) {
+          cepError.textContent = "CEP inválido";
+          Swal.fire({
+            position: "top-end",
+            icon: "error",
+            title: "CEP Inválido!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          resolve(false); // CEP é inválido
+        } else {
+          alert("Erro ao fazer a requisição");
+          resolve(false); // Erro na requisição
+        }
+      };
+    });
   } else {
     cepError.textContent = "Campo obrigatório*";
-    return false;
+    return Promise.resolve(false); // CEP em branco é inválido
   }
 }
 
@@ -133,12 +135,12 @@ const email = document.querySelector("#inputEmail");
 const password = document.querySelector("#inputPassword");
 const confirmPassword = document.querySelector("#inputConfirmPassword");
 
-form.addEventListener("submit", (ev) => {
+form.addEventListener("submit", async (ev) => {
   ev.preventDefault();
   if (
     validateEmail(email) &&
     validatePassword(password, confirmPassword) &&
-    validateCep()
+    (await validateCep())
   ) {
     createResponsible();
   }
