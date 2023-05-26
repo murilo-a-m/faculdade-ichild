@@ -1,6 +1,10 @@
 <?php 
   session_start();
   session_destroy();
-  header('Location: ../home/home.php');
+  if($_SESSION['role'] == 'transportador') {
+    header('Location: ../loginTransport/loginTransport.php');
+  } else if($_SESSION['role'] == 'responsavel') {
+    header('Location: ../login/login.php');
+  }
 ?>
 
