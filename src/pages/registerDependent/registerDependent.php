@@ -27,8 +27,14 @@
     <title>iChild</title>
   </head>
   <body>
+  <?php
+    require_once '../../database/connection.php';
+  ?>
 
-    <?php 
+
+    <?php
+      
+
       session_start();
       if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
         header('location: ../login/login.php?erro=true');
@@ -100,16 +106,28 @@
           </select>
           <span id="turn-error" class="error"></span>
         </div>
-
         <div class="col-md-8 mt-2 mb-2">
           <label for="inputTransport" class="form-label">Transporte</label>
-          <select id="inputTransport" class="form-select">
+          <select id="inputTransport" class="form-select" name="transporte">
             <option selected>Escolher..</option>
-            <option></option>
-          </select>
-          <span id="transport-error" class="error"></span>
-        </div>
+            <?php
+            $sqlTransporte = "SELECT id, nome FROM Transportadores";
+            $result = mysqli_query($conn, $sqlTransporte);
 
+            if (mysqli_num_rows($result) > 0) {
+              while ($row = mysqli_fetch_assoc($result)) {
+                $idTransportador = $row['id'];
+                $nomeTransportador = $row['nome'];
+                echo "<option value='$idTransportador'>$nomeTransportador</option>";
+              }
+            } else {
+              echo "<option>Nenhum transportador encontrado</option>";
+            }
+
+            mysqli_close($conn);
+            ?>
+          </select>
+        </div>
         <button type="submit" class="col-md-6 form__btn-save">
           Salvar dependente
         </button>

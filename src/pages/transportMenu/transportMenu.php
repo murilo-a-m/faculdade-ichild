@@ -80,7 +80,7 @@
                 <p class="dependent__info-text"></p>
               </div>
             </div>
-            <a class="card__transportButton" href="../dependentPanel/dependentPanel.php"><button>Ver tudo</button></a>
+            <a class="card__transportButton" href="../transportadorDependent/transportadorDependent.php"><button>Ver tudo</button></a>
           </div>
         </div>
 
