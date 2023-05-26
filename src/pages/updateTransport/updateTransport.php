@@ -168,7 +168,7 @@
 
       <form id="delete__form" method="post" action="../deleteTransport/deleteTransportExe.php" class="container__responsibleInfo-content row g-1 container-md gap-2 mt-1">
         <input type="hidden" name="id_cliente" value="1">
-        <button type="button" id="btnDelete" class="info__btn-editTransport col-md-7">
+        <button type="button" id="btnDelete" class="info__btn-editTransport col-md-7 mb-3">
         Deletar conta
         </button>
       </form>

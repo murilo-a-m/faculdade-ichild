@@ -2619,7 +2619,7 @@
   }
 }
 .container__main-transportInfo {
-  height: 92vh;
+  min-height: 92vh;
   background-color: #dde6ed;
   display: flex;
   align-items: center;
@@ -2665,8 +2665,8 @@
 }
 
 @media (max-height: 800px) {
-  .container__main-reponsibleInfo {
-    height: 800px;
+  .container__main-transportInfo {
+    min-height: 800px;
   }
 }
 
