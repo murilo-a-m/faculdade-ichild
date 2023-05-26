@@ -1,0 +1,244 @@
+.container__header-transport {
+  align-items: center;
+  display: flex;
+  min-height: 8vh;
+  justify-content: space-between;
+  padding: 0 30px;
+  background-color: #dde6ed;
+
+  #app__nav-icon {
+    cursor: pointer;
+    margin-right: 10px;
+    width: 25px;
+  }
+
+  .logo-img {
+    width: 50px;
+  }
+
+  .profileTransport-img {
+    border: 3px solid #526d82;
+    border-radius: 100%;
+    width: 40px;
+    cursor: pointer;
+  }
+}
+
+.app__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aside__bar-menuTransport {
+  font-family: $font;
+  font-weight: 500;
+  left: 0;
+  position: fixed;
+  z-index: 9999;
+  transform: translateX(-1000px);
+  transition: transform 0.3s ease-in-out;
+}
+
+#menu__bar-transport {
+  background-color: #526d82;
+  min-height: 100vh;
+  width: 320px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  display: flex;
+  flex-direction: column;
+
+  .menu__bar-icon {
+    align-self: flex-end;
+    margin: 5px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.466);
+      color: black;
+    }
+  }
+
+  ul {
+    margin-left: 33px;
+    margin-top: 1rem;
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      font-size: 18px;
+      list-style: none;
+      margin-top: 20px;
+
+      a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+
+        &:hover {
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+  }
+
+  ul li:first-child {
+    margin-top: 0;
+  }
+}
+
+.nav__profile {
+  background-color: #3ab5df;
+  border-radius: 4px;
+  display: none;
+  min-height: 60px;
+  justify-content: center;
+  margin-right: 30px;
+  position: absolute;
+  right: 0;
+  top: 10;
+  width: 80px;
+
+  ul {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    li {
+      font-size: 14px;
+      list-style: none;
+      text-align: right;
+
+      a {
+        color: rgb(255, 255, 255);
+        font-family: $font;
+        font-weight: 500;
+        text-decoration: none;
+
+        &:hover {
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+  }
+}
+
+.aside__bar-transport {
+  color: white;
+  font-family: $font;
+  font-weight: 500;
+  right: 0;
+  position: fixed;
+  z-index: 9999;
+  transform: translateX(1000px);
+  transition: transform 0.3s ease-in-out;
+}
+
+#profile__bar-transport {
+  background-color: #526d82;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+
+  svg {
+    align-self: flex-start;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.466);
+      color: black;
+    }
+  }
+
+  .profile__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+
+    .profile__pic {
+      width: 130px;
+      border: 5px solid #ffffff;
+      border-radius: 100%;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .profile__division {
+    background-color: rgba(255, 255, 255, 0.486);
+    width: 100%;
+    min-height: 2px;
+  }
+
+  .profile__options {
+    margin-bottom: 50px;
+  }
+
+  ul {
+    margin-top: 30px;
+    text-align: center;
+
+    li {
+      font-size: 16px;
+      list-style: none;
+      margin-top: 10px;
+
+      a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          color: rgb(0, 0, 0);
+        }
+      }
+
+      button {
+        border-radius: 20px;
+        border: none;
+        background-color: white;
+        padding: 8px 30px;
+
+        a {
+          font-weight: bold;
+          color: #526d82;
+          text-decoration: none;
+
+          &:hover {
+            color: rgb(0, 0, 0);
+          }
+        }
+      }
+    }
+  }
+}
+
+.openNavbar {
+  transform: translateX(0);
+  transition: 0.3s all;
+}
+
+@media (max-width: 425px) {
+  #menu__bar,
+  #profile__bar {
+    width: 100vw;
+  }
+}
+
+@media (max-height: 800px) {
+  .container__header-app {
+    min-height: 70px;
+  }
+}

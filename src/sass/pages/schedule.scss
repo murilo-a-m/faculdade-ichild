@@ -1,0 +1,81 @@
+.container__main-schedule {
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .schedule__content {
+    height: 92%;
+    width: 97%;
+    padding: 20px;
+    background-color: #eef3ff;
+    border-radius: 10px;
+
+    button {
+      background-color: $blue;
+      border: none;
+
+      &:hover {
+        background-color: #1a252fde;
+      }
+
+      &:disabled {
+        background-color: #1a252f;
+        opacity: 100%;
+      }
+    }
+
+    h2 {
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+  }
+}
+
+.container__form-paragraph {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  width: 100%;
+  height: 38px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+
+  &::-webkit-color-swatch {
+    border-radius: 6px;
+    border: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container__main-schedule .schedule__content h2 {
+    font-size: 16px;
+  }
+
+  .fc .fc-button-group button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .fc .fc-toolbar {
+    flex-direction: column;
+  }
+  .fc .fc-button-group button {
+    margin: 8px 0;
+  }
+}

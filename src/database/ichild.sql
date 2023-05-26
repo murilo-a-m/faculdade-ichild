@@ -42,6 +42,20 @@ CREATE TABLE Dependentes (
     FOREIGN KEY(transportadorId) REFERENCES Transportadores(id)
 );
 
+CREATE TABLE Agendas (
+    id INT(11) PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(90) NOT NULL,
+    description TEXT NOT NULL,
+    color VARCHAR(10) NOT NULL,
+    start TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    end TIMESTAMP NULL DEFAULT NULL,
+    responsavelId INT(11) NOT NULL,
+    transportadorId INT,
+
+    FOREIGN KEY(responsavelId) REFERENCES Responsaveis(id),
+    FOREIGN KEY(transportadorId) REFERENCES Transportadores(id)
+);
+
 
 CREATE TABLE Log_do_dia (
     horario TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
