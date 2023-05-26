@@ -166,7 +166,7 @@
         </button>
       </form>
 
-      <form id="delete__form" method="post" action="deleteExe.php" class="container__responsibleInfo-content row g-1 container-md gap-2 mt-1">
+      <form id="delete__form" method="post" action="../deleteTransport/deleteTransportExe.php" class="container__responsibleInfo-content row g-1 container-md gap-2 mt-1">
         <input type="hidden" name="id_cliente" value="1">
         <button type="button" id="btnDelete" class="info__btn-editTransport col-md-7">
         Deletar conta
@@ -181,7 +181,7 @@
     <script src="./updateTransport.js"></script>
 
     <!-- Script Delete -->
-    <script src="./delete.js"></script>
+    <script src="../deleteTransport/deleteTransport.js"></script>
 
     <!-- Script Bootstrap -->
     <script
