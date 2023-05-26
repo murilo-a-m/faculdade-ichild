@@ -128,7 +128,7 @@
     <script src="../../utils/navbar-menu.js"></script>
 
     <!-- Script Date -->
-    <script src="./date.js"></script>
+    <script src="../../utils/date.js"></script>
 
     <!-- Script Bootstrap -->
     <script
