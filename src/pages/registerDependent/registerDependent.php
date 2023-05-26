@@ -128,7 +128,9 @@
             ?>
           </select>
         </div>
-        <button type="submit" class="col-md-6 form__btn-save">
+        <input type="hidden" id="transporterId" name="transporterId" value="">
+
+        <button type="submit" class="col-md-6 form__btn-save" onclick="setTransporterId()">
           Salvar dependente
         </button>
         <button class="col-md-2 form__btn-cancel">Cancelar</button>

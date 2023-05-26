@@ -60,6 +60,7 @@
       $documento     = $_POST['documento'];
       $turno     = $_POST['turno'];
       $responsavelId = $_SESSION['id'];
+      $transporte = $_POST['transportadorId'];
       
       $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
 

@@ -144,8 +144,23 @@
         <div class="col-md-8 mt-2 mb-2">
           <label for="inputTransport" class="form-label">Transporte</label>
           <select id="inputTransport" class="form-select">
-            <option onchange="fetchDependents()" selected>Escolher..</option>
-            <option value="">JSM</option>
+            <option selected>Escolher..</option>
+            <?php
+              $sqlTransporte = "SELECT id, nome FROM Transportadores";
+              $result = mysqli_query($conn, $sqlTransporte);
+
+              if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                  $idTransportador = $row['id'];
+                  $nomeTransportador = $row['nome'];
+                  echo "<option value='$idTransportador'>$nomeTransportador</option>";
+                }
+              } else {
+                echo "<option>Nenhum transportador encontrado</option>";
+              }
+
+              mysqli_close($conn);
+            ?>
           </select>
           <span id="transport-error" class="error"></span>
         </div>
