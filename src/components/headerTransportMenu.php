@@ -53,7 +53,7 @@
     <div class="profile__division"></div>
     <div class="profile__options">
       <ul>
-        <li><a href="../../pages/responsible/update.php" >MEU PERFIL</a></li>
+        <li><a href="../../pages/updateTransport/updateTransport.php" >MEU PERFIL</a></li>
         <li><button><a href="../logout/logout.php" >SAIR</a></button></li>
       </ul>
     </div>
