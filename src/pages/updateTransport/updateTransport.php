@@ -101,7 +101,7 @@
       }   
     ;?>
 
-    <main class="container__main-reponsibleInfo container-fluid">
+    <main class="container__main-transportInfo container-fluid">
       <form id="formUpdate" class="container__responsibleInfo-content row g-1 container-md gap-2" method="post" action="updateTransportExe.php">
         <p class="col-md-7 container__form-text">Suas informações:</p>
 
@@ -153,22 +153,22 @@
           <span id="capacidade-error" class="error"></span>
         </div>
 
-        <button id="btnEdit" class="col-md-7 info__btn-edit">
+        <button id="btnEdit" class="col-md-7 info__btn-editTransport">
           Editar informações
         </button>
 
-        <button id="btnSave" class="col-md-5 info__btn-edit form-disabled">
+        <button id="btnSave" class="col-md-5 info__btn-editTransport form-disabled">
           Salvar
         </button>
 
-        <button id="btnCancel" class="col-md-2 info__btn-edit form-disabled">
+        <button id="btnCancel" class="col-md-2 info__btn-editTransport form-disabled">
           Cancelar
         </button>
       </form>
 
       <form id="delete__form" method="post" action="deleteExe.php" class="container__responsibleInfo-content row g-1 container-md gap-2 mt-1">
         <input type="hidden" name="id_cliente" value="1">
-        <button type="button" id="btnDelete" class="info__btn-edit col-md-7">
+        <button type="button" id="btnDelete" class="info__btn-editTransport col-md-7">
         Deletar conta
         </button>
       </form>
