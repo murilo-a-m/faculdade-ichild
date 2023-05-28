@@ -209,6 +209,21 @@
           </div>
         </div>
       </div>
+      <div class="main__bannerTransport background__style">
+        <div class="main__transport-box container-md">
+          <div class="main__transport-content">
+            <img src="../../img/about-logo-transporteBusiness.png" alt="" class="transportBusiness__img">
+            <div class="main__banner-btn">
+            <a href="../responsible/register.php" class="banner__registerBtn">
+              <span>Cadastrar-se</span>
+            </a>
+            <a href="#about" class="banner__aboutBtn">
+              <span>Entrar na conta</span>
+            </a>
+          </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="container__footer">
