@@ -36,9 +36,9 @@
           $_SESSION['rua'] = $rua;
           $_SESSION['numero'] = $numero;
 
-          // if (isset($foto_base64)) {
-          //     $_SESSION['foto'] = $foto_base64;
-          // }
+          if (isset($foto_base64)) {
+              $_SESSION['foto'] = $foto_base64;
+          }
 
           $status = 'success';
           $message = 'Requisição bem sucedida';
