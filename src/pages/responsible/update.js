@@ -105,11 +105,16 @@ form.addEventListener("submit", async (ev) => {
 });
 
 function updateResponsible() {
+  var form = document.getElementById("formUpdate");
+  var formData = new FormData(form);
+
   jQuery.ajax({
     url: "updateExe.php",
     type: "POST",
     dataType: "json",
-    data: $("#formUpdate").serialize(),
+    data: formData,
+    contentType: false,
+    processData: false,
     success: function (result) {
       Swal.fire("Atualizado!", "Usuário editado com sucesso!", "success").then(
         function () {
