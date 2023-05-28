@@ -85,25 +85,6 @@ cepInput.addEventListener("blur", () => {
   findCep();
 });
 
-function updateResponsible() {
-  jQuery.ajax({
-    url: "registerExe.php",
-    type: "POST",
-    dataType: "json",
-    data: $("#form").serialize(),
-    success: function (result) {
-      Swal.fire("Atualizado!", "Usuário editado com sucesso!", "success").then(
-        function () {
-          window.location = "./update.js";
-        }
-      );
-    },
-    error: function (resp) {
-      Swal.fire("Erro ao atualizar!");
-    },
-  });
-}
-
 form.addEventListener("submit", async (ev) => {
   ev.preventDefault();
 
@@ -122,3 +103,23 @@ form.addEventListener("submit", async (ev) => {
     timer: 1500,
   });
 });
+
+function updateResponsible() {
+  jQuery.ajax({
+    url: "updateExe.php",
+    type: "POST",
+    dataType: "json",
+    data: $("#formUpdate").serialize(),
+    success: function (result) {
+      Swal.fire("Atualizado!", "Usuário editado com sucesso!", "success").then(
+        function () {
+          window.location = "./update.php";
+        }
+      );
+    },
+    error: function (resp) {
+      console.log(resp);
+      Swal.fire("Erro ao atualizar!");
+    },
+  });
+}

@@ -1,6 +1,7 @@
 <?php
   session_start();
-  require_once "../../database/connection.php";
+  require_once '../../database/connection.php';
+  header('Content-Type: application/json');
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $nome    = $_POST['nome'];	
@@ -35,10 +36,39 @@
           $_SESSION['cidade'] = $cidade;
           $_SESSION['rua'] = $rua;
           $_SESSION['numero'] = $numero;
-          $_SESSION['foto'] = $foto_base64;
+
+          if (isset($foto_base64)){
+            $_SESSION['foto'] = $foto_base64;
+          }
+          
+          $status = 'success';
+          $message = 'Requisição bem sucedida';
+          $statusCode = 200;
+
+          http_response_code($statusCode);
+
+          $response = array(
+              'status' => $status,
+              'message' => $message,
+          );
+          $jsonResponse = json_encode($response);
+          echo $jsonResponse;
+          exit;
 
       } else {
-          echo "Erro ao salvar os dados: " . $conn->error;
+          $status = 'error';
+          $message = 'Erro ao realizar a requisição';
+          $statusCode = 500;
+
+          http_response_code($statusCode);
+
+          $response = array(
+              'status' => $status,
+              'message' => $message,
+          );
+          $jsonResponse = json_encode($response);
+          echo $jsonResponse;
+          exit;
       }
   $conn->close();
 }
