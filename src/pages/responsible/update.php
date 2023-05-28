@@ -101,7 +101,7 @@
     ;?>
 
     <main class="container__main-reponsibleInfo container-fluid">
-      <form id="formUpdate" class="container__responsibleInfo-content row g-1 container-md gap-2" method="post" action="updateExe.php">
+      <form id="formUpdate" class="container__responsibleInfo-content row g-1 container-md gap-2" method="post" action="updateExe.php" enctype="multipart/form-data">
         <p class="col-md-7 container__form-text">Suas informações:</p>
 
         <div class="col-md-7 mt-3">
@@ -144,6 +144,12 @@
           <label for="infoNumber" class="form-label">Número</label>
           <input type="text" value="<?php echo ($numero);?>" class="form-control disabled" id="infoNumber" required name="numero" disabled/>
           <span id="number-error" class="error"></span>
+        </div>
+
+        <div class="col-md-7 mt-3 mb-3">
+          <label for="infoNumber" class="form-label">Foto de Perfil</label>
+          <input type="file" class="form-control disabled" id="infoFoto" name="foto"/>
+          <span id="foto-error" class="error"></span>
         </div>
 
         <button id="btnEdit" class="col-md-7 info__btn-edit">
