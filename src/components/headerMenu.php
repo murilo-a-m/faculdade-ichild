@@ -30,6 +30,7 @@
   $responsavelId = $_SESSION['id'];
   $nome = $_SESSION['nome'];
   $sobrenome = $_SESSION['sobrenome'];
+  $imagem = $_SESSION['imagem'];
 ?>
 
 <aside class="aside__bar-profile">
@@ -47,7 +48,7 @@
           />
       </svg>
     <div class="profile__info">
-      <img src="../../img/profile.png" alt="" class="profile__pic img_fluid" />
+      <img src="data:image/jpeg;base64,<?php echo $_SESSION['imagem']; ?>" alt="" class="img-fluid rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
       <p class="profile__name"><?php echo ("$nome $sobrenome") ?></p>
     </div>
     <div class="profile__division"></div>
@@ -66,7 +67,7 @@
     <img src="../../img/favicon-ichild.png" alt="" class="logo-img" />
   </div>
   <div class="app__nav-profile">
-    <img src="../../img/profile.png" alt="" class="profile-img" />
+    <img src="data:image/jpeg;base64,<?php echo $_SESSION['imagem']; ?>" alt="" class="profile-img rounded-circle" style="width: 50px; height: 50px; object-fit: cover;">
   </div>
 </header>
 

@@ -2,7 +2,7 @@
   require_once "../../database/connection.php";
   $responsavelId = $_SESSION['id'];
 
-  $sql = "SELECT id, nome, sobrenome, cep, estado, cidade, rua, numero 
+  $sql = "SELECT id, nome, sobrenome, cep, estado, cidade, rua, numero, imagem
           FROM ichild.Responsaveis
           WHERE id =$responsavelId";
 
@@ -16,6 +16,7 @@
         $cidade = $row['cidade'];
         $rua = $row['rua'];
         $numero = $row['numero'];
+        $imagem = $row['imagem'];
       }
     }
   }   

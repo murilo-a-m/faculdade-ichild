@@ -21,6 +21,7 @@
           $sql = "UPDATE ichild.Responsaveis
               SET nome = '$nome', sobrenome = '$sobrenome', cep = '$cep', estado = '$estado', cidade = '$cidade', rua = '$rua', numero = '$numero', imagem = '$foto_base64'  
               WHERE id = $responsavelId";
+              
       } else {
           $sql = "UPDATE ichild.Responsaveis
               SET nome = '$nome', sobrenome = '$sobrenome', cep = '$cep', estado = '$estado', cidade = '$cidade', rua = '$rua', numero = '$numero' 
@@ -35,9 +36,9 @@
           $_SESSION['cidade'] = $cidade;
           $_SESSION['rua'] = $rua;
           $_SESSION['numero'] = $numero;
-
+          
           if (isset($foto_base64)) {
-              $_SESSION['foto'] = $foto_base64;
+              $_SESSION['imagem'] = $foto_base64;
           }
 
           $status = 'success';
