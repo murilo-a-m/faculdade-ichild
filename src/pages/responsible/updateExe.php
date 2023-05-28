@@ -1,10 +1,5 @@
 <?php
   session_start();
-
-  if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
-    header('location: ../login/login.php?erro=true');
-    exit;
-  }
   require_once "../../database/connection.php";
 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {

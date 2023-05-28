@@ -85,13 +85,32 @@ cepInput.addEventListener("blur", () => {
   findCep();
 });
 
+function updateResponsible() {
+  jQuery.ajax({
+    url: "registerExe.php",
+    type: "POST",
+    dataType: "json",
+    data: $("#form").serialize(),
+    success: function (result) {
+      Swal.fire("Atualizado!", "Usuário editado com sucesso!", "success").then(
+        function () {
+          window.location = "./update.js";
+        }
+      );
+    },
+    error: function (resp) {
+      Swal.fire("Erro ao atualizar!");
+    },
+  });
+}
+
 form.addEventListener("submit", async (ev) => {
   ev.preventDefault();
 
   validateCep = findCep();
 
   if (await findCep()) {
-    form.submit();
+    updateResponsible();
     return;
   }
 
