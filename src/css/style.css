@@ -610,6 +610,9 @@
     align-items: center;
     text-align: center;
   }
+  .main__services .services__item img {
+    width: 180px;
+  }
 }
 @media (max-width: 425px) {
   .main__services .services__item-container:nth-child(3) .services__item .services__item-title {
