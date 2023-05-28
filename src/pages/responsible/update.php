@@ -19,7 +19,6 @@
 
     <script src="sweetalert2.all.min.js"></script>
 
-    <!-- Favicon link -->
     <link
       rel="shortcut icon"
       href="../../img/favicon-ichild.png"
