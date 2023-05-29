@@ -27,10 +27,7 @@
     <title>iChild</title>
   </head>
   <body>
-  <?php
-    require_once '../../database/connection.php';
-    require '../../components/headerMenu.php';
-  ?>
+
 
     <?php
       session_start();
@@ -38,6 +35,8 @@
         header('location: ../login/login.php?erro=true');
         exit;
       }
+      require_once '../../database/connection.php';
+      require '../../components/headerMenu.php';
     ; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
