@@ -34,19 +34,13 @@
   <body>
 
     <?php 
-    require_once '../../components/responsibleAuthorization.php';
-    require_once '../../components/headerMenu.php';
-    require_once './loadResponsibleExe.php'
+      require_once '../../components/responsibleAuthorization.php';
+      require_once '../../components/headerMenu.php';
+      require_once './loadExe.php'
     ?>
 
     <main class="container__main-reponsibleInfo container-fluid">
       <form id="formUpdate" class="container__responsibleInfo-content row g-1 container-md gap-2" method="post" action="updateExe.php" enctype="multipart/form-data">
-
-        <!-- <div class="col-md-7 mt-10 d-flex justify-content-center align-items-center">
-          <div class="container__profile-picture rounded-circle">
-           <img src="data:image/jpeg;base64,<?php echo $imagem; ?>" alt="" class="img-fluid">
-          </div>
-        </div> -->
 
         <p class="col-md-7 container__form-text">Suas informações:</p>
 
