@@ -25,45 +25,16 @@
     />
 
     <title>iChild</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
-
+  
   <?php 
-    session_start();
-    if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
-      header('location: ../login/login.php?erro=true');
-      exit;
-    }
-  ;?>
-
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-  <?php require '../../components/headerMenu.php';?>
-    
-  <?php 
-    $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
-
-    
-
-    if (!$conn) {
-      die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
-    }
-
-    mysqli_query($conn,"SET NAMES 'utf8'");
-    mysqli_query($conn,'SET character_set_connection=utf8');
-    mysqli_query($conn,'SET character_set_client=utf8');
-    mysqli_query($conn,'SET character_set_results=utf8');
-
-    //$transportadorId = $_GET[id];
-
-    $sql = "SELECT horario, nome, statusLog, localLog
-            FROM ichild.Log_do_dia;
-            WHERE id = $transportadorId";
-
-
-  ;?>
-
-
+  session_start();
+    require '../../components/headerMenu.php';
+    require_once '../../database/connection.php';
+  ?>
+  
   <main class="container__form container-fluid">
     <form
       class="container__form-content row g-1 container-md gap-2"
@@ -79,14 +50,9 @@
         <span id="name-error" class="error"></span>
       </div>
 
-      <div class="col-md-8 mt-2">
-        <label for="inputTurn" class="form-label">Dependente</label>
-        <select id="inputTurn" class="form-select" name="turno">
-          <option selected >Escolher..</option>
-          <option value="" ></option>
-        </select>
-        <span id="turn-error" class="error"></span>
-      </div>
+      <?php 
+        require './loadDependents.php';
+      ?>
 
       <div class="col-md-8 mt-2">
         <label for="inputDocument" class="form-label">Status</label>
