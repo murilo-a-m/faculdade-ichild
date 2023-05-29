@@ -5,7 +5,7 @@
     // transportadorId = $_SESSION['id'];
 
 
-    $sql = "SELECT id, nome, sobrenome, dataNascimento, documento, turno
+    $sql = "SELECT horario, statusLog, localLog, dependentId
             FROM ichild.Log_do_dia
             WHERE responsavelId = $responsavelId
             ";

@@ -59,9 +59,11 @@ CREATE TABLE Agendas (
 
 CREATE TABLE Log_do_dia (
     horario TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    nome VARCHAR(50) NOT NULL,
     statusLog VARCHAR(50) NOT NULL,
-    localLog VARCHAR(50) NOT NULL
+    localLog VARCHAR(50) NOT NULL,
+    dependentId INT NOT NULL,
+
+    FOREIGN KEY(dependentId) REFERENCES Dependentes(id)
 );
 
 
