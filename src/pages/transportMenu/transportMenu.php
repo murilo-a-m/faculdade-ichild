@@ -129,7 +129,7 @@
 
         <div class="content__card-transport card__config">
           <a
-            href="../registerDependent/registerDependent.php"
+            href="../painelLog/updateLog.php"
             class="card__container container__config"
           >
             <p class="card__title-add">Novo log ></p>

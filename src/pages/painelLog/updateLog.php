@@ -55,14 +55,20 @@
       ?>
 
       <div class="col-md-8 mt-2">
-        <label for="inputDocument" class="form-label">Status</label>
-        <input  value="<?php echo ($statusLog);?>" class="form-control" id="inputDocument" name="documento"/>
-        <span id="document-error" class="error"></span>
+        
+        <div class="col-md-8 mt-2">
+        <label for="inputStatus" class="form-label">Status</label>
+          <select id="inputTurn" class="form-select" name="turno">
+            <option selected>Escolher..</option>
+            <option value="Matutino" ></option>
+          </select>
+        <span id="turn-error" class="error"></span>
+        </div>
       </div>
 
       <div class="col-md-8 mt-2">
         <label for="inputDocument" class="form-label">Local</label>
-        <input  value="<?php echo ($local);?>" class="form-control" id="inputDocument" name="documento"/>
+        <input  class="form-control" id="inputDocument" name="documento"/>
         <span id="document-error" class="error"></span>
       </div>
 
