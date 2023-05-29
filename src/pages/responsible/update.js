@@ -91,7 +91,7 @@ form.addEventListener("submit", async (ev) => {
   validateCep = findCep();
 
   if (await findCep()) {
-    form.submit();
+    updateResponsible();
     return;
   }
 
@@ -103,3 +103,28 @@ form.addEventListener("submit", async (ev) => {
     timer: 1500,
   });
 });
+
+function updateResponsible() {
+  var form = document.getElementById("formUpdate");
+  var formData = new FormData(form);
+
+  jQuery.ajax({
+    url: "updateExe.php",
+    type: "POST",
+    dataType: "json",
+    data: formData,
+    contentType: false,
+    processData: false,
+    success: function (result) {
+      Swal.fire("Atualizado!", "Usuário editado com sucesso!", "success").then(
+        function () {
+          window.location = "./update.php";
+        }
+      );
+    },
+    error: function (resp) {
+      console.log(resp);
+      Swal.fire("Erro ao atualizar!");
+    },
+  });
+}

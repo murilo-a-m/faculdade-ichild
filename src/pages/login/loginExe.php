@@ -7,7 +7,7 @@
   $email = $_POST['email'];
   $senha = $_POST['senha'];
 
-  $sql = "SELECT id, nome, sobrenome, email, senha 
+  $sql = "SELECT id, nome, sobrenome, email, senha, imagem
   FROM ichild.Responsaveis
   WHERE email = '$email'";
 
@@ -20,6 +20,7 @@
           $_SESSION['sobrenome'] = $row['sobrenome'];
           $_SESSION['email'] = $row['email'];
           $_SESSION['role'] = 'responsavel';
+          $_SESSION['imagem'] = $row['imagem'];
 
           $status = 'success';
           $message = 'Login realizado com sucesso';

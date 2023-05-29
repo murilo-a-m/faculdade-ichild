@@ -38,7 +38,7 @@ CREATE TABLE Dependentes (
     responsavelId INT NOT NULL,
     transportadorId INT,
 
-    FOREIGN KEY(responsavelId) REFERENCES Responsaveis(id),
+    FOREIGN KEY(responsavelId) REFERENCES Responsaveis(id) ON DELETE CASCADE,
     FOREIGN KEY(transportadorId) REFERENCES Transportadores(id)
 );
 
@@ -55,7 +55,6 @@ CREATE TABLE Agendas (
     FOREIGN KEY(responsavelId) REFERENCES Responsaveis(id),
     FOREIGN KEY(transportadorId) REFERENCES Transportadores(id)
 );
-
 
 CREATE TABLE Log_do_dia (
     horario TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,

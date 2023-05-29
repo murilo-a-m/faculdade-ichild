@@ -19,7 +19,6 @@
 
     <script src="sweetalert2.all.min.js"></script>
 
-    <!-- Favicon link -->
     <link
       rel="shortcut icon"
       href="../../img/favicon-ichild.png"
@@ -27,81 +26,22 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
     <title>iChild</title>
   </head>
 
   <body>
-    <?php 
-      session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
-        header('location: ../login/login.php?erro=true');
-        exit;
-      }
-    ;?>
 
     <?php 
-      if (isset($_GET['result'])){
-        
-        if ($_GET['result'] == 'success'){
-          echo 
-          "<script>
-          Swal.fire(
-            'Atualizado!',
-            'Usuário editado com sucesso!',
-            'success'
-          ).then(function() {
-            window.location = './update.php'
-          })
-        </script>";
-        }
-
-        if ($_GET['result'] == 'error'){
-          echo 
-          "<script>
-              Swal.fire('Erro ao atualizar!')
-          </script>";
-        }
-      }
-    ;?>
-
-    <?php require '../../components/headerMenu.php';?>
-
-    <?php 
-      $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
-
-      if (!$conn) {
-        die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
-      }
-
-      mysqli_query($conn,"SET NAMES 'utf8'");
-      mysqli_query($conn,'SET character_set_connection=utf8');
-      mysqli_query($conn,'SET character_set_client=utf8');
-      mysqli_query($conn,'SET character_set_results=utf8');
-
-      $responsavelId = $_SESSION['id'];
-      session_write_close();
-
-      $sql = "SELECT id, nome, sobrenome, cep, estado, cidade, rua, numero 
-              FROM ichild.Responsaveis
-              WHERE id =$responsavelId";
-
-      if ($result = mysqli_query($conn, $sql)) {
-        if (mysqli_num_rows($result) > 0) {
-          while ($row = mysqli_fetch_assoc($result)){
-            $nome = $row['nome'];
-            $sobrenome = $row['sobrenome'];
-            $cep = $row['cep'];
-            $estado = $row['estado'];
-            $cidade = $row['cidade'];
-            $rua = $row['rua'];
-            $numero = $row['numero'];
-          }
-        }
-      }   
-    ;?>
+      require_once '../../components/responsibleAuthorization.php';
+      require_once '../../components/headerMenu.php';
+      require_once './loadExe.php'
+    ?>
 
     <main class="container__main-reponsibleInfo container-fluid">
-      <form id="formUpdate" class="container__responsibleInfo-content row g-1 container-md gap-2" method="post" action="updateExe.php">
+      <form id="formUpdate" class="container__responsibleInfo-content row g-1 container-md gap-2" method="post" action="updateExe.php" enctype="multipart/form-data">
+
         <p class="col-md-7 container__form-text">Suas informações:</p>
 
         <div class="col-md-7 mt-3">
@@ -144,6 +84,12 @@
           <label for="infoNumber" class="form-label">Número</label>
           <input type="text" value="<?php echo ($numero);?>" class="form-control disabled" id="infoNumber" required name="numero" disabled/>
           <span id="number-error" class="error"></span>
+        </div>
+
+        <div class="col-md-7 mt-3 mb-3">
+          <label for="infoNumber" class="form-label">Foto de Perfil</label>
+          <input type="file" class="form-control disabled" id="infoFoto" name="foto"/>
+          <span id="foto-error" class="error"></span>
         </div>
 
         <button id="btnEdit" class="col-md-7 info__btn-edit">
