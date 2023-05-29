@@ -56,7 +56,7 @@
 
       <div class="col-md-8 mt-2">
         <label for="inputDocument" class="form-label">Status</label>
-        <input  value="<?php echo ($status);?>" class="form-control" id="inputDocument" name="documento"/>
+        <input  value="<?php echo ($statusLog);?>" class="form-control" id="inputDocument" name="documento"/>
         <span id="document-error" class="error"></span>
       </div>
 
