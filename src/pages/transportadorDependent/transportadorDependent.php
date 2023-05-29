@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="../../css/style.css" />
     <link rel="stylesheet" href="../../css/reset.css" />
 
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- Bootstrap links -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
@@ -29,7 +32,7 @@
       type="image/x-icon"
     />
 
-  <!-- AOS link -->
+    <!-- AOS link -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <body>
     <?php 
@@ -39,21 +42,24 @@
         exit;
       }
     ;?>
+
     <?php require '../../components/headerMenu.php';?>
+    
     <div class="dependenteTitulo">
-      <h5 class="tittleDependentes">Log do Dia</h5>
+      <p class="tittleDependentes">Dependentes</p>
     </div>
     
-    <div class="box">
-        <div class="titulos">
-          <h5 class="infoTitulos">Horário</h5>
-          <h5 class="infoTitulos">Nome</h5>
-          <h5 class="infoTitulos">Status</h5>
-          <h5 class="infoTitulos">Local</h5>
-        </div>
-        <?php require './painelLogExe.php' ;?>
-    </div>
+    <div class="boxTransportador">
+      <div class="titulos">
+        <h5 class="infoTitulos">Nome</h5>
+        <h5 class="infoTitulos">Escola</h5>
+        <h5 class="infoTitulos">Local</h5>
+        <h5 class="infoTitulos">Responsavel</h5>
+        <h5 class="infoTitulos">Turno</h5>
+      </div>
+    <?php require './transportadorDependentExe.php' ;?>
     <script src="../../utils/navbar-menu.js"></script>
+    <script src="./dependentPanel.js" ></script>
+    <script src="../deleteDependent/deleteDependent.js"></script>
   </body>
-
 </html>

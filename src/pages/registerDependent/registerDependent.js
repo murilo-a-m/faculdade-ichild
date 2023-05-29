@@ -3,8 +3,10 @@ function validateName(name) {
 
   if (name.value === "") {
     nameError.textContent = "Campo obrigatório*";
+    return false;
   } else {
     nameError.textContent = "";
+    return true;
   }
 }
 
@@ -13,8 +15,10 @@ function validateLastName(lastName) {
 
   if (lastName.value === "") {
     lastNameError.textContent = "Campo obrigatório*";
+    return false;
   } else {
     lastNameError.textContent = "";
+    return true;
   }
 }
 
@@ -23,8 +27,10 @@ function validateBirth(birth) {
 
   if (birth.value === "") {
     birthError.textContent = "Campo obrigatório*";
+    return false;
   } else {
     birthError.textContent = "";
+    return true;
   }
 }
 
@@ -33,8 +39,10 @@ function validateDocument(inputDocument) {
 
   if (inputDocument.value === "") {
     documentError.textContent = "Campo obrigatório*";
+    return false;
   } else {
     documentError.textContent = "";
+    return true;
   }
 }
 
@@ -43,8 +51,10 @@ function validateTurn(turn) {
 
   if (turn.value === "Escolher..") {
     turnError.textContent = "Campo obrigatório*";
+    return false;
   } else {
     turnError.textContent = "";
+    return true;
   }
 }
 
@@ -53,8 +63,10 @@ function validateTransport(transport) {
 
   if (transport.value === "Escolher..") {
     transportError.textContent = "Campo obrigatório*";
+    return false;
   } else {
     transportError.textContent = "";
+    return true;
   }
 }
 
@@ -70,10 +82,48 @@ const transport = document.querySelector("#inputTransport");
 
 formContent.addEventListener("submit", (ev) => {
   ev.preventDefault();
+  const nameValidated = validateName(inputName);
+  const lastNameValidated = validateLastName(lastName);
+  const birthValidated = validateBirth(birth);
+  const documentValidated = validateDocument(inputDocument);
+  const turnValidated = validateTurn(turn);
 
-  validateName(inputName);
-  validateLastName(lastName);
-  validateBirth(birth);
-  validateDocument(inputDocument);
-  validateTurn(turn);
+  if (
+    nameValidated &&
+    lastNameValidated &&
+    birthValidated &&
+    documentValidated &&
+    turnValidated
+  ) {
+    createDependent();
+  }
 });
+
+function createDependent() {
+  jQuery.ajax({
+    url: "registerDependentExe.php",
+    type: "POST",
+    dataType: "json",
+    data: $("#form-dependent").serialize(),
+    success: function (result) {
+      Swal.fire(
+        "Dependente cadastrado!",
+        "Dependente criado com sucesso",
+        "success"
+      ).then(function () {
+        window.location = "../responsibleMenu/responsibleMenu.php";
+      });
+    },
+    error: function (resp) {
+      if (resp.status == 403) {
+        Swal.fire(
+          "Documento já cadastrado!",
+          "Tente novamente com outro documento!",
+          "error"
+        );
+      } else {
+        Swal.fire("Conta não cadastrada!", "Tente novamente!", "error");
+      }
+    },
+  });
+}

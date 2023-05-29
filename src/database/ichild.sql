@@ -35,7 +35,6 @@ CREATE TABLE Dependentes (
     documento VARCHAR(255) NOT NULL UNIQUE,
     turno VARCHAR(255) NOT NULL,
     foto BLOB,
-
     responsavelId INT NOT NULL,
     transportadorId INT,
 
@@ -57,5 +56,14 @@ CREATE TABLE Agendas (
     FOREIGN KEY(transportadorId) REFERENCES Transportadores(id)
 );
 
+
+CREATE TABLE Log_do_dia (
+    horario TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    statusLog VARCHAR(50) NOT NULL,
+    localLog VARCHAR(50) NOT NULL,
+    dependentId INT NOT NULL,
+
+    FOREIGN KEY(dependentId) REFERENCES Dependentes(id)
+);
 
 

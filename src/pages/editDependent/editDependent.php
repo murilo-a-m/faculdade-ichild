@@ -23,7 +23,7 @@
       href="../../img/favicon-ichild.png"
       type="image/x-icon"
     />
-     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>iChild</title>
   </head>
 
@@ -145,7 +145,22 @@
           <label for="inputTransport" class="form-label">Transporte</label>
           <select id="inputTransport" class="form-select">
             <option selected>Escolher..</option>
-            <option></option>
+            <?php
+              $sqlTransporte = "SELECT id, nome FROM Transportadores";
+              $result = mysqli_query($conn, $sqlTransporte);
+
+              if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                  $idTransportador = $row['id'];
+                  $nomeTransportador = $row['nome'];
+                  echo "<option value='$idTransportador'>$nomeTransportador</option>";
+                }
+              } else {
+                echo "<option>Nenhum transportador encontrado</option>";
+              }
+
+              mysqli_close($conn);
+            ?>
           </select>
           <span id="transport-error" class="error"></span>
         </div>

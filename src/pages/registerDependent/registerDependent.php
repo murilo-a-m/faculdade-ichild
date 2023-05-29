@@ -28,40 +28,23 @@
   </head>
   <body>
 
-    <?php 
+
+    <?php
       session_start();
       if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
         header('location: ../login/login.php?erro=true');
         exit;
       }
+      require_once '../../database/connection.php';
+      require '../../components/headerMenu.php';
     ; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <?php
-      if (isset($_GET['erro'])){
-        if ($_GET['erro'] == 'documentExists'){
-          echo 
-            "<script>
-              Swal.fire(
-                'ERRO!',
-                'Codumento já cadastrado!',
-                'error'
-              ).then(function() {
-                window.location = './registerDependent.php'
-              })
-            </script>";
-        }
-      }
-    ;?>
-    <?php require '../../components/headerMenu.php';?>
 
     <main class="container__form container-fluid">
       <form
         class="container__form-content row g-1 container-md gap-2"
         id="form-dependent"
-        method="post"
-        action="registerDependentExe.php"
       >
         <p class="col-md-8 container__form-text">Registrar dependente:</p>
 
@@ -101,14 +84,9 @@
           <span id="turn-error" class="error"></span>
         </div>
 
-        <div class="col-md-8 mt-2 mb-2">
-          <label for="inputTransport" class="form-label">Transporte</label>
-          <select id="inputTransport" class="form-select">
-            <option selected>Escolher..</option>
-            <option></option>
-          </select>
-          <span id="transport-error" class="error"></span>
-        </div>
+        <?php require './loadTransports.php' ?>
+
+        <input type="hidden" id="transporterId" name="transporterId" value="">
 
         <button type="submit" class="col-md-6 form__btn-save">
           Salvar dependente
@@ -121,7 +99,7 @@
     <script src="../../utils/navbar-menu.js"></script>
 
     <!-- Script Regex -->
-    <!-- <script src="./registerDependent.js"></script> -->
+    <script src="./registerDependent.js"></script>
 
     <!-- Script Bootstrap -->
     <script
@@ -129,5 +107,7 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
   </body>
 </html>
