@@ -12,6 +12,7 @@
       echo '<div class="col-md-8 mt-2 mb-2"';
       echo '<label for="inputTransport" class="form-label">Transporte</label>';
       echo '<select id="inputTransport" class="form-select" name="transportadorId">';
+      echo '<option selected>Escolher..</option>';
 
       while ($row = mysqli_fetch_assoc($result)){
         echo '<option value="'.$row['id'].'">'.$row['nome'].'</option>';
