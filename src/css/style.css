@@ -2763,25 +2763,13 @@
     min-height: 800px;
   }
 }
-<<<<<<< HEAD
 .container__main-transportInfo {
   min-height: 92vh;
   background-color: #dde6ed;
-=======
-.dadosNoti {
-  display: flex;
-  align-self: flex-start;
-  font-family: "Poppins", sans-serif;
-  align-items: center;
-}
-
-.notifyBox {
->>>>>>> feature-logDoDia
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-<<<<<<< HEAD
 }
 
 .container__responsibleInfo-content {
@@ -2825,7 +2813,19 @@
   .container__main-transportInfo {
     min-height: 800px;
   }
-=======
+}
+.dadosNoti {
+  display: flex;
+  align-self: flex-start;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+}
+
+.notifyBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   height: 5vw;
   width: 93%;
   background-color: #ffffff;
@@ -2850,7 +2850,6 @@
 .boxMsg {
   display: flex;
   justify-content: space-between;
->>>>>>> feature-logDoDia
 }
 
 /*# sourceMappingURL=style.css.map */
