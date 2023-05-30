@@ -54,6 +54,7 @@
         <?php require './painelLogExe.php' ;?>
     </div>
     <script src="../../utils/navbar-menu.js"></script>
+    <script src="./painelLog.js"></script>
   </body>
 
 </html>

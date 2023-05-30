@@ -58,7 +58,7 @@
         
         <div class="col-md-12 mt-2">
         <label for="inputStatus" class="form-label">Status</label>
-          <select id="inputTurn" class="form-select" name="statusLog" required>
+          <select id="inputStatus" class="form-select" name="statusLog" required>
             <option selected>Escolher..</option>
             <option >Em transito</option>
             <option >Chegou ao destino</option>

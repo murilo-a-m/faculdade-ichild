@@ -2020,6 +2020,13 @@
   border-radius: 100%;
 }
 
+.dependenteLog .iconLogTransport2 {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(255, 17, 0);
+  border-radius: 100%;
+}
+
 .container__main-schedule {
   height: 92vh;
   display: flex;
