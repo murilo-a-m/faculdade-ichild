@@ -60,8 +60,8 @@
         <label for="inputStatus" class="form-label">Status</label>
           <select id="inputTurn" class="form-select" name="statusLog" required>
             <option selected>Escolher..</option>
-            <option value="" >Em transito</option>
-            <option value="" >Chegou ao destino</option>
+            <option >Em transito</option>
+            <option >Chegou ao destino</option>
           </select>
         <span id="turn-error" class="error"></span>
         </div>

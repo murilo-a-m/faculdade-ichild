@@ -1885,6 +1885,13 @@
   margin-bottom: 15px;
 }
 
+.dependenteLog .iconLog {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(51, 194, 51);
+  border-radius: 100%;
+}
+
 .dependenteLog .iconLog #userDependente {
   width: 3vw;
 }
@@ -1919,8 +1926,11 @@
     text-align: center;
     font-size: 13px;
   }
-  .box .dependenteLog .iconLog #doneImg {
-    height: 20px;
+  .box .dependenteLog .iconLog {
+    height: 15px;
+    width: 15px;
+    background-color: rgb(51, 194, 51);
+    border-radius: 100%;
   }
 }
 @media (max-width: 425px) {
@@ -2001,6 +2011,13 @@
 .dependenteTransportador .dados .infoDependentTransportador {
   width: 300px;
   text-align: center;
+}
+
+.dependenteLog .iconLogTransport {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(51, 194, 51);
+  border-radius: 100%;
 }
 
 .container__main-schedule {

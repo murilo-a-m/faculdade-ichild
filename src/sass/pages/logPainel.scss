@@ -18,6 +18,14 @@
     
 
 }
+.dependenteLog .iconLog{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(51, 194, 51);
+    border-radius: 100%;
+}
+
+
 .dependenteLog .iconLog #userDependente{
     width: 3vw;
 }
@@ -59,8 +67,11 @@
         font-size: 13px;
         
     }
-    .box .dependenteLog .iconLog #doneImg{
-        height: 20px;
+    .box .dependenteLog .iconLog{
+        height: 15px;
+        width: 15px;
+        background-color: rgb(51, 194, 51);
+        border-radius: 100%;
     }
 }
 

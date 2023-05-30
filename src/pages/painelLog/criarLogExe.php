@@ -22,6 +22,7 @@ if (!isset($_SESSION['id']) || $_SESSION['role'] !== 'transportador') {
 
     $horario = new DateTime($date . ' ' . $horario, new DateTimeZone('America/Sao_Paulo'));
     $horarioFormat = $horario->format('Y-m-d H:i:s');
+    //$horarioFormat = $horario->format('H:i');
 
     $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
 

@@ -39,7 +39,7 @@
         exit;
       }
     ;?>
-    <?php require '../../components/headerMenu.php';?>
+    <?php require '../../components/headerTransportMenu.php'?>
     <div class="dependenteTitulo">
       <h5 class="tittleDependentes">Log do Dia</h5>
     </div>
