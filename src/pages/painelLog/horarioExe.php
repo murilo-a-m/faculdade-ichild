@@ -1,16 +1,20 @@
    
 <?php
-    session_start();
-    require '../../components/headerTransportMenu.php';
-    require_once '../../database/connection.php';
 
-   $horario = ""; // Inicialize a variável $horario
+   
         if (isset($_GET['dependentId'])) {
             $dependentId = $_GET['dependentId'];
             
             // Consulta SQL para recuperar o horário
-            $sql = "SELECT horario FROM Log_do_dia WHERE dependentId = $dependentId ORDER BY horario DESC LIMIT 1";
-            
+            $horario = "SELECT horario FROM Log_do_dia WHERE dependentId = $dependentId ORDER BY horario DESC LIMIT 1";
+
+                
+            echo '<div class="col-md-8 mt-2">';
+                echo '<label for="time" class="form-label">Horario</label>';
+                echo '<input  value="<?php echo ($horario);?>" type="time" class="form-control" />';
+                echo '<span id="name-error" class="error"></span>';
+            echo'</div>';
+                
             // Executar a consulta no banco de dados
             $result = mysqli_query($connection, $sql);
             

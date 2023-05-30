@@ -49,7 +49,10 @@
         <input  value="<?php echo ($horario);?>" type="time" class="form-control" />
         <span id="name-error" class="error"></span>
       </div>
-
+      <?php
+        require './horarioExe.php'
+      ?>
+      
       <?php 
         require './loadDependents.php';
       ?>
