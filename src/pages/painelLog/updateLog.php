@@ -31,7 +31,7 @@
   
   <?php 
   session_start();
-    require '../../components/headerMenu.php';
+    require '../../components/headerTransportMenu.php';
     require_once '../../database/connection.php';
   ?>
   
@@ -56,11 +56,12 @@
 
       <div class="col-md-8 mt-2">
         
-        <div class="col-md-8 mt-2">
+        <div class="col-md-12 mt-2">
         <label for="inputStatus" class="form-label">Status</label>
-          <select id="inputTurn" class="form-select" name="turno">
+          <select id="inputTurn" class="form-select" name="turno" required>
             <option selected>Escolher..</option>
-            <option value="Matutino" ></option>
+            <option value="" >Em transito</option>
+            <option value="" >Chegou ao destino</option>
           </select>
         <span id="turn-error" class="error"></span>
         </div>
@@ -68,14 +69,14 @@
 
       <div class="col-md-8 mt-2">
         <label for="inputDocument" class="form-label">Local</label>
-        <input  class="form-control" id="inputDocument" name="documento"/>
+        <input class="form-control" id="inputDocument" name="documento" required/>
         <span id="document-error" class="error"></span>
       </div>
 
-      <button type="submit" class="col-md-6 form__btn-save">
+      <button type="submit" class="card__transportButton col-md-6 form__btn-save">
         Salvar Status
       </button>
-      <button class="col-md-2 form__btn-cancel">Cancelar</button>
+      <button class="card__transportButton col-md-2 form__btn-cancel">Cancelar</button>
     </form>
   </main>
 
