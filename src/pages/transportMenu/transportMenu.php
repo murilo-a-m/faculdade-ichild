@@ -107,7 +107,7 @@
               <img src="../../img/menu-item2-transporte.png" alt="" class="schedule__img" />
               <p id="clock" class="schedule__text"></p>
             </div>
-            <a href="../schedule/schedule.php" class="card__schedule-transportContent">
+            <a href="../transportSchedule/transportSchedule.php" class="card__schedule-transportContent">
               <img src="../../img/menu-item1-transporte.png" alt="" class="schedule__img" />
               <p class="schedule__text">Ver agenda</p>
             </a>
