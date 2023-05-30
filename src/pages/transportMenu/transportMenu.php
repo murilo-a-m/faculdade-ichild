@@ -129,7 +129,7 @@
 
         <div class="content__card-transport card__config">
           <a
-            href="../painelLog/updateLog.php"
+            href="../painelLog/criarLog.php"
             class="card__container container__config"
           >
             <p class="card__title-add">Novo log ></p>

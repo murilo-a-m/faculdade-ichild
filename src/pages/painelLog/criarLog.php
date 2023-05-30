@@ -40,19 +40,16 @@
       class="container__form-content row g-1 container-md gap-2"
       id="form-dependent"
       method="post"
-      action="registerDependentExe.php"
+      action="./criarLogExe.php"
     >
-      <p class="col-md-8 container__form-text">Update Log:</p>
+      <p class="col-md-8 container__form-text">Criar Log:</p>
 
       <div class="col-md-8 mt-2">
         <label for="time" class="form-label">Horario</label>
-        <input  value="<?php echo ($horario);?>" type="time" class="form-control" />
+        <input type="time" class="form-control" name="horarioLog" />
         <span id="name-error" class="error"></span>
       </div>
-      <?php
-        require './horarioExe.php'
-      ?>
-      
+    
       <?php 
         require './loadDependents.php';
       ?>
@@ -61,7 +58,7 @@
         
         <div class="col-md-12 mt-2">
         <label for="inputStatus" class="form-label">Status</label>
-          <select value="<?php echo ($statusLog); ?>" id="inputTurn" class="form-select" name="turno" required>
+          <select id="inputTurn" class="form-select" name="statusLog" required>
             <option selected>Escolher..</option>
             <option value="" >Em transito</option>
             <option value="" >Chegou ao destino</option>
@@ -72,7 +69,7 @@
 
       <div class="col-md-8 mt-2">
         <label for="inputDocument" class="form-label">Local</label>
-        <input class="form-control" id="inputDocument" name="documento" required/>
+        <input class="form-control" id="inputDocument" name="localLog" required/>
         <span id="document-error" class="error"></span>
       </div>
 
