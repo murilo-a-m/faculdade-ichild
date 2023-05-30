@@ -65,7 +65,7 @@ CREATE TABLE Log_do_dia (
     transportadorId INT NOT NULL,
 
     FOREIGN KEY(transportadorId) REFERENCES Transportadores(id),
-    FOREIGN KEY(dependentId) REFERENCES Dependentes(id)
+    FOREIGN KEY(dependentId) REFERENCES Dependentes(id) ON DELETE CASCADE,
 );
 
 
