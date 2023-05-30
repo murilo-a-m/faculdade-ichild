@@ -6,7 +6,6 @@
 
     include_once '../../components/responsibleAuthorization.php';
     include_once '../../database/connection.php'
-    
 
     $dependentId = $_GET['id'];
 
