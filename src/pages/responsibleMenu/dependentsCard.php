@@ -3,8 +3,9 @@
 
     $responsavelId = $_SESSION['id'];
 
-    $sql = "SELECT id, nome, documento, turno
-            FROM ichild.Dependentes
+    $sql = "SELECT d.id, d.nome, d.sobrenome, d.turno, t.nome AS transportador_nome, t.sobrenome AS transportador_sobrenome
+            FROM ichild.Dependentes d
+            INNER JOIN ichild.Transportadores t ON d.transportadorId = t.id
             WHERE responsavelId =$responsavelId
             LIMIT 3
             ";
@@ -21,12 +22,12 @@
             echo '<div class="dependent__img"></div>';
             echo '<div class="dependent__info">';
               echo '<p class="dependent__info-title">Nome</p>';
-              echo "<p class='dependent__info-text'>$row[nome]</p>";
+              echo "<p class='dependent__info-text'>$row[nome] $row[sobrenome]</p>";
             echo '</div>';
 
             echo '<div class="dependent__info">';
-              echo '<p class="dependent__info-title">Documento</p>';
-              echo "<p class='dependent__info-text'>$row[documento]</p>";
+              echo '<p class="dependent__info-title">Transportador</p>';
+              echo "<p class='dependent__info-text'>$row[transportador_nome] $row[transportador_sobrenome]</p>";
             echo '</div>';
 
             echo '<div class="dependent__info">';
