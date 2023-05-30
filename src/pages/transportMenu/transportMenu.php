@@ -60,29 +60,7 @@
     <main class="container__main-transportMenu">
       <div class="main__transport-content">
 
-        <div class="content__card-transport card__dependents">
-          <div class="card__container">
-            <p class="card__title">Dependentes</p>
-            <div class="card__transportContent">
-              <div class="dependent__img"></div>
-              <div class="dependent__info">
-                <p class="dependent__info-title">Nome</p>
-                <p class="dependent__info-text"></p>
-              </div>
-
-              <div class="dependent__info">
-                <p class="dependent__info-title">Turno</p>
-                <p class="dependent__info-text"></p>
-              </div>
-
-              <div class="dependent__info">
-                <p class="dependent__info-title">Responsável</p>
-                <p class="dependent__info-text"></p>
-              </div>
-            </div>
-            <a class="card__transportButton" href="../transportadorDependent/transportadorDependent.php"><button>Ver tudo</button></a>
-          </div>
-        </div>
+        <?php require './dependentsCard.php' ;?>
 
         <div class="content__card-transport card__log">
           <div class="card__container">
