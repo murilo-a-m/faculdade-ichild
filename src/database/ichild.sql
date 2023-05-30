@@ -62,7 +62,9 @@ CREATE TABLE Log_do_dia (
     statusLog VARCHAR(50) NOT NULL,
     localLog VARCHAR(50) NOT NULL,
     dependentId INT NOT NULL,
+    transportadorId INT NOT NULL,
 
+    FOREIGN KEY(transportadorId) REFERENCES Transportadores(id),
     FOREIGN KEY(dependentId) REFERENCES Dependentes(id)
 );
 

@@ -61,7 +61,7 @@
         
         <div class="col-md-12 mt-2">
         <label for="inputStatus" class="form-label">Status</label>
-          <select id="inputTurn" class="form-select" name="turno" required>
+          <select value="<?php echo ($statusLog); ?>" id="inputTurn" class="form-select" name="turno" required>
             <option selected>Escolher..</option>
             <option value="" >Em transito</option>
             <option value="" >Chegou ao destino</option>

@@ -7,7 +7,7 @@
 
     $sql = "SELECT horario, statusLog, localLog, dependentId
             FROM ichild.Log_do_dia
-            WHERE responsavelId = $responsavelId
+            WHERE transportadorId = $transportadorId
             ";
 
     if ($result = mysqli_query($conn, $sql)) {
@@ -18,10 +18,10 @@
                         echo "<img id='doneImg' src='../../img/marcacaoDone.png' alt=''>";
                     echo"</div>";
                     echo "<div class='dadosLog'>";
-                        echo "<h6 class='infoDadosLog'>13:55</h6>";
+                        echo "<h6 class='infoDadosLog'>$row[horario]13:55</h6>";
                         echo "<h6 class='infoDadosLog'>$row[nome]Elvis</h6>";
-                        echo "<h6 class='infoDadosLog'>Em transito</h6>";
-                        echo "<h6 class='infoDadosLog'>Marista</h6>";
+                        echo "<h6 class='infoDadosLog'>$row[statusLog]Em transito</h6>";
+                        echo "<h6 class='infoDadosLog'>$row[localLog]Marista</h6>";
                     echo "</div>";
                 echo "</div>";
             }
