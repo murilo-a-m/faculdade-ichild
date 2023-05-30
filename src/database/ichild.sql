@@ -57,11 +57,14 @@ CREATE TABLE Agendas (
 );
 
 CREATE TABLE Log_do_dia (
+    id INT(11) PRIMARY KEY AUTO_INCREMENT,
     horario TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     statusLog VARCHAR(50) NOT NULL,
     localLog VARCHAR(50) NOT NULL,
     dependentId INT NOT NULL,
+    transportadorId INT NOT NULL,
 
+    FOREIGN KEY(transportadorId) REFERENCES Transportadores(id),
     FOREIGN KEY(dependentId) REFERENCES Dependentes(id)
 );
 

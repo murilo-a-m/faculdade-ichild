@@ -39,7 +39,7 @@
         exit;
       }
     ;?>
-    <?php require '../../components/headerMenu.php';?>
+    <?php require '../../components/headerTransportMenu.php'?>
     <div class="dependenteTitulo">
       <h5 class="tittleDependentes">Log do Dia</h5>
     </div>
@@ -54,6 +54,7 @@
         <?php require './painelLogExe.php' ;?>
     </div>
     <script src="../../utils/navbar-menu.js"></script>
+    <script src="./painelLog.js"></script>
   </body>
 
 </html>

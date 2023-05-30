@@ -10,7 +10,7 @@
 
     echo '<div class="col-md-8 mt-2">';
     echo '<label for="inputTurn" class="form-label">Dependente</label>';
-    echo '<select id="inputTurn" class="form-select" name="turno">';
+    echo '<select id="inputTurn" class="form-select" name="dependenteLog">';
 
     if (mysqli_num_rows($result) > 0) {
 
