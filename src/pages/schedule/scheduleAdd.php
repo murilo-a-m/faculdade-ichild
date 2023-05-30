@@ -58,10 +58,11 @@
 
         <div class="col-md-8 mt-3">
           <label for="dependente" class="form-label">Dependente</label>
-          <select name="dependente" class="form-select">
+          <select name="dependente" class="form-select" id="dependentSelect">
             <option value="">Selecione um dependente...</option>
             <?php require './scheduleDependents.php';?>
           </select>
+          <span id="dependent-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-3">

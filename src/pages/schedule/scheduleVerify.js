@@ -13,6 +13,7 @@ function formatTime(date) {
   return `${hours}:${minutes}`;
 }
 
+const dependentSelect = document.querySelector("#dependentSelect");
 const currentDate = new Date();
 const formattedDate = formatDate(currentDate);
 const formattedTime = formatTime(currentDate);
@@ -26,11 +27,13 @@ formAdd.addEventListener("submit", (ev) => {
   const dateEnd = document.querySelector("#dateEnd");
   const timeEnd = document.querySelector("#timeEnd");
 
+  const dependentError = document.querySelector("#dependent-error");
   const dataStartError = document.querySelector("#dataStart-error");
   const timeStartError = document.querySelector("#timeStart-error");
   const dataEndError = document.querySelector("#dataEnd-error");
   const timeEndError = document.querySelector("#timeEnd-error");
 
+  dependentError.innerHTML = "";
   dataStartError.innerHTML = "";
   timeStartError.innerHTML = "";
   dataEndError.innerHTML = "";
@@ -99,5 +102,17 @@ formAdd.addEventListener("submit", (ev) => {
     });
     timeEndError.innerHTML =
       "Horário inválido! Esse horário é antetior ao horário inicial.";
+  }
+
+  if (dependentSelect.value == "") {
+    ev.preventDefault();
+    Swal.fire({
+      position: "top-end",
+      icon: "error",
+      title: "Selecione um dependente!",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    dependentError.innerHTML = "Selecione um dependente!";
   }
 });

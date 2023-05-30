@@ -20,9 +20,9 @@
 ?>
 
 <?php
-  $responsavelId = 1;
+  $responsavelId = $_SESSION['id'];
 
-  $sql = "SELECT id, nome FROM Dependentes WHERE responsavelId = $responsavelId";
+  $sql = "SELECT id, nome, sobrenome FROM Dependentes WHERE responsavelId = $responsavelId";
 
   $resultado = mysqli_query($conn, $sql);
 
@@ -30,8 +30,9 @@
       while ($row = mysqli_fetch_assoc($resultado)) {
           $dependenteId = $row['id'];
           $dependenteNome = $row['nome'];
+          $dependenteSobrenome = $row['sobrenome'];
 
-          echo "<option value=\"$dependenteId\">$dependenteNome</option>";
+          echo "<option value=\"$dependenteId\">$dependenteNome $dependenteSobrenome</option>";
       }
   }
 ?>
