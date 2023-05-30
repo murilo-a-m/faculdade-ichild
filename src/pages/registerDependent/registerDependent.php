@@ -50,32 +50,32 @@
 
         <div class="col-md-8 mt-2">
           <label for="inputName" class="form-label">Nome</label>
-          <input class="form-control" id="inputName" name="nome" />
+          <input class="form-control" id="inputName" name="nome" required/>
           <span id="name-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-2">
           <label for="inputLastName" class="form-label">Sobrenome</label>
-          <input class="form-control" id="inputLastName" name="sobrenome" />
+          <input class="form-control" id="inputLastName" name="sobrenome" required/>
           <span id="lastName-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-2">
           <label for="inputBirth" class="form-label">Data de nascimento</label>
-          <input type="date" class="form-control" id="inputBirth" name="dataNascimento"/>
+          <input type="date" class="form-control" id="inputBirth" name="dataNascimento" required/>
           <span id="birth-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-2">
           <label for="inputDocument" class="form-label">Documento</label>
-          <input class="form-control" id="inputDocument" name="documento"/>
+          <input class="form-control" id="inputDocument" name="documento" required/>
           <span id="document-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-2">
           <label for="inputTurn" class="form-label">Turno</label>
           <select id="inputTurn" class="form-select" name="turno">
-            <option selected>Escolher..</option>
+            <option value="">Escolher..</option>
             <option value="Matutino" >Matutino</option>
             <option value="Verpertino" >Verpertino</option>
             <option value="Noturno" >Noturno</option>
