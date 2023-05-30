@@ -84,7 +84,14 @@
           <span id="turn-error" class="error"></span>
         </div>
 
-        <?php require './loadTransports.php' ?>
+        <div class="col-md-8 mt-2 mb-2">
+          <label for="inputTransport" class="form-label">Transportador</label>
+          <select id="inputTransport" class="form-select" name="transportadorId">
+            <option value="">Escolher..</option>
+            <?php require './loadTransports.php' ?>
+          </select>
+          <span id="transport-error" class="error"></span>
+        </div>
 
         <input type="hidden" id="transporterId" name="transporterId" value="">
 
