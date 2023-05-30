@@ -34,24 +34,7 @@
       require_once '../../components/responsibleAuthorization.php';
       require '../../components/headerMenu.php';
     ?>
-  
-    <?php
-      if (isset($_GET['erro'])){
-        if ($_GET['erro'] == 'documentExists'){
-          echo 
-            "<script>
-              Swal.fire(
-                'ERRO!',
-                'Codumento já cadastrado!',
-                'error'
-              ).then(function() {
-                window.location = './registerDependent.php'
-              })
-            </script>";
-        }
-      }
-    ;?>
-  
+
     <main class="container__form container-fluid">
       <form
         class="container__form-content row g-1 container-md gap-2"
