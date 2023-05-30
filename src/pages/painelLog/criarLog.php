@@ -26,6 +26,7 @@
 
     <title>iChild</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
   </head>
   <body>
   
@@ -38,9 +39,7 @@
   <main class="container__form container-fluid">
     <form
       class="container__form-content row g-1 container-md gap-2"
-      id="form-dependent"
-      method="post"
-      action="./criarLogExe.php"
+      id="form-log"
     >
       <p class="col-md-8 container__form-text">Criar Log:</p>
 
@@ -82,6 +81,9 @@
 
   <!-- Script Navbar -->
   <script src="../../utils/navbar-menu.js"></script>
+
+  <!-- Script criarLog -->
+  <script src="./criarLog.js"></script>
 
   <!-- Script Regex -->
   <!-- <script src="./registerDependent.js"></script> -->
