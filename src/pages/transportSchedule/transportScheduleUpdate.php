@@ -35,11 +35,7 @@
         exit;
       }; 
 
-      $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
-
-      if (!$conn) {
-        die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
-      }
+      require '../../database/connection.php';
 
       $id = $_GET['id'];
       session_write_close();
