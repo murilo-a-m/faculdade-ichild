@@ -57,6 +57,14 @@
         <p class="col-md-8 container__form-text">Agendar evento</p>
 
         <div class="col-md-8 mt-3">
+          <label for="dependente" class="form-label">Dependente</label>
+          <select name="dependente" class="form-select">
+            <option value="">Selecione um dependente...</option>
+            <?php require './scheduleDependents.php';?>
+          </select>
+        </div>
+
+        <div class="col-md-8 mt-3">
           <label for="title" class="form-label">Título</label>
           <input type="text" class="form-control" id="title" name="title" required/>
         </div>

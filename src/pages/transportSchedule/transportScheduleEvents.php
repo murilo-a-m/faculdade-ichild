@@ -15,9 +15,9 @@
   mysqli_query($conn, 'SET character_set_client=utf8');
   mysqli_query($conn, 'SET character_set_results=utf8');
 
-  $responsavelId = $_SESSION['id'];
+  $transportadorId = $_SESSION['id'];
 
-  $sql = "SELECT * FROM Agendas WHERE responsavelId = '$responsavelId'";
+  $sql = "SELECT * FROM Agendas WHERE transportadorId = '$transportadorId'";
   $result = mysqli_query($conn, $sql);
 
   $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);

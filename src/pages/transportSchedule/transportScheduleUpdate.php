@@ -44,7 +44,7 @@
       $id = $_GET['id'];
       session_write_close();
 
-      $sql = "SELECT title, description, color, start, end 
+      $sql = "SELECT title, description, color, start, end, dependentId
               FROM ichild.Agendas
               WHERE id = $id";
 
@@ -56,9 +56,18 @@
             $color = $row['color'];
             $start = $row['start'];
             $end = $row['end'];
+            $dependentId = $row['dependentId'];
+
+            $sqlDependente = "SELECT nome, sobrenome FROM Dependentes WHERE id = $dependentId";
+            $resultDependente = mysqli_query($conn, $sqlDependente);
+
+            if ($rowDependente = mysqli_fetch_assoc($resultDependente)) {
+              $nomeDependente = $rowDependente['nome'];
+              $sobrenomeDependente = $rowDependente['sobrenome'];
           }
         }
       }
+    }
 
       $dateStart = New DateTime($start);
       $dateEnd = New DateTime($end);
@@ -78,14 +87,19 @@
     <main class="container__form container-fluid container__main-reponsibleInfo">
       <form
         class="container__form-content row g-1 container-md gap-1"
-        name="formEdit"
-        id="formAdd"
-        method="post"
-        action="./scheduleUpdateExe.php"
+        name="formInfo"
+        id="formInfo"
+        action="./transportSchedule.php"
       >
         <p class="col-md-7 container__form-text">Informações sobre o evento</p>
 
         <input type="hidden" name="id" id="id" value="<?php echo $id ?>">
+
+        <div class="col-md-7 mt-3">
+          <label for="dependente" class="form-label">Dependente</label>
+          <input type="text" class="form-control" id="dependente" name="dependente" value="<?php echo $nomeDependente . " " . $sobrenomeDependente ?>" disabled/>
+          <span id="title-error" class="error"></span>
+        </div>
 
         <div class="col-md-7 mt-3">
           <label for="title" class="form-label">Título</label>
