@@ -27,10 +27,18 @@
 </aside>
 
 <?php 
+  require '../../database/connection.php';
   $responsavelId = $_SESSION['id'];
   $nome = $_SESSION['nome'];
   $sobrenome = $_SESSION['sobrenome'];
-  $imagem = $_SESSION['imagem'];
+  
+  $sql = "SELECT imagem FROM Responsaveis WHERE id = $responsavelId";
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+      $row = $result->fetch_assoc();
+      $imagem = $row['imagem'];
+  }
 ?>
 
 <aside class="aside__bar-profile">

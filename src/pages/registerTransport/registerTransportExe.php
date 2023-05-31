@@ -13,6 +13,7 @@
   $marca = $_POST['marca'];
   $modelo = $_POST['modelo'];
   $capacidade = $_POST['capacidade'];
+  $foto = 'http://localhost/ichild/src/img/profile.png';
 
   $encrypted_pwd = md5($password);
 
@@ -46,30 +47,32 @@
   FROM ichild.Transportadores
   WHERE cnh = '$cnh'";
 
-if ($result = mysqli_query($conn, $sql)) {
-  if (mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_assoc($result)){
-      if ($row['cnh'] == $cnh) {
-        $status = 'error';
-        $message = 'Erro ao realizar a requisição';
-        $statusCode = 409;
+  if ($result = mysqli_query($conn, $sql)) {
+    if (mysqli_num_rows($result) > 0) {
+      while ($row = mysqli_fetch_assoc($result)){
+        if ($row['cnh'] == $cnh) {
+          $status = 'error';
+          $message = 'Erro ao realizar a requisição';
+          $statusCode = 409;
 
-        http_response_code($statusCode);
+          http_response_code($statusCode);
 
-        $response = array(
-            'status' => $status,
-            'message' => $message,
-        );
-        $jsonResponse = json_encode($response);
-        echo $jsonResponse;
-        exit;
-      } 
+          $response = array(
+              'status' => $status,
+              'message' => $message,
+          );
+          $jsonResponse = json_encode($response);
+          echo $jsonResponse;
+          exit;
+        } 
+      }
     }
   }
-}
 
-  $sql = "INSERT INTO ichild.Transportadores ( nome, sobrenome, email, senha, cnh, cep, placa, marca, modelo, capacidade) 
-          VALUES ('$nome','$sobrenome', '$email', '$encrypted_pwd', '$cnh', '$cep', '$placa','$marca','$modelo','$capacidade')";
+  $imagem_base64 = base64_encode(file_get_contents($foto));
+
+  $sql = "INSERT INTO ichild.Transportadores ( nome, sobrenome, email, senha, cnh, cep, placa, marca, modelo, capacidade, imagem) 
+          VALUES ('$nome','$sobrenome', '$email', '$encrypted_pwd', '$cnh', '$cep', '$placa','$marca','$modelo','$capacidade','$imagem_base64')";
   
   if ($result = mysqli_query($conn, $sql)) {       
         $status = 'success';

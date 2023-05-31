@@ -27,10 +27,18 @@
 </aside>
 
 <?php 
+  require '../../database/connection.php';
   $transportadorId = $_SESSION['id'];
   $nome = $_SESSION['nome'];
   $sobrenome = $_SESSION['sobrenome'];
-  $imagem = $_SESSION['imagem'];
+  
+  $sql = "SELECT imagem FROM Transportadores WHERE id = $transportadorId";
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+      $row = $result->fetch_assoc();
+      $imagem = $row['imagem'];
+  }
 ?>
 
 <aside class="aside__bar-transport">
