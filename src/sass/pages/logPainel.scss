@@ -12,9 +12,6 @@
   border-radius: 1%;
   margin-bottom: 15px;
 }
-.dependenteLog .iconLog #userDependente {
-  width: 3vw;
-}
 
 .dependenteLog .dadosLog {
   display: flex;
@@ -49,20 +46,6 @@
   }
   .box .dependenteLog .iconLog #doneImg {
     height: 20px;
-  }
-}
-
-@media (max-width: 425px) {
-  .dependenteLog {
-    height: 5vh;
-  }
-  .dependenteLog .dadosLog .infoDadosLog {
-    width: 79px;
-    text-align: center;
-    font-size: 9px;
-  }
-  .box .dependenteLog .iconLog #doneImg {
-    height: 15px;
   }
 }
 

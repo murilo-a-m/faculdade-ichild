@@ -1,61 +1,49 @@
-<?php 
-  session_start();
-  if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
-    header('location: ../login/login.php?erro=true');
-    exit;
-  }
-;?>
-
-<?php require '../../components/headerMenu.php';?>
-
-
-      
 <?php
+require '../../components/responsibleAuthorization.php';
+require_once "../../database/connection.php";
 
+header('Content-Type: application/json');
 
-  if(!empty($_GET['id']));
+$dependentId = $_POST['dependentId'];
+$nome = $_POST['nome'];
+$sobrenome = $_POST['sobrenome'];
+$dataNascimento = $_POST['dataNascimento'];
+$documento = $_POST['documento'];
+$turno = $_POST['turno'];
+$transportadorId = $_POST['transportadorId'];
 
+$sql = "UPDATE ichild.Dependentes
+        SET nome = '$nome', sobrenome = '$sobrenome', dataNascimento= '$dataNascimento', documento = '$documento', turno = '$turno', transportadorId = '$transportadorId' 
+        WHERE id = $dependentId";
 
-  
+if ($result = mysqli_query($conn, $sql)) {       
+    $status = 'success';
+    $message = 'Requisição bem sucedida';
+    $statusCode = 200;
 
-  $sqlSelect = "SELECT * FROM Dependentes where id=$id";
+    http_response_code($statusCode);
 
-  $result = $conn->query($sqlSelect);
+    $response = array(
+        'status' => $status,
+        'message' => $message,
+    );
+    $jsonResponse = json_encode($response);
+    echo $jsonResponse;
+    exit;
 
-  if($result -> num_rows > 0)
-  {
-    while($row = mysqli_fetch_assoc($result))
-    {
-      $nome    = $_row['nome'];	
-      $sobrenome     = $_row['sobrenome'];
-      $dataNascimento = $_row['dataNascimento'];
-      $documento = $_row['documento'];
-      $turno = $_row['turno'];
-      
-    }
-  }
-  else
-  {
-    header('location: ./update.php?result=error');
-  }
+} else {
+    $status = 'error';
+    $message = 'Erro ao realizar a requisição: ' . mysqli_error($conn);
+    $statusCode = 500;
 
+    http_response_code($statusCode);
 
-
-  
-  $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
-
-  if (!$conn) {
-    die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
-  }
-
-  mysqli_query($conn,"SET NAMES 'utf8'");
-  mysqli_query($conn,'SET character_set_connection=utf8');
-  mysqli_query($conn,'SET character_set_client=utf8');
-  mysqli_query($conn,'SET character_set_results=utf8');
-
-
-  $sql = "UPDATE ichild.Dependentes
-          SET nome = '$nome', sobrenome = '$sobrenome', dataNascimento= '$dataNascimento', documento = '$documento', turno = '$turno' 
-          WHERE id = $dependentId";  
-;?>
-
+    $response = array(
+        'status' => $status,
+        'message' => $message,
+    );
+    $jsonResponse = json_encode($response);
+    echo $jsonResponse;
+    exit;
+}
+?>

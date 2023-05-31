@@ -3,14 +3,13 @@
   $transportadorId = $_SESSION['id'];
 
   $sql = "SELECT id, nome
-          FROM ichild.Dependentes
-          WHERE transportadorId =$transportadorId";
+          FROM ichild.Transportadores;";
 
   if ($result = mysqli_query($conn, $sql)) {
 
     echo '<div class="col-md-8 mt-2">';
-    echo '<label for="inputTurn" class="form-label">Dependente</label>';
-    echo '<select id="inputTurn" class="form-select" name="dependenteLog">';
+    echo '<label for="inputTransport" class="form-label">Transporte</label>';
+    echo '<select id="inputTransport" class="form-select" name="transportadorId" >';
 
     if (mysqli_num_rows($result) > 0) {
 
@@ -20,7 +19,7 @@
     }
     
     echo '</select>';
-    echo '<span id="turn-error" class="error"></span>';
+    echo '<span id="transport-error" class="error"></span>';
     echo '</div>';
   }   
-;?>
+?>

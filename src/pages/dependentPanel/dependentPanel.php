@@ -34,6 +34,11 @@
 
     <!-- AOS link -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+
+    <title>iChild</title>
+  </head>
+
   <body>
     <?php 
       session_start();
@@ -54,12 +59,13 @@
         <h5 class="infoTitulos">Nome</h5>
         <h5 class="infoTitulos">Sobrenome</h5>
         <h5 class="infoTitulos">Data Nascimento</h5>
-        <h5 class="infoTitulos">Documento</h5>
+        <h5 class="infoTitulos">Documento</h5>  
         <h5 class="infoTitulos">Turno</h5>
       </div>
     <?php require './dependentTable.php' ;?>
+
     <script src="../../utils/navbar-menu.js"></script>
     <script src="./dependentPanel.js" ></script>
-    <script src="../deleteDependent/deleteDependent.js"></script>
+    <script src="./deleteDependent.js"></script>
   </body>
 </html>
