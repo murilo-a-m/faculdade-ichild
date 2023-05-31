@@ -36,8 +36,20 @@
 
 .panel_search {
   display: flex;
-  justify-content: end;
-  gap: 0.1%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-content {
+  display: flex;
+  gap: 1%;
+}
+
+.card__title {
+  font-size: 16px;
+  color: #646466;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
 .btn-style {
