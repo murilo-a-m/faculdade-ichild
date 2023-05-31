@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -24,65 +25,53 @@
         />
 
         <title>iChild</title>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
     </head>
+    <body>
+
     <?php 
     session_start();
-    if (!isset($_SESSION['id']) || $_SESSION['role'] != 'responsavel') {
-        header('location: ../login/login.php?erro=true');
-        exit;
-    }
+    require '../../components/headerTransportMenu.php';
+    require_once '../../database/connection.php';
     ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <main class="container__form container-fluid">
+        <form
+        class="container__form-content row g-1 container-md gap-2"
+        id="form-log"
+        >
+        <p class="col-md-8 container__form-text">Enviar Notificação:</p>
+        <?php 
+            require './loadDependentNotify.php';
+        ?>
+            <div class="col-md-8 mt-2">
+                <label for="inputMessage" class="form-label">Mensagem</label>
+                <input class="form-control" id="inputMessage" name="messageNot"  required/>
+                <span id="document-error" class="error"></span>
+            </div>
 
+            <button type="submit" class="card__transportButton col-md-6 form__btn-save">
+            Salvar Notificação
+            </button>
+            <button class="card__transportButton col-md-2 form__btn-cancel">Cancelar</button>
+        </form>
+        </main>
 
-    <?php require '../../components/headerMenu.php';?>
+    <!-- Script Navbar -->
+    <script src="../../utils/navbar-menu.js"></script>
 
-    <?php 
-    $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
+    <!-- Script criarLog -->
+    <script src="./criarLog.js"></script>
 
-    if (!$conn) {
-        die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
-    }
+    <!-- Script Regex -->
+    <!-- <script src="./registerDependent.js"></script> -->
 
-    mysqli_query($conn, "SET NAMES 'utf8'");
-    mysqli_query($conn, 'SET character_set_connection=utf8');
-    mysqli_query($conn, 'SET character_set_client=utf8');
-    mysqli_query($conn, 'SET character_set_results=utf8');
-
-    $responsavelId = $_SESSION['id'];
-
-
-    $sql = "SELECT * FROM Dependentes WHERE responsavelId = '$responsavelId'";
-
-  
-    $result = mysqli_query($conn, $sql);
-
- 
-    if (mysqli_num_rows($result) > 0) {
-        echo '<main class="container__form container-fluid">';
-        echo '<div class="col-md-8 mt-2">';
-        echo '<label for="inputTurn" class="form-label">Dependentes</label>';
-        echo '<select id="inputTurn" class="form-select" name="turno">';
-        echo '<option selected>Escolher..</option>';
-
-
-        while ($row = mysqli_fetch_assoc($result)) {
-    
-        $id = $row['id'];
-        $nome = $row['nome'];
-
-        echo "<option value='$id'>$nome</option>";
-        }
-
-        echo '</select>';
-        echo '</div>';
-        echo '<div class="mb-3">';
-        echo '<label for="notifyForm" class="form-label">Digite sua mensagem</label>';
-        echo '<textarea class="form-control" id="notifyForm" rows="3"></textarea>';
-        echo '</div>';
-        echo '</main>';
-        
-    }
-    ?>
+    <!-- Script Bootstrap -->
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"
+    ></script>
+    </body>
 </html>
