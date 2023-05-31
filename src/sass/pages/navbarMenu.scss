@@ -1,7 +1,7 @@
 .container__header-app {
   align-items: center;
   display: flex;
-  min-height: 8vh;
+  height: 8vh;
   justify-content: space-between;
   padding: 0 30px;
 
@@ -19,6 +19,7 @@
     border: 3px solid #3ab5df;
     border-radius: 100%;
     width: 40px;
+    object-fit: cover;
   }
 }
 
@@ -172,6 +173,7 @@
       width: 130px;
       border: 5px solid #ffffff;
       border-radius: 100%;
+      object-fit: cover;
     }
     p {
       font-size: 18px;

@@ -27,9 +27,18 @@
 </aside>
 
 <?php 
+  require '../../database/connection.php';
   $transportadorId = $_SESSION['id'];
   $nome = $_SESSION['nome'];
   $sobrenome = $_SESSION['sobrenome'];
+  
+  $sql = "SELECT imagem FROM Transportadores WHERE id = $transportadorId";
+  $result = $conn->query($sql);
+
+  if ($result->num_rows > 0) {
+      $row = $result->fetch_assoc();
+      $imagem = $row['imagem'];
+  }
 ?>
 
 <aside class="aside__bar-transport">
@@ -47,7 +56,7 @@
           />
       </svg>
     <div class="profile__info">
-      <img src="../../img/profile.png" alt="" class="profile__pic img_fluid" />
+      <img src="data:image/jpeg;base64,<?php echo $imagem; ?>" alt="" class="profile__pic img_fluid" />
       <p class="profile__name"><?php echo ("$nome $sobrenome") ?></p>
     </div>
     <div class="profile__division"></div>
@@ -66,7 +75,7 @@
     <img src="../../img/favicon-ichild-transporte.png" alt="" class="logo-img" />
   </div>
   <div class="app__nav-profile">
-    <img src="../../img/profile.png" alt="" class="profileTransport-img" />
+    <img src="data:image/jpeg;base64,<?php echo $imagem; ?>" alt="" class="profileTransport-img" />
   </div>
 </header>
 

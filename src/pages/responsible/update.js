@@ -51,6 +51,7 @@ const inputs = [
   (inputCity = document.querySelector("#infoCity")),
   (inputStreet = document.querySelector("#infoStreet")),
   (inputNumber = document.querySelector("#infoNumber")),
+  (inputPhoto = document.querySelector("#infoFoto")),
 ];
 
 btnEdit.addEventListener("click", (ev) => {

@@ -44,6 +44,7 @@ const inputs = [
   (inputMarca = document.querySelector("#infoMarca")),
   (inputModelo = document.querySelector("#infoModelo")),
   (inputCapacidade = document.querySelector("#infoCapacidade")),
+  (inputFoto = document.querySelector("#infoFoto")),
 ];
 
 btnEdit.addEventListener("click", (ev) => {

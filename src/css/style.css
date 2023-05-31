@@ -1703,7 +1703,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 10px;
 }
 
 .container__responsibleInfo-content {
@@ -1751,7 +1750,7 @@
 .container__header-app {
   align-items: center;
   display: flex;
-  min-height: 8vh;
+  height: 8vh;
   justify-content: space-between;
   padding: 0 30px;
 }
@@ -1767,6 +1766,7 @@
   border: 3px solid #3ab5df;
   border-radius: 100%;
   width: 40px;
+  object-fit: cover;
 }
 
 .app__nav {
@@ -1906,6 +1906,7 @@
   width: 130px;
   border: 5px solid #ffffff;
   border-radius: 100%;
+  object-fit: cover;
 }
 #profile__bar .profile__info p {
   font-size: 18px;
