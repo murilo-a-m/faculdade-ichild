@@ -13,8 +13,8 @@
     if ($result = mysqli_query($conn, $sql)) {
       if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)){
-          echo "<tr>";
-          echo "<th scope='row'>$row[id]</th>";
+          echo "<tr class='panelContent'>";
+          echo "<th class='id' scope='row'>$row[id]</th>";
           echo "<td>$row[nome] $row[sobrenome]</td>";
           echo "<td>" . date('d/m/Y', strtotime($row['dataNascimento'])) . "</td>";
           echo "<td>$row[documento]</td>";

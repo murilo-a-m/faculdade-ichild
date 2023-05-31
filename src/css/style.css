@@ -2869,13 +2869,18 @@
   background-color: #eef3ff;
   border-radius: 10px;
 }
+.container__main-panel .table-dark {
+  --bs-table-bg: #526d82;
+}
 .container__main-panel .table__panel thead {
   font-weight: bold;
 }
-.container__main-panel .table__panel thead tr {
-  border-radius: 20px;
+
+.id {
+  font-weight: bold;
 }
-.container__main-panel .table__panel thead tr th {
+
+.panelContent th {
   padding: 20px;
 }
 

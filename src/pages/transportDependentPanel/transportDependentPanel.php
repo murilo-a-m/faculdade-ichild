@@ -48,21 +48,23 @@
     
     <main class="container__main-panel">
       <div id="panel" class="panel__content">
-        <table class="table table-striped text-center table__panel">
-          <thead class="table-dark">
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Nome</th>
-              <th scope="col">Data de nascimento</th>
-              <th scope="col">Documento</th>
-              <th scope="col">Turno</th>
-              <th scope="col">Responsavel</th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php require './transportDependentePanelExe.php';?>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="table table-striped text-center table__panel">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Data de nascimento</th>
+                <th scope="col">Documento</th>
+                <th scope="col">Turno</th>
+                <th scope="col">Responsavel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php require './transportDependentePanelExe.php';?>
+            </tbody>
+          </table>
+        </div>
       </div>
     </main>
     

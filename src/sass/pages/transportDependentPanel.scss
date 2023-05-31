@@ -12,16 +12,24 @@
     border-radius: 10px;
   }
 
+  .table-dark {
+    --bs-table-bg: #526d82;
+  }
+
   .table__panel {
     thead {
       font-weight: bold;
-      tr {
-        border-radius: 20px;
-        th {
-          padding: 20px;
-        }
-      }
     }
+  }
+}
+
+.id {
+  font-weight: bold;
+}
+
+.panelContent {
+  th {
+    padding: 20px;
   }
 }
 
