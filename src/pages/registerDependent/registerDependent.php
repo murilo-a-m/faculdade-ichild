@@ -50,32 +50,32 @@
 
         <div class="col-md-8 mt-2">
           <label for="inputName" class="form-label">Nome</label>
-          <input class="form-control" id="inputName" name="nome" />
+          <input class="form-control" id="inputName" name="nome" required/>
           <span id="name-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-2">
           <label for="inputLastName" class="form-label">Sobrenome</label>
-          <input class="form-control" id="inputLastName" name="sobrenome" />
+          <input class="form-control" id="inputLastName" name="sobrenome" required/>
           <span id="lastName-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-2">
           <label for="inputBirth" class="form-label">Data de nascimento</label>
-          <input type="date" class="form-control" id="inputBirth" name="dataNascimento"/>
+          <input type="date" class="form-control" id="inputBirth" name="dataNascimento" required/>
           <span id="birth-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-2">
           <label for="inputDocument" class="form-label">Documento</label>
-          <input class="form-control" id="inputDocument" name="documento"/>
+          <input class="form-control" id="inputDocument" name="documento" required/>
           <span id="document-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-2">
           <label for="inputTurn" class="form-label">Turno</label>
           <select id="inputTurn" class="form-select" name="turno">
-            <option selected>Escolher..</option>
+            <option value="">Escolher..</option>
             <option value="Matutino" >Matutino</option>
             <option value="Verpertino" >Verpertino</option>
             <option value="Noturno" >Noturno</option>
@@ -84,7 +84,14 @@
           <span id="turn-error" class="error"></span>
         </div>
 
-        <?php require './loadTransports.php' ?>
+        <div class="col-md-8 mt-2 mb-2">
+          <label for="inputTransport" class="form-label">Transportador</label>
+          <select id="inputTransport" class="form-select" name="transportadorId">
+            <option value="">Escolher..</option>
+            <?php require './loadTransports.php' ?>
+          </select>
+          <span id="transport-error" class="error"></span>
+        </div>
 
         <input type="hidden" id="transporterId" name="transporterId" value="">
 

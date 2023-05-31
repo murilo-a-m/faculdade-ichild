@@ -17,11 +17,11 @@
       />
     </svg>
     <ul>
-      <li><a href="/ichild/src/pages/responsibleMenu/responsibleMenu.php">MENU</a></li>
-      <li><a href="/ichild/src/pages/dependentPanel/dependentPanel.php">DEPENDENTES</a></li>
-      <li><a href="/ichild/src/pages/registerDependent/registerDependent.php">LOG DO DIA</a></li>
+      <li><a href="/ichild/src/pages/transportMenu/transportMenu.php">MENU</a></li>
+      <li><a href="#">DEPENDENTES</a></li>
+      <li><a href="#">LOG DO DIA</a></li>
       <li><a href="#">NOVO LOG</a></li>
-      <li><a href="/ichild/src/pages/schedule/schedule.php">ENVIAR NOTIFICAÇÃO</a></li>
+      <li><a href="#">ENVIAR NOTIFICAÇÃO</a></li>
     </ul>
   </div>
 </aside>

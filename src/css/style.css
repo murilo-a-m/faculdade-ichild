@@ -415,20 +415,20 @@
   align-items: center;
 }
 
-.main__transport-content {
+.main__transport-contentHome {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main__transport-content .transportBusiness__img {
+.main__transport-contentHome .transportBusiness__img {
   width: 80%;
 }
-.main__transport-content .main__banner-btn {
+.main__transport-contentHome .main__banner-btn {
   display: flex;
   gap: 14px;
 }
-.main__transport-content .main__banner-btn .banner__registerBtn,
-.main__transport-content .main__banner-btn .banner__aboutBtn {
+.main__transport-contentHome .main__banner-btn .banner__registerBtn,
+.main__transport-contentHome .main__banner-btn .banner__aboutBtn {
   background-color: #526d82;
   border-radius: 10px;
   color: white;
@@ -445,16 +445,16 @@
   transition: all 0.14s ease-out;
   white-space: nowrap;
 }
-.main__transport-content .main__banner-btn .banner__registerBtn:hover,
-.main__transport-content .main__banner-btn .banner__aboutBtn:hover {
+.main__transport-contentHome .main__banner-btn .banner__registerBtn:hover,
+.main__transport-contentHome .main__banner-btn .banner__aboutBtn:hover {
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px, -4px);
 }
-.main__transport-content .main__banner-btn .banner__registerBtn:focus-visible,
-.main__transport-content .main__banner-btn .banner__aboutBtn:focus-visible {
+.main__transport-contentHome .main__banner-btn .banner__registerBtn:focus-visible,
+.main__transport-contentHome .main__banner-btn .banner__aboutBtn:focus-visible {
   outline-offset: 1px;
 }
-.main__transport-content .main__banner-btn .banner__aboutBtn {
+.main__transport-contentHome .main__banner-btn .banner__aboutBtn {
   background-color: #92acbf;
 }
 

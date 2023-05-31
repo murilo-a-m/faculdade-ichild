@@ -1,26 +1,28 @@
-<?php 
-  require_once "../../database/connection.php";
-  $transportadorId = $_SESSION['id'];
+<?php
+  $conn = mysqli_connect("localhost:3306", 'dev', 'dev', 'ichild');
 
-  $sql = "SELECT id, nome
-          FROM ichild.Transportadores
-          WHERE id =$transportadorId";
+  if (!$conn) {
+    die("<strong> Falha de conexão: </strong>" . mysqli_connect_error());
+  }
+
+  mysqli_query($conn,"SET NAMES 'utf8'");
+  mysqli_query($conn,'SET character_set_connection=utf8');
+  mysqli_query($conn,'SET character_set_client=utf8');
+  mysqli_query($conn,'SET character_set_results=utf8');
+?>
+
+<?php 
+  $sql = "SELECT id, nome, sobrenome FROM ichild.Transportadores";
 
   if ($result = mysqli_query($conn, $sql)) {
     if (mysqli_num_rows($result) > 0) {
-
-      echo '<div class="col-md-8 mt-2 mb-2"';
-      echo '<label for="inputTransport" class="form-label">Transporte</label>';
-      echo '<select id="inputTransport" class="form-select" name="transportadorId">';
-      echo '<option selected>Escolher..</option>';
-
       while ($row = mysqli_fetch_assoc($result)){
-        echo '<option value="'.$row['id'].'">'.$row['nome'].'</option>';
+        $transporteId = $row['id'];
+        $transporteNome = $row['nome'];
+        $transporteSobrenome = $row['sobrenome'];
+        
+        echo "<option value=\"$transporteId\">$transporteNome $transporteSobrenome</option>";
       }
-
-      echo '</select>';
-      echo '<span id="turn-error" class="error"></span>';
-      echo '</div>';
     }
   }   
 ;?>

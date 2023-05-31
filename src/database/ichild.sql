@@ -50,9 +50,11 @@ CREATE TABLE Agendas (
     start TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     end TIMESTAMP NULL DEFAULT NULL,
     responsavelId INT(11) NOT NULL,
+    dependentId INT(11) NOT NULL,
     transportadorId INT,
 
     FOREIGN KEY(responsavelId) REFERENCES Responsaveis(id),
+    FOREIGN KEY(dependentId) REFERENCES Dependentes(id),
     FOREIGN KEY(transportadorId) REFERENCES Transportadores(id)
 );
 

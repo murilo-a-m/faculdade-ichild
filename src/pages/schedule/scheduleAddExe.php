@@ -15,6 +15,7 @@
   $dateEnd = $_POST['dateEnd'];	
   $timeEnd = $_POST['timeEnd'];
   $responsavelId = $_SESSION['id'];
+  $dependentId = $_POST['dependente'];
 
   $start = new DateTime($dateStart . ' ' . $timeStart, new DateTimeZone('America/Sao_Paulo'));
   $startFormat = $start->format('Y-m-d H:i:s');
@@ -33,8 +34,16 @@
   mysqli_query($conn, 'SET character_set_client=utf8');
   mysqli_query($conn, 'SET character_set_results=utf8');
 
-  $sql = "INSERT INTO Agendas ( title, description, color, start, end, responsavelId, transportadorId) 
-              VALUES ('$title','$desc', '$color', '$startFormat','$endFormat','$responsavelId', NULL)";?>
+  $sqlTransportador = "SELECT transportadorId FROM Dependentes WHERE id = $dependentId";
+  $resultTransportador = mysqli_query($conn, $sqlTransportador);
+
+  if ($rowTransportador = mysqli_fetch_assoc($resultTransportador)) {
+    $transportadorId = $rowTransportador['transportadorId'];
+
+    $sql = "INSERT INTO Agendas ( title, description, color, start, end, responsavelId, dependentId, transportadorId) 
+              VALUES ('$title','$desc', '$color', '$startFormat','$endFormat','$responsavelId', '$dependentId', $transportadorId)";
+  }
+?>
 
 <?php
   echo "<div>";
