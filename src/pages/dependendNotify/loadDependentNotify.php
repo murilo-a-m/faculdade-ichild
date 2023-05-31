@@ -4,23 +4,14 @@
 
   $sql = "SELECT id, nome
           FROM ichild.Dependentes
-          WHERE transportadorId =$transportadorId";
+          WHERE transportadorId = $transportadorId";
+  
 
   if ($result = mysqli_query($conn, $sql)) {
-
-    echo '<div class="col-md-8 mt-2">';
-    echo '<label  class="form-label">Dependente</label>';
-    echo '<select  class="form-select" name="dependenteNotify">';
-
     if (mysqli_num_rows($result) > 0) {
-
       while ($row = mysqli_fetch_assoc($result)){
-        echo '<option value="'.$row['id'].'">'.$row['nome'].'</option>';
+        echo '<option value="' . $row['id'] . '">' . $row['nome'] . '</option>';
       }
     }
-    
-    echo '</select>';
-    echo '<span id="turn-error" class="error"></span>';
-    echo '</div>';
-  }   
-;?>
+  }     
+?>

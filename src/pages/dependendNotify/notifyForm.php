@@ -31,9 +31,8 @@
     <body>
 
     <?php 
-    session_start();
-    require '../../components/headerTransportMenu.php';
-    require_once '../../database/connection.php';
+        require_once '../../database/connection.php';
+        require '../../components/headerTransportMenu.php';
     ?>
 
     <main class="container__form container-fluid">
@@ -41,14 +40,16 @@
         class="container__form-content row g-1 container-md gap-2"
         id="form-log"
         >
-        <p class="col-md-8 container__form-text">Enviar Notificação:</p>
-        <?php 
-            require './loadDependentNotify.php';
-            require './dependendNotifyExe.php';
-        ?>
+            <p class="col-md-8 container__form-text">Enviar Notificação:</p>
+            <div class="col-md-8 mt-2">
+                <label  class="form-label">Dependente</label>
+                <select  class="form-select" name="dependenteNotify">
+                    <?php require_once './loadDependentNotify.php'; ?>
+                </select>
+            </div>
             <div class="col-md-8 mt-2">
                 <label for="inputMessage" class="form-label">Mensagem</label>
-                <input class="form-control" name="messageNot"  required/>
+                <input class="form-control" name="messageNot" required/>
                 <span id="document-error" class="error"></span>
             </div>
 
@@ -57,16 +58,13 @@
             </button>
             <button class="card__transportButton col-md-2 form__btn-cancel">Cancelar</button>
         </form>
-        </main>
+    </main>
 
     <!-- Script Navbar -->
-    <script src="../../utils/navbar-menu.js"></script>
+    <script src="../../utils/navbar-transportMenu.js"></script>
 
     <!-- Script criarLog -->
     <script src="./criarLog.js"></script>
-
-    <!-- Script Regex -->
-    <!-- <script src="./registerDependent.js"></script> -->
 
     <!-- Script Bootstrap -->
     <script

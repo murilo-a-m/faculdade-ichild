@@ -37,7 +37,7 @@
   <body>
     <?php 
       session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
+      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'transportador'  ){
         header('location: ../login/login.php?erro=true');
         exit;
       }
