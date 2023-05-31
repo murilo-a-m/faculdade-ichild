@@ -1,3 +1,21 @@
+function validateBirth(birth) {
+  const birthError = document.querySelector("#birth-error");
+  const birthDate = new Date(birth);
+  const today = new Date();
+  const idade = today.getFullYear() - birthDate.getFullYear();
+
+  if (idade < 3) {
+    birthError.textContent = "Idade mínima de 3 anos*";
+    return false;
+  } else if (idade > 13) {
+    birthError.textContent = "Idade máxima de 13 anos*";
+    return false;
+  } else {
+    birthError.textContent = "";
+    return true;
+  }
+}
+
 function validateTurn(turn) {
   const turnError = document.querySelector("#turn-error");
 
@@ -28,11 +46,13 @@ formContent.addEventListener("submit", (ev) => {
   ev.preventDefault();
   const turn = document.querySelector("#inputTurn").value;
   const transport = document.querySelector("#inputTransport").value;
+  const birth = document.querySelector("#inputBirth").value;
 
   const turnValidated = validateTurn(turn);
   const transportValidated = validateTransport(transport);
+  const birthValidated = validateBirth(birth);
 
-  if (turnValidated && transportValidated) {
+  if (turnValidated && transportValidated && birthValidated) {
     createDependent();
   }
 });
