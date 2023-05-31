@@ -2885,6 +2885,29 @@
   padding: 20px;
 }
 
+.panel_search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-content {
+  display: flex;
+  gap: 1%;
+}
+
+.card__title {
+  font-size: 16px;
+  color: #646466;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.btn-style {
+  color: white;
+  background-color: #526d82;
+}
+
 @media (max-width: 768px) {
   .container__main-panel .panel__content h2 {
     font-size: 16px;
