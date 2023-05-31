@@ -7,7 +7,6 @@
             FROM ichild.Dependentes d
             INNER JOIN ichild.Responsaveis r ON d.responsavelId = r.id
             WHERE transportadorId = $transportadorId
-            LIMIT 3
             ";
 
     if ($result = mysqli_query($conn, $sql)) {
