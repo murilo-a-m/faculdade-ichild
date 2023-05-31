@@ -1703,7 +1703,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 10px;
 }
 
 .container__responsibleInfo-content {
@@ -1766,7 +1765,7 @@
 .container__header-app .profile-img {
   border: 3px solid #3ab5df;
   border-radius: 100%;
-  width: 45px;
+  width: 40px;
   object-fit: cover;
 }
 
