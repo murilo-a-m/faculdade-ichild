@@ -24,6 +24,7 @@
       type="image/x-icon"
     />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
     <title>iChild</title>
   </head>
 
@@ -40,8 +41,6 @@
       <form
         class="container__form-content row g-1 container-md gap-2"
         id="form-dependent"
-        method="post"
-        action="saveEdit.php"
       >
         <p class="col-md-8 container__form-text">Registrar dependente:</p>
 
@@ -71,17 +70,17 @@
 
         <div class="col-md-8 mt-2">
           <label for="inputTurn" class="form-label">Turno</label>
-          <select value="<?php echo '$turno';?>"id="inputTurn" class="form-select" name="turno">
-            <option selected>Escolher..</option>
-            <option value="Matutino" >Matutino</option>
-            <option value="Vespertino" >Vespertino</option>
-            <option value="Noturno" >Noturno</option>
-            <option value="Integral" >Integral</option>
+          <select id="inputTurn" class="form-select" name="turno">
+            <option <?php if ($turno == 'Matutino') echo 'selected'; ?> value="Matutino">Matutino</option>
+            <option <?php if ($turno == 'Vespertino') echo 'selected'; ?> value="Vespertino">Vespertino</option>
+            <option <?php if ($turno == 'Noturno') echo 'selected'; ?> value="Noturno">Noturno</option>
+            <option <?php if ($turno == 'Integral') echo 'selected'; ?> value="Integral">Integral</option>
           </select>
           <span id="turn-error" class="error"></span>
         </div>
+
         <?php require_once './selectTransport.php' ?>
-        <button type="submit" name="update" id="update" class="col-md-6 form__btn-save">
+        <button type ="submit" name="update" id="update" class="col-md-6 form__btn-save">
           Editar dependente
         </button>
       </form>
@@ -93,5 +92,8 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./editDependent.js"></script>
+
   </body>
 </html>
