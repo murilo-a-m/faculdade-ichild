@@ -12,6 +12,7 @@
   $cidade = $_POST['cidade'];
   $rua = $_POST['rua'];
   $numero = $_POST['numero'];
+  $foto = 'http://localhost/ichild/src/img/profile.png';
 
   $encrypted_pwd = md5($password);
 
@@ -41,8 +42,11 @@
     }
   }
 
-  $sql = "INSERT INTO Responsaveis ( nome, sobrenome, email, senha, cep, estado, cidade, rua, numero) 
-          VALUES ('$nome','$sobrenome', '$email', '$encrypted_pwd','$cep','$estado','$cidade','$rua','$numero')";
+  $imagem_base64 = base64_encode(file_get_contents($foto));
+
+  $sql = "INSERT INTO Responsaveis ( nome, sobrenome, email, senha, cep, estado, cidade, rua, numero, imagem) 
+          VALUES ('$nome','$sobrenome', '$email', '$encrypted_pwd','$cep','$estado','$cidade','$rua','$numero','$imagem_base64')";
+  
   
   if ($result = mysqli_query($conn, $sql)) {       
         $status = 'success';
