@@ -116,7 +116,7 @@
         </div>
 
         <div class="content__card-transport card__config">
-          <a href="../notifyForm/notifyForm.php" class="card__container container__config">
+          <a href="../dependendNotify/notifyForm.php" class="card__container container__config">
             <p class="card__title-config">Enviar notificação ></p>
             <img src="../../img/notificacao-transporte.png" alt="" class="logTransport__img" />
           </a>

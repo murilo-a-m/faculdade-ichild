@@ -44,10 +44,11 @@
         <p class="col-md-8 container__form-text">Enviar Notificação:</p>
         <?php 
             require './loadDependentNotify.php';
+            require './dependendNotifyExe.php';
         ?>
             <div class="col-md-8 mt-2">
                 <label for="inputMessage" class="form-label">Mensagem</label>
-                <input class="form-control" id="inputMessage" name="messageNot"  required/>
+                <input class="form-control" name="messageNot"  required/>
                 <span id="document-error" class="error"></span>
             </div>
 
