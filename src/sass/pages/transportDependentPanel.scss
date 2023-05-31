@@ -1,0 +1,53 @@
+.container__main-panel {
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .panel__content {
+    height: 92%;
+    width: 97%;
+    padding: 20px;
+    background-color: #eef3ff;
+    border-radius: 10px;
+  }
+
+  .table-dark {
+    --bs-table-bg: #526d82;
+  }
+
+  .table__panel {
+    thead {
+      font-weight: bold;
+    }
+  }
+}
+
+.id {
+  font-weight: bold;
+}
+
+.panelContent {
+  th {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container__main-panel .panel__content h2 {
+    font-size: 16px;
+  }
+
+  .fc .fc-button-group button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .fc .fc-toolbar {
+    flex-direction: column;
+  }
+  .fc .fc-button-group button {
+    margin: 8px 0;
+  }
+}

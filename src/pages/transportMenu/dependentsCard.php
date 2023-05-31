@@ -38,7 +38,7 @@
         }
       }
     }   
-    echo '<a class="card__transportButton" href="../dependentPanel/dependentPanel.php"><button>Ver tudo</button></a>';
+    echo '<a class="card__transportButton" href="../transportDependentPanel/transportDependentPanel.php"><button>Ver tudo</button></a>';
     echo '</div>';
     echo '</div>';
 ;?>
