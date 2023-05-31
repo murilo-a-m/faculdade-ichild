@@ -1981,17 +1981,6 @@
   margin-bottom: 15px;
 }
 
-.dependenteLog .iconLog {
-  height: 20px;
-  width: 20px;
-  background-color: rgb(51, 194, 51);
-  border-radius: 100%;
-}
-
-.dependenteLog .iconLog #userDependente {
-  width: 3vw;
-}
-
 .dependenteLog .dadosLog {
   display: flex;
   align-items: center;
@@ -2022,24 +2011,8 @@
     text-align: center;
     font-size: 13px;
   }
-  .box .dependenteLog .iconLog {
-    height: 15px;
-    width: 15px;
-    background-color: rgb(51, 194, 51);
-    border-radius: 100%;
-  }
-}
-@media (max-width: 425px) {
-  .dependenteLog {
-    height: 5vh;
-  }
-  .dependenteLog .dadosLog .infoDadosLog {
-    width: 79px;
-    text-align: center;
-    font-size: 9px;
-  }
   .box .dependenteLog .iconLog #doneImg {
-    height: 15px;
+    height: 20px;
   }
 }
 @media (max-width: 375px) {
@@ -2844,6 +2817,13 @@
     min-height: 800px;
   }
 }
+.boxMsg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 .dadosNoti {
   display: flex;
   align-self: flex-start;
