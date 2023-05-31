@@ -1703,7 +1703,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 10px;
 }
 
 .container__responsibleInfo-content {
@@ -1751,7 +1750,7 @@
 .container__header-app {
   align-items: center;
   display: flex;
-  min-height: 8vh;
+  height: 8vh;
   justify-content: space-between;
   padding: 0 30px;
 }
@@ -1767,6 +1766,7 @@
   border: 3px solid #3ab5df;
   border-radius: 100%;
   width: 40px;
+  object-fit: cover;
 }
 
 .app__nav {
@@ -1906,6 +1906,7 @@
   width: 130px;
   border: 5px solid #ffffff;
   border-radius: 100%;
+  object-fit: cover;
 }
 #profile__bar .profile__info p {
   font-size: 18px;
@@ -1981,17 +1982,6 @@
   margin-bottom: 15px;
 }
 
-.dependenteLog .iconLog {
-  height: 20px;
-  width: 20px;
-  background-color: rgb(51, 194, 51);
-  border-radius: 100%;
-}
-
-.dependenteLog .iconLog #userDependente {
-  width: 3vw;
-}
-
 .dependenteLog .dadosLog {
   display: flex;
   align-items: center;
@@ -2022,24 +2012,8 @@
     text-align: center;
     font-size: 13px;
   }
-  .box .dependenteLog .iconLog {
-    height: 15px;
-    width: 15px;
-    background-color: rgb(51, 194, 51);
-    border-radius: 100%;
-  }
-}
-@media (max-width: 425px) {
-  .dependenteLog {
-    height: 5vh;
-  }
-  .dependenteLog .dadosLog .infoDadosLog {
-    width: 79px;
-    text-align: center;
-    font-size: 9px;
-  }
   .box .dependenteLog .iconLog #doneImg {
-    height: 15px;
+    height: 20px;
   }
 }
 @media (max-width: 375px) {

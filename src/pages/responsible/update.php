@@ -44,51 +44,51 @@
 
         <p class="col-md-7 container__form-text">Suas informações:</p>
 
-        <div class="col-md-7 mt-3">
+        <div class="col-md-7 mt-2">
           <label for="infoName" class="form-label">Nome</label>
           <input type="text" value="<?php echo ($nome);?>" class="form-control disabled" id="infoName" name="nome" disabled/>
           <span id="name-error" class="error"></span>
         </div>
 
-        <div class="col-md-7 mt-3">
+        <div class="col-md-7 mt-2">
           <label for="infoLastname" class="form-label">Sobrenome</label>
           <input type="text" value="<?php echo ($sobrenome);?>" class="form-control disabled" id="infoLastname" name="sobrenome" required disabled/>
           <span id="lastname-error" class="error"></span>
         </div>
 
-        <div class="col-md-7 mt-3">
+        <div class="col-md-7 mt-2">
           <label for="infoCep" class="form-label">CEP</label>
           <input type="text" value="<?php echo ($cep);?>" class="form-control disabled" id="infoCep" required name="cep" disabled />
           <span id="cep-error" class="error"></span>
         </div>
 
-        <div class="col-md-7 mt-3">
+        <div class="col-md-7 mt-2">
           <label for="infoState" class="form-label">Estado</label>
           <input type="text" value="<?php echo ($estado);?>" class="form-control disabled" id="infoState"  name="estado" disabled/>
           <span id="state-error" class="error"></span>
         </div>
 
-        <div class="col-md-7 mt-3">
+        <div class="col-md-7 mt-2">
           <label for="infoCity" class="form-label">Cidade</label>
           <input type="text" value="<?php echo ($cidade);?>" class="form-control disabled" id="infoCity"  name="cidade" disabled/>
           <span id="city-error" class="error"></span>
         </div>
 
-        <div class="col-md-7 mt-3">
+        <div class="col-md-7 mt-2">
           <label for="infoStreet" class="form-label">Rua</label>
           <input type="text" value="<?php echo ($rua);?>" class="form-control disabled" id="infoStreet" required name="rua" disabled/>
           <span id="street-error" class="error"></span>
         </div>
 
-        <div class="col-md-7 mt-3 mb-3">
+        <div class="col-md-7 mt-2 mb-2">
           <label for="infoNumber" class="form-label">Número</label>
           <input type="text" value="<?php echo ($numero);?>" class="form-control disabled" id="infoNumber" required name="numero" disabled/>
           <span id="number-error" class="error"></span>
         </div>
 
-        <div class="col-md-7 mt-3 mb-3">
+        <div class="col-md-7 mt-2 mb-2">
           <label for="infoNumber" class="form-label">Foto de Perfil</label>
-          <input type="file" class="form-control disabled" id="infoFoto" name="foto"/>
+          <input type="file" class="form-control disabled" id="infoFoto" name="foto" disabled/>
           <span id="foto-error" class="error"></span>
         </div>
 
