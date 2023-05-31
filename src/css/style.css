@@ -2861,12 +2861,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #dde6ed;
 }
 .container__main-panel .panel__content {
   height: 92%;
   width: 97%;
   padding: 20px;
-  background-color: #eef3ff;
+  background-color: #ffffff;
   border-radius: 10px;
 }
 .container__main-panel .table-dark {
