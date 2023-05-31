@@ -50,22 +50,42 @@
 
     <?php require '../../components/headerMenu.php';?>
     
-    <div class="dependenteTitulo">
-      <p class="tittleDependentes">Dependentes</p>
-    </div>
-    
-    <div class="box">
-      <div class="titulos">
-        <h5 class="infoTitulos">Nome</h5>
-        <h5 class="infoTitulos">Sobrenome</h5>
-        <h5 class="infoTitulos">Data Nascimento</h5>
-        <h5 class="infoTitulos">Documento</h5>  
-        <h5 class="infoTitulos">Turno</h5>
+    <main class="container__main-panel">
+      <div id="panel" class="panel__content">
+        <div class="panel_search mb-2">
+          <p class="card__title">Dependentes</p>
+          <div class="search-content">
+            <input type="search" class="form-control w-100" placeholder="Pesquisar" id="search">
+            <button class="btn btn-style" id="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped text-center table__panel">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Data de nascimento</th>
+                <th scope="col">Documento</th>
+                <th scope="col">Turno</th>
+                <th scope="col">Transportador</th>
+                <th scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php require './DependentPanelExe.php';?>
+            </tbody>
+          </table>
+        </div>
       </div>
-    <?php require './dependentTable.php' ;?>
+    </main>
 
     <script src="../../utils/navbar-menu.js"></script>
-    <script src="./dependentPanel.js" ></script>
     <script src="./deleteDependent.js"></script>
+    <script src="./responsibleDependentSearch.js"></script>
   </body>
 </html>
