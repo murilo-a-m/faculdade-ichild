@@ -23,7 +23,7 @@ CREATE TABLE Transportadores (
     placa VARCHAR(255) NOT NULL,
     marca VARCHAR(255) NOT NULL,
     modelo VARCHAR(255) NOT NULL,
-    capacidade INT NOT NULL
+    capacidade INT NOT NULL,
     imagem BLOB
 );
 
@@ -68,7 +68,7 @@ CREATE TABLE Log_do_dia (
     transportadorId INT NOT NULL,
 
     FOREIGN KEY(transportadorId) REFERENCES Transportadores(id),
-    FOREIGN KEY(dependentId) REFERENCES Dependentes(id) ON DELETE CASCADE,
+    FOREIGN KEY(dependentId) REFERENCES Dependentes(id) ON DELETE CASCADE
 );
 
 
