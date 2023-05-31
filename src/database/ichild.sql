@@ -55,7 +55,7 @@ CREATE TABLE Agendas (
     transportadorId INT,
 
     FOREIGN KEY(responsavelId) REFERENCES Responsaveis(id),
-    FOREIGN KEY(dependentId) REFERENCES Dependentes(id),
+    FOREIGN KEY(dependentId) REFERENCES Dependentes(id) ON DELETE CASCADE,
     FOREIGN KEY(transportadorId) REFERENCES Transportadores(id)
 );
 

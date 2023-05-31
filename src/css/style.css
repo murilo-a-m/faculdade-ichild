@@ -2880,6 +2880,10 @@
 .container__main-panel .table-dark {
   --bs-table-bg: #526d82;
 }
+.container__main-panel .table-light {
+  --bs-table-bg: #3ab5df;
+  color: white;
+}
 .container__main-panel .table__panel thead {
   font-weight: bold;
 }
@@ -2913,6 +2917,11 @@
 .btn-style {
   color: white;
   background-color: #526d82;
+}
+
+.btn-styleResponsible {
+  color: white;
+  background-color: #3ab5df;
 }
 
 @media (max-width: 768px) {

@@ -31,7 +31,7 @@ function deleteDependentExe(dependentId) {
     },
     error: function (resp) {
       console.log(resp);
-      Swal.fire("Conta não cadastrada!", "Tente novamente!", "error");
+      Swal.fire("Erro ao deletar o dependente!", "Tente novamente!", "error");
     },
   });
 }
