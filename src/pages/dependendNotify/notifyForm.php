@@ -31,6 +31,7 @@
     <body>
 
     <?php 
+        session_start();
         require_once '../../database/connection.php';
         require '../../components/headerTransportMenu.php';
     ?>
@@ -39,6 +40,8 @@
         <form
         class="container__form-content row g-1 container-md gap-2"
         id="form-log"
+        method ='post'
+        action='dependendNotifyExe.php'
         >
             <p class="col-md-8 container__form-text">Enviar Notificação:</p>
             <div class="col-md-8 mt-2">
