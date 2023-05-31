@@ -18,7 +18,7 @@ function updateDependent(dependentId) {
         "Dependente atualizado com sucesso!",
         "success"
       ).then(function () {
-        window.location = `./editDependent.php?id=${dependentId}`;
+        window.location = `../dependentPanel/dependentPanel.php`;
       });
     },
     error: function (resp) {
