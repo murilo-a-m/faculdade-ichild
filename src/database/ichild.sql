@@ -71,3 +71,12 @@ CREATE TABLE Log_do_dia (
 );
 
 
+CREATE TABLE Mensagem(
+    id INT(11) PRIMARY KEY AUTO_INCREMENT,
+    mensagem VARCHAR(50) NOT NULL,
+    dependentId INT NOT NULL,
+    transportadorId INT NOT NULL,
+    
+    FOREIGN KEY(transportadorId) REFERENCES Transportadores(id),
+    FOREIGN KEY(dependentId) REFERENCES Dependentes(id) ON DELETE CASCADE
+);

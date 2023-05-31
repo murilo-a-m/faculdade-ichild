@@ -1,51 +1,51 @@
-<html>
-        <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<?php
+    session_start();
+    require_once "../../database/connection.php";
+    header('Content-Type: application/json');
 
-        <!-- Css Links -->
-        <link rel="stylesheet" href="../../css/style.css" />
-        <link rel="stylesheet" href="../../css/reset.css" />
+    if (isset($_GET['date'])) {
+    $date = new \DateTime($_GET['date'], new \DateTimeZone('America/Sao_Paulo'));
+    }
+    $transportador = $_SESSION['id'];
+    $horario = $_POST['horarioLog'];
+    $statusLog = $_POST['statusLog'];
+    $localLog = $_POST['localLog'];
+    $dependentId = $_POST['dependenteLog'];
 
-        <!-- Bootstrap links -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-            crossorigin="anonymous"
-        />
+    
+    //$horarioFormat = $horario->format('H:i');
 
-        <!-- Favicon link -->
-        <link
-            rel="shortcut icon"
-            href="../../img/favicon-ichild.png"
-            type="image/x-icon"
-        />
+    
+    $sql= "INSERT INTO ichild.Log_Do_Dia (horario, statusLog, localLog, transportadorId, dependentId) VALUES ('$horarioFormat','$statusLog', '$localLog','$transportador','$dependentId')";
 
-        <title>iChild</title>
-    </head>
-    <?php
-        require_once '../../database/connection.php';
+    if ($result = mysqli_query($conn, $sql)) {       
+            $status = 'success';
+            $message = 'Requisição bem sucedida';
+            $statusCode = 200;
 
+            http_response_code($statusCode);
 
-        $responsavelId = $_SESSION['id'];
+            $response = array(
+                'status' => $status,
+                'message' => $message,
+            );
+            $jsonResponse = json_encode($response);
+            echo $jsonResponse;
+            exit;
 
-        $sql = "SELECT id, nome, sobrenome, dataNascimento, documento, turno
-                FROM ichild.Dependentes
-                WHERE responsavelId = $responsavelId
-                ";
-                
-        if ($result = mysqli_query($conn, $sql)) {
-            if (mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)){
-                    echo '<div class="dependente">';
-                    echo '<div class="icon">';
-                    echo'</div>';
-                    echo"<div value=$row[id] id='DependentSubmit' class='dados'>";
-                        echo"<h6 class='notify'></h6>";
-                    
-                }
-            }
-        }
-</html>
+    } else {
+        $status = 'error';
+        $message = 'Erro ao realizar a requisição';
+        $statusCode = 500;
+
+        http_response_code($statusCode);
+
+        $response = array(
+            'status' => $status,
+            'message' => $message,
+        );
+        $jsonResponse = json_encode($response);
+        echo $jsonResponse;
+        exit;
+    }
+?>
