@@ -37,7 +37,7 @@
   <body>
     <?php 
       session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
+      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'transportador'  ){
         header('location: ../login/login.php?erro=true');
         exit;
       }
@@ -55,7 +55,9 @@
         <div class='notificationsBall'></div>
         <h6 class='notify'>mensagens</h6>
       </div>
-      <div class="mensagens">DJADADAW</div>
+      <?php 
+        require './dependentMsg.php';
+      ?>
     </div>
     
     <!-- <?php require './dependendNotifyExe.php' ;?> -->

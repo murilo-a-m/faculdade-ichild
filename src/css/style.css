@@ -2818,6 +2818,13 @@
     min-height: 800px;
   }
 }
+.boxMsg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
 .dadosNoti {
   display: flex;
   align-self: flex-start;
