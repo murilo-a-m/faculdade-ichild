@@ -55,7 +55,9 @@
         <div class='notificationsBall'></div>
         <h6 class='notify'>mensagens</h6>
       </div>
-      <div class="mensagens">DJADADAW</div>
+      <?php 
+        require './dependentMsg.php';
+      ?>
     </div>
     
     <!-- <?php require './dependendNotifyExe.php' ;?> -->
