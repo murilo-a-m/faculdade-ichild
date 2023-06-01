@@ -40,7 +40,7 @@
 
     <?php require '../../components/headerTransportMenu.php';?>
 
-    <main class="container__main-schedule">
+    <main class="container__main-transportSchedule">
       <div id="calendar" class="schedule__content"></div>
     </main>
 

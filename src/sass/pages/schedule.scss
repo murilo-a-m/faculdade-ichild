@@ -37,6 +37,46 @@
   }
 }
 
+.container__main-transportSchedule {
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dde6ed;
+
+  .schedule__content {
+    height: 92%;
+    width: 97%;
+    padding: 20px;
+    background-color: #eef3ff;
+    border-radius: 10px;
+
+    button {
+      background-color: #526d82;
+      border: none;
+
+      &:hover {
+        background-color: #1a252fde;
+      }
+
+      &:disabled {
+        background-color: #1a252f;
+        opacity: 100%;
+      }
+    }
+
+    h2 {
+      font-weight: bold;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+  }
+}
+
 .container__form-paragraph {
   font-size: 16px;
   font-weight: bold;
