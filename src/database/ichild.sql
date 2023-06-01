@@ -40,7 +40,7 @@ CREATE TABLE Dependentes (
     transportadorId INT,
 
     FOREIGN KEY(responsavelId) REFERENCES Responsaveis(id) ON DELETE CASCADE,
-    FOREIGN KEY(transportadorId) REFERENCES Transportadores(id)
+    FOREIGN KEY(transportadorId) REFERENCES Transportadores(id) ON DELETE SET NULL
 );
 
 CREATE TABLE Agendas (
@@ -54,9 +54,9 @@ CREATE TABLE Agendas (
     dependentId INT(11) NOT NULL,
     transportadorId INT,
 
-    FOREIGN KEY(responsavelId) REFERENCES Responsaveis(id),
+    FOREIGN KEY(responsavelId) REFERENCES Responsaveis(id) ON DELETE CASCADE,
     FOREIGN KEY(dependentId) REFERENCES Dependentes(id) ON DELETE CASCADE,
-    FOREIGN KEY(transportadorId) REFERENCES Transportadores(id)
+    FOREIGN KEY(transportadorId) REFERENCES Transportadores(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Log_do_dia (
@@ -67,7 +67,7 @@ CREATE TABLE Log_do_dia (
     dependentId INT NOT NULL,
     transportadorId INT NOT NULL,
 
-    FOREIGN KEY(transportadorId) REFERENCES Transportadores(id),
+    FOREIGN KEY(transportadorId) REFERENCES Transportadores(id) ON DELETE CASCADE,
     FOREIGN KEY(dependentId) REFERENCES Dependentes(id) ON DELETE CASCADE
 );
 
@@ -78,6 +78,6 @@ CREATE TABLE Mensagem(
     dependentId INT NOT NULL,
     transportadorId INT NOT NULL,
     
-    FOREIGN KEY(transportadorId) REFERENCES Transportadores(id),
+    FOREIGN KEY(transportadorId) REFERENCES Transportadores(id) ON DELETE CASCADE,
     FOREIGN KEY(dependentId) REFERENCES Dependentes(id) ON DELETE CASCADE
 );
