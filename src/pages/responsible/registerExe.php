@@ -47,7 +47,6 @@
   $sql = "INSERT INTO Responsaveis ( nome, sobrenome, email, senha, cep, estado, cidade, rua, numero, imagem) 
           VALUES ('$nome','$sobrenome', '$email', '$encrypted_pwd','$cep','$estado','$cidade','$rua','$numero','$imagem_base64')";
   
-  
   if ($result = mysqli_query($conn, $sql)) {       
         $status = 'success';
         $message = 'Requisição bem sucedida';
