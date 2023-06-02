@@ -27,19 +27,11 @@
     <title>iChild</title>
   </head>
   <body>
-
-
     <?php
-      session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
-        header('location: ../login/login.php?erro=true');
-        exit;
-      }
+      require_once '../../components/responsibleAuthorization.php';
       require_once '../../database/connection.php';
       require '../../components/headerMenu.php';
     ; ?>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <main class="container__form container-fluid">
       <form
@@ -101,6 +93,12 @@
         <button class="col-md-2 form__btn-cancel">Cancelar</button>
       </form>
     </main>
+    
+    <!-- Script Jquery -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+
+    <!-- Script SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Script Navbar -->
     <script src="../../utils/navbar-menu.js"></script>
@@ -114,7 +112,5 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
-
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
   </body>
 </html>

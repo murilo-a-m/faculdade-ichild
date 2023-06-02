@@ -1,8 +1,7 @@
 <?php
-    header('Content-Type: application/json');
     session_start();    
-
     require_once '../../database/connection.php';
+    header('Content-Type: application/json');
 
     $nome    = $_POST['nome'];	
     $sobrenome     = $_POST['sobrenome'];
