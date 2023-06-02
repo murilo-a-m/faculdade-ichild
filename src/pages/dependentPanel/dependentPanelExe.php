@@ -1,5 +1,5 @@
 <?php 
-    require '../../database/connection.php';
+    require_once '../../database/connection.php';
 
     $responsavelId = $_SESSION['id'];
 
@@ -8,7 +8,6 @@
             LEFT JOIN ichild.Transportadores t ON d.transportadorId = t.id
             WHERE responsavelId = $responsavelId";
 
-
     if(!empty($_GET['search'])) {
         $data = $_GET['search'];
         $sql = "SELECT d.id, d.nome, d.sobrenome, d.dataNascimento, d.documento, d.turno, t.nome AS transportador_nome, t.sobrenome AS transportador_sobrenome
@@ -16,7 +15,6 @@
             INNER JOIN ichild.Transportadores t ON d.transportadorId = t.id
             WHERE (d.nome LIKE '%$data%' OR d.sobrenome LIKE '%$data%' OR d.documento LIKE '%$data%' OR d.turno LIKE '%$data%' OR t.nome LIKE '%$data%' OR t.sobrenome LIKE '%$data%')
             AND d.responsavelId = $responsavelId";
-
 
         if ($result = mysqli_query($conn, $sql)) {
         if (mysqli_num_rows($result) > 0) {
