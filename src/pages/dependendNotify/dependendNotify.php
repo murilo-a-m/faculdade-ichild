@@ -34,35 +34,43 @@
 
     <!-- AOS link -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+
+    <title>iChild</title>
+  </head>
+
   <body>
     <?php 
-      session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'transportador'  ){
-        header('location: ../login/login.php?erro=true');
-        exit;
-      }
+      require_once '../../components/transportAuthorization.php';
+      require_once '../../database/connection.php';
+      require_once '../../components/headerTransportMenu.php';
     ;?>
+    
+    <main class="container__main-panel">
+      <div id="panel" class="panel__content">
+        <div class="panel_search mb-2">
+          <p class="card__title">Mensagens</p>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-striped text-center table__panel">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Transportador</th>
+                <th scope="col">Mensagem</th>
+              
+              </tr>
+            </thead>
+            <tbody>
 
-    <?php require '../../components/headerMenu.php';?>
-    
-    
-    <div class="box">
-      <div class="titulos">
-        <h1 class="tituloNotify">Notificação</h1>
-    </div>
-    <div class="notifyBox">
-      <div  class='dadosNoti'>
-        <div class='notificationsBall'></div>
-        <h6 class='notify'>mensagens</h6>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <?php 
-        require './dependentMsg.php';
-      ?>
-    </div>
+    </main>
     
-    <!-- <?php require './dependendNotifyExe.php' ;?> -->
-    <script src="../../utils/navbar-menu.js"></script>
-    <script src="./dependentPanel.js" ></script>
-    <script src="../deleteDependent/deleteDependent.js"></script>
+    <script src="../../utils/navbar-transportMenu.js"></script>
+
+    <script src="./transportDependentSearch.js"></script>
   </body>
 </html>
