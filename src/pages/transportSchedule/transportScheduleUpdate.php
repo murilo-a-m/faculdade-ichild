@@ -29,7 +29,6 @@
 
   <body>
     <?php 
-      session_start();
       require_once '../../components/transportAuthorization.php';
       require_once '../../database/connection.php';
 
