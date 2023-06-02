@@ -32,7 +32,7 @@
 
     <?php 
       require_once '../../components/transportAuthorization.php';
-      require '../../components/headerTransportMenu.php';
+      require_once '../../components/headerTransportMenu.php';
     ?>
 
     <main class="container__main-transportSchedule">

@@ -30,8 +30,8 @@
   <body>
     <?php 
       session_start();
-      require '../../components/transportAuthorization.php';
-      require '../../database/connection.php';
+      require_once '../../components/transportAuthorization.php';
+      require_once '../../database/connection.php';
 
       $id = $_GET['id'];
       session_write_close();

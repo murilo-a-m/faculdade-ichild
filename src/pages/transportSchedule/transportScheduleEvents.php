@@ -1,6 +1,6 @@
 <?php 
-  require '../../components/transportAuthorization.php';
-  require '../../database/connection.php';
+  require_once '../../components/transportAuthorization.php';
+  require_once '../../database/connection.php';
 
   $transportadorId = $_SESSION['id'];
 

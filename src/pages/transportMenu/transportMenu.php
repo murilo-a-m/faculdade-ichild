@@ -31,14 +31,9 @@
 
   <body>
     <?php 
-      session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'transportador'  ){
-        header('location: ../loginTransport/loginTransport.php?erro=true');
-        exit;
-      }
-    ;?>
-
-    <?php require '../../components/headerTransportMenu.php';?>
+      require_once '../../components/headerTransportMenu.php';
+      require_once '../../components/transportAuthorization.php'
+    ?>
 
     <?php
       if (isset($_GET['status'])){
