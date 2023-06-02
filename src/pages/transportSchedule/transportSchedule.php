@@ -28,17 +28,12 @@
   </head>
   <body>
 
-    <?php 
-      session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'transportador'  ){
-        header('location: ../loginTransport/loginTransport.php?erro=true');
-        exit;
-      }
-    ; ?>
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <?php require '../../components/headerTransportMenu.php';?>
+    <?php 
+      require_once '../../components/transportAuthorization.php';
+      require '../../components/headerTransportMenu.php';
+    ?>
 
     <main class="container__main-transportSchedule">
       <div id="calendar" class="schedule__content"></div>

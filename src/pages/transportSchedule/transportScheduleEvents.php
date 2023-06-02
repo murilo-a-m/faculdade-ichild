@@ -1,10 +1,5 @@
 <?php 
-  session_start();
-  if (!isset($_SESSION['id']) || $_SESSION['role'] != 'transportador') {
-    header('location: ../loginTransport/loginTransport.php?erro=true');
-    exit;
-  }
-
+  require '../../components/transportAuthorization.php';
   require '../../database/connection.php';
 
   $transportadorId = $_SESSION['id'];
