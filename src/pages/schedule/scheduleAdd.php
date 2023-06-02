@@ -27,22 +27,14 @@
     <title>iChild</title>
   </head>
   <body>
-    <?php 
-      session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
-        header('location: ../login/login.php?erro=true');
-        exit;
-      }
-    ; ?>
-
     <?php
+      require_once '../../components/responsibleAuthorization.php';
+
       $date = null;
       if (isset($_GET['date'])) {
         $date = new \DateTime($_GET['date'], new \DateTimeZone('America/Sao_Paulo'));
       }
     ?>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <?php require '../../components/headerMenu.php';?>
 
@@ -113,6 +105,9 @@
         </button>
       </form>
     </main>
+    
+    <!-- Script SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Script Navbar -->
     <script src="../../utils/navbar-menu.js"></script>

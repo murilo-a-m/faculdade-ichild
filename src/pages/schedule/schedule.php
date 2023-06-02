@@ -29,20 +29,16 @@
   <body>
 
     <?php 
-      session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
-        header('location: ../login/login.php?erro=true');
-        exit;
-      }
-    ; ?>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <?php require '../../components/headerMenu.php';?>
+      require_once '../../components/responsibleAuthorization.php';
+      require_once '../../components/headerMenu.php';
+    ?>
 
     <main class="container__main-schedule">
       <div id="calendar" class="schedule__content"></div>
     </main>
+
+    <!-- Script Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Script Navbar -->
     <script src="../../utils/navbar-menu.js"></script>
