@@ -25,8 +25,6 @@
         />
 
         <title>iChild</title>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
     </head>
     <body>
 
@@ -62,6 +60,9 @@
             <button class="card__transportButton col-md-2 form__btn-cancel">Cancelar</button>
         </form>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
 
     <!-- Script Navbar -->
     <script src="../../utils/navbar-transportMenu.js"></script>

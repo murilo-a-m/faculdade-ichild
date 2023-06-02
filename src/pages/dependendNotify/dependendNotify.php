@@ -14,9 +14,6 @@
     <link rel="stylesheet" href="../../css/style.css" />
     <link rel="stylesheet" href="../../css/reset.css" />
 
-    <script src="sweetalert2.all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
     <!-- Bootstrap links -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
@@ -32,19 +29,11 @@
       type="image/x-icon"
     />
 
-    <!-- AOS link -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <body>
     <?php 
-      session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'transportador'  ){
-        header('location: ../login/login.php?erro=true');
-        exit;
-      }
-    ;?>
-
-    <?php require '../../components/headerMenu.php';?>
-    
+      require_once '../../components/transportAuthorization.php';
+      require '../../components/headerMenu.php';
+    ?>
     
     <div class="box">
       <div class="titulos">
@@ -61,6 +50,9 @@
     </div>
     
     <!-- <?php require './dependendNotifyExe.php' ;?> -->
+
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../../utils/navbar-menu.js"></script>
     <script src="./dependentPanel.js" ></script>
     <script src="../deleteDependent/deleteDependent.js"></script>
