@@ -31,7 +31,7 @@
 
   <body>
     <?php 
-      require '../../componentes/responsibleAuthorization.php';
+      require '../../components/transportAuthorization.php';
       require '../../components/headerTransportMenu.php'
     ?>
 

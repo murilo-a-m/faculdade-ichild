@@ -1,6 +1,6 @@
 <?php 
   require_once '../../components/responsibleAuthorization.php';
-  require_once '../../components/connection.php';
+  require_once '../../database/connection.php';
 
   mysqli_query($conn, "SET NAMES 'utf8'");
   mysqli_query($conn, 'SET character_set_connection=utf8');

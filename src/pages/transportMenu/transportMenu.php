@@ -31,8 +31,8 @@
 
   <body>
     <?php 
+      require_once '../../components/transportAuthorization.php';
       require_once '../../components/headerTransportMenu.php';
-      require_once '../../components/transportAuthorization.php'
     ?>
 
     <?php

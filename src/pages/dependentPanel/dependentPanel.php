@@ -37,7 +37,7 @@
 
   <body>
     <?php 
-      require_once '../../componentes/responsibleAuthorization.php';
+      require_once '../../components/responsibleAuthorization.php';
       require '../../components/headerMenu.php';
     ?>
     
@@ -75,6 +75,7 @@
       </div>
     </main>
 
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
     <script src="../../utils/navbar-menu.js"></script>
     <script src="./deleteDependent.js"></script>
     <script src="./responsibleDependentSearch.js"></script>

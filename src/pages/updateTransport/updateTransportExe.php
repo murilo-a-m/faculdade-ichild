@@ -1,6 +1,6 @@
 <?php 
-    require_once '../../database/connection.php';
     require_once '../../components/transportAuthorization.php';
+    require_once '../../database/connection.php';
       
     $nome    = $_POST['nome'];	
     $sobrenome     = $_POST['sobrenome'];
