@@ -33,29 +33,30 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     </head>
     <body>
-    <?php 
-        session_start();
-        if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
-        header('location: ../login/login.php?erro=true');
-        exit;
-        }
-    ;?>
-    <?php require '../../components/headerMenu.php'?>
-    <div class="dependenteTitulo">
-        <h5 class="tittleDependentes">Log do Dia</h5>
-    </div>
+        <?php 
+            require_once '../../components/responsibleAuthorization.php';
+            require_once '../../components/headerMenu.php'
+        ?>
 
-    <div class="box">
-        <div class="titulos">
-            <h5 class="infoTitulos">Horário</h5>
-            <h5 class="infoTitulos">Nome</h5>
-            <h5 class="infoTitulos">Status</h5>
-            <h5 class="infoTitulos">Local</h5>
+        <div class="dependenteTitulo">
+            <h5 class="tittleDependentes">Log do Dia</h5>
         </div>
-        <?php require './painelLogExe.php' ;?>
-    </div>
-    <script src="../../utils/navbar-menu.js"></script>
-    <script src="./painelLog.js"></script>
+
+        <div class="box">
+            <div class="titulos">
+                <h5 class="infoTitulos">Horário</h5>
+                <h5 class="infoTitulos">Nome</h5>
+                <h5 class="infoTitulos">Status</h5>
+                <h5 class="infoTitulos">Local</h5>
+            </div>
+            <?php require './painelLogExe.php' ;?>
+        </div>
+        
+        <!-- Navbar script -->
+        <script src="../../utils/navbar-menu.js"></script>
+
+        <!-- Painel log Script -->
+        <script src="./painelLog.js"></script>
     </body>
 
 </html>

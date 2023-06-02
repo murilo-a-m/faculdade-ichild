@@ -5,7 +5,6 @@
         // Consulta SQL para recuperar o horário
         $horario = "SELECT horario FROM Log_do_dia WHERE dependentId = $dependentId ORDER BY horario DESC LIMIT 1";
 
-            
         echo '<div class="col-md-8 mt-2">';
             echo '<label for="time" class="form-label">Horario</label>';
             echo '<input  value="<?php echo ($horario);?>" type="time" class="form-control" />';
