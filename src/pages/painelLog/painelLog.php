@@ -29,17 +29,12 @@
       type="image/x-icon"
     />
 
-  <!-- AOS link -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <body>
     <?php 
-      session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
-        header('location: ../login/login.php?erro=true');
-        exit;
-      }
-    ;?>
-    <?php require '../../components/headerTransportMenu.php'?>
+      require '../../components/transportAuthorization.php';
+      require '../../components/headerTransportMenu.php'
+    ?>
+
     <div class="dependenteTitulo">
       <h5 class="tittleDependentes">Log do Dia</h5>
     </div>
@@ -53,8 +48,11 @@
         </div>
         <?php require './painelLogExe.php' ;?>
     </div>
+
+    <!-- Navbar script -->
     <script src="../../utils/navbar-menu.js"></script>
+
+    <!-- Painel log Script -->
     <script src="./painelLog.js"></script>
   </body>
-
 </html>

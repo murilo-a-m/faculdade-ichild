@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="../../css/reset.css" />
     <link rel="stylesheet" href="../../css/style.css" />
     <link rel="shortcut icon" href="../../img/favicon-ichild.png" type="image/x-icon"/>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
     <title>Login</title>
   </head>
   <body>
@@ -32,6 +30,8 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
     <script src="../../utils/navbar.js"></script>
     <script src="./login.js"></script>
 </body>

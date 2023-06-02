@@ -1,5 +1,5 @@
 <?php 
-    require '../../database/connection.php';
+    require_once '../../database/connection.php';
 
     $transportadorId = $_SESSION['id'];
 

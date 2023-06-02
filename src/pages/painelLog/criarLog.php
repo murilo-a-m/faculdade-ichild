@@ -25,15 +25,13 @@
     />
 
     <title>iChild</title>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
   </head>
+
   <body>
-  
   <?php 
-  session_start();
-    require '../../components/headerTransportMenu.php';
+    session_start();
     require_once '../../database/connection.php';
+    require_once '../../components/headerTransportMenu.php';
   ?>
   
   <main class="container__form container-fluid">
@@ -79,14 +77,17 @@
     </form>
   </main>
 
+  <!-- Script Jquery -->
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+
+  <!-- Script SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   <!-- Script Navbar -->
   <script src="../../utils/navbar-menu.js"></script>
 
   <!-- Script criarLog -->
   <script src="./criarLog.js"></script>
-
-  <!-- Script Regex -->
-  <!-- <script src="./registerDependent.js"></script> -->
 
   <!-- Script Bootstrap -->
   <script

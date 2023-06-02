@@ -1766,6 +1766,7 @@
   border: 3px solid #3ab5df;
   border-radius: 100%;
   width: 40px;
+  height: 40px;
   object-fit: cover;
 }
 
@@ -1904,6 +1905,7 @@
 }
 #profile__bar .profile__info .profile__pic {
   width: 130px;
+  height: 130px;
   border: 5px solid #ffffff;
   border-radius: 100%;
   object-fit: cover;

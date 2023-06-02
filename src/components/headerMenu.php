@@ -27,7 +27,7 @@
 </aside>
 
 <?php 
-  require '../../database/connection.php';
+  require_once '../../database/connection.php';
   $responsavelId = $_SESSION['id'];
   $nome = $_SESSION['nome'];
   $sobrenome = $_SESSION['sobrenome'];

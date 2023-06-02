@@ -29,13 +29,8 @@
 
   <body>
     <?php 
-      session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'transportador'  ){
-        header('location: ../loginTransport/loginTransport.php?erro=true');
-        exit;
-      }; 
-
-      require '../../database/connection.php';
+      require_once '../../components/transportAuthorization.php';
+      require_once '../../database/connection.php';
 
       $id = $_GET['id'];
       session_write_close();

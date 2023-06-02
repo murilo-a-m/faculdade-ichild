@@ -17,17 +17,12 @@
       crossorigin="anonymous"
     />
 
-    <script src="sweetalert2.all.min.js"></script>
-
     <link
       rel="shortcut icon"
       href="../../img/favicon-ichild.png"
       type="image/x-icon"
     />
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
     <title>iChild</title>
   </head>
 
@@ -112,6 +107,13 @@
         </button>
       </form>
     </main>
+
+    <!-- Script Jquery -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+
+    <!-- Script SweetAlert -->
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Script Navbar -->
     <script src="../../utils/navbar-menu.js"></script>

@@ -29,17 +29,10 @@
       type="image/x-icon"
     />
 
-    <!-- AOS link -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
-
     <title>iChild</title>
   </head>
   <body>
-    
-    <?php require '../../components/header.php';?>
+    <?php require_once '../../components/header.php';?>
 
     <main class="container__form-register container-fluid">
       <form id="form" class="container__form-content row g-1 container-md mt-3">
@@ -148,6 +141,12 @@
       </form>
     </main>
 
+    <!-- Script Jquery -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+
+    <!-- Script SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- Script Navbar -->
     <script src="../../utils/navbar.js"></script>
 
@@ -161,11 +160,5 @@
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
       crossorigin="anonymous"
     ></script>
-
-    <!-- Script AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>

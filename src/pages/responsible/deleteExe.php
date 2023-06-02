@@ -8,7 +8,6 @@
 ?>
 
 <?php
-  
   if ($result = mysqli_query($conn, $sql)) {
     header('location: ../home/home.php?result=success');
 
