@@ -1,5 +1,5 @@
 <?php 
-    require '../../database/connection.php';
+    require_once '../../database/connection.php';
 
     $responsavelId = $_SESSION['id'];
 
@@ -10,7 +10,6 @@
             LIMIT 3
             ";
             
-
     echo '<div class="content__card card__dependents">';
     echo '<div class="card__container">';
     echo '<p class="card__title">Dependentes</p>';
