@@ -56,9 +56,12 @@
               <label class="form-label custom-label" for="email">Email</label>
             </div>
 
-            <div class="form-outline mb-4">
-              <input type="password" id="senha" name="senha" class="form-control p-2" />
-              <label class="form-label" for="senha">Senha</label>
+            <div class="d-flex form-outline mb-4">
+                <input type="password" id="senha" name="senha" class="form-control p-2" />
+                <button id="showPassword" class="btn btn-link" data-mdb-ripple-color="dark" type="button" id="mostrarSenha">
+                  <i id="eye" class="bi bi-eye-fill"></i>
+                </button>
+                <label class="form-label" for="senha">Senha</label>
             </div>
 
             <button type="submit" class="bn632-hover bn20">Entrar</button>
