@@ -45,8 +45,8 @@
           <p>Seja bem vindo!</p>
           <p>Entre com seu email e senha caso já possua uma conta.</p>
           <div class="input-group mt-3">
-            <a href=""><button type="submit" class="bn632-transport bn20"><i class="bi bi-person-fill-add"></i> Criar conta</button></a>
-            <a href=""><button type="submit" class="bn632-transport bn20"><i class="bi bi-house-door-fill"></i> Home</button></a>
+            <a href="../registerTransport/registerTransport.php"><button type="submit" class="bn632-transport bn20"><i class="bi bi-person-fill-add"></i> Criar conta</button></a>
+            <a href="../home/home.php"><button type="submit" class="bn632-transport bn20"><i class="bi bi-house-door-fill"></i> Home</button></a>
           </div>
         </div>
 
@@ -71,7 +71,7 @@
             <button type="submit" class="bn632-transport bn20">Entrar</button>
 
             <div class="text-center dontHaveAccount">
-              <p>Não possui uma conta? <a href="../responsible/register.php">Registre-se</a></p>
+              <p>Não possui uma conta? <a href="../registerTransport/registerTransport.php">Registre-se</a></p>
             </div>
           </form>
         </div>
@@ -91,6 +91,6 @@
     ></script>
 
     <!-- Login -->
-    <script src="./login.js"></script>
+    <script src="./loginTransport.js"></script>
   </body>
 </html>

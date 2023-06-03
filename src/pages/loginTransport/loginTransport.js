@@ -30,13 +30,13 @@ function login(email, password) {
 
 const formContent = document.querySelector("#form");
 const email = document.querySelector("#email");
-const name = document.querySelector("#password");
+const senha = document.querySelector("#senha");
 const showPassword = document.querySelector("#showPassword");
 const eye = document.querySelector("#eye");
 
 formContent.addEventListener("submit", (ev) => {
   ev.preventDefault();
-  login(email.value, password.value);
+  login(email.value, senha.value);
 });
 
 showPassword.addEventListener("click", () => {
