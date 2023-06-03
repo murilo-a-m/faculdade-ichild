@@ -31,8 +31,23 @@ function login(email, password) {
 const formContent = document.querySelector("#form");
 const email = document.querySelector("#email");
 const name = document.querySelector("#password");
+const showPassword = document.querySelector("#showPassword");
+const eye = document.querySelector("#eye");
 
 formContent.addEventListener("submit", (ev) => {
   ev.preventDefault();
   login(email.value, password.value);
+});
+
+showPassword.addEventListener("click", () => {
+  const type = senha.getAttribute("type");
+  if (type === "password") {
+    senha.setAttribute("type", "text");
+    eye.classList.remove("bi-eye-fill");
+    eye.classList.add("bi-eye-slash-fill");
+  } else {
+    senha.setAttribute("type", "password");
+    eye.classList.remove("bi-eye-slash-fill");
+    eye.classList.add("bi-eye-fill");
+  }
 });
