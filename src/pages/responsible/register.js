@@ -116,7 +116,7 @@ function createResponsible() {
   });
 }
 
-const form = document.querySelector(".container__form-content");
+const form = document.querySelector("#form");
 const email = document.querySelector("#inputEmail");
 const password = document.querySelector("#inputPassword");
 const confirmPassword = document.querySelector("#inputConfirmPassword");
