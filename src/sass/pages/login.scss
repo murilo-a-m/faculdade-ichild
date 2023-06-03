@@ -54,6 +54,14 @@
         font-weight: 400;
         width: 80%;
       }
+
+      div {
+        width: 60%;
+
+        a {
+          width: 50%;
+        }
+      }
     }
 
     .login__content-form {
@@ -152,6 +160,13 @@
           font-weight: 400;
           width: 80%;
         }
+
+        div {
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
       }
 
       .login__content-form {
@@ -184,6 +199,10 @@
         }
 
         p {
+          display: none;
+        }
+
+        div {
           display: none;
         }
       }

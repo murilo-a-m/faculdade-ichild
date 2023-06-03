@@ -44,6 +44,10 @@
           <a href="../home/home.php"><img class="img-fluid" src="../../img/favicon-ichild.png" alt=""></a>
           <p>Seja bem vindo!</p>
           <p>Entre com seu email e senha caso já possua uma conta.</p>
+          <div class="input-group mt-3">
+            <a href=""><button type="submit" class="bn632-hover bn20"><i class="bi bi-person-fill-add m-2"></i> Criar conta</button></a>
+            <a href=""><button type="submit" class="bn632-hover bn20"><i class="bi bi-house-door-fill m-2"></i> Home</button></a>
+          </div>
         </div>
 
         <div class="login__content-form">
