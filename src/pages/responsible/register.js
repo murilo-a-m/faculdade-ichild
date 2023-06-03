@@ -1,3 +1,56 @@
+function validateCPF(cpf) {
+  const cpfError = document.querySelector("#cpf-error");
+  cpf = cpf.replace(/\D/g, "");
+
+  if (cpf.length !== 11) {
+    cpfError.textContent = "CPF inválido";
+    return false;
+  }
+
+  const firstDigit = Number(cpf[9]);
+  const secondDigit = Number(cpf[10]);
+
+  let sum = 0;
+  let weight = 10;
+  let remainder;
+
+  for (let i = 0; i < 9; i++) {
+    sum += Number(cpf[i]) * weight;
+    weight--;
+  }
+
+  remainder = (sum * 10) % 11;
+  if (remainder === 10) {
+    remainder = 0;
+  }
+
+  if (remainder !== firstDigit) {
+    cpfError.textContent = "CPF inválido";
+    return false;
+  }
+
+  sum = 0;
+  weight = 11;
+
+  for (let i = 0; i < 10; i++) {
+    sum += Number(cpf[i]) * weight;
+    weight--;
+  }
+
+  remainder = (sum * 10) % 11;
+  if (remainder === 10) {
+    remainder = 0;
+  }
+
+  if (remainder !== secondDigit) {
+    cpfError.textContent = "CPF inválido";
+    return false;
+  }
+
+  cpfError.textContent = "";
+  return true;
+}
+
 function validateEmail(email) {
   const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   const spanError = document.querySelector("#email-error");
@@ -63,30 +116,6 @@ function validatePassword(password, passwordConfirm) {
   }
 }
 
-function validateStreet(street) {
-  const streetError = document.querySelector("#street-error");
-
-  if (street.value === "") {
-    streetError.textContent = "Campo obrigatório*";
-    return false;
-  } else {
-    streetError.textContent = "";
-    return true;
-  }
-}
-
-function validateNumber(number) {
-  const numberError = document.querySelector("#number-error");
-
-  if (number.value === "") {
-    numberError.textContent = "Campo obrigatório*";
-    return false;
-  } else {
-    numberError.textContent = "";
-    return true;
-  }
-}
-
 function createResponsible() {
   jQuery.ajax({
     url: "registerExe.php",
@@ -109,6 +138,12 @@ function createResponsible() {
           "Tente novamente com outro email!",
           "error"
         );
+      } else if (resp.status == 409) {
+        Swal.fire(
+          "CPF já cadastrado!",
+          "Tente novamente ou faça seu login!",
+          "error"
+        );
       } else {
         Swal.fire("Conta não cadastrada!", "Tente novamente!", "error");
       }
@@ -120,17 +155,15 @@ const form = document.querySelector("#form");
 const email = document.querySelector("#inputEmail");
 const password = document.querySelector("#inputPassword");
 const confirmPassword = document.querySelector("#inputConfirmPassword");
-const street = document.querySelector("#inputStreet");
-const number = document.querySelector("#inputNumber");
+const cpf = document.querySelector("#inputCpf");
 
 form.addEventListener("submit", (ev) => {
   ev.preventDefault();
   const emailOk = validateEmail(email);
   const passwordOk = validatePassword(password, confirmPassword);
-  const streetOk = validateStreet(street);
-  const numberOk = validateNumber(number);
+  const cpfOk = validateCPF(cpf.value);
 
-  if (emailOk && passwordOk && streetOk && numberOk) {
+  if (emailOk && passwordOk && cpfOk) {
     createResponsible();
   }
 });
