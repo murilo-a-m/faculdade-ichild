@@ -1,8 +1,7 @@
 <?php
+  session_start();
   require_once '../../database/connection.php';
   header('Content-Type: application/json');
-
-  session_start();
   
   $email = $_POST['email'];
   $senha = $_POST['senha'];

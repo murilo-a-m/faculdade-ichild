@@ -57,14 +57,14 @@
             </div>
 
             <div class="form-outline mb-4">
-              <input type="password" id="senha" class="form-control p-2" />
+              <input type="password" id="senha" name="senha" class="form-control p-2" />
               <label class="form-label" for="senha">Senha</label>
             </div>
 
             <button type="submit" class="bn632-hover bn20">Entrar</button>
 
             <div class="text-center">
-              <p>Não possui uma conta? <a href="#!">Registre-se</a></p>
+              <p>Não possui uma conta? <a href="../responsible/register.php">Registre-se</a></p>
             </div>
           </form>
         </div>
