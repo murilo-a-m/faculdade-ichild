@@ -1,97 +1,97 @@
-$corprimaria: #39b5e0;
-$corsecundaria: #a31acb;
-$corterciaria: #ff78f0;
-$fonte: font-family "Montserrat", sans-serif;
-
-#form {
+.container__login {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../img/about-background.png);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-}
 
-.fundo {
-  display: flex;
-  justify-content: center;
-}
-
-.fundo .box {
-  display: flex;
-  justify-content: center;
-  height: 70vh;
-  align-items: center;
-  width: 50vw;
-  margin-top: 4rem;
-  background-color: white;
-  border: 4px solid $corterciaria;
-  border-radius: 3%;
-}
-
-.fundo .box #bemvindo {
-  font-size: 30px;
-  height: 2vh;
-}
-
-.fundo .box .inputCadastro {
-  display: flex;
-  justify-content: center;
-  height: 5vh;
-  flex-direction: column;
-  gap: 5px;
-}
-.fundo .box .inputCadastro #semConta {
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
-  margin-top: 1rem;
-
-  &:hover {
-    color: $corterciaria;
-  }
-}
-
-.fundo .box .inputCadastro .single-input {
-  position: relative;
-  margin: 30px 0;
-
-  label {
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    color: rgb(150, 150, 150);
-    cursor: text;
-    transition: 0.5s ease-in-out;
+  .img__responsive {
+    display: none;
+    width: 200px;
   }
 
-  .input {
-    border-radius: 2%;
-    width: 100%;
-    padding: 2px;
-    border: 0;
-    border-bottom: 2px solid rgb(200, 200, 200);
-    outline: 0;
-    font-size: 16px;
-    color: rgb(80, 80, 80);
-    transition: 0.5s ease-in-out;
-  }
-  &:focus &:valid {
-    border-bottom: 2px solid cornflowerblue;
-    ~ label {
-      transform: translateY(-24px);
-      font-size: 12px;
-      color: cornflowerblue;
+  .container__login-content {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    height: 85%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    .login__content-backgroud {
+      background: rgb(163, 26, 202);
+      background: linear-gradient(
+        266deg,
+        rgba(163, 26, 202, 1) 0%,
+        rgba(58, 181, 223, 1) 100%
+      );
+      width: 60%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+
+      img {
+        width: 300px;
+      }
+
+      p {
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 0;
+        text-align: center;
+      }
+
+      p:nth-child(3) {
+        font-size: 1.3rem;
+        font-weight: 400;
+        width: 80%;
+      }
+    }
+
+    .login__content-form {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .form__login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .login__title {
+          align-self: flex-start;
+          font-size: 2rem;
+          font-weight: 700;
+        }
+      }
     }
   }
 }
 
-.fundo .box .inputCadastro .fonte {
-  font-family: "Montserrat", sans-serif;
-  font-size: 25px;
+.text-center {
+  p {
+    margin-bottom: 0;
+
+    a {
+      color: #a31aca;
+    }
+  }
 }
 
-.fundo .box .inputCadastro .bn632-hover {
-  width: 160px;
-  font-size: 16px;
-  font-weight: 600;
+.bn632-hover {
+  width: 100%;
+  font-weight: 500;
   color: #fff;
   cursor: pointer;
   margin-bottom: 20px;
@@ -99,7 +99,7 @@ $fonte: font-family "Montserrat", sans-serif;
   text-align: center;
   border: none;
   background-size: 300% 100%;
-  border-radius: 50px;
+  border-radius: 4px;
   transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
@@ -129,129 +129,108 @@ $fonte: font-family "Montserrat", sans-serif;
   }
 }
 
-.fundo .box .inputCadastro #iconichild {
-  height: 30vh;
-  margin-bottom: 2rem;
-}
+@media (max-width: 1024px) {
+  .container__login {
+    .container__login-content {
+      .login__content-backgroud {
+        width: 50%;
 
-.inputbox {
-  position: relative;
-  width: 300px;
-  height: 50px;
-  margin-bottom: 50px;
+        img {
+          width: 200px;
+        }
 
-  input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    border: 2px solid #000;
-    outline: none;
-    background: none;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 1.2em;
-  }
+        p {
+          color: white;
+          font-size: 2rem;
+          font-weight: bold;
+          margin: 0;
+          text-align: center;
+        }
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+        p:nth-child(3) {
+          font-size: 1rem;
+          font-weight: 400;
+          width: 80%;
+        }
+      }
 
-  span {
-    position: absolute;
-    top: 14px;
-    left: 20px;
-    font-size: 1em;
-    transition: 0.6s;
-    font-family: sans-serif;
-  }
+      .login__content-form {
+        width: 50%;
 
-  input:focus ~ span,
-  input:valid ~ span {
-    transform: translateX(-13px) translateY(-35px);
-    font-size: 1em;
-  }
-
-  [type="button"] {
-    width: 50%;
-    background: dodgerblue;
-    color: #fff;
-    border: #fff;
-  }
-
-  &:hover [type="button"] {
-    background: linear-gradient(45deg, greenyellow, dodgerblue);
+        .login__title {
+          align-self: flex-start;
+          font-size: 2rem;
+          color: #686868;
+          font-weight: 700;
+        }
+      }
+    }
   }
 }
 
-@media (max-width: 1368px) {
-  .fundo .box {
-    height: 70vh;
-  }
-  .fundo .box .inputCadastro #iconichild {
-    height: 300px;
-  }
-}
+@media (max-width: 768px) {
+  .container__login {
+    .img__responsive {
+      display: flex;
+    }
+    .container__login-content {
+      height: 100%;
+      width: 100%;
+      .login__content-backgroud {
+        width: 20%;
 
-@media (max-width: 680px) {
-  .fundo .box {
-    border: none;
+        img {
+          display: none;
+        }
+
+        p {
+          display: none;
+        }
+      }
+
+      .login__content-form {
+        width: 80%;
+      }
+    }
   }
 }
 
 @media (max-width: 425px) {
-  .fundo .box {
-    height: 80vh;
-    width: 80vw;
-  }
-  .inputbox {
-    position: relative;
-    width: 90%;
-    height: 50px;
-    margin-bottom: 50px;
-  }
-  .fundo .box .inputCadastro #iconichild {
-    width: 80%;
-    margin-bottom: 2rem;
-    margin-left: 0;
-    align-self: center;
-  }
-  #email,
-  #password {
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    height: 40px;
+  .container__login {
+    .img__responsive {
+      display: flex;
+    }
+    .container__login-content {
+      height: 100%;
+      width: 100%;
+      border-radius: 0;
+      .login__content-backgroud {
+        width: 0;
+
+        img {
+          display: none;
+        }
+
+        p {
+          display: none;
+        }
+      }
+
+      .login__content-form {
+        width: 90%;
+      }
+    }
   }
 }
 
-@media (max-width: 375px) {
-  .fundo .box {
-    width: 90vw;
-    height: 80vh;
+@media (max-height: 700px) {
+  .container__login {
+    min-height: 700px;
   }
 }
 
-.swal2-container {
-  font-family: $font;
-}
-
-@media (max-height: 800px) {
-  .fundo .box .inputCadastro #iconichild {
-    width: 200px;
-    align-self: center;
-  }
-
-  .fundo {
-    min-height: 300px;
-    padding: 20px 0;
-  }
-
-  .fundo .box {
+@media (max-height: 600px) {
+  .container__login {
     min-height: 500px;
-    padding: 20px 0;
-  }
-
-  #form {
-    min-height: 250px;
   }
 }
