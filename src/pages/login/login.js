@@ -30,9 +30,9 @@ function login(email, password) {
 
 const formContent = document.querySelector("#form");
 const email = document.querySelector("#email");
-const name = document.querySelector("#password");
+const senha = document.querySelector("#senha");
 
 formContent.addEventListener("submit", (ev) => {
   ev.preventDefault();
-  login(email.value, password.value);
+  login(email.value, senha.value);
 });

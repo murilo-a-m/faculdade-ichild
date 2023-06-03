@@ -1,38 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../css/reset.css" />
+
+    <!-- Css Links -->
     <link rel="stylesheet" href="../../css/style.css" />
-    <link rel="shortcut icon" href="../../img/favicon-ichild.png" type="image/x-icon"/>
-    <title>Login</title>
+    <link rel="stylesheet" href="../../css/reset.css" />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon link -->
+    <link
+      rel="shortcut icon"
+      href="../../img/favicon-ichild.png"
+      type="image/x-icon"
+    />
+
+    <title>iChild</title>
   </head>
+
   <body>
-    <?php require '../../components/header.php';?>
-    <div class="fundo">
-        <div class="box">
-            <div class="inputCadastro">
-              <img id="iconichild" src="../../img/about-logo.png" alt="">
-              <form id="form">
-                <div class="inputbox">
-                  <input id="email" type="text" name="email">
-                  <span>Email</span>
-                </div>
-                <div class="inputbox">
-                  <input id="password" type="password" name="senha">
-                  <span>Password</span>                      
-                </div>
-                <button type="submit" class="bn632-hover bn20">Bem-Vindo</button>
-              </form>
+    <main class="container__login background__style">
+      <div class="container__login-content">
+        <div class="login__content-backgroud">
+          <a href="../home/home.php"><img class="img-fluid" src="../../img/favicon-ichild.png" alt=""></a>
+          <p>Seja bem vindo!</p>
+          <p>Entre com seu email e senha caso já possua uma conta.</p>
+        </div>
+
+        <div class="login__content-form">
+          <form class="col-md-8 form__login" id="form">
+            <a href="../home/home.php"><img class="img-fluid img__responsive" src="../../img/favicon-ichild.png" alt=""></a>
+            <p class="login__title mb-3">Login</p>
+            
+            <div class="form-outline mb-4">
+              <input type="email" id="email" name="email" class="form-control p-2" />
+              <label class="form-label custom-label" for="email">Email</label>
             </div>
+
+            <div class="form-outline mb-4">
+              <input type="password" id="senha" class="form-control p-2" />
+              <label class="form-label" for="senha">Senha</label>
+            </div>
+
+            <button type="submit" class="bn632-hover bn20">Entrar</button>
+
+            <div class="text-center">
+              <p>Não possui uma conta? <a href="#!">Registre-se</a></p>
+            </div>
+          </form>
         </div>
       </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </main>
+
+    <!-- Jquery -->
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
-    <script src="../../utils/navbar.js"></script>
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"
+    ></script>
+
+    <!-- Login -->
     <script src="./login.js"></script>
-</body>
+  </body>
 </html>
