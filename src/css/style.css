@@ -866,6 +866,16 @@
     width: 90%;
   }
 }
+@media (max-height: 700px) {
+  .container__login {
+    min-height: 700px;
+  }
+}
+@media (max-height: 600px) {
+  .container__login {
+    min-height: 500px;
+  }
+}
 .container__form-register {
   display: flex;
   align-items: center;

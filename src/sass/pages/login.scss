@@ -222,3 +222,15 @@
     }
   }
 }
+
+@media (max-height: 700px) {
+  .container__login {
+    min-height: 700px;
+  }
+}
+
+@media (max-height: 600px) {
+  .container__login {
+    min-height: 500px;
+  }
+}
