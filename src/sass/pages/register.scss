@@ -87,16 +87,6 @@
   }
 }
 
-.text-center {
-  p {
-    margin-bottom: 0;
-
-    a {
-      color: #a31aca;
-    }
-  }
-}
-
 .bn632-hover {
   width: 100%;
   font-weight: 500;
@@ -263,6 +253,6 @@
 
 @media (max-height: 650px) {
   .container__register {
-    min-height: 800px;
+    min-height: 650px;
   }
 }

@@ -243,13 +243,15 @@
 }
 
 @media (max-height: 700px) {
-  .container__login-transport {
-    min-height: 700px;
+  .container__login-transport .container__login-content {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
   }
 }
 
 @media (max-height: 600px) {
   .container__login-transport {
-    min-height: 500px;
+    min-height: 600px;
   }
 }

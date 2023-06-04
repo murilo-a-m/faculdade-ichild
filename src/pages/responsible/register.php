@@ -152,7 +152,7 @@
 
             <button type="submit" class="bn632-hover bn20">Criar conta</button>
 
-            <div class="text-center">
+            <div class="text-center haveAccount">
               <p>Já possui uma conta? <a href="../login/login.php">Faça seu login</a></p>
             </div>
           </form>

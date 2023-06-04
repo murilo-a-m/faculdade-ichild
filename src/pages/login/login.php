@@ -70,7 +70,7 @@
 
             <button type="submit" class="bn632-hover bn20">Entrar</button>
 
-            <div class="text-center">
+            <div class="text-center haveAccount">
               <p>Não possui uma conta? <a href="../responsible/register.php">Registre-se</a></p>
             </div>
           </form>

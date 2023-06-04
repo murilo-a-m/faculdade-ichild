@@ -763,10 +763,10 @@
   font-weight: 700;
 }
 
-.text-center p {
+.haveAccount p {
   margin-bottom: 0;
 }
-.text-center p a {
+.haveAccount p a {
   color: #a31aca;
 }
 
@@ -883,13 +883,15 @@
   }
 }
 @media (max-height: 700px) {
-  .container__login {
-    min-height: 700px;
+  .container__login .container__login-content {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
   }
 }
 @media (max-height: 600px) {
   .container__login {
-    min-height: 500px;
+    min-height: 600px;
   }
 }
 .container__login-transport {
@@ -1086,13 +1088,15 @@
   }
 }
 @media (max-height: 700px) {
-  .container__login-transport {
-    min-height: 700px;
+  .container__login-transport .container__login-content {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
   }
 }
 @media (max-height: 600px) {
   .container__login-transport {
-    min-height: 500px;
+    min-height: 600px;
   }
 }
 .container__register {
@@ -1167,13 +1171,6 @@
   align-self: flex-start;
   font-size: 2rem;
   font-weight: 700;
-}
-
-.text-center p {
-  margin-bottom: 0;
-}
-.text-center p a {
-  color: #a31aca;
 }
 
 .bn632-hover {
@@ -1310,7 +1307,7 @@
 }
 @media (max-height: 650px) {
   .container__register {
-    min-height: 800px;
+    min-height: 650px;
   }
 }
 .container__form {
