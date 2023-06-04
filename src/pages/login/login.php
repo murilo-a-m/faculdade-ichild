@@ -44,6 +44,10 @@
           <a href="../home/home.php"><img class="img-fluid" src="../../img/favicon-ichild.png" alt=""></a>
           <p>Seja bem vindo!</p>
           <p>Entre com seu email e senha caso já possua uma conta.</p>
+          <div class="input-group mt-3">
+            <a href="../../pages/responsible/register.php"><button type="submit" class="bn632-hover bn20"><i class="bi bi-person-fill-add"></i> Criar conta</button></a>
+            <a href="../../pages/home/home.php"><button type="submit" class="bn632-hover bn20"><i class="bi bi-house-door-fill"></i> Home</button></a>
+          </div>
         </div>
 
         <div class="login__content-form">
@@ -52,12 +56,12 @@
             <p class="login__title mb-3">Login</p>
             
             <div class="form-outline mb-4">
-              <input type="email" id="email" name="email" class="form-control p-2" />
+              <input type="email" id="email" name="email" class="form-control form-control-lg" />
               <label class="form-label custom-label" for="email">Email</label>
             </div>
 
             <div class="d-flex form-outline mb-4">
-                <input type="password" id="senha" name="senha" class="form-control p-2" />
+                <input type="password" id="senha" name="senha" class="form-control form-control-lg" />
                 <button id="showPassword" class="btn btn-link" data-mdb-ripple-color="dark" type="button" id="mostrarSenha">
                   <i id="eye" class="bi bi-eye-fill"></i>
                 </button>
@@ -66,7 +70,7 @@
 
             <button type="submit" class="bn632-hover bn20">Entrar</button>
 
-            <div class="text-center">
+            <div class="text-center haveAccount">
               <p>Não possui uma conta? <a href="../responsible/register.php">Registre-se</a></p>
             </div>
           </form>

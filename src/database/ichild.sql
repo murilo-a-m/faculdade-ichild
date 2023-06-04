@@ -4,6 +4,7 @@ CREATE TABLE Responsaveis (
     sobrenome VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL,
+    cpf CHAR(11) NOT NULL,
     cep VARCHAR(20) NOT NULL,
     estado VARCHAR(50) NOT NULL,
     cidade VARCHAR(255) NOT NULL,
