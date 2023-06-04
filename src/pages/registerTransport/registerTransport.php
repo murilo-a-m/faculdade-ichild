@@ -4,161 +4,173 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="/src/img/favicon-ichild.png"
-      type="image/x-icon"
-    />
 
     <!-- Css Links -->
     <link rel="stylesheet" href="../../css/style.css" />
     <link rel="stylesheet" href="../../css/reset.css" />
 
-    <!-- Bootstrap links -->
+    <!-- Font Awesome -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
-      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css"
+      rel="stylesheet"
     />
 
     <!-- Favicon link -->
     <link
       rel="shortcut icon"
-      href="./img/favicon-ichild.png"
+      href="../../img/favicon-ichild.png"
       type="image/x-icon"
     />
 
     <title>iChild</title>
   </head>
+
   <body>
-    <?php require_once '../../components/header.php';?>
-
-    <main class="container__form-register container-fluid">
-      <form id="form" class="container__form-content row g-1 container-md mt-3">
-
-        <div class="col-md-10 passwordContent">
-          <div class="col-md-6">
-            <label for="inputName" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="inputName" name="nome" required />
-            <span id="name-error" class="error"></span>
-          </div>
-
-          <div class="col-md-6">
-            <label for="inputLastname" class="form-label">Sobrenome</label>
-            <input type="text" class="form-control" id="inputLastname" name="sobrenome" required />
-            <span id="lastname-error" class="error"></span>
+    <main class="container__register-transport background__style">
+      <div class="container__register-content">
+        <div class="login__content-backgroud">
+          <a href="../home/home.php"><img class="img-fluid" src="../../img/favicon-ichild-transporte.png" alt=""></a>
+          <p>Seja bem vindo!</p>
+          <p>Se cadastre e registre seu veículo agora mesmo.</p>
+          <div class="input-group mt-3">
+            <a href="../../pages/responsible/register.php"><button type="submit" class="bn632-transport bn20"> <i class="bi bi-person-check-fill"></i> Fazer login</button></a>
+            <a href="../../pages/home/home.php"><button type="submit" class="bn632-transport bn20"><i class="bi bi-house-door-fill"></i> Home</button></a>
           </div>
         </div>
 
-        <div class="col-md-10">
-          <label for="inputEmail" class="form-label mt-3">Email</label>
-          <input
-            type="email"
-            class="form-control"
-            id="inputEmail"
-            required
-            placeholder="user@email.com"
-            name="email"
-          />
-          <span id="email-error" class="error"></span>
+        <div class="login__content-form">
+          <form class="col-md-10 form__login" id="form">
+            <a href="../home/home.php"><img class="img-fluid img__responsive" src="../../img/favicon-ichild-transporte.png" alt=""></a>
+            <p class="login__title mb-3">Crie sua conta</p>
+            
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="text" id="inputName" class="form-control form-control-lg" name="nome" required/>
+                  <label class="form-label" for="inputName">Nome</label>
+                </div>
+                <span id="name-error" class="error"></span>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="text" id="inputLastname" class="form-control form-control-lg" name="sobrenome" required/>
+                  <label class="form-label" for="inputLastname">Sobrenome</label>
+                </div>
+                <span id="lastname-error" class="error"></span>
+              </div>
+
+              <div class="col-md-12 mb-4">
+                <div class="form-outline">
+                  <input type="email" id="inputEmail" class="form-control form-control-lg" placeholder="user@email.com" name="email" required/>
+                  <label class="form-label" for="inputEmail">Email</label>
+                </div>
+                <span id="email-error" class="error"></span>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="password" id="inputPassword" class="form-control form-control-lg" name="password" required/>
+                  <label class="form-label" for="inputPassword">Senha</label>
+                </div>
+                <span id="password-error" class="error"></span>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="password" id="inputConfirmPassword" class="form-control form-control-lg" name="password2" required/>
+                  <label class="form-label" for="inputConfirmPassword">Confirmar senha</label>
+                </div>
+                <span id="confirmPassword-error" class="error"></span>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="text" id="inputCnh" class="form-control form-control-lg" name="cnh" required/>
+                  <label class="form-label" for="inputCnh">CNH</label>
+                </div>
+                <span id="cnh-error" class="error"></span>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="text" id="inputCep" class="form-control form-control-lg" name="cep" required/>
+                  <label class="form-label" for="inputCep">CEP</label>
+                </div>
+                <span id="cep-error" class="error"></span>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="text" id="inputPlaca" class="form-control form-control-lg" name="placa" required/>
+                  <label class="form-label" for="inputPlaca">Placa</label>
+                </div>
+                <span id="placa-error" class="error"></span>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="text" id="inputMarca" class="form-control form-control-lg" name="marca" required/>
+                  <label class="form-label" for="inputMarca">Marca</label>
+                </div>
+                <span id="marca-error" class="error"></span>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="text" id="inputModelo" class="form-control form-control-lg" name="modelo" required/>
+                  <label class="form-label" for="inputModelo">Modelo</label>
+                </div>
+                <span id="modelo-error" class="error"></span>
+              </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="text" id="inputCapacidade" class="form-control form-control-lg" name="capacidade" required/>
+                  <label class="form-label" for="inputCapacidade">Capacidade</label>
+                </div>
+                <span id="capacidade-error" class="error"></span>
+              </div>
+            </div>
+
+            <button type="submit" class="bn632-transport bn20">Criar conta</button>
+
+            <div class="text-center dontHaveAccount">
+              <p>Já possui uma conta? <a href="../loginTransport/loginTransport.php">Faça seu login</a></p>
+            </div>
+          </form>
         </div>
-
-        <div class="col-md-10 passwordContent mt-3">
-          <div class="col-md-6">
-            <label for="inputPassword" class="form-label">Senha</label>
-            <input
-              type="password"
-              class="form-control"
-              id="inputPassword"
-              required
-              name="password"
-            />
-            <span id="password-error" class="error"></span>
-            <p class="require">
-              A senha deve conter letras maiscúlas, letras minúsculas, números e
-              caracteres especiais.
-            </p>
-          </div>
-
-          <div class="col-md-6">
-            <label for="inputConfirmPassword" class="form-label"
-              >Confirmar senha</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="inputConfirmPassword"
-              required
-              name="password2"
-            />
-            <span id="confirmPassword-error" class="error"></span>
-          </div>
-        </div>
-
-        <div class="col-md-10 passwordContent">
-          <div class="col-md-6 mt-3">
-            <label for="inputCnh" class="form-label">CNH</label>
-            <input type="text" class="form-control" id="inputCnh" required name="cnh"  />
-            <span id="cnh-error" class="error"></span>
-          </div>
-          <div class="col-md-6 mt-3">
-            <label for="inputCep" class="form-label">CEP</label>
-            <input type="text" class="form-control" id="inputCep" required name="cep"  />
-            <span id="cep-error" class="error"></span>
-          </div>
-        </div>
-
-        <div class="col-md-10 passwordContent">
-          <div class="col-md-6 mt-3">
-            <label for="inputPlaca" class="form-label">Placa</label>
-            <input type="text" class="form-control" id="inputPlaca" required name="placa" />
-            <span id="street-error" class="error"></span>
-          </div>
-          <div class="col-md-6 mt-3">
-            <label for="inputMarca" class="form-label">Marca</label>
-            <input type="text" class="form-control" id="inputMarca" required name="marca" />
-            <span id="marca-error" class="error"></span>
-          </div>
-        </div>
-
-        <div class="col-md-10 passwordContent">
-          <div class="col-md-6 mt-3">
-            <label for="inputModelo" class="form-label">Modelo</label>
-            <input type="text" class="form-control" id="inputModelo" required name="modelo" />
-            <span id="modelo-error" class="error"></span>
-          </div>
-          <div class="col-md-6 mt-3">
-            <label for="inputNumber" class="form-label">Capacidade</label>
-            <input type="text" class="form-control" id="inputCapacidade" required name="capacidade" />
-            <span id="capacidade-error" class="error"></span>
-          </div>
-        </div>
-
-        <button type="submit" class="col-md-10 form__btn mt-3">
-          Cadastrar veiculo
-        </button>
-      </form>
+      </div>
     </main>
 
-    <!-- Script Jquery -->
+    <!-- Jquery -->
     <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
 
-    <!-- Script SweetAlert -->
+    <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <!-- Script Navbar -->
-    <script src="../../utils/navbar.js"></script>
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"
+    ></script>
 
     <!-- Script Regex -->
     <script src="./registerTransport.js"></script>
-    <script src="./cepTransport.js"></script>
 
-    <!-- Script Bootstrap -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Script CEP -->
+    <script src="../../utils/cep.js"></script>
   </body>
 </html>

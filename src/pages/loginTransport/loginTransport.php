@@ -56,12 +56,12 @@
             <p class="login__title mb-3">Login</p>
             
             <div class="form-outline mb-4">
-              <input type="email" id="email" name="email" class="form-control p-2" />
+              <input type="email" id="email" name="email" class="form-control form-control-lg" />
               <label class="form-label custom-label" for="email">Email</label>
             </div>
 
             <div class="d-flex form-outline mb-4">
-                <input type="password" id="senha" name="senha" class="form-control p-2" />
+                <input type="password" id="senha" name="senha" class="form-control form-control-lg" />
                 <button id="showPassword" class="btn btn-link" data-mdb-ripple-color="dark" type="button" id="mostrarSenha">
                   <i id="eye" class="bi bi-eye-fill"></i>
                 </button>

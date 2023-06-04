@@ -101,6 +101,78 @@ function validateCep() {
   }
 }
 
+function validarCNH(cnh) {
+  const numeroCNH = cnh.replace(/\D/g, "");
+  const cnhError = document.querySelector("#cnh-error");
+
+  if (numeroCNH.length !== 11) {
+    cnhError.textContent = "CNH inválida";
+    Swal.fire({
+      position: "top-end",
+      icon: "error",
+      title: "CNH inválido!",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    return false;
+  }
+
+  const peso1 = [9, 8, 7, 6, 5, 4, 3, 2, 1];
+  const peso2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+  let soma1 = 0;
+  let soma2 = 0;
+
+  for (let i = 0; i < 9; i++) {
+    soma1 += parseInt(numeroCNH.charAt(i)) * peso1[i];
+    soma2 += parseInt(numeroCNH.charAt(i)) * peso2[i];
+  }
+
+  const resto1 = soma1 % 11;
+  const resto2 = soma2 % 11;
+
+  const digitoVerificador1 = resto1 >= 10 ? 0 : resto1;
+  const digitoVerificador2 = resto2 >= 10 ? 0 : resto2;
+
+  if (
+    digitoVerificador1 === parseInt(numeroCNH.charAt(9)) &&
+    digitoVerificador2 === parseInt(numeroCNH.charAt(10))
+  ) {
+    cnhError.textContent = "";
+    return true;
+  } else {
+    cnhError.textContent = "CNH inválida";
+    Swal.fire({
+      position: "top-end",
+      icon: "error",
+      title: "CNH inválido!",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    return false;
+  }
+}
+
+function validarPlaca(placa) {
+  const placaFormato = /^[A-Z]{3}\d{4}$/;
+  const placaError = document.querySelector("#placa-error");
+
+  if (placa.match(placaFormato)) {
+    placaError.textContent = "";
+    return true;
+  } else {
+    placaError.textContent = "Placa inválida";
+    Swal.fire({
+      position: "top-end",
+      icon: "error",
+      title: "Placa inválida!",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    return false;
+  }
+}
+
 function createResponsible() {
   jQuery.ajax({
     url: "registerTransportExe.php",
@@ -140,13 +212,17 @@ const form = document.querySelector("#form");
 const email = document.querySelector("#inputEmail");
 const password = document.querySelector("#inputPassword");
 const confirmPassword = document.querySelector("#inputConfirmPassword");
+const cnh = document.querySelector("#inputCnh");
+const placa = document.querySelector("#inputPlaca");
 
 form.addEventListener("submit", async (ev) => {
   ev.preventDefault();
   if (
     validateEmail(email) &&
     validatePassword(password, confirmPassword) &&
-    (await validateCep())
+    (await validateCep()) &&
+    validarCNH(cnh.value) &&
+    validarPlaca(placa.value)
   ) {
     createResponsible();
   }
