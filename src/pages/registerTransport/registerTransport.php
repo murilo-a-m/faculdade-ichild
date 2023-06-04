@@ -45,7 +45,7 @@
           <p>Seja bem vindo!</p>
           <p>Se cadastre e registre seu veículo agora mesmo.</p>
           <div class="input-group mt-3">
-            <a href="../../pages/responsible/register.php"><button type="submit" class="bn632-transport bn20"> <i class="bi bi-person-check-fill"></i> Fazer login</button></a>
+            <a href="../../pages/loginTransport/loginTransport.php"><button type="submit" class="bn632-transport bn20"> <i class="bi bi-person-check-fill"></i> Fazer login</button></a>
             <a href="../../pages/home/home.php"><button type="submit" class="bn632-transport bn20"><i class="bi bi-house-door-fill"></i> Home</button></a>
           </div>
         </div>
