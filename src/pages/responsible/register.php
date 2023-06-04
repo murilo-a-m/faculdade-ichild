@@ -38,12 +38,12 @@
   </head>
 
   <body>
-    <main class="container__login background__style">
-      <div class="container__login-content">
+    <main class="container__register background__style">
+      <div class="container__register-content">
         <div class="login__content-backgroud">
           <a href="../home/home.php"><img class="img-fluid" src="../../img/favicon-ichild.png" alt=""></a>
           <p>Seja bem vindo!</p>
-          <p>Crie agora sua conta e registre seus dependentes.</p>
+          <p>Se cadastre e registre seus dependentes agora mesmo.</p>
           <div class="input-group mt-3">
             <a href="../../pages/responsible/register.php"><button type="submit" class="bn632-hover bn20"> <i class="bi bi-person-check-fill"></i> Fazer login</button></a>
             <a href="../../pages/home/home.php"><button type="submit" class="bn632-hover bn20"><i class="bi bi-house-door-fill"></i> Home</button></a>
@@ -51,7 +51,7 @@
         </div>
 
         <div class="login__content-form">
-          <form class="col-md-10 form__login" id="form">
+          <form class="col-md-11 form__login" id="form">
             <a href="../home/home.php"><img class="img-fluid img__responsive" src="../../img/favicon-ichild.png" alt=""></a>
             <p class="login__title mb-3">Crie sua conta</p>
             
@@ -80,7 +80,12 @@
                 <span id="email-error" class="error"></span>
               </div>
 
-              <div class="col-md-6">
+              <p class="require">
+                Sua senha deve conter letras maiscúlas, letras minúsculas, números e
+                caracteres especiais.
+              </p>
+
+              <div class="col-md-6 mb-4">
                 <div class="form-outline">
                   <input type="password" id="inputPassword" class="form-control form-control-lg" name="password" required/>
                   <label class="form-label" for="inputPassword">Senha</label>
@@ -88,18 +93,13 @@
                 <span id="password-error" class="error"></span>
               </div>
 
-              <div class="col-md-6">
+              <div class="col-md-6 mb-4">
                 <div class="form-outline">
                   <input type="password" id="inputConfirmPassword" class="form-control form-control-lg" name="password2" required/>
                   <label class="form-label" for="inputConfirmPassword">Confirmar senha</label>
                 </div>
                 <span id="confirmPassword-error" class="error"></span>
               </div>
-
-              <p class="require">
-                A senha deve conter letras maiscúlas, letras minúsculas, números e
-                caracteres especiais.
-              </p>
 
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
