@@ -101,13 +101,11 @@ function validatePassword(password, passwordConfirm) {
     } else {
       passwordError.textContent = "Senha inválida";
       passwordConfirmError.textContent = "";
-      Swal.fire({
-        position: "top-end",
-        icon: "error",
-        title: "Senha inválida!",
-        showConfirmButton: false,
-        timer: 1500,
-      });
+      Swal.fire(
+        "Senha inválida!",
+        "Sua senha deve conter letras maiscúlas, letras minúsculas, números e caracteres especiais",
+        "warning"
+      );
       return false;
     }
   } else {

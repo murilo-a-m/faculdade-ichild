@@ -51,7 +51,7 @@
         </div>
 
         <div class="login__content-form">
-          <form class="col-md-11 form__login" id="form">
+          <form class="col-md-10 form__login" id="form">
             <a href="../home/home.php"><img class="img-fluid img__responsive" src="../../img/favicon-ichild.png" alt=""></a>
             <p class="login__title mb-3">Crie sua conta</p>
             
@@ -79,11 +79,6 @@
                 </div>
                 <span id="email-error" class="error"></span>
               </div>
-
-              <p class="require">
-                Sua senha deve conter letras maiscúlas, letras minúsculas, números e
-                caracteres especiais.
-              </p>
 
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
