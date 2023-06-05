@@ -57,7 +57,9 @@
 
         <?php require './dependentsCard.php' ;?>
 
-        <div class="content__card card__log">
+        <?php require './logCard.php' ;?>
+
+        <!-- <div class="content__card card__log">
           <div class="card__container">
             <p class="card__title">Log do dia</p>
             <div class="card__log-content">
@@ -71,7 +73,7 @@
             <div class="card__log-content"></div>
             <a class="card__button" href="../painelLog/painelLogDependent.php"><button>Ver tudo</button></a>
           </div>
-        </div>
+        </div> -->
 
         <div class="content__card card__schedule">
           <div class="card__container">

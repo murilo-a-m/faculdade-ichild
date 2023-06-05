@@ -21,6 +21,13 @@
   font-family: "Poppins", sans-serif !important;
 }
 
+.null {
+  color: #7d7e8a;
+  font-weight: bold;
+  align-self: center;
+  margin: auto 0;
+}
+
 .container__header {
   display: flex;
   min-height: 10vh;
@@ -1944,10 +1951,6 @@
   gap: 5%;
 }
 .card__container .card__log-content .log__light {
-  width: 15px;
-  height: 15px;
-  background-color: rgba(0, 255, 0, 0.37);
-  border-radius: 100%;
   margin-left: 10%;
 }
 .card__container .card__log-content .log__text {

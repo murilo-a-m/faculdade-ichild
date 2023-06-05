@@ -35,9 +35,11 @@
             echo '</div>';
           echo '</div>';
         }
+        echo '<a class="card__button" href="../dependentPanel/dependentPanel.php"><button>Ver tudo</button></a>';
+      } else {
+        echo "<p class='null'>Nenhum dependente foi cadastrado</p>";
       }
     }   
-    echo '<a class="card__button" href="../dependentPanel/dependentPanel.php"><button>Ver tudo</button></a>';
     echo '</div>';
     echo '</div>';
 ;?>
