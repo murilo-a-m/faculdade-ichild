@@ -3055,10 +3055,6 @@
   gap: 5%;
 }
 .card__container .card__log-transportContent .log__lightTransport {
-  width: 15px;
-  height: 15px;
-  background-color: #27374d;
-  border-radius: 100%;
   margin-left: 10%;
 }
 .card__container .card__log-transportContent .log__text {

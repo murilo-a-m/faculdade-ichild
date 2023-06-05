@@ -36,9 +36,11 @@
             echo '</div>';
           echo '</div>';
         }
+        echo '<a class="card__transportButton" href="../transportDependentPanel/transportDependentPanel.php"><button>Ver tudo</button></a>';
+      } else {
+        echo "<p class='null'>Não há nenhum dependente cadastrado</p>";
       }
     }   
-    echo '<a class="card__transportButton" href="../transportDependentPanel/transportDependentPanel.php"><button>Ver tudo</button></a>';
     echo '</div>';
     echo '</div>';
 ;?>
