@@ -69,6 +69,7 @@
                 <th scope="col">Status</th>
                 <th scope="col">Local</th>
                 <th scope="col">Dependente</th>
+                <th scope="col">Responsavel</th>
               </tr>
             </thead>
             <tbody>

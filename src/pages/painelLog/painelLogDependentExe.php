@@ -41,7 +41,7 @@
 
             $horario = strtotime($row['horario']);
             $data = date('Y-m-d', $horario);
-            $hora = date('H:i:s', $horario);
+            $hora = date('H:i', $horario);
 
             echo "<td>$data</td>";
             echo "<td>$hora</td>";
@@ -74,7 +74,7 @@
 
             $horario = strtotime($row['horario']);
             $data = date('Y-m-d', $horario);
-            $hora = date('H:i:s', $horario);
+            $hora = date('H:i', $horario);
 
             echo "<td>$data</td>";
             echo "<td>$hora</td>";

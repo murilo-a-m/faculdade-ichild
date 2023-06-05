@@ -1,250 +1,92 @@
-* {
-  font-family: $font;
-}
-
-.dependenteTitulo {
+.container__main-panelResponsible {
+  height: 92vh;
   display: flex;
-  margin-left: 5rem;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: white;
+
+  .panel__content {
+    height: auto;
+    width: 97%;
+    padding: 20px;
+    background-color: #eef3ff;
+    border-radius: 10px;
+  }
+
+  .table-light {
+    --bs-table-bg: #3ab5df;
+    color: white;
+  }
+
+  .table__panel {
+    thead {
+      font-weight: bold;
+    }
+  }
 }
 
-.tittleDependentes {
-  font-size: 20px;
+.id {
   font-weight: bold;
-  color: black;
-  font-family: $font;
-  margin-bottom: 10px;
 }
 
-.box {
-  background-color: $corboxfundo;
-  height: 45vw;
-  width: auto;
-  margin: 0 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 1%;
-}
-.box .titulos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: $font;
-  font-weight: bolder;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-.box .titulos .infoTitulos {
-  width: 310px;
-  text-align: center;
-  font-weight: bolder;
+.panelContent {
+  th {
+    padding: 20px;
+  }
 }
 
-.dependente {
+.panel_search {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  height: 5vw;
-  width: calc(100% - 7%);
-  background-color: #ffffff;
-  border-radius: 1%;
+}
 
-  margin-top: 2rem;
+.search-content {
+  display: flex;
+  gap: 1%;
 }
-.dependente .icon #userDependente {
-  width: 3vw;
+
+.card__title {
+  font-size: 16px;
+  color: #646466;
+  font-weight: bold;
+  margin-bottom: 0;
 }
-#botaoDependentDelete{
+
+.btn-styleResponsible {
+  color: white;
+  background-color: #3ab5df;
+}
+
+@media (max-width: 768px) {
+  .container__main-panel .panel__content h2 {
+    font-size: 16px;
+  }
+
+  .fc .fc-button-group button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .fc .fc-toolbar {
+    flex-direction: column;
+  }
+  .fc .fc-button-group button {
+    margin: 8px 0;
+  }
+}
+
+#botaoDependentDelete {
   height: 27px;
-  
 }
 
-#botaolixo{
+#botaolixo {
   border: none;
   outline: none;
-  background-color: #ffffff;
+  background-color: transparent;
 }
-#botaoDependentEdit{
+
+#botaoDependentEdit {
   height: 27px;
-}
-
-.dependente .dados {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: $font;
-}
-
-.dependente .dados .infoDados {
-  width: 300px;
-  text-align: center;
-}
-@media (max-width: 1440px) {
-  .box {
-    width: 90%;
-  }
-  .box .titulos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: $font;
-    font-weight: bolder;
-    margin-top: 1rem;
-  }
-  .box .titulos .infoTitulos {
-    width: 200px;
-    text-align: center;
-    font-weight: bolder;
-  }
-  .dependente .dados .infoDados {
-    width: 200px;
-    text-align: center;
-  }
-
-  @media (max-width: 1024px) {
-    .box {
-      width: 90%;
-      height: 80vh;
-    }
-    .box .titulos {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: $font;
-      font-weight: bolder;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-    }
-    .box .titulos .infoTitulos {
-      width: 150px;
-      text-align: center;
-      font-weight: bolder;
-    }
-    .dependente .dados .infoDados {
-      width: 150px;
-      text-align: center;
-    }
-
-    @media (max-width: 768px) {
-      .box {
-        width: 90%;
-        height: 80vh;
-      }
-      .box .titulos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: $font;
-        font-weight: bolder;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-      }
-      .box .titulos .infoTitulos {
-        width: 100px;
-        text-align: center;
-        font-weight: bolder;
-        font-size: 12px;
-      }
-      .dependente{
-        margin-top: 1rem;
-      }
-      .dependente .dados .infoDados {
-        width: 110px;
-        text-align: center;
-        font-size: 13px;
-        
-      }
-    }
-
-    @media (max-width: 425px) {
-      .dependenteTitulo {
-        display: none;
-        margin-left: 1rem;
-      }
-      #tittledependentes {
-        font-family: $font;
-        font-size: 10px;
-      }
-      .box {
-        width: 100%;
-        height: 80vh;
-        margin-left: 0;
-        margin-right: 0;
-      }
-      .box .titulos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: $font;
-        font-weight: bolder;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-      }
-      .box .titulos .infoTitulos {
-        width: 70px;
-        text-align: center;
-        font-weight: bolder;
-        font-size: 8px;
-      }
-      .dependente .dados .infoDados {
-        width: 70px;
-        text-align: center;
-        font-size: 9px;
-      }
-      #botaoDependentDelete{
-        height: 12px;
-        
-      }
-      #botaoDependentEdit{
-        height: 12px;
-      }
-    }
-    @media (max-width: 375px) {
-      .box .titulos {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: $font;
-        font-weight: bolder;
-        margin-top: 1rem;
-        margin-bottom: 0.5rem;
-      }
-      .box .titulos .infoTitulos {
-        width: 60px;
-        text-align: center;
-        font-weight: bolder;
-        font-size: 8.5px;
-      }
-      .dependente {
-        height: 5vh;
-      }
-      .dependente .dados .infoDados {
-        width: 60px;
-        height: 2vh;
-      }
-    }
-
-  @media (max-width: 320px) {
-    .dependente .dados .infoDados {
-      width: 55px;
-      text-align: center;
-      font-size: 8px;
-    }
-    .box .titulos .infoTitulos {
-      width: 55px;
-      text-align: center;
-      font-weight: bolder;
-      font-size: 10px;
-    }
-  }
-  } 
-}
-
-
-
-@media(max-height:371px){
-  .dependente{
-    min-height: 350px;
-    padding-bottom: 1px;
-  }
 }
