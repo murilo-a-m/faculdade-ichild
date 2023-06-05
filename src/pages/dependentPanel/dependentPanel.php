@@ -41,7 +41,7 @@
       require '../../components/headerMenu.php';
     ?>
     
-    <main class="container__main-panel">
+    <main class="container__main-panelResponsible">
       <div id="panel" class="panel__content">
         <div class="panel_search mb-2">
           <p class="card__title">Dependentes</p>

@@ -1,12 +1,13 @@
 .container__main-panel {
   height: 92vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background-color: #dde6ed;
 
   .panel__content {
-    height: 92%;
+    margin-top: 30px;
+    height: auto;
     width: 97%;
     padding: 20px;
     background-color: #ffffff;
@@ -15,11 +16,6 @@
 
   .table-dark {
     --bs-table-bg: #526d82;
-  }
-
-  .table-light {
-    --bs-table-bg: #3ab5df;
-    color: white;
   }
 
   .table__panel {
@@ -60,11 +56,6 @@
 .btn-style {
   color: white;
   background-color: #526d82;
-}
-
-.btn-styleResponsible {
-  color: white;
-  background-color: #3ab5df;
 }
 
 @media (max-width: 768px) {
