@@ -226,13 +226,87 @@
       </div>
     </main>
 
-    <footer class="container__footer">
-      <div class="container__footer-md container-md">
-        <div class="container__footer-logo">
-          <img src="../../img/logo-ichild.png" alt="" />
-          <p>Copyright &copy; 2023 - iChild</p>
+    <footer class="container__foter" class="text-center text-lg-start text-dark">
+      <section class="footer__section">
+          <div class="d-flex align-items-center justify-content-center p-3 text-white gap-2">
+            <a target="_blank" class="link" href="https://github.com/murilo-a-m/faculdade-ichild">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg></i></i>
+            <a target="_blank" class="link" href="https://trello.com/b/clD6ibOn/ichild">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-trello" viewBox="0 0 16 16">
+                <path d="M14.1 0H1.903C.852 0 .002.85 0 1.9v12.19A1.902 1.902 0 0 0 1.902 16h12.199A1.902 1.902 0 0 0 16 14.09V1.9A1.902 1.902 0 0 0 14.1 0ZM7 11.367a.636.636 0 0 1-.64.633H3.593a.633.633 0 0 1-.63-.633V3.583c0-.348.281-.631.63-.633h2.765c.35.002.632.284.633.633L7 11.367Zm6.052-3.5a.633.633 0 0 1-.64.633h-2.78A.636.636 0 0 1 9 7.867V3.583a.636.636 0 0 1 .633-.633h2.778c.35.002.631.285.631.633l.01 4.284Z"/>
+              </svg>
+            </a>
+          </div>
+      </section>
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="d-flex align-items-center text-uppercase fw-bold">iChild</h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto"/>
+              <p class="mb-5">
+                Realiza o registro de dependentes, permitindo os responsáveis acompanhar sua rotina escolar. 
+              </p>
+              <h6 class="d-flex align-items-center text-uppercase fw-bold">iChild business</h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto"/>
+              <p>
+                Permite o motorista registrar seu veículo e realizar o tranporte de dependentes. 
+              </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold"><i class="bi bi-house-door-fill"></i> Home</h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto"/>
+              <p>
+                <a href="#!" class="text-dark">Ínicio</a>
+              </p>
+              <p>
+                <a href="#!" class="text-dark">Quem somos?</a>
+              </p>
+              <p>
+                <a href="#!" class="text-dark">Serviços</a>
+              </p>
+              <p>
+                <a href="#!" class="text-dark">Transporte</a>
+              </p>
+            </div>
+
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold"><i class="bi bi-github"></i> github</h6>
+              <hr
+                  class="mb-4 mt-0 d-inline-block mx-auto"/>
+              <p>
+                <a href="#!" class="text-dark">Elvis Claudino</a>
+              </p>
+              <p>
+                <a href="#!" class="text-dark">Gabriel Fasolim</a>
+              </p>
+              <p>
+                <a href="#!" class="text-dark">Murilo Analiel</a>
+              </p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold"><i class="bi bi-linkedin"></i> Linkedin</h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto"/>
+              <p>
+                <a href="#!" class="text-dark">Elvis Claudino</a>
+              </p>
+              <p>
+                <a href="#!" class="text-dark">Gabriel Fasolim</a>
+              </p>
+              <p>
+                <a href="#!" class="text-dark">Murilo Analiel</a>
+              </p>
+            </div>
+          </div>
         </div>
-        <a href="#" class="container__footer-link">Voltar ao início</a>
+      </section>
+      <div class="text-center p-3 copy">
+        © 2023 Copyright:
+        <a class="" href="#">iChild</a>
       </div>
     </footer>
 
