@@ -47,6 +47,7 @@
     ;?>
     
     <main class="container__main-panel">
+      
       <div id="panel" class="panel__content">
         <div class="panel_search mb-2">
           <p class="card__title">Mensagens</p>
@@ -58,11 +59,10 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Transportador</th>
                 <th scope="col">Mensagem</th>
-              
               </tr>
             </thead>
             <tbody>
-            <?php require_once './dependendNotifyExe.php'; ?>
+            <?php require_once './dependentMsgExib.php'; ?>
             </tbody>
           </table>
         </div>
