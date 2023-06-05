@@ -209,7 +209,7 @@
           </div>
         </div>
       </div>
-      <div class="main__bannerTransport background__style">
+      <div id="transport" class="main__bannerTransport background__style">
         <div class="main__transport-box container-md">
           <div class="main__transport-contentHome">
             <img src="../../img/about-logo-transporteBusiness.png" alt="" class="transportBusiness__img">
@@ -245,12 +245,12 @@
           <div class="row mt-3">
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <h6 class="d-flex align-items-center text-uppercase fw-bold">iChild</h6>
-              <hr class="mb-4 mt-0 d-inline-block mx-auto"/>
-              <p class="mb-5">
+              <hr class="mb-2 mt-0 d-inline-block mx-auto"/>
+              <p class="mb-4">
                 Realiza o registro de dependentes, permitindo os responsáveis acompanhar sua rotina escolar. 
               </p>
               <h6 class="d-flex align-items-center text-uppercase fw-bold">iChild business</h6>
-              <hr class="mb-4 mt-0 d-inline-block mx-auto"/>
+              <hr class="mb-2 mt-0 d-inline-block mx-auto"/>
               <p>
                 Permite o motorista registrar seu veículo e realizar o tranporte de dependentes. 
               </p>
@@ -260,16 +260,16 @@
               <h6 class="text-uppercase fw-bold"><i class="bi bi-house-door-fill"></i> Home</h6>
               <hr class="mb-4 mt-0 d-inline-block mx-auto"/>
               <p>
-                <a href="#!" class="text-dark">Ínicio</a>
+                <a href="#" class="text-dark">Ínicio</a>
               </p>
               <p>
-                <a href="#!" class="text-dark">Quem somos?</a>
+                <a href="#about" class="text-dark">Quem somos?</a>
               </p>
               <p>
-                <a href="#!" class="text-dark">Serviços</a>
+                <a href="#services" class="text-dark">Serviços</a>
               </p>
               <p>
-                <a href="#!" class="text-dark">Transporte</a>
+                <a href="#transport" class="text-dark">Transporte</a>
               </p>
             </div>
 
@@ -278,27 +278,27 @@
               <hr
                   class="mb-4 mt-0 d-inline-block mx-auto"/>
               <p>
-                <a href="#!" class="text-dark">Elvis Claudino</a>
+                <a target="_blank" href="https://github.com/elvisclaudino" class="text-dark">Elvis Claudino</a>
               </p>
               <p>
-                <a href="#!" class="text-dark">Gabriel Fasolim</a>
+                <a target="_blank" href="https://github.com/GabrielFasolim" class="text-dark">Gabriel Fasolim</a>
               </p>
               <p>
-                <a href="#!" class="text-dark">Murilo Analiel</a>
+                <a target="_blank" href="https://github.com/murilo-a-m" class="text-dark">Murilo Analiel</a>
               </p>
             </div>
 
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <div class="col-md-4 col-lg-3 col-xl-2 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold"><i class="bi bi-linkedin"></i> Linkedin</h6>
               <hr class="mb-4 mt-0 d-inline-block mx-auto"/>
               <p>
-                <a href="#!" class="text-dark">Elvis Claudino</a>
+                <a target="_blank" href="https://www.linkedin.com/in/elvis-claudino/" class="text-dark">Elvis Claudino</a>
               </p>
               <p>
-                <a href="#!" class="text-dark">Gabriel Fasolim</a>
+                <a target="_blank" href="https://www.linkedin.com/in/gabrielfasolim/" class="text-dark">Gabriel Fasolim</a>
               </p>
               <p>
-                <a href="#!" class="text-dark">Murilo Analiel</a>
+                <a target="_blank" href="https://www.linkedin.com/in/muriloam17/" class="text-dark">Murilo Analiel</a>
               </p>
             </div>
           </div>
