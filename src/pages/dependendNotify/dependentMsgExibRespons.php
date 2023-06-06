@@ -56,7 +56,7 @@
           <table class="table table-striped text-center table__panel">
             <thead class="table-dark">
               <tr>
-                <th scope="col">Nome</th>
+                <th scope="col">Dependente</th>
                 <th scope="col">Transportador</th>
                 <th scope="col">Mensagem</th>
               </tr>
