@@ -244,13 +244,13 @@
         <div class="container text-center text-md-start mt-5">
           <div class="row mt-3">
             <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <h6 class="d-flex align-items-center text-uppercase fw-bold">iChild</h6>
-              <hr class="mb-2 mt-0 d-inline-block mx-auto"/>
+              <h6 class="text-uppercase fw-bold">iChild</h6>
+              <hr class="mb-3 mt-0 d-inline-block mx-auto"/>
               <p class="mb-4">
                 Realiza o registro de dependentes, permitindo os responsáveis acompanhar sua rotina escolar. 
               </p>
-              <h6 class="d-flex align-items-center text-uppercase fw-bold">iChild business</h6>
-              <hr class="mb-2 mt-0 d-inline-block mx-auto"/>
+              <h6 class="text-uppercase fw-bold">iChild business</h6>
+              <hr class="mb-3 mt-0 d-inline-block mx-auto"/>
               <p>
                 Permite o motorista registrar seu veículo e realizar o tranporte de dependentes. 
               </p>
