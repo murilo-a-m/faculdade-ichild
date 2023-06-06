@@ -34,7 +34,7 @@
     require_once '../../components/headerTransportMenu.php';
   ?>
   
-  <main class="container__form container-fluid">
+  <main class="container__form-transport container-fluid">
     <form
       class="container__form-content row g-1 container-md gap-2"
       id="form-log"
@@ -70,10 +70,10 @@
         <span id="document-error" class="error"></span>
       </div>
 
-      <button type="submit" class="card__transportButton col-md-6 form__btn-save">
-        Salvar Status
+      <button type="submit" class="info__btn-editTransport col-md-6 form__btn-save">
+        Enviar
       </button>
-      <button class="card__transportButton col-md-2 form__btn-cancel">Cancelar</button>
+      <button class="info__btn-editTransport col-md-2 form__btn-cancel">Cancelar</button>
     </form>
   </main>
 

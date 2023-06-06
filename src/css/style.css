@@ -36,6 +36,11 @@
   background-color: #dde6ed;
 }
 
+@media (max-height: 700px) {
+  .container__form-transport {
+    height: 700px;
+  }
+}
 .container__header {
   display: flex;
   min-height: 10vh;

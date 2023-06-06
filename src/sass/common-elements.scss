@@ -33,3 +33,9 @@
   justify-content: center;
   background-color: #dde6ed;
 }
+
+@media (max-height: 700px) {
+  .container__form-transport {
+    height: 700px;
+  }
+}
