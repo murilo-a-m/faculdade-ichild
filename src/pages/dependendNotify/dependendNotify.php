@@ -67,19 +67,8 @@
   <body>
     <?php 
       require_once '../../components/transportAuthorization.php';
-      require '../../components/headerMenu.php';
     ?>
     
-    <div class="box">
-      <div class="titulos">
-        <h1 class="tituloNotify">Notificação</h1>
-    </div>
-    <div class="notifyBox">
-      <div  class='dadosNoti'>
-        <div class='notificationsBall'></div>
-        <h6 class='notify'>mensagens</h6>
-      </div>
-    </main>
     
 
     <script src="../../utils/navbar-transportMenu.js"></script>
