@@ -28,6 +28,14 @@
   margin: auto 0;
 }
 
+.container__form-transport {
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dde6ed;
+}
+
 .container__header {
   display: flex;
   min-height: 10vh;
