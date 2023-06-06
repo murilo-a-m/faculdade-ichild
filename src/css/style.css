@@ -91,6 +91,20 @@
   margin-right: 6px;
 }
 
+.header__btn-responsive {
+  display: none;
+  background-color: #a31aca;
+  border-radius: 10px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+.header__btn-responsive:hover {
+  color: white;
+}
+
 @media (max-width: 1024px) {
   .header__image {
     width: 100px;
@@ -141,6 +155,12 @@
   }
   .header__nav.open {
     transform: translateX(0px);
+  }
+  .header__btn {
+    display: none;
+  }
+  .header__btn-responsive {
+    display: flex;
   }
 }
 @media (max-height: 800px) {
