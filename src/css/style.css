@@ -91,6 +91,20 @@
   margin-right: 6px;
 }
 
+.header__btn-responsive {
+  display: none;
+  background-color: #a31aca;
+  border-radius: 10px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+.header__btn-responsive:hover {
+  color: white;
+}
+
 @media (max-width: 1024px) {
   .header__image {
     width: 100px;
@@ -142,6 +156,12 @@
   .header__nav.open {
     transform: translateX(0px);
   }
+  .header__btn {
+    display: none;
+  }
+  .header__btn-responsive {
+    display: flex;
+  }
 }
 @media (max-height: 800px) {
   .container__header {
@@ -184,7 +204,7 @@
   color: black;
   display: flex;
   flex-direction: column;
-  min-height: 70vh;
+  height: 70vh;
   justify-content: center;
   width: 100%;
 }
@@ -240,7 +260,7 @@
 .main__specs {
   align-items: center;
   display: flex;
-  min-height: 20vh;
+  height: 20vh;
   justify-content: space-between;
 }
 .main__specs .main__specs-item {
@@ -295,7 +315,7 @@
   background-color: #a31aca;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
   justify-content: center;
 }
 .main__about .main__about-box {
@@ -305,7 +325,7 @@
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   display: flex;
   justify-content: center;
-  min-height: 90vh;
+  height: 90vh;
   width: 80%;
 }
 .main__about .about__text {
@@ -447,6 +467,44 @@
   background-color: #92acbf;
 }
 
+.main__transport {
+  align-items: center;
+  background-image: url("../img/about-backgroundTransport.png");
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+.main__transport .main__about-box {
+  align-items: center;
+  background: rgb(93, 130, 167);
+  background: linear-gradient(266deg, rgb(93, 130, 167) 0%, rgb(163, 184, 205) 100%);
+  border-radius: 20px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 90vh;
+  width: 80%;
+}
+.main__transport .main__about-box p {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+  text-align: center;
+}
+.main__transport .main__about-box p:nth-child(3) {
+  font-size: 1.3rem;
+  font-weight: 400;
+  width: 80%;
+}
+.main__transport .main__about-box div {
+  width: 40%;
+}
+.main__transport .main__about-box div a {
+  width: 50%;
+}
+
 @media (max-width: 1024px) {
   .main__banner .main__banner-text .banner__paragraph {
     font-size: 24px;
@@ -479,12 +537,12 @@
     background-color: #a31aca;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
     justify-content: center;
   }
   .main__about .main__about-box {
     background-image: url("../img/about-background.png");
-    min-height: 65%;
+    height: 65%;
     width: 90%;
   }
   .main__about img {
@@ -543,14 +601,23 @@
   .main__transport-box {
     justify-content: center;
   }
+  .main__transport .main__about-box p {
+    font-size: 2rem;
+  }
+  .main__transport .main__about-box p:nth-child(3) {
+    font-size: 1rem;
+  }
+  .main__transport .main__about-box div {
+    width: 60%;
+  }
 }
 @media (max-width: 768px) {
   .main__banner {
-    min-height: 64vh;
+    height: 64vh;
   }
   .main__specs {
     flex-wrap: wrap;
-    min-height: 26vh;
+    height: 26vh;
   }
   .main__specs .main__specs-item {
     width: 48%;
@@ -564,13 +631,14 @@
   }
   .main__about {
     background-color: #a31aca;
-    min-height: 100vh;
+    height: 100vh;
   }
   .main__about .main__about-box {
-    min-height: 100%;
+    height: 100%;
     width: 100%;
     border-radius: 0;
     flex-direction: column;
+    box-shadow: none;
   }
   .main__about img {
     width: 40%;
@@ -601,6 +669,21 @@
   }
   .main__services .services__item img {
     width: 40%;
+  }
+  .main__transport .main__about-box {
+    height: 100vh;
+    width: 100vw;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .main__transport .main__about-box p {
+    font-size: 2rem;
+  }
+  .main__transport .main__about-box p:nth-child(3) {
+    font-size: 1rem;
+  }
+  .main__transport .main__about-box div {
+    width: 80%;
   }
 }
 @media (max-width: 425px) {
@@ -649,32 +732,55 @@
   }
   .main__specs {
     flex-direction: column;
+    height: auto;
     padding: 20px;
     gap: 20px;
   }
   .main__specs .main__specs-item {
     width: 100%;
   }
+  .main__transport .main__about-box img {
+    width: 200px;
+  }
+  .main__transport .main__about-box p {
+    font-size: 1.8rem;
+  }
+  .main__transport .main__about-box p:nth-child(3) {
+    font-size: 1rem;
+  }
+  .main__transport .main__about-box div {
+    width: 100%;
+    justify-content: center;
+  }
+  .main__transport .main__about-box div a {
+    width: 90%;
+  }
 }
-@media (max-height: 800px) {
+@media (max-height: 700px) {
   .main__banner {
-    padding-bottom: 20px;
+    min-height: 400px;
   }
   .main__specs {
     min-height: 200px;
   }
   .main__about {
-    padding: 20px 0;
+    min-height: 700px;
   }
   .main__about .main__about-box {
     box-shadow: none;
-    min-height: 90vh;
+    min-height: 90%;
   }
   .services__item-container {
-    min-height: 800px;
+    min-height: 700px;
   }
   .main__bannerTransport {
-    min-height: 800px;
+    min-height: 700px;
+  }
+  .main__transport {
+    height: 700px;
+  }
+  .main__transport .main__about-box {
+    height: 700px;
   }
 }
 .container__login {

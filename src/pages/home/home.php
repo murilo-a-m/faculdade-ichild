@@ -201,7 +201,7 @@
                   Proporcionar controle do agendamento de embarque do menor de
                   idade.
                 </p>
-                <a href="" class="services__item-link"
+                <a href="#transport" class="services__item-link"
                   >Começar agora ></a
                 >
               </div>
@@ -209,18 +209,21 @@
           </div>
         </div>
       </div>
-      <div id="transport" class="main__bannerTransport background__style">
-        <div class="main__transport-box container-md">
-          <div class="main__transport-contentHome">
-            <img src="../../img/about-logo-transporteBusiness.png" alt="" class="transportBusiness__img">
-            <div class="main__banner-btn">
-            <a href="../registerTransport/registerTransport.php" class="banner__registerBtn">
-              <span>Cadastrar-se</span>
-            </a>
-            <a href="../loginTransport/loginTransport.php" class="banner__aboutBtn">
-              <span>Entrar na conta</span>
-            </a>
-          </div>
+      <div id="transport" class="main__transport background__style">
+        <div class="main__about-box background__style">
+          <img
+            data-aos-duration="2000"
+            data-aos="zoom-out"
+            src="../../img/favicon-ichild-transporte.png"
+            alt="Logo iChild"
+            class="img-fluid"
+            width="300px"
+          />
+          <p>iChild Business</p>
+          <p>Se registre e cadastre seu veículo agora mesmo!</p>
+          <div class="input-group mt-3">
+            <a href="../loginTransport/loginTransport.php"><button type="submit" class="bn632-transport bn20"><i class="bi bi-person-fill-check"></i> Fazer login</button></a>
+            <a href="../registerTransport/registerTransport.php"><button type="submit" class="bn632-transport bn20"><i class="bi bi-person-fill-add"></i> Criar conta</button></a>
           </div>
         </div>
       </div>
@@ -247,12 +250,12 @@
               <h6 class="text-uppercase fw-bold">iChild</h6>
               <hr class="mb-3 mt-0 d-inline-block mx-auto"/>
               <p class="mb-4">
-                Realiza o registro de dependentes, permitindo os responsáveis acompanhar sua rotina escolar. 
+                Realiza o registro de dependentes, permitindo o responsável acompanhar sua rotina escolar. 
               </p>
               <h6 class="text-uppercase fw-bold">iChild business</h6>
               <hr class="mb-3 mt-0 d-inline-block mx-auto"/>
               <p>
-                Permite o motorista registrar seu veículo e realizar o tranporte de dependentes. 
+                Permite o motorista registrar seu veículo e realizar o transporte de dependentes. 
               </p>
             </div>
 
