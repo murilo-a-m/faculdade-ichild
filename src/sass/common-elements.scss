@@ -9,3 +9,19 @@
   background: center / cover no-repeat;
   width: 100%;
 }
+
+.error {
+  font-size: 12px;
+  color: red;
+}
+
+.swal2-popup {
+  font-family: $font !important;
+}
+
+.null {
+  color: $gray-text-color;
+  font-weight: bold;
+  align-self: center;
+  margin: auto 0;
+}

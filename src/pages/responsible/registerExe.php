@@ -7,6 +7,7 @@
   $email = $_POST['email'];
   $password = $_POST['password'];
   $password2 = $_POST['password2'];
+  $cpf = $_POST['cpf'];
   $cep = $_POST['cep'];
   $estado = $_POST['estado'];
   $cidade = $_POST['cidade'];
@@ -16,7 +17,7 @@
 
   $encrypted_pwd = md5($password);
 
-  $sql = "SELECT id, nome, sobrenome, email, senha, cep, estado, cidade, rua, numero 
+  $sql = "SELECT id, nome, sobrenome, email, senha, cpf, cep, estado, cidade, rua, numero 
   FROM ichild.Responsaveis
   WHERE email = '$email'";
 
@@ -42,11 +43,32 @@
     }
   }
 
+  $sql = "SELECT id, nome, sobrenome, email, senha, cpf, cep, estado, cidade, rua, numero 
+  FROM ichild.Responsaveis
+  WHERE cpf = '$cpf'";
+
+  if ($result = mysqli_query($conn, $sql)) {
+    if (mysqli_num_rows($result) > 0) {
+      $status = 'error';
+      $message = 'CPF já cadastrado';
+      $statusCode = 409;
+
+      http_response_code($statusCode);
+
+      $response = array(
+        'status' => $status,
+        'message' => $message,
+      );
+      $jsonResponse = json_encode($response);
+      echo $jsonResponse;
+      exit;
+    }
+  }
+
   $imagem_base64 = base64_encode(file_get_contents($foto));
 
-  $sql = "INSERT INTO Responsaveis ( nome, sobrenome, email, senha, cep, estado, cidade, rua, numero, imagem) 
-          VALUES ('$nome','$sobrenome', '$email', '$encrypted_pwd','$cep','$estado','$cidade','$rua','$numero','$imagem_base64')";
-  
+  $sql = "INSERT INTO Responsaveis ( nome, sobrenome, email, senha, cpf, cep, estado, cidade, rua, numero, imagem) 
+          VALUES ('$nome','$sobrenome', '$email', '$encrypted_pwd', '$cpf', '$cep','$estado','$cidade','$rua','$numero','$imagem_base64')";
   
   if ($result = mysqli_query($conn, $sql)) {       
         $status = 'success';

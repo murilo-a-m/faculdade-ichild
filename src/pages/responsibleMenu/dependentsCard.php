@@ -1,5 +1,5 @@
 <?php 
-    require '../../database/connection.php';
+    require_once '../../database/connection.php';
 
     $responsavelId = $_SESSION['id'];
 
@@ -10,7 +10,6 @@
             LIMIT 3
             ";
             
-
     echo '<div class="content__card card__dependents">';
     echo '<div class="card__container">';
     echo '<p class="card__title">Dependentes</p>';
@@ -36,9 +35,11 @@
             echo '</div>';
           echo '</div>';
         }
+        echo '<a class="card__button" href="../dependentPanel/dependentPanel.php"><button>Ver tudo</button></a>';
+      } else {
+        echo "<p class='null'>Nenhum dependente foi cadastrado</p>";
       }
     }   
-    echo '<a class="card__button" href="../dependentPanel/dependentPanel.php"><button>Ver tudo</button></a>';
     echo '</div>';
     echo '</div>';
 ;?>

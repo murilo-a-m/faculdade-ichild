@@ -31,14 +31,9 @@
 
   <body>
     <?php 
-      session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
-        header('location: ../login/login.php?erro=true');
-        exit;
-      }
-    ;?>
-
-    <?php require '../../components/headerMenu.php';?>
+      require_once '../../components/responsibleAuthorization.php';
+      require_once '../../components/headerMenu.php';
+    ?>
 
     <?php
       if (isset($_GET['status'])){
@@ -62,21 +57,7 @@
 
         <?php require './dependentsCard.php' ;?>
 
-        <div class="content__card card__log">
-          <div class="card__container">
-            <p class="card__title">Log do dia</p>
-            <div class="card__log-content">
-              <div class="log__light"></div>
-              <p class="log__text">14:30 - Chegou na escola</p>
-            </div>
-            <div class="card__log-content"></div>
-            <div class="card__log-content"></div>
-            <div class="card__log-content"></div>
-            <div class="card__log-content"></div>
-            <div class="card__log-content"></div>
-            <a class="card__button" href="../painelLog/painelLogDependent.php"><button>Ver tudo</button></a>
-          </div>
-        </div>
+        <?php require './logCard.php' ;?>
 
         <div class="content__card card__schedule">
           <div class="card__container">

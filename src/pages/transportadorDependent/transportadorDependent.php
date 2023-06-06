@@ -36,14 +36,9 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <body>
     <?php 
-      session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
-        header('location: ../login/login.php?erro=true');
-        exit;
-      }
-    ;?>
-
-    <?php require '../../components/headerMenu.php';?>
+      require_once '../../components/responsibleAuthorization.php';
+      require_once '../../components/headerMenu.php';
+    ?>
     
     <div class="dependenteTitulo">
       <p class="tittleDependentes">Dependentes</p>

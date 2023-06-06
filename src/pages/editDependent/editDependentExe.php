@@ -1,5 +1,5 @@
 <?php
-require '../../components/responsibleAuthorization.php';
+require_once '../../components/responsibleAuthorization.php';
 require_once "../../database/connection.php";
 
 header('Content-Type: application/json');

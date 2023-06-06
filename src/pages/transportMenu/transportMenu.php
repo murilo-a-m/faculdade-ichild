@@ -31,14 +31,9 @@
 
   <body>
     <?php 
-      session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'transportador'  ){
-        header('location: ../loginTransport/loginTransport.php?erro=true');
-        exit;
-      }
-    ;?>
-
-    <?php require '../../components/headerTransportMenu.php';?>
+      require_once '../../components/transportAuthorization.php';
+      require_once '../../components/headerTransportMenu.php';
+    ?>
 
     <?php
       if (isset($_GET['status'])){
@@ -61,22 +56,7 @@
       <div class="main__transport-content">
 
         <?php require './dependentsCard.php' ;?>
-
-        <div class="content__card-transport card__log">
-          <div class="card__container">
-            <p class="card__title">Log do dia</p>
-            <div class="card__log-transportContent">
-              <div class="log__lightTransport"></div>
-              <p class="log__text">14:30 - Chegou na escola</p>
-            </div>
-            <div class="card__log-transportContent"></div>
-            <div class="card__log-transportContent"></div>
-            <div class="card__log-transportContent"></div>
-            <div class="card__log-transportContent"></div>
-            <div class="card__log-transportContent"></div>
-            <a class="card__transportButton" href="../painelLog/painelLog.php"><button>Ver tudo</button></a>
-          </div>
-        </div>
+        <?php require './logCard.php' ;?>
 
         <div class="content__card-transport card__schedule">
           <div class="card__container">

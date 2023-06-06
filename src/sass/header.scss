@@ -69,6 +69,21 @@
   }
 }
 
+.header__btn-responsive {
+  display: none;
+  background-color: $purple;
+  border-radius: 10px;
+  color: white;
+  font-family: $font;
+  font-size: 14px;
+  padding: 0.5rem;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+  }
+}
+
 @media (max-width: 1024px) {
   .header__image {
     width: 100px;
@@ -131,6 +146,14 @@
 
   .header__nav.open {
     transform: translateX(0px);
+  }
+
+  .header__btn {
+    display: none;
+  }
+
+  .header__btn-responsive {
+    display: flex;
   }
 }
 

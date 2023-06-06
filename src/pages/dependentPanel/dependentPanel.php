@@ -32,25 +32,16 @@
       type="image/x-icon"
     />
 
-    <!-- AOS link -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
-
     <title>iChild</title>
   </head>
 
   <body>
     <?php 
-      session_start();
-      if (!isset($_SESSION['id']) || !$_SESSION['role'] == 'responsavel'  ){
-        header('location: ../login/login.php?erro=true');
-        exit;
-      }
-    ;?>
-
-    <?php require '../../components/headerMenu.php';?>
+      require_once '../../components/responsibleAuthorization.php';
+      require '../../components/headerMenu.php';
+    ?>
     
-    <main class="container__main-panel">
+    <main class="container__main-panelResponsible">
       <div id="panel" class="panel__content">
         <div class="panel_search mb-2">
           <p class="card__title">Dependentes</p>
@@ -84,6 +75,7 @@
       </div>
     </main>
 
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
     <script src="../../utils/navbar-menu.js"></script>
     <script src="./deleteDependent.js"></script>
     <script src="./responsibleDependentSearch.js"></script>
