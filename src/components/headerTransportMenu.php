@@ -72,7 +72,7 @@
 <header class="container__header-transport">
   <div class="app__nav">
     <img src="../../img/navbarIcon-transporte.png" alt="" id="app__nav-icon" />
-    <img src="../../img/favicon-ichild-transporte.png" alt="" class="logo-img" />
+    <a href="../transportMenu/transportMenu.php"><img src="../../img/favicon-ichild-transporte.png" alt="" class="logo-img" /></a>
   </div>
   <div class="app__nav-profile">
     <img src="data:image/jpeg;base64,<?php echo $imagem; ?>" alt="" class="profileTransport-img" />

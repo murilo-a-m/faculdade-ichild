@@ -1689,6 +1689,7 @@
   white-space: nowrap;
 }
 .form__btn-cancel:hover {
+  color: white;
   box-shadow: 4px 4px 0 #000;
   transform: translate(-4px, -4px);
 }
@@ -2887,8 +2888,8 @@
 }
 
 @media (max-width: 425px) {
-  #menu__bar,
-  #profile__bar {
+  #menu__bar-transport,
+  #profile__bar-transport {
     width: 100vw;
   }
 }
