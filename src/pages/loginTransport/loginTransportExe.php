@@ -20,6 +20,8 @@
           $_SESSION['email'] = $row['email'];
           $_SESSION['role'] = 'transportador';
 
+          $_SESSION['ultimo_acesso'] = time();
+
           $status = 'success';
           $message = 'Login realizado com sucesso';
           $statusCode = 200;

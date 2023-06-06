@@ -1,5 +1,6 @@
 <?php
   session_start();
+
   require_once '../../database/connection.php';
   header('Content-Type: application/json');
   
@@ -20,6 +21,8 @@
           $_SESSION['email'] = $row['email'];
           $_SESSION['role'] = 'responsavel';
           $_SESSION['imagem'] = $row['imagem'];
+
+          $_SESSION['ultimo_acesso'] = time();
 
           $status = 'success';
           $message = 'Login realizado com sucesso';
