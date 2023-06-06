@@ -81,7 +81,7 @@
             </div>
             <div class="card__notifications-transportContent"></div>
             <div class="card__notifications-transportContent"></div>
-            <a class="card__transportButton" href=""><button>Ver tudo</button></a>
+            <a class="card__transportButton" href="../dependendNotify/dependendNotify.php"><button>Ver tudo</button></a>
           </div>
         </div>
 

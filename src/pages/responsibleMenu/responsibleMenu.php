@@ -82,7 +82,7 @@
             </div>
             <div class="card__notifications-content"></div>
             <div class="card__notifications-content"></div>
-            <a class="card__button" href=""><button>Ver tudo</button></a>
+            <a class="card__button" href="../dependendNotify/dependentMsgExibRespons.php"><button>Ver tudo</button></a>
           </div>
         </div>
 
