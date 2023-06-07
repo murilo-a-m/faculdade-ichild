@@ -10,6 +10,7 @@
     $turno     = $_POST['turno'];
     $responsavelId = $_SESSION['id'];
     $transportadorId = $_POST['transportadorId'];
+    $time_ = $_POST['time'];
     
     $sql = "SELECT id, nome, documento
     FROM ichild.Dependentes
@@ -37,8 +38,8 @@
       }
     }
 
-    $sql = "INSERT INTO Dependentes ( nome, sobrenome, dataNascimento, documento, turno, responsavelId, transportadorId) 
-            VALUES ('$nome','$sobrenome', '$dataNascimento', '$documento','$turno','$responsavelId', '$transportadorId')";
+    $sql = "INSERT INTO Dependentes ( nome, sobrenome, dataNascimento, documento, turno, responsavelId, transportadorId, time) 
+            VALUES ('$nome','$sobrenome', '$dataNascimento', '$documento','$turno','$responsavelId', '$transportadorId', '$time_')";
             
     if ($result = mysqli_query($conn, $sql)) {
       $status = 'success';
@@ -56,7 +57,8 @@
       exit;
     } else {
       $status = 'error';
-      $message = 'Erro ao realizar a requisição';
+      // Retorna erro do banco 
+      $message = mysqli_error($conn);
       $statusCode = 500;
 
       http_response_code($statusCode);
