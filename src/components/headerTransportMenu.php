@@ -18,10 +18,12 @@
     </svg>
     <ul>
       <li><a href="/ichild/src/pages/transportMenu/transportMenu.php">MENU</a></li>
-      <li><a href="#">DEPENDENTES</a></li>
-      <li><a href="#">LOG DO DIA</a></li>
-      <li><a href="#">NOVO LOG</a></li>
-      <li><a href="#">ENVIAR NOTIFICAÇÃO</a></li>
+      <li><a href="/ichild/src/pages/transportDependentPanel/transportDependentPanel.php">DEPENDENTES</a></li>
+      <li><a href="/ichild/src/pages/painelLog/painelLog.php">LOG DO DIA</a></li>
+      <li><a href="/ichild/src/pages/painelLog/criarLog.php">NOVO LOG</a></li>
+      <li><a href="/ichild/src/pages/dependendNotify/dependendNotify.php">NOTIFICAÇÕES</a></li>
+      <li><a href="/ichild/src/pages/dependendNotify/notifyForm.php">ENVIAR NOTIFICAÇÃO</a></li>
+      <li><a href="/ichild/src/pages/transportSchedule/transportSchedule.php">AGENDA</a></li>
     </ul>
   </div>
 </aside>
