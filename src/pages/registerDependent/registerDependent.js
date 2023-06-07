@@ -80,6 +80,7 @@ function createDependent() {
           "error"
         );
       } else {
+        console.log(resp);
         Swal.fire("Conta não cadastrada!", "Tente novamente!", "error");
       }
     },
