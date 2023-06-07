@@ -49,7 +49,7 @@
     <main class="container__main-panelResponsible">
       <div id="panel" class="panel__content">
         <div class="panel_search mb-2">
-          <p class="card__title">Mensagens</p>
+          <p class="card__title">Notificações recebidas</p>
           <div class="search-content">
             <input type="search" class="form-control w-100" placeholder="Pesquisar" id="search">
             <button class="btn btn-styleResponsible" id="button">
