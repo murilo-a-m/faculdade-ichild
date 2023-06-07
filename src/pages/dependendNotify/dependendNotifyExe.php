@@ -1,15 +1,13 @@
 <?php
     session_start();
     require_once "../../database/connection.php";
-
+    header('Content-Type: application/json');
 
     $transportadorId = $_SESSION['id'];
     $message = $_POST ['messageNot'];
     $dependentId = $_POST['dependenteNotify'];
 
     $sql = "INSERT INTO ichild.Mensagem (mensagem, transportadorId, dependentId) VALUES ('$message', '$transportadorId', '$dependentId')";
-
-    
 
     if ($result = mysqli_query($conn, $sql)) {       
         $status = 'success';
@@ -24,7 +22,6 @@
         );
         $jsonResponse = json_encode($response);
         echo $jsonResponse;
-        header('location: ./notifyForm.php');
         exit;
 
     } else {
@@ -42,4 +39,6 @@
         echo $jsonResponse;
         exit;
     }
+
+    mysqli_close($conn);
 ?>
