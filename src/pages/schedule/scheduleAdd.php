@@ -33,6 +33,8 @@
       $date = null;
       if (isset($_GET['date'])) {
         $date = new \DateTime($_GET['date'], new \DateTimeZone('America/Sao_Paulo'));
+      } else {
+        $date = new \DateTime('now', new \DateTimeZone('America/Sao_Paulo'));
       }
     ?>
 
@@ -100,9 +102,10 @@
           <span id="timeEnd-error" class="error"></span>
         </div>
 
-        <button type="submit" class="col-md-8 form__btn-save mt-3">
+        <button type="submit" class="col-md-6 form__btn-save mt-3">
           Agendar
         </button>
+        <a href="../responsibleMenu/responsibleMenu.php" class="col-md-2 form__btn-cancel mt-3">Cancelar</a>
       </form>
     </main>
     

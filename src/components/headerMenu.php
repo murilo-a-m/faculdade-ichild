@@ -20,8 +20,9 @@
       <li><a href="/ichild/src/pages/responsibleMenu/responsibleMenu.php">MENU</a></li>
       <li><a href="/ichild/src/pages/dependentPanel/dependentPanel.php">DEPENDENTES</a></li>
       <li><a href="/ichild/src/pages/registerDependent/registerDependent.php">ADICIONAR DEPENDENTES</a></li>
-      <li><a href="#">LOG DO DIA</a></li>
+      <li><a href="/ichild/src/pages/painelLog/painelLogDependent.php">LOG DO DIA</a></li>
       <li><a href="/ichild/src/pages/schedule/schedule.php">AGENDA</a></li>
+      <li><a href="/ichild/src/pages/schedule/scheduleAdd.php">NOVO EVENTO</a></li>
     </ul>
   </div>
 </aside>
@@ -72,7 +73,7 @@
 <header class="container__header-app">
   <div class="app__nav">
     <img src="../../img/navbarIcon.png" alt="" id="app__nav-icon" />
-    <img src="../../img/favicon-ichild.png" alt="" class="logo-img" />
+    <a href="../responsibleMenu/responsibleMenu.php"><img src="../../img/favicon-ichild.png" alt="" class="logo-img" /></a>
   </div>
   <div class="app__nav-profile">
     <img src="data:image/jpeg;base64,<?php echo $_SESSION['imagem']; ?>" alt="" class="profile-img">

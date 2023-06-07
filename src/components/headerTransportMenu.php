@@ -18,10 +18,12 @@
     </svg>
     <ul>
       <li><a href="/ichild/src/pages/transportMenu/transportMenu.php">MENU</a></li>
-      <li><a href="#">DEPENDENTES</a></li>
-      <li><a href="#">LOG DO DIA</a></li>
-      <li><a href="#">NOVO LOG</a></li>
-      <li><a href="#">ENVIAR NOTIFICAÇÃO</a></li>
+      <li><a href="/ichild/src/pages/transportDependentPanel/transportDependentPanel.php">DEPENDENTES</a></li>
+      <li><a href="/ichild/src/pages/painelLog/painelLog.php">LOG DO DIA</a></li>
+      <li><a href="/ichild/src/pages/painelLog/criarLog.php">NOVO LOG</a></li>
+      <li><a href="/ichild/src/pages/dependendNotify/dependendNotify.php">NOTIFICAÇÕES</a></li>
+      <li><a href="/ichild/src/pages/dependendNotify/notifyForm.php">ENVIAR NOTIFICAÇÃO</a></li>
+      <li><a href="/ichild/src/pages/transportSchedule/transportSchedule.php">AGENDA</a></li>
     </ul>
   </div>
 </aside>
@@ -72,7 +74,7 @@
 <header class="container__header-transport">
   <div class="app__nav">
     <img src="../../img/navbarIcon-transporte.png" alt="" id="app__nav-icon" />
-    <img src="../../img/favicon-ichild-transporte.png" alt="" class="logo-img" />
+    <a href="../transportMenu/transportMenu.php"><img src="../../img/favicon-ichild-transporte.png" alt="" class="logo-img" /></a>
   </div>
   <div class="app__nav-profile">
     <img src="data:image/jpeg;base64,<?php echo $imagem; ?>" alt="" class="profileTransport-img" />

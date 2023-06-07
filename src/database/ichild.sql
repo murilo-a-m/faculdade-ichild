@@ -40,6 +40,7 @@ CREATE TABLE Dependentes (
     responsavelId INT NOT NULL,
     transportadorId INT,
 
+
     FOREIGN KEY(responsavelId) REFERENCES Responsaveis(id) ON DELETE CASCADE,
     FOREIGN KEY(transportadorId) REFERENCES Transportadores(id) ON DELETE SET NULL
 );

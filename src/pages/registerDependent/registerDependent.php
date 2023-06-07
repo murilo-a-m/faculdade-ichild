@@ -90,7 +90,7 @@
         <button type="submit" class="col-md-6 form__btn-save">
           Salvar dependente
         </button>
-        <button class="col-md-2 form__btn-cancel">Cancelar</button>
+        <a href="../responsibleMenu/responsibleMenu.php" class="col-md-2 form__btn-cancel">Cancelar</a>
       </form>
     </main>
     

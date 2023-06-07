@@ -61,6 +61,7 @@
   white-space: nowrap;
 
   &:hover {
+    color: white;
     box-shadow: 4px 4px 0 #000;
     transform: translate(-4px, -4px);
   }

@@ -25,3 +25,17 @@
   align-self: center;
   margin: auto 0;
 }
+
+.container__form-transport {
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dde6ed;
+}
+
+@media (max-height: 700px) {
+  .container__form-transport {
+    height: 700px;
+  }
+}

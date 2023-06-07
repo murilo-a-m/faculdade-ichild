@@ -231,14 +231,14 @@
 }
 
 @media (max-width: 425px) {
-  #menu__bar,
-  #profile__bar {
+  #menu__bar-transport,
+  #profile__bar-transport {
     width: 100vw;
   }
 }
 
 @media (max-height: 800px) {
-  .container__header-app {
+  .container__header-transport {
     min-height: 70px;
   }
 }

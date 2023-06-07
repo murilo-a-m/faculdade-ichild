@@ -34,18 +34,12 @@
     require_once '../../components/headerTransportMenu.php';
   ?>
   
-  <main class="container__form container-fluid">
+  <main class="container__form-transport container-fluid">
     <form
       class="container__form-content row g-1 container-md gap-2"
       id="form-log"
     >
       <p class="col-md-8 container__form-text">Criar Log:</p>
-
-      <div class="col-md-8 mt-2">
-        <label for="time" class="form-label">Horario</label>
-        <input type="time" class="form-control" name="horarioLog" />
-        <span id="name-error" class="error"></span>
-      </div>
     
       <?php 
         require './loadDependents.php';
@@ -56,9 +50,9 @@
         <div class="col-md-12 mt-2">
         <label for="inputStatus" class="form-label">Status</label>
           <select id="inputStatus" class="form-select" name="statusLog" required>
-            <option selected>Escolher..</option>
-            <option >Em transito</option>
-            <option >Chegou ao destino</option>
+            <option value="">Escolher..</option>
+            <option value="Em transito">Em transito</option>
+            <option value="Chegou ao destino">Chegou ao destino</option>
           </select>
         <span id="turn-error" class="error"></span>
         </div>
@@ -70,10 +64,10 @@
         <span id="document-error" class="error"></span>
       </div>
 
-      <button type="submit" class="card__transportButton col-md-6 form__btn-save">
-        Salvar Status
+      <button type="submit" class="info__btn-editTransport col-md-6 form__btn-save">
+        Enviar
       </button>
-      <button class="card__transportButton col-md-2 form__btn-cancel">Cancelar</button>
+      <a href="../transportMenu/transportMenu.php" class="info__btn-editTransport col-md-2 form__btn-cancel">Cancelar</a>
     </form>
   </main>
 
