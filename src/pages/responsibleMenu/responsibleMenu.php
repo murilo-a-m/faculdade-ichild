@@ -56,7 +56,6 @@
       <div class="main__app-content">
 
         <?php require './dependentsCard.php' ;?>
-
         <?php require './logCard.php' ;?>
 
         <div class="content__card card__schedule">
@@ -73,7 +72,8 @@
           </div>
         </div>
 
-        <div class="content__card card__notifications">
+        <?php require './notificationsCard.php' ;?>
+        <!-- <div class="content__card card__notifications">
           <div class="card__container">
             <p class="card__title">Notificações</p>
             <div class="card__notifications-content">
@@ -84,7 +84,7 @@
             <div class="card__notifications-content"></div>
             <a class="card__button" href="../dependendNotify/dependentMsgExibRespons.php"><button>Ver tudo</button></a>
           </div>
-        </div>
+        </div> -->
 
         <div class="content__card card__config">
           <a
