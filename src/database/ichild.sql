@@ -25,6 +25,7 @@ CREATE TABLE Transportadores (
     marca VARCHAR(255) NOT NULL,
     modelo VARCHAR(255) NOT NULL,
     capacidade INT NOT NULL,
+    dataNascimento DATE NOT NULL,
     imagem BLOB
 );
 

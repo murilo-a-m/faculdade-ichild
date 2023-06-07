@@ -119,6 +119,11 @@
           <input type="file" class="form-control disabled" id="infoFoto" name="foto" disabled/>
           <span id="foto-error" class="error"></span>
         </div>
+        <div class="col-md-7 mt-2 mb-2">
+          <label for="infoNumber" class="form-label">Data-Nascimento</label>
+          <input type="date" value="<?php echo ($dataNascimento);?>" class="form-control disabled" id="infoNumber" required name="numero" disabled/>
+          <span id="number-error" class="error"></span>
+        </div>
 
         <button id="btnEdit" class="col-md-7 info__btn-editTransport">
           Editar informações

@@ -143,6 +143,14 @@
                 </div>
                 <span id="capacidade-error" class="error"></span>
               </div>
+
+              <div class="col-md-6 mb-4">
+                <div class="form-outline">
+                  <input type="date" id="inputCapacidade" class="form-control form-control-lg" name="capacidade" required/>
+                  <label class="form-label" for="inputdataNascimento">Data Nascimento</label>
+                </div>
+                <span id="capacidade-error" class="error"></span>
+              </div>
             </div>
 
             <button type="submit" class="bn632-transport bn20">Criar conta</button>

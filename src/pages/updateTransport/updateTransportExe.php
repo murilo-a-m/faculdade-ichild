@@ -10,7 +10,7 @@
     $marca = $_POST['marca'];
     $modelo = $_POST['modelo'];
     $capacidade = $_POST['capacidade'];
-
+    $dataNascimento = $_POST ['dataNascimento']
     $transportadorId = $_SESSION['id'];
 
     if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] == 0) {
@@ -18,7 +18,7 @@
       $foto_base64 = base64_encode(file_get_contents($foto));
 
       $sql = "UPDATE ichild.Transportadores
-            SET nome = '$nome', sobrenome = '$sobrenome', cnh = '$cnh', cep = '$cep', placa = '$placa', marca = '$marca', modelo = '$modelo', capacidade = '$capacidade', imagem = '$foto_base64'  
+            SET nome = '$nome', sobrenome = '$sobrenome', cnh = '$cnh', cep = '$cep', placa = '$placa', marca = '$marca', modelo = '$modelo', capacidade = '$capacidade', imagem = '$foto_base64', dataNascimento = '$dataNascimento' 
             WHERE id = $transportadorId";  
     } else {
       $sql = "UPDATE ichild.Transportadores

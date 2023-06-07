@@ -4,7 +4,7 @@
   $transportadorId = $_SESSION['id'];
   session_write_close();
 
-  $sql = "SELECT id, nome, sobrenome, cnh, cep, placa, marca, modelo, capacidade 
+  $sql = "SELECT id, nome, sobrenome, cnh, cep, placa, marca, modelo, capacidade, dataNascimento 
           FROM ichild.Transportadores
           WHERE id = $transportadorId";
 
@@ -19,6 +19,7 @@
         $marca = $row['marca'];
         $modelo = $row['modelo'];
         $capacidade = $row['capacidade'];
+        $dataNascimento = $row['dataNascimento'];
       }
     }
   }   

@@ -13,11 +13,12 @@
   $marca = $_POST['marca'];
   $modelo = $_POST['modelo'];
   $capacidade = $_POST['capacidade'];
+  $dataNascimento = $_POST['dataNascimento']
   $foto = 'http://localhost/ichild/src/img/profile.png';
 
   $encrypted_pwd = md5($password);
 
-  $sql = "SELECT id, nome, sobrenome, email, senha, cnh, cep, placa, marca, modelo, capacidade
+  $sql = "SELECT id, nome, sobrenome, email, senha, cnh, cep, placa, marca, modelo, capacidade, dataNascimento
   FROM ichild.Transportadores
   WHERE email = '$email'";
 
