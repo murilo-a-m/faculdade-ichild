@@ -64,6 +64,7 @@
                 <th scope="col">Documento</th>
                 <th scope="col">Turno</th>
                 <th scope="col">Transportador</th>
+                <th scope="col">Time</th>
                 <th scope="col">Ações</th>
               </tr>
             </thead>
