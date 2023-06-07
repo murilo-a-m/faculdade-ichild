@@ -46,15 +46,14 @@
       require_once '../../components/headerMenu.php';
     ;?>
     
-    <main class="container__main-panel">
-      
+    <main class="container__main-panelResponsible">
       <div id="panel" class="panel__content">
         <div class="panel_search mb-2">
           <p class="card__title">Mensagens</p>
         </div>
         <div class="table-responsive">
           <table class="table table-striped text-center table__panel">
-            <thead class="table-dark">
+            <thead class="table-light" id="tableResponsible">
               <tr>
                 <th scope="col">Dependente</th>
                 <th scope="col">Transportador</th>
