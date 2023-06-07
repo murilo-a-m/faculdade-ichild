@@ -62,27 +62,21 @@
           <table class="table table-striped text-center table__panel">
             <thead class="table-dark">
               <tr>
+              <th scope="col"></th>
                 <th scope="col">Dependente</th>
                 <th scope="col">Responsavel</th>
                 <th scope="col">Mensagem</th>
               </tr>
             </thead>
             <tbody>
-            <?php require_once './dependentMsgExib.php'; ?>
+              <?php require_once './dependenteNotifyTransportTable.php'; ?>
             </tbody>
           </table>
         </div>
-  <body>
-    <?php 
-      require_once '../../components/transportAuthorization.php';
-    ?>
-    
-    
-
+  <body>   
     <script src="../../utils/navbar-transportMenu.js"></script>
 
     <script src="./dependentNotifyTransportSearch.js"></script>
-    <!-- <?php require './dependendNotifyExe.php' ;?> -->
 
     <script src="sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

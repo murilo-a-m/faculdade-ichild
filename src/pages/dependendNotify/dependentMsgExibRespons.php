@@ -63,13 +63,14 @@
           <table class="table table-striped text-center table__panel">
             <thead class="table-light" id="tableResponsible">
               <tr>
+                <th scope="col"></th>
                 <th scope="col">Dependente</th>
                 <th scope="col">Transportador</th>
                 <th scope="col">Mensagem</th>
               </tr>
             </thead>
             <tbody>
-            <?php require_once './dependentMsgExib.php'; ?>
+            <?php require_once './dependentNotifyResponsibleTable.php'; ?>
             </tbody>
           </table>
         </div>
