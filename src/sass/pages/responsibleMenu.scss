@@ -179,6 +179,11 @@
   .config__img {
     width: 180px;
   }
+
+  .event__img {
+    width: 150px;
+    margin-top: 10px;
+  }
 }
 
 .card__title-add {
@@ -295,6 +300,10 @@
   .card__container .config__img {
     width: 150px;
   }
+
+  .card__container .event__img {
+    width: 130px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -345,6 +354,10 @@
         padding-bottom: 10px;
       }
     }
+  }
+
+  .card__container .event__img {
+    width: 100px;
   }
 }
 

@@ -82,6 +82,7 @@
         <button type ="submit" name="update" id="update" class="col-md-6 form__btn-save">
           Editar dependente
         </button>
+        <a href="../responsibleMenu/responsibleMenu.php" class="col-md-2 form__btn-cancel">Cancelar</a>
       </form>
     </main>
 

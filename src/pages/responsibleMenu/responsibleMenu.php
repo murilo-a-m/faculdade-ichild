@@ -97,9 +97,9 @@
         </div>
 
         <div class="content__card card__config">
-          <a href="#" class="card__container container__config">
-            <p class="card__title-config">Configurar dependentes ></p>
-            <img src="../../img/child-config.png" alt="" class="config__img" />
+          <a href="../schedule/scheduleAdd.php" class="card__container container__config">
+            <p class="card__title-config">Novo evento ></p>
+            <img src="../../img/adicionar-evento.png" alt="" class="event__img img-fluid" />
           </a>
         </div>
       </div>

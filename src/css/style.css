@@ -1951,6 +1951,10 @@
 .card__container .config__img {
   width: 180px;
 }
+.card__container .event__img {
+  width: 150px;
+  margin-top: 10px;
+}
 
 .card__title-add {
   font-size: 16px;
@@ -2055,6 +2059,9 @@
   .card__container .config__img {
     width: 150px;
   }
+  .card__container .event__img {
+    width: 130px;
+  }
 }
 @media (max-width: 768px) {
   .card__container .card__log-content {
@@ -2099,6 +2106,9 @@
     grid-row: 3/4;
     background-color: #eef3ff;
     padding-bottom: 10px;
+  }
+  .card__container .event__img {
+    width: 100px;
   }
 }
 @media (max-width: 425px) {

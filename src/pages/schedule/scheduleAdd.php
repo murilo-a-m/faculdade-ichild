@@ -33,6 +33,8 @@
       $date = null;
       if (isset($_GET['date'])) {
         $date = new \DateTime($_GET['date'], new \DateTimeZone('America/Sao_Paulo'));
+      } else {
+        $date = new \DateTime('now', new \DateTimeZone('America/Sao_Paulo'));
       }
     ?>
 
