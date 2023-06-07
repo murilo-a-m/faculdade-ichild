@@ -10,6 +10,7 @@
     $turno     = $_POST['turno'];
     $responsavelId = $_SESSION['id'];
     $transportadorId = $_POST['transportadorId'];
+    $apelido = $_POST['apelido'];
     
     $sql = "SELECT id, nome, documento
     FROM ichild.Dependentes
@@ -37,8 +38,8 @@
       }
     }
 
-    $sql = "INSERT INTO Dependentes ( nome, sobrenome, dataNascimento, documento, turno, responsavelId, transportadorId) 
-            VALUES ('$nome','$sobrenome', '$dataNascimento', '$documento','$turno','$responsavelId', '$transportadorId')";
+    $sql = "INSERT INTO Dependentes ( nome, sobrenome, dataNascimento, documento, turno, responsavelId, transportadorId, apelido) 
+            VALUES ('$nome','$sobrenome', '$dataNascimento', '$documento','$turno','$responsavelId', '$transportadorId', '$apelido')";
             
     if ($result = mysqli_query($conn, $sql)) {
       $status = 'success';

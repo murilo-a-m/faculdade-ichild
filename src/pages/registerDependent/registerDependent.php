@@ -53,6 +53,12 @@
         </div>
 
         <div class="col-md-8 mt-2">
+          <label for="inputApelido" class="form-label">Apelido</label>
+          <input class="form-control" id="inputApelido" name="apelido" required/>
+          <span id="apelido-error" class="error"></span>
+        </div>
+
+        <div class="col-md-8 mt-2">
           <label for="inputBirth" class="form-label">Data de nascimento</label>
           <input type="date" class="form-control" id="inputBirth" name="dataNascimento" required/>
           <span id="birth-error" class="error"></span>

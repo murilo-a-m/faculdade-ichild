@@ -60,6 +60,7 @@
               <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Nome</th>
+                <th scope="col">Apelido</th>
                 <th scope="col">Data de nascimento</th>
                 <th scope="col">Documento</th>
                 <th scope="col">Turno</th>

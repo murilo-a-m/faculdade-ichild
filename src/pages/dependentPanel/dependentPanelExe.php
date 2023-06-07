@@ -3,7 +3,7 @@
 
     $responsavelId = $_SESSION['id'];
 
-    $sql = "SELECT d.id, d.nome, d.sobrenome, d.dataNascimento, d.documento, d.turno, t.nome AS transportador_nome, t.sobrenome AS transportador_sobrenome
+    $sql = "SELECT d.id, d.nome, d.sobrenome, d.dataNascimento, d.documento, d.turno, t.nome AS transportador_nome, t.sobrenome AS transportador_sobrenome, d.apelido
             FROM ichild.Dependentes d
             LEFT JOIN ichild.Transportadores t ON d.transportadorId = t.id
             WHERE responsavelId = $responsavelId";
@@ -13,7 +13,7 @@
         $sql = "SELECT d.id, d.nome, d.sobrenome, d.dataNascimento, d.documento, d.turno, t.nome AS transportador_nome, t.sobrenome AS transportador_sobrenome
             FROM ichild.Dependentes d
             INNER JOIN ichild.Transportadores t ON d.transportadorId = t.id
-            WHERE (d.nome LIKE '%$data%' OR d.sobrenome LIKE '%$data%' OR d.documento LIKE '%$data%' OR d.turno LIKE '%$data%' OR t.nome LIKE '%$data%' OR t.sobrenome LIKE '%$data%')
+            WHERE (d.nome LIKE '%$data%' OR d.sobrenome LIKE '%$data%' OR d.documento LIKE '%$data%' OR d.turno LIKE '%$data%' OR t.nome LIKE '%$data%' OR t.sobrenome LIKE '%$data%' OR d.apelido LIKE '%$data%')
             AND d.responsavelId = $responsavelId";
 
         if ($result = mysqli_query($conn, $sql)) {
@@ -22,6 +22,7 @@
                 echo "<tr class='panelContent'>";
                 echo "<th class='id' scope='row'>$row[id]</th>";
                 echo "<td>$row[nome] $row[sobrenome]</td>";
+                echo "<td>$row[apelido]</td>";
                 echo "<td>" . date('d/m/Y', strtotime($row['dataNascimento'])) . "</td>";
                 echo "<td>$row[documento]</td>";
                 echo "<td>$row[turno]</td>";
@@ -48,6 +49,7 @@
                     echo "<tr class='panelContent'>";
                     echo "<th class='id' scope='row'>$row[id]</th>";
                     echo "<td>$row[nome] $row[sobrenome]</td>";
+                    echo "<td>$row[apelido]</td>";
                     echo "<td>" . date('d/m/Y', strtotime($row['dataNascimento'])) . "</td>";
                     echo "<td>$row[documento]</td>";
                     echo "<td>$row[turno]</td>";
