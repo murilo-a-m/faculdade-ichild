@@ -28,6 +28,10 @@
   margin: auto 0;
 }
 
+.log__lightTransport {
+  margin-left: 10%;
+}
+
 .container__form-transport {
   height: 92vh;
   display: flex;
@@ -2994,9 +2998,6 @@
   background-color: #dde6ed;
   border-radius: 10px;
   gap: 5%;
-}
-.card__container .card__log-transportContent .log__lightTransport {
-  margin-left: 10%;
 }
 .card__container .card__log-transportContent .log__text {
   margin: 0;

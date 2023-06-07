@@ -15,7 +15,7 @@
     if (mysqli_num_rows($result) > 0) {
       while ($row = mysqli_fetch_assoc($result)){
         echo '<div class="card__notifications-transportContent">';
-            echo "<div class='notifications__transportLight'>
+            echo "<div class='log__lightTransport'>
                       <svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='#526D82' class='bi bi-circle-fill' viewBox='0 0 16 16'>
                         <circle cx='8' cy='8' r='8'/>
                       </svg>
