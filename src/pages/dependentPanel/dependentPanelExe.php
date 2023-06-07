@@ -3,14 +3,14 @@
 
     $responsavelId = $_SESSION['id'];
 
-    $sql = "SELECT d.id, d.nome, d.sobrenome, d.dataNascimento, d.documento, d.turno, t.nome AS transportador_nome, t.sobrenome AS transportador_sobrenome
+    $sql = "SELECT d.id, d.nome, d.sobrenome, d.dataNascimento, d.documento, d.turno,  d.time, t.nome AS transportador_nome, t.sobrenome AS transportador_sobrenome
             FROM ichild.Dependentes d
             LEFT JOIN ichild.Transportadores t ON d.transportadorId = t.id
             WHERE responsavelId = $responsavelId";
 
     if(!empty($_GET['search'])) {
         $data = $_GET['search'];
-        $sql = "SELECT d.id, d.nome, d.sobrenome, d.dataNascimento, d.documento, d.turno, t.nome AS transportador_nome, t.sobrenome AS transportador_sobrenome
+        $sql = "SELECT d.id, d.nome, d.sobrenome, d.dataNascimento, d.documento, d.turno, d.time, t.nome AS transportador_nome, t.sobrenome AS transportador_sobrenome
             FROM ichild.Dependentes d
             INNER JOIN ichild.Transportadores t ON d.transportadorId = t.id
             WHERE (d.nome LIKE '%$data%' OR d.sobrenome LIKE '%$data%' OR d.documento LIKE '%$data%' OR d.turno LIKE '%$data%' OR t.nome LIKE '%$data%' OR t.sobrenome LIKE '%$data%')
@@ -26,6 +26,8 @@
                 echo "<td>$row[documento]</td>";
                 echo "<td>$row[turno]</td>";
                 echo "<td>$row[transportador_nome] $row[transportador_sobrenome]</td>";
+                echo "<td>$row[time]</td>";
+
                 echo "<td><a target='blank' href='http://localhost/ichild/src/pages/editDependent/editDependent.php?id=$row[id]'>
                 <svg xmlns='http://www.w3.org/2000/svg ' id= 'botaoDependentEdit' fill='#3ab5df' class='bi bi-pencil-square' viewBox='0 0 16 16'>
                 <path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z'/>
@@ -52,6 +54,7 @@
                     echo "<td>$row[documento]</td>";
                     echo "<td>$row[turno]</td>";
                     echo "<td>$row[transportador_nome] $row[transportador_sobrenome]</td>";
+                    echo "<td>$row[time]</td>";
                     echo "<td><a href='http://localhost/ichild/src/pages/editDependent/editDependent.php?id=$row[id]'>
                     <svg xmlns='http://www.w3.org/2000/svg ' id='botaoDependentEdit' fill='#3ab5df' class='bi bi-pencil-square' viewBox='0 0 16 16'>
                     <path d='M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z'/>
