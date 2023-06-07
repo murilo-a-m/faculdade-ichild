@@ -29,7 +29,7 @@
     <body>
 
     <?php 
-        session_start();
+        require_once '../../components/transportAuthorization.php';
         require_once '../../database/connection.php';
         require '../../components/headerTransportMenu.php';
     ?>
@@ -37,7 +37,7 @@
     <main class="container__form-transport container-fluid">
         <form
         class="container__form-content row g-1 container-md gap-2"
-        id="form-log"
+        id="form-notify"
         method ='post'
         action='dependendNotifyExe.php'
         >
@@ -67,8 +67,8 @@
     <!-- Script Navbar -->
     <script src="../../utils/navbar-transportMenu.js"></script>
 
-    <!-- Script criarLog -->
-    <script src="./criarLog.js"></script>
+    <!-- Script notify -->
+    <script src="./dependentNotify.js"></script>
 
     <!-- Script Bootstrap -->
     <script

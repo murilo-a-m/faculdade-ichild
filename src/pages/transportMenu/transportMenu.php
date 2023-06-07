@@ -72,7 +72,9 @@
           </div>
         </div>
 
-        <div class="content__card-transport card__notifications">
+        <?php require './notificationsCard.php' ;?>
+
+        <!-- <div class="content__card-transport card__notifications">
           <div class="card__container">
             <p class="card__title">Notificações enviadas</p>
             <div class="card__notifications-transportContent">
@@ -83,7 +85,7 @@
             <div class="card__notifications-transportContent"></div>
             <a class="card__transportButton" href="../dependendNotify/dependendNotify.php"><button>Ver tudo</button></a>
           </div>
-        </div>
+        </div> -->
 
         <div class="content__card-transport card__config">
           <a
