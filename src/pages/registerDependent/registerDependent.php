@@ -65,6 +65,12 @@
         </div>
 
         <div class="col-md-8 mt-2">
+          <label for="inputTime" class="form-label">Time</label>
+          <input class="form-control" id="inputTime" name="time" required/>
+          <span id="time-error" class="error"></span>
+        </div>
+
+        <div class="col-md-8 mt-2">
           <label for="inputTurn" class="form-label">Turno</label>
           <select id="inputTurn" class="form-select" name="turno">
             <option value="">Escolher..</option>
