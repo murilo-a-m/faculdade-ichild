@@ -12,9 +12,10 @@
 
     if(!empty($_GET['search'])) {
       $data = $_GET['search'];
-      $sql = "SELECT l.id, l.horario, l.statusLog, l.localLog, d.nome AS dependente_nome, d.sobrenome AS dependente_sobrenome
+      $sql = "SELECT l.id, l.horario, l.statusLog, l.localLog, d.nome AS dependente_nome, d.sobrenome AS dependente_sobrenome, r.nome AS responsavel_nome, r.sobrenome AS responsavel_sobrenome
         FROM ichild.log_do_dia l
         INNER JOIN ichild.Dependentes d ON l.dependentId = d.id
+        INNER JOIN ichild.Responsaveis r ON d.responsavelId = r.id
         WHERE (l.horario LIKE '%$data%' OR l.statusLog LIKE '%$data%' OR l.localLog LIKE '%$data%' OR d.nome LIKE '%$data%' OR d.sobrenome LIKE '%$data%')
         AND l.transportadorId = $transportadorId
         ORDER BY l.horario DESC";

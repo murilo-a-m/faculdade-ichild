@@ -5,13 +5,19 @@ function createLog() {
     dataType: "json",
     data: $("#form-log").serialize(),
     success: function (result) {
-      Swal.fire("log Criado com Sucesso!", "success").then(function () {
-        window.location = "./criarLog.php";
-      });
+      swal
+        .fire(
+          "Log realizada!",
+          "Log enviada ao responsável com sucesso!",
+          "success"
+        )
+        .then(function () {
+          window.location = "./criarLog.php";
+        });
     },
     error: function (resp) {
       console.log(resp);
-      Swal.fire("Log não gerado!", "Tente novamente!", "error");
+      swal.fire("Log não realizada!", "Erro ao realizar a log!", "error");
     },
   });
 }

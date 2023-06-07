@@ -34,30 +34,30 @@
         require '../../components/headerTransportMenu.php';
     ?>
 
-    <main class="container__form container-fluid">
+    <main class="container__form-transport container-fluid">
         <form
         class="container__form-content row g-1 container-md gap-2"
         id="form-log"
         method ='post'
         action='dependendNotifyExe.php'
         >
-            <p class="col-md-8 container__form-text">Enviar Notificação:</p>
-            <div class="col-md-8 mt-2">
+            <p class="col-md-7 container__form-text">Enviar Notificação:</p>
+            <div class="col-md-7 mt-2">
                 <label  class="form-label">Dependente</label>
                 <select  class="form-select" name="dependenteNotify">
                     <?php require_once './loadDependentNotify.php'; ?>
                 </select>
             </div>
-            <div class="col-md-8 mt-2">
+            <div class="col-md-7 mt-2">
                 <label for="inputMessage" class="form-label">Mensagem</label>
                 <input class="form-control" name="messageNot" required/>
                 <span id="document-error" class="error"></span>
             </div>
 
-            <button type="submit" class="card__transportButton col-md-6 form__btn-save">
-            Salvar Notificação
+            <button type="submit" class="info__btn-editTransport col-md-5 form__btn-save">
+            Enviar
             </button>
-            <button class="card__transportButton col-md-2 form__btn-cancel">Cancelar</button>
+            <a href="../transportMenu/transportMenu.php" class="info__btn-editTransport col-md-2 form__btn-cancel">Cancelar</a>
         </form>
     </main>
 
