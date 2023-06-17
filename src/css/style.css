@@ -2718,6 +2718,7 @@
   height: 40px;
   width: 40px;
   cursor: pointer;
+  object-fit: cover;
 }
 
 .app__nav {
@@ -2854,6 +2855,7 @@
   width: 130px;
   border: 5px solid #ffffff;
   border-radius: 100%;
+  object-fit: cover;
 }
 #profile__bar-transport .profile__info p {
   font-size: 18px;

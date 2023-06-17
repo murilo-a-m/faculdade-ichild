@@ -22,6 +22,7 @@
     height: 40px;
     width: 40px;
     cursor: pointer;
+    object-fit: cover;
   }
 }
 
@@ -172,6 +173,7 @@
       width: 130px;
       border: 5px solid #ffffff;
       border-radius: 100%;
+      object-fit: cover;
     }
     p {
       font-size: 18px;
