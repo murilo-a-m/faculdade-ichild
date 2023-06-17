@@ -2850,6 +2850,7 @@
   margin-bottom: 30px;
 }
 #profile__bar-transport .profile__info .profile__pic {
+  height: 130px;
   width: 130px;
   border: 5px solid #ffffff;
   border-radius: 100%;
