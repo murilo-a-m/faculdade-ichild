@@ -41,17 +41,17 @@
         class="container__form-content row g-1 container-md gap-2"
         id="form-dependent"
       >
-        <p class="col-md-8 container__form-text">Registrar dependente:</p>
+        <p class="col-md-8 container__form-text">Editar dependente:</p>
 
         <div class="col-md-8 mt-2">
           <label for="inputName" class="form-label">Nome</label>
-          <input class="form-control" value="<?php echo ($nome);?>"id="inputName" name="nome" />
+          <input class="form-control" value="<?php echo ($nomeDependente);?>"id="inputName" name="nome" />
           <span id="name-error" class="error"></span>
         </div>
 
         <div class="col-md-8 mt-2">
           <label for="inputLastName" class="form-label">Sobrenome</label>
-          <input class="form-control" value="<?php echo ($sobrenome);?>" id="inputLastName" name="sobrenome" />
+          <input class="form-control" value="<?php echo ($sobrenomeDependente);?>" id="inputLastName" name="sobrenome" />
           <span id="lastName-error" class="error"></span>
         </div>
 
@@ -70,10 +70,10 @@
         <div class="col-md-8 mt-2">
           <label for="inputTurn" class="form-label">Turno</label>
           <select id="inputTurn" class="form-select" name="turno">
-            <option <?php if ($turno == 'Matutino') echo 'selected'; ?> value="Matutino">Matutino</option>
-            <option <?php if ($turno == 'Vespertino') echo 'selected'; ?> value="Vespertino">Vespertino</option>
-            <option <?php if ($turno == 'Noturno') echo 'selected'; ?> value="Noturno">Noturno</option>
-            <option <?php if ($turno == 'Integral') echo 'selected'; ?> value="Integral">Integral</option>
+            <option <?php if ($turnoDependente == 'Matutino') echo 'selected'; ?> value="Matutino">Matutino</option>
+            <option <?php if ($turnoDependente == 'Vespertino') echo 'selected'; ?> value="Vespertino">Vespertino</option>
+            <option <?php if ($turnoDependente == 'Noturno') echo 'selected'; ?> value="Noturno">Noturno</option>
+            <option <?php if ($turnoDependente == 'Integral') echo 'selected'; ?> value="Integral">Integral</option>
           </select>
           <span id="turn-error" class="error"></span>
         </div>

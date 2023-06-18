@@ -9,11 +9,11 @@
     if (mysqli_num_rows($result) > 0) {
       while ($row = mysqli_fetch_assoc($result)){
         echo '<script>console.log("'.$row['turno'].'")</script>';
-        $nome = $row['nome'];
-        $sobrenome = $row['sobrenome'];
+        $nomeDependente = $row['nome'];
+        $sobrenomeDependente = $row['sobrenome'];
         $dataNascimento = $row['dataNascimento'];
         $documento = $row['documento'];
-        $turno = $row['turno'];
+        $turnoDependente = $row['turno'];
       }
     }
   }   
